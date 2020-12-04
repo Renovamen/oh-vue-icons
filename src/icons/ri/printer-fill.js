@@ -1,0 +1,13 @@
+import Icon from '../../components/Icon.vue'
+
+Icon.register({
+  'ri/printer-fill': {
+    width: 1200,
+    height: 1200,
+    paths: [
+      {
+        d: 'M350 850H850V1100H350V850zM950 1000V750H250V1000H150A50-50 0 0 0 100 950V450A50-50 0 0 0 150 400H1050A50-50 0 0 0 1100 450V950A50-50 0 0 0 1050 1000H950zM250 500V600H400V500H250zM350 100H850A50-50 0 0 0 900 150V300H300V150A50-50 0 0 0 350 100z'
+      }
+    ]
+  }
+})

@@ -1,0 +1,13 @@
+import Icon from '../../components/Icon.vue'
+
+Icon.register({
+  'ri/pencil-ruler-line': {
+    width: 1200,
+    height: 1200,
+    paths: [
+      {
+        d: 'M250 400V1000H450V400H250zM150 350L350 100 550 350V1100H150V350zM950 800V700H800V600H950V500H850V400H950V300H750V1000H950V900H850V800H950zM700 200H1000A50-50 0 0 0 1050 250V1050A50-50 0 0 0 1000 1100H700A50-50 0 0 0 650 1050V250A50-50 0 0 0 700 200z'
+      }
+    ]
+  }
+})

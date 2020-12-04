@@ -1,0 +1,13 @@
+import Icon from '../../components/Icon.vue'
+
+Icon.register({
+  'ri/gamepad-fill': {
+    width: 1200,
+    height: 1200,
+    paths: [
+      {
+        d: 'M850 200A300-300 0 0 0 1150 500V700A300-300 0 0 0 850 1000H350A300-300 0 0 0 50 700V500A300-300 0 0 0 350 200H850zM500 450H400V550H300V650H400L400 750H500L499.9 650H600V550H500V450zM900 650H800V750H900V650zM800 450H700V550H800V450z'
+      }
+    ]
+  }
+})

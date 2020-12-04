@@ -1,0 +1,74 @@
+{
+  "name": "@renovamen/vue-icons",
+  "version": "0.1.0",
+  "description": "Include SVG icons from different icon packs in Vue easily, based on vue-awesome.",
+  "author": "Renovamen <renovamenzxh@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Renovamen/oh-my-icons"
+  },
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "cross-env NODE_ENV=production rollup -c",
+    "lint": "vue-cli-service lint",
+    "font2json": "node -r esm build/font2json.js",
+    "icons": "yarn font2json && node -r esm build/icons.js",
+    "pub": "sh ./publish.sh"
+  },
+  "main": "dist/vue-icons.js",
+  "module": "index.js",
+  "dependencies": {
+    "core-js": "^3.4.4"
+  },
+  "devDependencies": {
+    "academicons": "^1.8.6",
+    "@fortawesome/fontawesome-free": "^5.14.0",
+    "@rollup/plugin-buble": "^0.21.3",
+    "@rollup/plugin-commonjs": "^14.0.0",
+    "@rollup/plugin-node-resolve": "^8.4.0",
+    "@vue/cli-plugin-babel": "^4.4.6",
+    "@vue/cli-plugin-eslint": "^4.4.6",
+    "@vue/cli-service": "^4.4.6",
+    "@vue/eslint-config-prettier": "^5.0.0",
+    "babel-eslint": "^10.1.0",
+    "cross-env": "^5.2.1",
+    "eslint": "^7.5.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-vue": "^6.2.2",
+    "esm": "^3.2.25",
+    "minimist": "^1.2.5",
+    "mkdirp": "^0.5.1",
+    "prettier": "^2.0.5",
+    "prettier-eslint": "^11.0.0",
+    "remixicon": "^2.5.0",
+    "rimraf": "^2.7.1",
+    "rollup": "^2.22.1",
+    "rollup-plugin-terser": "^6.1.0",
+    "rollup-plugin-vue": "^5.1.9",
+    "semver": "^5.7.1",
+    "stringify-object": "^3.3.0",
+    "svgfont2glyphs": "^0.1.4",
+    "vue": "^2.6.11",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "peerDependencies": {
+    "vue": "^2.4.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "keywords": [
+    "font awesome",
+    "remix icon",
+    "academicons",
+    "vue"
+  ]
+}

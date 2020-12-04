@@ -1,0 +1,13 @@
+import Icon from '../../components/Icon.vue'
+
+Icon.register({
+  'ri/medicine-bottle-fill': {
+    width: 1200,
+    height: 1200,
+    paths: [
+      {
+        d: 'M850 250V350C932.9 350 1000 417.1 1000 500V1050C1000 1077.6 977.6 1100 950 1100H250C222.4 1100 200 1077.6 200 1050V500C200 417.1 267.1 350 350 350V250H850zM650 550H550V650H450V750H550L550 850H650L650 750H750V650H650V550zM950 100V200H250V100H950z'
+      }
+    ]
+  }
+})

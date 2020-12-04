@@ -1,0 +1,13 @@
+import Icon from '../../components/Icon.vue'
+
+Icon.register({
+  'ri/delete-bin-5-fill': {
+    width: 1200,
+    height: 1200,
+    paths: [
+      {
+        d: 'M200 400H1000V1050A50-50 0 0 0 950 1100H250A50-50 0 0 0 200 1050V400zM350 250V150A50-50 0 0 0 400 100H800A50-50 0 0 0 850 150V250H1100V350H100V250H350zM450 200V250H750V200H450zM450 600V900H550V600H450zM650 600V900H750V600H650z'
+      }
+    ]
+  }
+})
