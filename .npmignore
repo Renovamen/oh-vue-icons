@@ -1,0 +1,7 @@
+build
+src
+assets
+.*
+*.config.js
+*.sh
+*.lock
