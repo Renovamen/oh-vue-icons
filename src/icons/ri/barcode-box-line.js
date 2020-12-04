@@ -1,0 +1,13 @@
+import Icon from '../../components/Icon.vue'
+
+Icon.register({
+  'ri/barcode-box-line': {
+    width: 1200,
+    height: 1200,
+    paths: [
+      {
+        d: 'M200 250V950H1000V250H200zM150 150H1050A50-50 0 0 0 1100 200V1000A50-50 0 0 0 1050 1050H150A50-50 0 0 0 100 1000V200A50-50 0 0 0 150 150zM300 350H450V850H300V350zM500 350H600V850H500V350zM650 350H700V850H650V350zM750 350H900V850H750V350z'
+      }
+    ]
+  }
+})

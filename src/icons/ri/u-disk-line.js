@@ -1,0 +1,13 @@
+import Icon from '../../components/Icon.vue'
+
+Icon.register({
+  'ri/u-disk-line': {
+    width: 1200,
+    height: 1200,
+    paths: [
+      {
+        d: 'M950 600H250V1000H950V600zM250 500V100H950V500H1000A50-50 0 0 0 1050 550V1050A50-50 0 0 0 1000 1100H200A50-50 0 0 0 150 1050V550A50-50 0 0 0 200 500H250zM350 500H850V200H350V500zM450 300H550V400H450V300zM650 300H750V400H650V300z'
+      }
+    ]
+  }
+})

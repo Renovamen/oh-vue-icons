@@ -1,0 +1,13 @@
+import Icon from '../../components/Icon.vue'
+
+Icon.register({
+  'ri/delete-bin-3-line': {
+    width: 1200,
+    height: 1200,
+    paths: [
+      {
+        d: 'M1000 350V1000A100-100 0 0 0 900 1100H300A100-100 0 0 0 200 1000V350H100V250H1100V350H1000zM300 350V1000H900V350H300zM550 450H650V550H550V450zM550 600H650V700H550V600zM550 750H650V850H550V750zM350 100H850V200H350V100z'
+      }
+    ]
+  }
+})
