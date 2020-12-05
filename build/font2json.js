@@ -13,6 +13,7 @@ let icons = {}
 
 function extractIcons(svgDir, namespace = "", toNamespace = namespace, iconset = "fa") {
     let prefix = toNamespace ? `${toNamespace}/` : ""
+    
     fs.readdirSync(path.join(svgDir, namespace), "utf8")
         .filter(file => {
             return !fs.statSync(path.resolve(svgDir, namespace, file)).isDirectory()
@@ -30,9 +31,8 @@ function extractIcons(svgDir, namespace = "", toNamespace = namespace, iconset =
             let dMatch = svg.match(/ d="([^"]+)"/)
             if (!sizeMatch || !dMatch) return
 
-            let icon = {}
             let name = file.replace(iconset + "-", "").replace(/\.svg$/, "")
-            icons[iconset + '/' + prefix + name] = {
+            icons[iconset][prefix + name] = {
                 width: parseInt(sizeMatch[1], 10),
                 height: parseInt(sizeMatch[2], 10),
                 paths: [
@@ -45,6 +45,8 @@ function extractIcons(svgDir, namespace = "", toNamespace = namespace, iconset =
 }
 
 function fa2json() {
+    icons['fa'] = {}
+
     const FA_SVG_DIR = path.resolve(__dirname, path.join(BASE_DIR, 'fa'))
     rimraf.sync(FA_SVG_DIR)
     
@@ -55,6 +57,8 @@ function fa2json() {
 }
 
 function ri2json() {
+    icons['ri'] = {}
+
     const RI_SVG_DIR = path.resolve(__dirname, path.join(BASE_DIR, 'ri'))
     rimraf.sync(RI_SVG_DIR)
     
@@ -63,6 +67,8 @@ function ri2json() {
 }
 
 function ai2json() {
+    icons['ai'] = {}
+
     const AI_SVG_DIR = path.resolve(__dirname, path.join(BASE_DIR, 'ai'))
     rimraf.sync(AI_SVG_DIR)
     

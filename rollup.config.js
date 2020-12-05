@@ -8,7 +8,7 @@ export default {
   input: 'src/index.js',
   output: {
     file: 'dist/vue-icons.js',
-    name: 'VueAwesome',
+    name: 'VueIcons',
     format: 'umd',
     globals: {
       vue: 'Vue'
