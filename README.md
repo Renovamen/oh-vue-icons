@@ -27,7 +27,7 @@ npm i @renovamen/vue-icons
 Add the following code to your HTML file:
 
 ```html
-<link href="https://cdn.jsdelivr.net/npm/@renovamen/vue-icons@0.1.0/dist/vue-icons.js" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@renovamen/vue-icons@0.1.1/dist/vue-icons.js" rel="stylesheet">
 ```
 
 &nbsp;
