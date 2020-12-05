@@ -1,6 +1,6 @@
 {
   "name": "@renovamen/vue-icons",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Include SVG icons from different icon packs in Vue easily, based on vue-awesome.",
   "author": "Renovamen <renovamenzxh@gmail.com>",
   "license": "MIT",
