@@ -1,7 +1,7 @@
 // split Remix icons into individual SVG files
 
 import fs from "fs"
-import svgfont2glyphs from "svgfont2glyphs"
+import glyphs2json from "../glyphs2json"
 import { sync as mkdirpSync } from "mkdirp"
 import minimist from "minimist"
 
@@ -29,7 +29,7 @@ function loadFile(path) {
 }
 
 function extractGlyphs(path, aliases, { dir, color, verbose }) {
-  let glyphs = svgfont2glyphs(loadFile(path))
+  let glyphs = glyphs2json(loadFile(path))
 
   mkdirpSync(dir)
 

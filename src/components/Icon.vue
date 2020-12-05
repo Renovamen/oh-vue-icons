@@ -73,18 +73,14 @@ export default {
 
       if (this.classes) {
         Object.keys(this.classes).forEach(c => {
-          if (this.classes[c]) {
-            classes[c] = true
-          }
+          if (this.classes[c]) classes[c] = true
         })
       }
 
       return classes
     },
     icon () {
-      if (this.name) {
-        return icons[this.name]
-      }
+      if (this.name) return icons[this.name]
       return null
     },
     box () {
@@ -94,9 +90,8 @@ export default {
       return `0 0 ${this.width} ${this.height}`
     },
     ratio () {
-      if (!this.icon) {
-        return 1
-      }
+      if (!this.icon) return 1
+
       let { width, height } = this.icon
       return Math.max(width, height) / 16
     },
@@ -115,18 +110,14 @@ export default {
       )
     },
     style () {
-      if (this.normalizedScale === 1) {
-        return false
-      }
+      if (this.normalizedScale === 1) return false
       return {
         fontSize: this.normalizedScale + 'em'
       }
     },
     raw () {
       // generate unique id for each icon's SVG element with ID
-      if (!this.icon || !this.icon.raw) {
-        return null
-      }
+      if (!this.icon || !this.icon.raw) return null
       let raw = this.icon.raw
       let ids = {}
       raw = raw.replace(
@@ -141,10 +132,7 @@ export default {
         /#(?:([^'")\s]+)|xpointer\(id\((['"]?)([^')]+)\2\)\))/g,
         (match, rawId, _, pointerId) => {
           let id = rawId || pointerId
-          if (!id || !ids[id]) {
-            return match
-          }
-
+          if (!id || !ids[id]) return match
           return `#${ids[id]}`
         }
       )
@@ -153,14 +141,11 @@ export default {
     },
     focusable () {
       let { tabindex } = this
-      if (tabindex == null) {
-        return 'false'
-      }
-      let index =
-        typeof tabindex === 'string' ? parseInt(tabindex, 10) : tabindex
-      if (index >= 0) {
-        return null
-      }
+      if (tabindex == null) return 'false'
+      
+      let index = typeof tabindex === 'string' ? parseInt(tabindex, 10) : tabindex
+      if (index >= 0) return null
+      
       return 'false'
     }
   },
@@ -177,9 +162,7 @@ export default {
         return
       }
 
-      if (this.icon) {
-        return
-      }
+      if (this.icon) return
 
       let width = 0
       let height = 0
@@ -198,9 +181,7 @@ export default {
     }
   },
   render (h) {
-    if (this.name === null) {
-      return h()
-    }
+    if (this.name === null) return h()
 
     let options = {
       class: this.klass,
@@ -222,10 +203,7 @@ export default {
 
     if (this.raw) {
       let html = `<g>${this.raw}</g>`
-
-      if (this.title) {
-        html = `<title>${escapeHTML(this.title)}</title>${html}`
-      }
+      if (this.title) html = `<title>${escapeHTML(this.title)}</title>${html}`
 
       options.domProps = { innerHTML: html }
     }
@@ -266,13 +244,8 @@ export default {
       let icon = data[name]
       let { paths = [], d, polygons = [], points } = icon
 
-      if (d) {
-        paths.push({ d })
-      }
-
-      if (points) {
-        polygons.push({ points })
-      }
+      if (d) paths.push({ d })
+      if (points) polygons.push({ points })
 
       icons[name] = assign({}, icon, {
         paths,
