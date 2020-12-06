@@ -31,7 +31,7 @@ npm install oh-vue-icons
 Add the following code to your HTML file:
 
 ```html
-<link href="https://cdn.jsdelivr.net/npm/oh-vue-icons@0.1.1/dist/oh-vue-icons.js" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/oh-vue-icons@0.1.2/dist/oh-vue-icons.js" rel="stylesheet">
 ```
 
 &nbsp;
