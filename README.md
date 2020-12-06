@@ -1,10 +1,14 @@
 # Oh, Vue icons!
 
-A [Vue](https://vuejs.org/) component for including inline SVG icons from different icon packs in easily. It's now support:
+A [Vue](https://vuejs.org/) component for including inline SVG icons from different icon packs in easily. Now the following icon packs are supported:
 
 - `fa` - [Font Awesome](https://fontawesome.com/)
 - `ri` - [Remix Icon](https://github.com/Remix-Design/RemixIcon)
 - `ai` - [academicons](https://github.com/jpswalsh/academicons)
+
+Some of the icons are resized for better and more consistent user experience.
+
+See the demo [here](https://oh-vue-icons.vercel.app).
 
 It is based on [Justineo/vue-awesome](https://github.com/Justineo/vue-awesome), so check out that repo for more information.
 
@@ -119,6 +123,13 @@ Re-generate SVGs under `assets/svg` and files under `src/icons` automatically:
 ```bash
 yarn icons
 ```
+
+Run demo:
+
+```bash
+yarn dev
+```
+
 
 &nbsp;
 
