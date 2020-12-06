@@ -4,6 +4,7 @@
   "description": "Include inline SVG icons from different icon packs in Vue easily, based on vue-awesome.",
   "author": "Renovamen <renovamenzxh@gmail.com>",
   "license": "MIT",
+  "homepage": "https://oh-vue-icons.vercel.app",
   "repository": {
     "type": "git",
     "url": "https://github.com/Renovamen/oh-vue-icons"
@@ -12,8 +13,9 @@
     "url": "https://github.com/Renovamen/oh-vue-icons/issues"
   },
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "dev": "vue-cli-service serve",
     "build": "cross-env NODE_ENV=production rollup -c",
+    "build:demo": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "font2json": "node -r esm build/font2json.js",
     "icons": "yarn font2json && node -r esm build/icons.js",

@@ -47,7 +47,7 @@ export default {
       y: false,
       childrenWidth: 0,
       childrenHeight: 0,
-      outerScale: 1
+      outerScale: 1.2
     }
   },
   computed: {
@@ -142,10 +142,10 @@ export default {
     focusable () {
       let { tabindex } = this
       if (tabindex == null) return 'false'
-      
+
       let index = typeof tabindex === 'string' ? parseInt(tabindex, 10) : tabindex
       if (index >= 0) return null
-      
+
       return 'false'
     }
   },
