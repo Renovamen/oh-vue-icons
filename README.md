@@ -1,10 +1,10 @@
 # Oh, Vue icons!
 
-A component for including inline SVG icons from different icon packs in [Vue](https://vuejs.org/) easily. It's now support:
+A [Vue](https://vuejs.org/) component for including inline SVG icons from different icon packs in easily. It's now support:
 
-- [Font Awesome](https://fontawesome.com/)
-- [Remix Icon](https://github.com/Remix-Design/RemixIcon)
-- [academicons](https://github.com/jpswalsh/academicons)
+- `fa` - [Font Awesome](https://fontawesome.com/)
+- `ri` - [Remix Icon](https://github.com/Remix-Design/RemixIcon)
+- `ai` - [academicons](https://github.com/jpswalsh/academicons)
 
 It is based on [Justineo/vue-awesome](https://github.com/Justineo/vue-awesome), so check out that repo for more information.
 
@@ -17,7 +17,7 @@ It is based on [Justineo/vue-awesome](https://github.com/Justineo/vue-awesome), 
 ```bash
 yarn add oh-vue-icons
 # or
-npm i oh-vue-icons
+npm install oh-vue-icons
 ```
 
 &nbsp;
@@ -102,6 +102,23 @@ The icons are organized as follows:
 
 - For Font Awesome icons, icons from regular and brands are located in `icons/fa/regular` and `icons/fa/brands` directory, which have name prop values like `fa/regular/flag` or `fa/brands/reddit`. Icons from solid pack are located in `icons/fa` directory and have name prop values like `fa/beer`.
 
+&nbsp;
+
+## Development
+
+Install dependencies:
+
+```bash
+yarn install
+# or
+npm install
+```
+
+Re-generate SVGs under `assets/svg` and files under `src/icons` automatically:
+
+```bash
+yarn icons
+```
 
 &nbsp;
 

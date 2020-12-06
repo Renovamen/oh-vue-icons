@@ -2,11 +2,11 @@ import Icon from '../../../components/Icon.vue'
 
 Icon.register({
   'fa/brands/microsoft': {
-    width: 448,
-    height: 512,
+    width: 599,
+    height: 599,
     paths: [
       {
-        d: 'M0 32h214.6v214.6h-214.6v-214.6zM233.4 32h214.6v214.6h-214.6v-214.6zM0 265.4h214.6v214.6h-214.6v-214.6zM233.4 265.4h214.6v214.6h-214.6v-214.6z'
+        d: 'M75.5 75.5h214.6v214.6h-214.6v-214.6zM308.9 75.5h214.6v214.6h-214.6v-214.6zM75.5 308.9h214.6v214.6h-214.6v-214.6zM308.9 308.9h214.6v214.6h-214.6v-214.6z'
       }
     ]
   }
