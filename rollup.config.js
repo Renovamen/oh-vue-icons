@@ -7,8 +7,8 @@ import resolve from '@rollup/plugin-node-resolve'
 export default {
   input: 'src/index.js',
   output: {
-    file: 'dist/vue-icons.js',
-    name: 'VueIcons',
+    file: 'dist/oh-vue-icons.js',
+    name: 'OhVueIcons',
     format: 'umd',
     globals: {
       vue: 'Vue'

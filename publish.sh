@@ -2,6 +2,6 @@ yarn icons
 yarn build
 cp -r ./src/* .
 rm index.js
-npm publish --access public
+npm publish
 rm -rf ./components
 rm -rf ./icons
