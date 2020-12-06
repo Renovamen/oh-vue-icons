@@ -2,11 +2,11 @@ import Icon from '../../components/Icon.vue'
 
 Icon.register({
   'fa/square-full': {
-    width: 512,
-    height: 512,
+    width: 599,
+    height: 599,
     paths: [
       {
-        d: 'M512 512h-512v-512h512v512z'
+        d: 'M555.5 555.5h-512v-512h512v512z'
       }
     ]
   }

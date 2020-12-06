@@ -29,7 +29,7 @@ function loadFile(path) {
 }
 
 function extractGlyphs(path, aliases, { dir, color, verbose }) {
-  let glyphs = glyphs2json(loadFile(path))
+  let glyphs = glyphs2json(loadFile(path), 'fa')
 
   mkdirpSync(dir)
 
