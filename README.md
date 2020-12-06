@@ -1,6 +1,6 @@
-# Oh, my icons!
+# Oh, Vue icons!
 
-A component for including SVG icons from different icon packs in [Vue](https://vuejs.org/) easily. It's now support:
+A component for including inline SVG icons from different icon packs in [Vue](https://vuejs.org/) easily. It's now support:
 
 - [Font Awesome](https://fontawesome.com/)
 - [Remix Icon](https://github.com/Remix-Design/RemixIcon)
@@ -15,9 +15,9 @@ It is based on [Justineo/vue-awesome](https://github.com/Justineo/vue-awesome), 
 ### `yarn` / `npm`
 
 ```bash
-yarn add @renovamen/vue-icons
+yarn add oh-vue-icons
 # or
-npm i @renovamen/vue-icons
+npm i oh-vue-icons
 ```
 
 &nbsp;
@@ -27,14 +27,14 @@ npm i @renovamen/vue-icons
 Add the following code to your HTML file:
 
 ```html
-<link href="https://cdn.jsdelivr.net/npm/@renovamen/vue-icons@0.1.1/dist/vue-icons.js" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/oh-vue-icons@0.1.1/dist/oh-vue-icons.js" rel="stylesheet">
 ```
 
 &nbsp;
 
 ### Download Manually
 
-Download [`dist/vue-icons.js`](dist/vue-icons.js) and include it in your HTML file.
+Download [`dist/oh-vue-icons.js`](dist/oh-vue-icons.js) and include it in your HTML file.
 
 
 &nbsp;
@@ -43,7 +43,7 @@ Download [`dist/vue-icons.js`](dist/vue-icons.js) and include it in your HTML fi
 
 ### Import
 
-Import `vue-icons` in your Vue project:
+Import `oh-vue-icons` in your Vue project:
 
 ```js
 import Vue from 'vue'
@@ -51,17 +51,17 @@ import Vue from 'vue'
 /* Import icons */
 
 // only import the icons you use to reduce bundle size
-import '@renovamen/vue-icons/icons/fa/flag'
+import 'oh-vue-icons/icons/fa/flag'
 
 // or import a certain icon pack, for example, Font Awesome
-import '@renovamen/vue-icons/icons/fa'
+import 'oh-vue-icons/icons/fa'
 
 // or import all icons if you don't care about bundle size
-import '@renovamen/vue-icons/icons'
+import 'oh-vue-icons/icons'
 
 /* Register component */
 
-import VueIcon from '@renovamen/vue-icons/components/Icon'
+import VueIcon from 'oh-vue-icons/components/Icon'
 
 // globally (in your main.js file)
 Vue.component('v-icon', VueIcon)

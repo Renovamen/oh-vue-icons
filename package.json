@@ -1,12 +1,15 @@
 {
-  "name": "@renovamen/vue-icons",
+  "name": "oh-vue-icons",
   "version": "0.1.1",
-  "description": "Include SVG icons from different icon packs in Vue easily, based on vue-awesome.",
+  "description": "Include inline SVG icons from different icon packs in Vue easily, based on vue-awesome.",
   "author": "Renovamen <renovamenzxh@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Renovamen/oh-my-icons"
+    "url": "https://github.com/Renovamen/oh-vue-icons"
+  },
+  "bugs": {
+    "url": "https://github.com/Renovamen/oh-vue-icons/issues"
   },
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -16,7 +19,7 @@
     "icons": "yarn font2json && node -r esm build/icons.js",
     "pub": "sh ./publish.sh"
   },
-  "main": "dist/vue-icons.js",
+  "main": "dist/oh-vue-icons.js",
   "module": "index.js",
   "dependencies": {
     "core-js": "^3.4.4"
@@ -70,6 +73,7 @@
     "font awesome",
     "remix icon",
     "academicons",
-    "vue"
+    "vue",
+    "icons"
   ]
 }
