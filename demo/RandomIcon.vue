@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import '../icons'
-import OhVueIcon from '../components/Icon.vue'
+import '../src/icons'
+import OhVueIcon from '../src/components/Icon.vue'
 const keys = Object.keys(OhVueIcon.icons)
 
 function randomIcon () {

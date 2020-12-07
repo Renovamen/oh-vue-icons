@@ -205,7 +205,7 @@
 
 <script>
 import RandomIcon from './RandomIcon'
-import '../icons'
+import '../src/icons'
 
 export default {
   name: 'demo',

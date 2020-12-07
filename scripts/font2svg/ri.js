@@ -1,7 +1,7 @@
 // split Remix icons into individual SVG files
 
 import fs from "fs"
-import glyphs2json from "../glyphs2json"
+import glyphs2json from "../lib/glyphs2json"
 import { sync as mkdirpSync } from "mkdirp"
 import minimist from "minimist"
 

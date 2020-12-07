@@ -44,7 +44,7 @@ function extractIcons(svgDir, namespace = "", toNamespace = namespace, iconset =
         })
 }
 
-function fa2json() {
+function gen_fa() {
     icons['fa'] = {}
 
     const FA_SVG_DIR = path.resolve(__dirname, path.join(BASE_DIR, 'fa'))
@@ -56,7 +56,7 @@ function fa2json() {
     extractIcons(FA_SVG_DIR, 'solid', '', 'fa')
 }
 
-function ri2json() {
+function gen_ri() {
     icons['ri'] = {}
 
     const RI_SVG_DIR = path.resolve(__dirname, path.join(BASE_DIR, 'ri'))
@@ -66,7 +66,7 @@ function ri2json() {
     extractIcons(RI_SVG_DIR, '', '', 'ri')
 }
 
-function ai2json() {
+function gen_ai() {
     icons['ai'] = {}
 
     const AI_SVG_DIR = path.resolve(__dirname, path.join(BASE_DIR, 'ai'))
@@ -76,9 +76,9 @@ function ai2json() {
     extractIcons(AI_SVG_DIR, '', '', 'ai')
 }
 
-fa2json()
-ri2json()
-ai2json()
+gen_fa()
+gen_ri()
+gen_ai()
 
 fs.writeFileSync(
   path.resolve(__dirname, '../assets/icons.json'),
