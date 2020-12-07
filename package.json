@@ -18,7 +18,7 @@
     "build:demo": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "gen-svgs": "node -r esm scripts/gen-svgs.js",
-    "icons": "yarn font2json && node -r esm scripts/gen-js.js",
+    "icons": "yarn gen-svgs && node -r esm scripts/gen-js.js",
     "pub": "sh ./scripts/publish.sh"
   },
   "main": "dist/oh-vue-icons.js",
