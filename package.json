@@ -17,9 +17,9 @@
     "build": "cross-env NODE_ENV=production rollup -c",
     "build:demo": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "font2json": "node -r esm build/font2json.js",
-    "icons": "yarn font2json && node -r esm build/icons.js",
-    "pub": "sh ./publish.sh"
+    "gen-svgs": "node -r esm scripts/gen-svgs.js",
+    "icons": "yarn font2json && node -r esm scripts/gen-js.js",
+    "pub": "sh ./scripts/publish.sh"
   },
   "main": "dist/oh-vue-icons.js",
   "module": "index.js",

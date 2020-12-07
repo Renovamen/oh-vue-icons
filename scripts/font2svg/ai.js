@@ -1,16 +1,16 @@
-// split Font Awesome icons into individual SVG files
+// split Remix icons into individual SVG files
 
 import fs from "fs"
-import glyphs2json from "../glyphs2json"
+import glyphs2json from "../lib/glyphs2json"
 import { sync as mkdirpSync } from "mkdirp"
 import minimist from "minimist"
 
-function loadAliases(less) {
-  const re = /@fa-var-([a-z0-9-]+)\s*:\s*"\\([0-9a-f]+)";/g
+function loadAliases(css) {
+  const re = /.ai-([a-z0-9-]+)\s*:before{content:\s*"\\([0-9a-f]+)"}/g
   const m = {} // unicode hex -> [alias0, alias1, alias2, ...]
 
   let match
-  while ((match = re.exec(less)) !== null) {
+  while ((match = re.exec(css)) !== null) {
     const alias = match[1]
     const unicode_hex = match[2]
 
@@ -23,19 +23,19 @@ function loadAliases(less) {
 
 function loadFile(path) {
   return fs.readFileSync(
-    require.resolve(`@fortawesome/fontawesome-free/${path}`),
+    require.resolve(`academicons/${path}`),
     "utf8"
   )
 }
 
 function extractGlyphs(path, aliases, { dir, color, verbose }) {
-  let glyphs = glyphs2json(loadFile(path), 'fa')
+  let glyphs = glyphs2json(loadFile(path), 'ai')
 
   mkdirpSync(dir)
 
   for (let g of glyphs) {
     for (let alias of aliases[g.unicode_hex] || []) {
-      const path = `${dir}/fa-${alias}.svg`
+      const path = `${dir}/ai-${alias}.svg`
       const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 ${g.width} ${g.height}"><path fill="${color}" d="${g.path}" /></svg>`
       fs.writeFileSync(path, svg)
 
@@ -45,20 +45,10 @@ function extractGlyphs(path, aliases, { dir, color, verbose }) {
 }
 
 export default function splitSVG(dir, color = "currentColor", verbose = false) {
-  const aliases = loadAliases(loadFile("less/_variables.less"))
+  const aliases = loadAliases(loadFile("css/academicons.min.css"))
 
-  extractGlyphs("webfonts/fa-regular-400.svg", aliases, {
+  extractGlyphs("fonts/academicons.svg", aliases, {
     dir,
-    color,
-    verbose
-  })
-  extractGlyphs("webfonts/fa-brands-400.svg", aliases, {
-    dir: `${dir}/brands`,
-    color,
-    verbose
-  })
-  extractGlyphs("webfonts/fa-solid-900.svg", aliases, {
-    dir: `${dir}/solid`,
     color,
     verbose
   })
