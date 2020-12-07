@@ -1,10 +1,10 @@
 module.exports = {
   publicPath: process.env.NODE_ENV === 'production' ? './' : '/',
-  outputDir: 'demo',
+  outputDir: './demo/dist',
   chainWebpack: config => {
     config
       .entry('app')
       .clear()
-      .add('./src/demo/main.js')
+      .add('./demo/index.js')
   }
 }

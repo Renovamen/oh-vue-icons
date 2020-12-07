@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Demo from './Demo.vue'
-import OhVueIcon from '../components/Icon.vue'
+import OhVueIcon from '../src/components/Icon.vue'
 
 OhVueIcon.register({
   baidu: {
