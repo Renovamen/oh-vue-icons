@@ -124,7 +124,7 @@ Re-generate SVGs under `assets/svg` and files under `src/icons` automatically:
 yarn icons
 ```
 
-Run demo:
+Run docs:
 
 ```bash
 yarn dev
