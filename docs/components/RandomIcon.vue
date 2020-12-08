@@ -1,13 +1,13 @@
 <template>
-<v-icon
+<OhVueIcon
   :name="name"
   scale="4"
 />
 </template>
 
 <script>
-import '../src/icons'
-import OhVueIcon from '../src/components/Icon.vue'
+import '../../src/icons'
+import OhVueIcon from '../../src/components/Icon.vue'
 const keys = Object.keys(OhVueIcon.icons)
 
 function randomIcon () {
@@ -18,6 +18,9 @@ export default {
   name: 'random-icon',
   props: {
     playing: Boolean
+  },
+  components: {
+    OhVueIcon
   },
   data () {
     return {
