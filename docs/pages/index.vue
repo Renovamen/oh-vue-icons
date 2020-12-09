@@ -11,7 +11,7 @@
         <div class="flex flex-col text-center">
           <div class="text-3xl font-semibold">Oh, Vue Icons!</div>
           <div
-            class="mt-3"
+            class="mt-3 px-2"
             :class="{
               'text-gray-600': !isDark,
               'text-gray-500': isDark
@@ -22,12 +22,13 @@
           </div>
         </div>
       </div>
-      <div class="my-4 flex justify-center">
+      <div class="my-4 flex justify-center px-2">
         <nav>
           <button
             v-for="tab in tabs"
             :key="tab"
-            class="mr-4 px-3 py-2 font-medium text-sm leading-5 rounded-md text-gray-500 hover:text-blue-600 focus:outline-none focus:text-blue-600 focus:bg-blue-50"
+            class="sm:mr-4 px-3 py-2 font-medium text-sm leading-5 rounded-md text-gray-500
+                    hover:text-blue-600 focus:outline-none focus:text-blue-600 focus:bg-blue-50"
             :class="{
               'text-blue-700 bg-blue-100': tabSelected === tab
             }"
@@ -38,12 +39,18 @@
         </nav>
       </div>
       <div class="page-width">
-        <div class="grid grid-cols-12 shadow rounded-md border">
+        <div
+          class="grid grid-cols-8 sm:grid-cols-12 rounded-md
+                  border border-transparent transition duration-200"
+          :class="{
+            'shadow-search': !isSearchFocused,
+            'shadow-search-hover': isSearchFocused
+          }">
           <div class="relative col-start-1 col-span-1">
             <OhVueIcon
               name="ri/search-2-line"
               scale="1.3"
-              class="absolute h-full right-0 mr-4 transition ease-out duration-200"
+              class="absolute h-full right-0 mr-2 sm:mr-4 transition duration-200"
               :class="{
                 'text-gray-500': !isSearchFocused,
                 'text-blue-600': isSearchFocused & !isDark,
@@ -55,7 +62,7 @@
             ref="search"
             id="search"
             v-model="search"
-            class="col-start-2 col-span-11 pt-4 pb-4
+            class="col-start-2 col-span-7 sm:col-span-11 pt-4 pb-4
                     text-base focus:outline-none bg-transparent
                     inline-block align-middle"
             :class="{
@@ -82,9 +89,9 @@
                     :class="{
                       'text-gray-300': isDark,
                       'text-gray-800': !isDark,
-                      'bg-gray-200 shadow-sm': !isDark && iconSelected === icon,
-                      'bg-gray-700 shadow-sm': isDark && iconSelected === icon,
-                      'hover:shadow': !(iconSelected === icon)
+                      'bg-gray-200': !isDark && iconSelected === icon,
+                      'bg-gray-700': isDark && iconSelected === icon,
+                      'hover:shadow-icon': !(iconSelected === icon)
                     }"
                     @click="selectIcon(icon, iconSet.tab.toLowerCase())"
                   >
