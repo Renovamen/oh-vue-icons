@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="page">
     <div
       class="pb-16 pt-20"
       :class="{
@@ -37,7 +37,7 @@
           </button>
         </nav>
       </div>
-      <div class="website-width">
+      <div class="page-width">
         <div class="grid grid-cols-12 shadow rounded-md border">
           <div class="relative col-start-1 col-span-1">
             <OhVueIcon
@@ -199,12 +199,8 @@ export default {
 }
 </script>
 
-<style>
-body {
-  font: 15px "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-.website-width {
+<style scoped>
+.page-width {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 10px;

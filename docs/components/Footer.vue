@@ -1,6 +1,6 @@
 <template>
     <footer
-        class="pb-8 pt-8 font-medium text-center"
+        class="pb-8 pt-8 font-normal text-center"
         :class="{
             'text-gray-600 bg-white': !isDark,
             'text-gray-500 bg-gray-800': isDark
