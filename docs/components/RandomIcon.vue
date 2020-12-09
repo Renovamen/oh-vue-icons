@@ -1,8 +1,24 @@
 <template>
-<OhVueIcon
-  :name="name"
-  scale="4"
-/>
+<div class="h-40 w-40 mt-4 mx-auto block relative">
+  <figure
+    id="logo"
+    @mouseenter="toggle"
+    @mouseleave="toggle"
+    @click="change"
+    class="absolute rounded-full transition-all duration-300 cursor-pointer"
+    :class="{
+      'bg-gray-400 text-blue-600 hover:bg-blue-600 hover:text-gray-400': isDark,
+      'bg-gray-700 text-blue-400 hover:bg-blue-400 hover:text-gray-700': !isDark
+    }"
+  >
+    <OhVueIcon
+      ref="logo"
+      :playing="playing"
+      :name="name"
+      scale="4"
+    />
+  </figure>
+</div>
 </template>
 
 <script>
@@ -15,16 +31,13 @@ function randomIcon () {
 }
 
 export default {
-  name: 'random-icon',
-  props: {
-    playing: Boolean
-  },
   components: {
     OhVueIcon
   },
   data () {
     return {
-      name: randomIcon()
+      name: randomIcon(),
+      playing: true
     }
   },
   mounted () {
@@ -33,6 +46,11 @@ export default {
         this.change()
       }
     }, 200)
+  },
+  computed: {
+    isDark() {
+      return this.$store.state.theme.isDark
+    }
   },
   methods: {
     change () {
@@ -44,3 +62,14 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+#logo {
+  margin: 10px;
+  padding: 30px;
+}
+#logo:hover {
+  margin: 0;
+  padding: 40px;
+}
+</style>

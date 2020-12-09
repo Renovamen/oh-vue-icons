@@ -1,31 +1,14 @@
 <template>
 <main
-  class="text-base pt-20 pb-12 text-left sm:text-center"
+  class="page text-base pt-20 pb-12 text-left sm:text-center"
   :class="{
     'text-gray-300 bg-gray-800': isDark,
     'text-gray-700 bg-white': !isDark
   }"
 >
-  <figure
-    @mouseenter="toggle"
-    @mouseleave="toggle"
-    @click="change"
-    class="block relative w-40 h-40 mt-10 mb-12 sm:mb-20 mx-auto rounded-full
-            transition-all duration-300 cursor-pointer
-            hover:mt-4 hover:mb-8 text-center transform scale-75 sm:scale-100"
-    :class="{
-      'bg-gray-400 text-blue-600 hover:bg-blue-600 hover:text-gray-400': isDark,
-      'bg-gray-700 text-blue-400 hover:bg-blue-400 hover:text-gray-700': !isDark
-    }"
-  >
-    <RandomIcon
-      ref="logo"
-      :playing="playing"
-      class="h-full"
-    />
-  </figure>
+  <RandomIcon />
   <h1
-    class="text-3xl font-semibold mb-6 px-4"
+    class="text-3xl font-semibold mt-10 mb-6 px-4"
     :class="{
       'text-gray-800': !isDark,
       'text-gray-200': isDark
@@ -43,7 +26,7 @@
       class="hover:underline"
       :class="{
         'text-blue-600': !isDark,
-        'text-blue-300': isDark
+        'text-blue-400': isDark
       }"
     >
       github
@@ -55,7 +38,7 @@
       class="hover:underline"
       :class="{
         'text-blue-600': !isDark,
-        'text-blue-300': isDark
+        'text-blue-400': isDark
       }"
     >
       npm
@@ -67,7 +50,7 @@
       class="hover:underline"
       :class="{
         'text-blue-600': !isDark,
-        'text-blue-300': isDark
+        'text-blue-400': isDark
       }"
     >
       docs
@@ -83,7 +66,7 @@
       class="hover:underline"
       :class="{
         'text-blue-600': !isDark,
-        'text-blue-300': isDark
+        'text-blue-400': isDark
       }"
     >
       Font Awesome
@@ -95,7 +78,7 @@
       class="hover:underline"
       :class="{
         'text-blue-600': !isDark,
-        'text-blue-300': isDark
+        'text-blue-400': isDark
       }"
     >
       Remix Icon
@@ -107,7 +90,7 @@
       class="hover:underline"
       :class="{
         'text-blue-600': !isDark,
-        'text-blue-300': isDark
+        'text-blue-400': isDark
       }"
     >
       academicons
@@ -422,22 +405,9 @@ export default {
     RandomIcon,
     OhVueIcon
   },
-  data () {
-    return {
-      playing: true
-    }
-  },
   computed: {
     isDark() {
       return this.$store.state.theme.isDark
-    }
-  },
-  methods: {
-    toggle () {
-      this.playing = !this.playing
-    },
-    change () {
-      this.$refs.logo.change()
     }
   }
 }
