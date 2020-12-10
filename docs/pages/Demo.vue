@@ -95,6 +95,18 @@
     >
       academicons
     </a>
+    ·
+    <a
+      href="https://game-icons.net"
+      target="_blank"
+      class="hover:underline"
+      :class="{
+        'text-blue-600': !isDark,
+        'text-blue-400': isDark
+      }"
+    >
+      gameicons
+    </a>
   </p>
 
   <h2
@@ -107,12 +119,13 @@
     Basic
   </h2>
   <p class="mb-2 px-4 px-4">
-    <OhVueIcon name="fa/flag"/> <OhVueIcon name="ri/bank-card-fill"/> <OhVueIcon name="ai/google-scholar-square"/>
+    <OhVueIcon name="fa/flag"/> <OhVueIcon name="ri/bank-card-fill"/> <OhVueIcon name="ai/google-scholar-square"/> <OhVueIcon name="game/battered-axe"/>
   </p>
   <figure class="m-4">
     <pre><code>&lt;v-icon <span class="attr">name</span>=<span class="val">"fa/flag"</span>/&gt;
 &lt;v-icon <span class="attr">name</span>=<span class="val">"ri/bank-card-fill"</span>/&gt;
-&lt;v-icon <span class="attr">name</span>=<span class="val">"ai/google-scholar-square"</span>/&gt;</code></pre>
+&lt;v-icon <span class="attr">name</span>=<span class="val">"ai/google-scholar-square"</span>/&gt;
+&lt;v-icon <span class="attr">name</span>=<span class="val">"game/battered-axe"</span>/&gt;</code></pre>
   </figure>
 
   <h2
@@ -137,11 +150,16 @@
       name="ai/overleaf"
       scale="3"
     />
+    <OhVueIcon
+      name="game/ancient-sword"
+      scale="3"
+    />
   </p>
   <figure class="m-4">
     <pre><code>&lt;v-icon <span class="attr">name</span>=<span class="val">"fa/gamepad"</span> <span class="attr">scale</span>=<span class="val">"3"</span>/&gt;
 &lt;v-icon <span class="attr">name</span>=<span class="val">"ri/folder-music-fill"</span> <span class="attr">scale</span>=<span class="val">"3"</span>/&gt;
-&lt;v-icon <span class="attr">name</span>=<span class="val">"ai/overleaf"</span> <span class="attr">scale</span>=<span class="val">"3"</span>/&gt;</code></pre>
+&lt;v-icon <span class="attr">name</span>=<span class="val">"ai/overleaf"</span> <span class="attr">scale</span>=<span class="val">"3"</span>/&gt;
+&lt;v-icon <span class="attr">name</span>=<span class="val">"game/ancient-sword"</span> <span class="attr">scale</span>=<span class="val">"3"</span>/&gt;</code></pre>
   </figure>
 
   <h2
@@ -166,11 +184,16 @@
       name="ai/doi"
       spin
     />
+    <OhVueIcon
+      name="game/earth-asia-oceania"
+      spin
+    />
   </p>
   <figure class="m-4">
     <pre><code>&lt;v-icon <span class="attr">name</span>=<span class="val">"fa/sync"</span> <span class="attr">spin</span>/&gt;
 &lt;v-icon <span class="attr">name</span>=<span class="val">"ri/refresh-line"</span> <span class="attr">spin</span>/&gt;
-&lt;v-icon <span class="attr">name</span>=<span class="val">"ai/doi"</span> <span class="attr">spin</span>/&gt;</code></pre>
+&lt;v-icon <span class="attr">name</span>=<span class="val">"ai/doi"</span> <span class="attr">spin</span>/&gt;
+&lt;v-icon <span class="attr">name</span>=<span class="val">"game/earth-asia-oceania"</span> <span class="attr">spin</span>/&gt;</code></pre>
   </figure>
 
   <h2
@@ -195,11 +218,16 @@
       name="ai/osf"
       pulse
     />
+    <OhVueIcon
+      name="game/american-shield"
+      pulse
+    />
   </p>
   <figure class="m-4">
     <pre><code>&lt;v-icon <span class="attr">name</span>=<span class="val">"fa/spinner"</span> <span class="attr">pulse</span>/&gt;
 &lt;v-icon <span class="attr">name</span>=<span class="val">"ri/loader-line"</span> <span class="attr">pulse</span>/&gt;
-&lt;v-icon <span class="attr">name</span>=<span class="val">"ai/osf"</span> <span class="attr">pulse</span>/&gt;</code></pre>
+&lt;v-icon <span class="attr">name</span>=<span class="val">"ai/osf"</span> <span class="attr">pulse</span>/&gt;
+&lt;v-icon <span class="attr">name</span>=<span class="val">"game/american-shield"</span> <span class="attr">pulse</span>/&gt;</code></pre>
   </figure>
 
   <h2
@@ -224,11 +252,16 @@
       name="ai/google-scholar"
       flip="horizontal"
     />
+    <OhVueIcon
+      name="game/campfire"
+      flip="horizontal"
+    />
   </p>
   <figure class="m-4">
     <pre><code>&lt;v-icon <span class="attr">name</span>=<span class="val">"fa/signal"</span> <span class="attr">flip</span>=<span class="val">"horizontal"</span>/&gt;
 &lt;v-icon <span class="attr">name</span>=<span class="val">"ri/playstation-line"</span> <span class="attr">flip</span>=<span class="val">"horizontal"</span>/&gt;
-&lt;v-icon <span class="attr">name</span>=<span class="val">"ai/google-scholar"</span> <span class="attr">flip</span>=<span class="val">"horizontal"</span>/&gt;</code></pre>
+&lt;v-icon <span class="attr">name</span>=<span class="val">"ai/google-scholar"</span> <span class="attr">flip</span>=<span class="val">"horizontal"</span>/&gt;
+&lt;v-icon <span class="attr">name</span>=<span class="val">"game/campfire"</span> <span class="attr">flip</span>=<span class="val">"horizontal"</span>/&gt;</code></pre>
   </figure>
 
   <h2
