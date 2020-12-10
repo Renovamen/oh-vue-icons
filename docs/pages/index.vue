@@ -79,7 +79,7 @@
           <div v-for="(iconSet, index) in iconSets" :key="index">
             <div v-if="tabSelected === iconSet.tab || tabSelected === 'All'">
               <div class="grid grid-cols-4 sm:grid-cols-8 gap-3">
-                <div
+                <lazy-component
                   v-for="(icon, index) in filterBySearch(iconSet.components)"
                   :key="index"
                 >
@@ -102,7 +102,7 @@
                       />
                     </div>
                   </div>
-                </div>
+                </lazy-component>
               </div>
             </div>
           </div>
