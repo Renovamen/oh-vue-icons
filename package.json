@@ -17,6 +17,7 @@
     "start": "nuxt start",
     "build": "cross-env NODE_ENV=production rollup -c",
     "build:docs": "nuxt generate",
+    "download": "sh ./scripts/download.sh",
     "gen-svgs": "node -r esm scripts/gen-svgs.js",
     "icons": "yarn gen-svgs && node -r esm scripts/gen-js.js",
     "pub": "sh ./scripts/publish.sh"
@@ -33,6 +34,7 @@
     "@rollup/plugin-buble": "^0.21.3",
     "@rollup/plugin-commonjs": "^14.0.0",
     "@rollup/plugin-node-resolve": "^8.4.0",
+    "adm-zip": "^0.5.1",
     "cross-env": "^5.2.1",
     "esm": "^3.2.25",
     "minimist": "^1.2.5",

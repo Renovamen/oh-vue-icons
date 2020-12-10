@@ -118,7 +118,7 @@ export default {
       this.$emit('close')
     },
     onDownloadSVG() {
-      let iconSet = this.iconSelected.slice(0, 2)
+      let iconSet = this.iconSelected.slice(0, this.iconSelected.indexOf("/"))
       let svgName = this.iconSelected.substring(this.iconSelected.lastIndexOf("/") + 1)
       let fileName = `${iconSet}-${svgName}.svg`
       let dirName = this.iconSelected.substring(0, this.iconSelected.lastIndexOf("/"))

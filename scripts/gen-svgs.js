@@ -6,6 +6,7 @@ import mkdirp from "mkdirp"
 import fa2svg from "./font2svg/fa"
 import ri2svg from "./font2svg/ri"
 import ai2svg from "./font2svg/ai"
+import game2svg from "./font2svg/game"
 
 const BASE_DIR = "../assets/svg"
 
@@ -76,9 +77,21 @@ function gen_ai() {
     extractIcons(AI_SVG_DIR, '', '', 'ai')
 }
 
+function gen_game() {
+    icons['game'] = {}
+
+    const GAME_SVG_DIR = path.resolve(__dirname, path.join(BASE_DIR, 'game'))
+    rimraf.sync(GAME_SVG_DIR)
+    
+    game2svg(GAME_SVG_DIR, function() {
+        extractIcons(GAME_SVG_DIR, '', '', 'game')
+    })
+}
+
 gen_fa()
 gen_ri()
 gen_ai()
+gen_game()
 
 fs.writeFileSync(
   path.resolve(__dirname, '../assets/icons.json'),
