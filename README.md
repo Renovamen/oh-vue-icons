@@ -5,10 +5,11 @@ A [Vue](https://vuejs.org/) component for including inline SVG icons from differ
 - `fa` - [Font Awesome](https://fontawesome.com/)
 - `ri` - [Remix Icon](https://github.com/Remix-Design/RemixIcon)
 - `ai` - [academicons](https://github.com/jpswalsh/academicons)
+- `game` - [gameicons](https://game-icons.net)
 
 Some of the icons are resized for better and more consistent user experience.
 
-See the demo [here](https://oh-vue-icons.vercel.app).
+View the full set of icons and the demo [here](https://oh-vue-icons.vercel.app).
 
 It is based on [Justineo/vue-awesome](https://github.com/Justineo/vue-awesome), so check out that repo for more information.
 
@@ -116,6 +117,12 @@ Install dependencies:
 yarn install
 # or
 npm install
+```
+
+Download some of the icons packs ([`gameicons`](https://game-icons.net/archives/svg/zip/000000/transparent/game-icons.net.svg.zip)):
+
+```bash
+yarn download
 ```
 
 Re-generate SVGs under `assets/svg` and files under `src/icons` automatically:

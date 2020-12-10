@@ -1,12 +1,12 @@
 <template>
-  <div class="page">
-    <div
-      class="pb-16 pt-20"
-      :class="{
-        'text-gray-900 bg-white': !isDark,
-        'text-white bg-gray-800': isDark
-      }"
-    >
+  <div
+    class="page"
+    :class="{
+      'text-gray-900 bg-white': !isDark,
+      'text-white bg-gray-800': isDark
+    }"
+  >
+    <div class="pb-16 pt-20">
       <div class="flex justify-center font-medium pt-12 pb-12">
         <div class="flex flex-col text-center">
           <div class="text-3xl font-semibold">Oh, Vue Icons!</div>
@@ -137,6 +137,10 @@ var riIcons = iconKeys.filter(function (x) {
 var aiIcons = iconKeys.filter(function (x) {
   return x.slice(0, 2) === 'ai'
 })
+// gameicons
+var gameIcons = iconKeys.filter(function (x) {
+  return x.slice(0, 4) === 'game'
+})
 
 export default {
   components: { 
@@ -147,7 +151,7 @@ export default {
     return {
       search: "",
       isSearchFocused: false,
-      tabs: ["All", "Font Awesome", "Remix Icon", "academicons"],
+      tabs: ["All", "Font Awesome", "Remix Icon", "academicons", "gameicons"],
       tabSelected: "All",
       iconSelected: "",
       categorySelected: "",
@@ -166,6 +170,11 @@ export default {
           tab: "academicons",
           components: aiIcons,
           count: aiIcons.length
+        },
+        {
+          tab: "gameicons",
+          components: gameIcons,
+          count: gameIcons.length
         }
       ]
     };
@@ -175,6 +184,7 @@ export default {
       if (this.tabSelected === "Font Awesome") return faIcons.length;
       else if (this.tabSelected === "Remix Icon") return riIcons.length
       else if (this.tabSelected === "academicons") return aiIcons.length
+      else if (this.tabSelected === "gameicons") return gameIcons.length
       else if (this.tabSelected === "All") return iconKeys.length
     },
     isDark() {
