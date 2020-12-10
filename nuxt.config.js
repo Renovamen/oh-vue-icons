@@ -24,6 +24,9 @@ export default {
   ],
   build: {
   },
+  plugins: [
+    '~/plugins/lazyload.js'
+  ],
   tailwindcss: {
     config: {
       theme: {

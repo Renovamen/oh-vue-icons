@@ -17,9 +17,11 @@
     "start": "nuxt start",
     "build": "cross-env NODE_ENV=production rollup -c",
     "build:docs": "nuxt generate",
+    "preview:docs": "cd docs/dist && http-server",
     "download": "sh ./scripts/download.sh",
     "gen-svgs": "node -r esm scripts/gen-svgs.js",
-    "icons": "yarn gen-svgs && node -r esm scripts/gen-js.js",
+    "gen-js": "node -r esm scripts/gen-js.js",
+    "icons": "yarn gen-svgs && yarn gen-js",
     "pub": "sh ./scripts/publish.sh"
   },
   "main": "dist/oh-vue-icons.js",
@@ -48,6 +50,7 @@
     "stringify-object": "^3.3.0",
     "svgpath": "^2.3.0",
     "vue": "^2.6.11",
+    "vue-lazyload": "^1.3.3",
     "vue-template-compiler": "^2.6.11",
     "xml2js": "^0.4.23"
   },
