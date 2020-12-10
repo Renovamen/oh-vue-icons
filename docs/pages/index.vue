@@ -22,30 +22,32 @@
           </div>
         </div>
       </div>
-      <div class="my-4 flex justify-center px-2">
-        <nav>
-          <button
-            v-for="tab in tabs"
-            :key="tab"
-            class="sm:mr-4 px-3 py-2 font-medium text-sm leading-5 rounded-md text-gray-500
-                    hover:text-blue-600 focus:outline-none focus:text-blue-600 focus:bg-blue-50"
-            :class="{
-              'text-blue-700 bg-blue-100': tabSelected === tab
-            }"
-            @click="changeTab(tab)"
-          >
-            {{ tab }}
-          </button>
-        </nav>
-      </div>
-      <div class="page-width">
+      <div
+        class="tool-bar w-full py-2 -mt-2 -mb-6 z-10"
+        :class="{
+          'bg-white': !isDark,
+          'bg-gray-800': isDark
+        }"
+      >
+        <div class="page-width my-4 flex justify-center">
+          <nav>
+            <button
+              v-for="tab in tabs"
+              :key="tab"
+              class="sm:mr-4 px-3 py-2 font-medium text-sm leading-5 rounded-md text-gray-500
+                      hover:text-blue-600 focus:outline-none focus:text-blue-600 focus:bg-blue-50"
+              :class="{
+                'text-blue-700 bg-blue-100': tabSelected === tab
+              }"
+              @click="changeTab(tab)"
+            >
+              {{ tab }}
+            </button>
+          </nav>
+        </div>
         <div
-          class="grid grid-cols-8 sm:grid-cols-12 rounded-md
-                  border border-transparent transition duration-200"
-          :class="{
-            'shadow-search': !isSearchFocused,
-            'shadow-search-hover': isSearchFocused
-          }">
+          class="page-width grid grid-cols-8 sm:grid-cols-12 rounded-md
+                  border border-gray-500 transition duration-200">
           <div class="relative col-start-1 col-span-1">
             <OhVueIcon
               name="ri/search-2-line"
@@ -67,14 +69,15 @@
                     inline-block align-middle"
             :class="{
               'text-gray-900': !isDark,
-              'text-white': !isDark
+              'text-white': isDark
             }"
             :placeholder="`Search ${countIconsByTab} icons...`"
             @focus="isSearchFocused = true"
             @blur="isSearchFocused = false"
           />
         </div>
-
+      </div>
+      <div class="page-width">
         <div class="mt-10">
           <div v-for="(iconSet, index) in iconSets" :key="index">
             <div v-if="tabSelected === iconSet.tab || tabSelected === 'All'">
@@ -191,9 +194,6 @@ export default {
       return this.$store.state.theme.isDark
     }
   },
-  mounted(){
-    this.$refs.search.focus()
-  },
   methods: {
     selectIcon(name, category) {
       this.iconSelected = name
@@ -219,7 +219,12 @@ export default {
 <style scoped>
 .page-width {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 16px auto;
   padding: 0 10px;
+}
+.tool-bar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 50px;
 }
 </style>
