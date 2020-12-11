@@ -122,10 +122,7 @@
     <OhVueIcon name="fa/flag"/> <OhVueIcon name="ri/bank-card-fill"/> <OhVueIcon name="ai/google-scholar-square"/> <OhVueIcon name="game/battered-axe"/>
   </p>
   <figure class="m-4">
-    <pre><code>&lt;v-icon <span class="attr">name</span>=<span class="val">"fa/flag"</span>/&gt;
-&lt;v-icon <span class="attr">name</span>=<span class="val">"ri/bank-card-fill"</span>/&gt;
-&lt;v-icon <span class="attr">name</span>=<span class="val">"ai/google-scholar-square"</span>/&gt;
-&lt;v-icon <span class="attr">name</span>=<span class="val">"game/battered-axe"</span>/&gt;</code></pre>
+    <pre class="language-html"><code class="language-html" v-html="codeBlock('basic')"></code></pre>
   </figure>
 
   <h2
@@ -156,10 +153,7 @@
     />
   </p>
   <figure class="m-4">
-    <pre><code>&lt;v-icon <span class="attr">name</span>=<span class="val">"fa/gamepad"</span> <span class="attr">scale</span>=<span class="val">"3"</span>/&gt;
-&lt;v-icon <span class="attr">name</span>=<span class="val">"ri/folder-music-fill"</span> <span class="attr">scale</span>=<span class="val">"3"</span>/&gt;
-&lt;v-icon <span class="attr">name</span>=<span class="val">"ai/overleaf"</span> <span class="attr">scale</span>=<span class="val">"3"</span>/&gt;
-&lt;v-icon <span class="attr">name</span>=<span class="val">"game/ancient-sword"</span> <span class="attr">scale</span>=<span class="val">"3"</span>/&gt;</code></pre>
+    <pre class="language-html"><code class="language-html" v-html="codeBlock('scale')"></code></pre>
   </figure>
 
   <h2
@@ -190,10 +184,7 @@
     />
   </p>
   <figure class="m-4">
-    <pre><code>&lt;v-icon <span class="attr">name</span>=<span class="val">"fa/sync"</span> <span class="attr">spin</span>/&gt;
-&lt;v-icon <span class="attr">name</span>=<span class="val">"ri/refresh-line"</span> <span class="attr">spin</span>/&gt;
-&lt;v-icon <span class="attr">name</span>=<span class="val">"ai/doi"</span> <span class="attr">spin</span>/&gt;
-&lt;v-icon <span class="attr">name</span>=<span class="val">"game/earth-asia-oceania"</span> <span class="attr">spin</span>/&gt;</code></pre>
+    <pre class="language-html"><code class="language-html" v-html="codeBlock('spin')"></code></pre>
   </figure>
 
   <h2
@@ -224,10 +215,7 @@
     />
   </p>
   <figure class="m-4">
-    <pre><code>&lt;v-icon <span class="attr">name</span>=<span class="val">"fa/spinner"</span> <span class="attr">pulse</span>/&gt;
-&lt;v-icon <span class="attr">name</span>=<span class="val">"ri/loader-line"</span> <span class="attr">pulse</span>/&gt;
-&lt;v-icon <span class="attr">name</span>=<span class="val">"ai/osf"</span> <span class="attr">pulse</span>/&gt;
-&lt;v-icon <span class="attr">name</span>=<span class="val">"game/american-shield"</span> <span class="attr">pulse</span>/&gt;</code></pre>
+    <pre class="language-html"><code class="language-html" v-html="codeBlock('pulse')"></code></pre>
   </figure>
 
   <h2
@@ -258,10 +246,7 @@
     />
   </p>
   <figure class="m-4">
-    <pre><code>&lt;v-icon <span class="attr">name</span>=<span class="val">"fa/signal"</span> <span class="attr">flip</span>=<span class="val">"horizontal"</span>/&gt;
-&lt;v-icon <span class="attr">name</span>=<span class="val">"ri/playstation-line"</span> <span class="attr">flip</span>=<span class="val">"horizontal"</span>/&gt;
-&lt;v-icon <span class="attr">name</span>=<span class="val">"ai/google-scholar"</span> <span class="attr">flip</span>=<span class="val">"horizontal"</span>/&gt;
-&lt;v-icon <span class="attr">name</span>=<span class="val">"game/campfire"</span> <span class="attr">flip</span>=<span class="val">"horizontal"</span>/&gt;</code></pre>
+    <pre class="language-html"><code class="language-html" v-html="codeBlock('flip')"></code></pre>
   </figure>
 
   <h2
@@ -283,7 +268,7 @@
     />
   </p>
   <figure class="m-4">
-    <pre><code>&lt;v-icon <span class="attr">name</span>=<span class="val">"fa/code"</span> <span class="attr">label</span>=<span class="val">"Source Code"</span>/&gt;</code></pre>
+    <pre class="language-html"><code class="language-html" v-html="codeBlock('label')"></code></pre>
   </figure>
 
   <h2
@@ -305,7 +290,7 @@
     />
   </p>
   <figure class="m-4">
-    <pre><code>&lt;v-icon <span class="attr">name</span>=<span class="val">"fa/brands/vuejs"</span> <span class="attr">title</span>=<span class="val">"Vue.js"</span>/&gt;</code></pre>
+    <pre class="language-html"><code class="language-html" v-html="codeBlock('title')"></code></pre>
   </figure>
 
   <h2
@@ -331,10 +316,7 @@
     </OhVueIcon>
   </p>
   <figure class="m-4">
-    <pre><code>&lt;v-icon <span class="attr">label</span>=<span class="val">"No Photos"</span>&gt;
-  &lt;v-icon <span class="attr">name</span>=<span class="val">"fa/camera"</span>/&gt;
-  &lt;v-icon <span class="attr">name</span>=<span class="val">"fa/ban"</span> <span class="attr">scale</span>=<span class="val">"2"</span> <span class="attr">class</span>=<span class="val">"alert"</span>/&gt;
-&lt;/v-icon&gt;</code></pre>
+    <pre class="language-html"><code class="language-html" v-html="codeBlock('stack')"></code></pre>
   </figure>
 
   <h2
@@ -353,7 +335,7 @@
     <OhVueIcon name="baidu"/>
   </p>
   <figure class="m-4">
-    <pre><code>&lt;v-icon <span class="attr">name</span>=<span class="val">"baidu"</span>/&gt;</code></pre>
+    <pre class="language-html"><code class="language-html" v-html="codeBlock('custom')"></code></pre>
   </figure>
 
   <h2
@@ -369,7 +351,7 @@
     Register icons in more advanced ways to unleash the full power of SVG.
   </p>
   <p class="px-4">
-    <OhVueIcon name="webpack"/> <OhVueIcon name="vue"/> <OhVueIcon name="html5-c"/>
+    <OhVueIcon name="webpack" /> <OhVueIcon name="vue" /> <OhVueIcon name="html5-c" />
   </p>
 </main>
 </template>
@@ -377,6 +359,7 @@
 <script>
 import OhVueIcon from '../../src/components/Icon.vue'
 import RandomIcon from '../components/RandomIcon'
+import Prism from 'prismjs'
 import '../../src/icons'
 
 OhVueIcon.register({
@@ -433,6 +416,37 @@ OhVueIcon.register({
   }
 })
 
+const code = {
+  basic: `<v-icon name="fa/flag"/>
+<v-icon name="ri/bank-card-fill"/>
+<v-icon name="ai/google-scholar-square"/>
+<v-icon name="game/battered-axe"/>`,
+  scale: `<v-icon name="fa/gamepad" scale="3"/>
+<v-icon name="ri/folder-music-fill" scale="3"/>
+<v-icon name="ai/overleaf" scale="3"/>
+<v-icon name="game/ancient-sword" scale="3"/>`,
+  spin: `<v-icon name="fa/sync" spin/>
+<v-icon name="ri/refresh-line" spin/>
+<v-icon name="ai/doi" spin/>
+<v-icon name="game/earth-asia-oceania" spin/>`,
+  pulse: `<v-icon name="fa/spinner" pulse/>
+<v-icon name="ri/loader-line" pulse/>
+<v-icon name="ai/osf" pulse/>
+<v-icon name="game/american-shield" pulse/>`,
+  flip: `<v-icon name="fa/signal" flip="horizontal"/>
+<v-icon name="ri/playstation-line" flip="horizontal"/>
+<v-icon name="ai/google-scholar" flip="horizontal"/>
+<v-icon name="game/campfire" flip="horizontal"/>
+`,
+  label: `<v-icon name="fa/code" label="Source Code"/>`,
+  title: `<v-icon name="fa/brands/vuejs" title="Vue.js"/>`,
+  stack: `<v-icon label="No Photos">
+  <v-icon name="fa/camera"/>
+  <v-icon name="fa/ban" scale="2" class="alert"/>
+</v-icon>`,
+  custom: `<v-icon name="baidu"/>`,
+}
+
 export default {
   components: {
     RandomIcon,
@@ -442,37 +456,32 @@ export default {
     isDark() {
       return this.$store.state.theme.isDark
     }
+  },
+  methods: {
+    codeBlock(name) {
+      const source = code[name]
+      const html = Prism.highlight(source, Prism.languages.html, 'html')
+      return html
+    }
   }
 }
 </script>
 
 <style>
+@import 'prismjs/themes/prism.css';
+
 pre {
   display: inline-block;
   margin: 0;
-  padding: 0.8em;
-  background-color: #fafafa;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  text-align: left;
-  line-height: 1.1;
-  color: #e45649;
   border-radius: 5px;
-}
-
-pre, code {
-  font-family: "Roboto Mono", Monaco, courier, monospace;
+  background-color: #fafafa !important;
+  padding: 0.8em 0.9rem !important;
+  line-height: 1.1 !important;
 }
 
 pre code {
-  font-size: 0.9em;
-}
-
-.attr {
-  color: #986801;
-}
-
-.val {
-  color: #50a14f;
+  font-size: 0.9em !important;
 }
 
 .alert {
@@ -485,7 +494,6 @@ pre code {
     display: block;
     box-shadow: none;
     overflow-x: auto;
-    font-size: 0.9em;
   }
 }
 </style>
