@@ -107,6 +107,8 @@ The icons are organized as follows:
 
 - For Font Awesome icons, icons from regular and brands are located in `icons/fa/regular` and `icons/fa/brands` directory, which have name prop values like `fa/regular/flag` or `fa/brands/reddit`. Icons from solid pack are located in `icons/fa` directory and have name prop values like `fa/beer`.
 
+For more information about the usage, see [here](https://oh-vue-icons.vercel.app).
+
 &nbsp;
 
 ## Development

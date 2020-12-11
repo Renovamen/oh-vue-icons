@@ -6,7 +6,7 @@
       'text-white bg-gray-800': isDark
     }"
   >
-    <div class="pb-16 pt-20">
+    <div class="page-width pb-16 pt-20">
       <div class="flex justify-center font-medium pt-12 pb-12">
         <div class="flex flex-col text-center">
           <div class="text-3xl font-semibold">Oh, Vue Icons!</div>
@@ -29,7 +29,7 @@
           'bg-gray-800': isDark
         }"
       >
-        <div class="page-width my-4 flex justify-center">
+        <div class="mb-2 flex text-left justify-center">
           <nav>
             <button
               v-for="tab in tabs"
@@ -45,40 +45,38 @@
             </button>
           </nav>
         </div>
-        <div class="page-width">
-          <div class="grid grid-cols-8 sm:grid-cols-12 rounded-md
-                      border border-gray-500 transition duration-200">
-            <div class="relative col-start-1 col-span-1">
-              <OhVueIcon
-                name="ri/search-2-line"
-                scale="1.3"
-                class="absolute h-full right-0 mr-2 sm:mr-4 transition duration-200"
-                :class="{
-                  'text-gray-500': !isSearchFocused,
-                  'text-blue-600': isSearchFocused & !isDark,
-                  'text-blue-400': isSearchFocused & isDark
-                }"
-              />
-            </div>
-            <input
-              ref="search"
-              id="search"
-              v-model="search"
-              class="col-start-2 col-span-7 sm:col-span-11 py-3 sm:py-4
-                      text-base focus:outline-none bg-transparent
-                      inline-block align-middle"
+        <div class="grid grid-cols-8 sm:grid-cols-12 rounded-md
+                    border border-gray-500 transition duration-200">
+          <div class="relative col-start-1 col-span-1">
+            <OhVueIcon
+              name="ri/search-2-line"
+              scale="1.3"
+              class="absolute h-full right-0 mr-2 sm:mr-4 transition duration-200"
               :class="{
-                'text-gray-900': !isDark,
-                'text-white': isDark
+                'text-gray-500': !isSearchFocused,
+                'text-blue-600': isSearchFocused & !isDark,
+                'text-blue-400': isSearchFocused & isDark
               }"
-              :placeholder="`Search ${countIconsByTab} icons...`"
-              @focus="isSearchFocused = true"
-              @blur="isSearchFocused = false"
             />
           </div>
+          <input
+            ref="search"
+            id="search"
+            v-model="search"
+            class="col-start-2 col-span-7 sm:col-span-11 py-3 sm:py-4
+                    text-base focus:outline-none bg-transparent
+                    inline-block align-middle"
+            :class="{
+              'text-gray-900': !isDark,
+              'text-white': isDark
+            }"
+            :placeholder="`Search ${countIconsByTab} icons...`"
+            @focus="isSearchFocused = true"
+            @blur="isSearchFocused = false"
+          />
         </div>
       </div>
-      <div class="page-width">
+      <div>
         <div class="mt-10">
           <div v-for="(iconSet, index) in iconSets" :key="`set-${index}`">
             <div v-if="tabSelected === iconSet.tab || tabSelected === 'All'">
@@ -88,7 +86,7 @@
                   :key="`icon-${index}`"
                 >
                   <div
-                    class="px-4 py-5 sm:py-6 cursor-pointer rounded-lg
+                    class="px-4 py-5 cursor-pointer rounded-lg
                             transition ease-out duration-300"
                     :class="{
                       'text-gray-300': isDark,
@@ -187,11 +185,11 @@ export default {
           count: gameIcons.length
         }
       ]
-    };
+    }
   },
   computed: {
     countIconsByTab() {
-      if (this.tabSelected === "Font Awesome") return faIcons.length;
+      if (this.tabSelected === "Font Awesome") return faIcons.length
       else if (this.tabSelected === "Remix Icon") return riIcons.length
       else if (this.tabSelected === "academicons") return aiIcons.length
       else if (this.tabSelected === "gameicons") return gameIcons.length
@@ -224,19 +222,9 @@ export default {
 </script>
 
 <style scoped>
-.page-width {
-  max-width: 800px;
-  margin: 16px auto;
-  padding: 0 10px;
-}
 .tool-bar {
   position: -webkit-sticky;
   position: sticky;
-  top: 55px;
-}
-@media (max-width: 639px) { 
-  .page-width {
-    margin: 5px auto;
-  }
+  top: 58px;
 }
 </style>

@@ -20,6 +20,13 @@ html, body, #__nuxt, #__layout, .layout {
 .page {
   flex: 1 0 auto;
 }
+.page-width {
+  max-width: 780px;
+  margin: 0 auto;
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+}
 footer {
   flex: 0 0 auto;
 }
