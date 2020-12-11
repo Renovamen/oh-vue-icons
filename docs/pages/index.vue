@@ -23,7 +23,7 @@
         </div>
       </div>
       <div
-        class="tool-bar w-full py-2 -mt-2 -mb-6 z-10"
+        class="tool-bar w-full py-1 -mt-1 -mb-5 z-10"
         :class="{
           'bg-white': !isDark,
           'bg-gray-800': isDark
@@ -34,7 +34,7 @@
             <button
               v-for="tab in tabs"
               :key="tab"
-              class="sm:mr-4 px-3 py-2 font-medium text-sm leading-5 rounded-md text-gray-500
+              class="sm:mr-4 px-2 py-1 sm:px-3 sm:py-2 font-medium text-sm leading-5 rounded-md text-gray-500
                       hover:text-blue-600 focus:outline-none focus:text-blue-600 focus:bg-blue-50"
               :class="{
                 'text-blue-700 bg-blue-100': tabSelected === tab
@@ -45,46 +45,47 @@
             </button>
           </nav>
         </div>
-        <div
-          class="page-width grid grid-cols-8 sm:grid-cols-12 rounded-md
-                  border border-gray-500 transition duration-200">
-          <div class="relative col-start-1 col-span-1">
-            <OhVueIcon
-              name="ri/search-2-line"
-              scale="1.3"
-              class="absolute h-full right-0 mr-2 sm:mr-4 transition duration-200"
+        <div class="page-width">
+          <div class="grid grid-cols-8 sm:grid-cols-12 rounded-md
+                      border border-gray-500 transition duration-200">
+            <div class="relative col-start-1 col-span-1">
+              <OhVueIcon
+                name="ri/search-2-line"
+                scale="1.3"
+                class="absolute h-full right-0 mr-2 sm:mr-4 transition duration-200"
+                :class="{
+                  'text-gray-500': !isSearchFocused,
+                  'text-blue-600': isSearchFocused & !isDark,
+                  'text-blue-400': isSearchFocused & isDark
+                }"
+              />
+            </div>
+            <input
+              ref="search"
+              id="search"
+              v-model="search"
+              class="col-start-2 col-span-7 sm:col-span-11 py-3 sm:py-4
+                      text-base focus:outline-none bg-transparent
+                      inline-block align-middle"
               :class="{
-                'text-gray-500': !isSearchFocused,
-                'text-blue-600': isSearchFocused & !isDark,
-                'text-blue-400': isSearchFocused & isDark
+                'text-gray-900': !isDark,
+                'text-white': isDark
               }"
+              :placeholder="`Search ${countIconsByTab} icons...`"
+              @focus="isSearchFocused = true"
+              @blur="isSearchFocused = false"
             />
           </div>
-          <input
-            ref="search"
-            id="search"
-            v-model="search"
-            class="col-start-2 col-span-7 sm:col-span-11 pt-4 pb-4
-                    text-base focus:outline-none bg-transparent
-                    inline-block align-middle"
-            :class="{
-              'text-gray-900': !isDark,
-              'text-white': isDark
-            }"
-            :placeholder="`Search ${countIconsByTab} icons...`"
-            @focus="isSearchFocused = true"
-            @blur="isSearchFocused = false"
-          />
         </div>
       </div>
       <div class="page-width">
         <div class="mt-10">
-          <div v-for="(iconSet, index) in iconSets" :key="index">
+          <div v-for="(iconSet, index) in iconSets" :key="`set-${index}`">
             <div v-if="tabSelected === iconSet.tab || tabSelected === 'All'">
               <div class="grid grid-cols-4 sm:grid-cols-8 gap-3">
                 <lazy-component
                   v-for="(icon, index) in filterBySearch(iconSet.components)"
-                  :key="index"
+                  :key="`icon-${index}`"
                 >
                   <div
                     class="px-4 py-5 sm:py-6 cursor-pointer rounded-lg
@@ -154,7 +155,13 @@ export default {
     return {
       search: "",
       isSearchFocused: false,
-      tabs: ["All", "Font Awesome", "Remix Icon", "academicons", "gameicons"],
+      tabs: [
+        "All",
+        "Font Awesome",
+        "Remix Icon",
+        "academicons",
+        "gameicons"
+      ],
       tabSelected: "All",
       iconSelected: "",
       categorySelected: "",
@@ -225,6 +232,11 @@ export default {
 .tool-bar {
   position: -webkit-sticky;
   position: sticky;
-  top: 50px;
+  top: 55px;
+}
+@media (max-width: 639px) { 
+  .page-width {
+    margin: 5px auto;
+  }
 }
 </style>

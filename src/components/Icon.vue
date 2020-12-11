@@ -41,7 +41,7 @@ export default {
     label: String,
     tabindex: [Number, String]
   },
-  data () {
+  data() {
     return {
       x: false,
       y: false,
@@ -51,7 +51,7 @@ export default {
     }
   },
   computed: {
-    normalizedScale () {
+    normalizedScale() {
       let scale = this.scale
       scale = typeof scale === 'undefined' ? 1 : Number(scale)
       if (isNaN(scale) || scale <= 0) {
@@ -60,7 +60,7 @@ export default {
       }
       return scale * this.outerScale
     },
-    klass () {
+    klass() {
       let classes = {
         'v-icon': true,
         'v-spin': this.spin,
@@ -79,43 +79,43 @@ export default {
 
       return classes
     },
-    icon () {
+    icon() {
       if (this.name) return icons[this.name]
       return null
     },
-    box () {
+    box() {
       if (this.icon) {
         return `0 0 ${this.icon.width} ${this.icon.height}`
       }
       return `0 0 ${this.width} ${this.height}`
     },
-    ratio () {
+    ratio() {
       if (!this.icon) return 1
 
       let { width, height } = this.icon
       return Math.max(width, height) / 16
     },
-    width () {
+    width() {
       return (
         this.childrenWidth ||
         (this.icon && (this.icon.width / this.ratio) * this.normalizedScale) ||
         0
       )
     },
-    height () {
+    height() {
       return (
         this.childrenHeight ||
         (this.icon && (this.icon.height / this.ratio) * this.normalizedScale) ||
         0
       )
     },
-    style () {
+    style() {
       if (this.normalizedScale === 1) return false
       return {
         fontSize: this.normalizedScale + 'em'
       }
     },
-    raw () {
+    raw() {
       // generate unique id for each icon's SVG element with ID
       if (!this.icon || !this.icon.raw) return null
       let raw = this.icon.raw
@@ -139,7 +139,7 @@ export default {
 
       return raw
     },
-    focusable () {
+    focusable() {
       let { tabindex } = this
       if (tabindex == null) return 'false'
 
@@ -149,14 +149,14 @@ export default {
       return 'false'
     }
   },
-  mounted () {
+  mounted() {
     this.updateStack()
   },
-  updated () {
+  updated() {
     this.updateStack()
   },
   methods: {
-    updateStack () {
+    updateStack() {
       if (!this.name && this.name !== null && this.$children.length === 0) {
         warn(`Invalid prop: prop "name" is required.`, this)
         return
