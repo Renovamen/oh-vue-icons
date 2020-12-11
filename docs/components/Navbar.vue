@@ -24,9 +24,9 @@
                 'text-gray-600 hover:text-gray-700': !isDark,
                 'text-gray-300 hover:text-gray-200': isDark
             }"
-            to="/demo"
+            to="/docs"
         >
-            Demo
+            Docs
         </NuxtLink>
         <ToggleTheme />
         <a
