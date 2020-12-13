@@ -1,6 +1,6 @@
 <template>
 <div
-  class="page text-base pt-20 pb-16"
+  class="page docs text-base pt-20 pb-16"
   :class="{
     'text-gray-300 bg-gray-800': isDark,
     'text-gray-700 bg-white': !isDark
@@ -9,20 +9,17 @@
   <div class="page-width">
     <div class="text-left sm:text-center">
       <RandomIcon />
-      <h1 :class="{ 'text-gray-800': !isDark, 'text-gray-200': isDark }">
+      <h1 :class="{ 'dark': isDark }">
         Oh, Vue Icons!
       </h1>
       <p class="my-0">
         A Vue component for including inline SVG icons from different icon packs easily.
       </p>
-      <p class="my-0 font-semibold">
+      <p class="my-0">
         <a
           href="https://github.com/Renovamen/oh-vue-icons"
           target="_blank"
-          :class="{
-            'text-blue-600': !isDark,
-            'text-blue-400': isDark
-          }"
+          :class="{ 'dark': isDark }"
         >
           github
         </a>
@@ -30,20 +27,14 @@
         <a
           href="https://www.npmjs.com/package/oh-vue-icons"
           target="_blank"
-          :class="{
-            'text-blue-600': !isDark,
-            'text-blue-400': isDark
-          }"
+          :class="{ 'dark': isDark }"
         >
           npm
         </a>
         ·
         <NuxtLink
           to="/"
-          :class="{
-            'text-blue-600': !isDark,
-            'text-blue-400': isDark
-          }"
+          :class="{ 'dark': isDark }"
         >
           icons
         </NuxtLink>
@@ -51,14 +42,11 @@
       <p class="my-0">
         Now the following icon packs are supported:
       </p>
-      <p class="mt-0 mb-20 font-semibold">
+      <p class="mt-0 mb-20">
         <a
           href="https://fontawesome.com"
           target="_blank"
-          :class="{
-            'text-blue-600': !isDark,
-            'text-blue-400': isDark
-          }"
+          :class="{ 'dark': isDark }"
         >
           Font Awesome
         </a>
@@ -66,10 +54,7 @@
         <a
           href="https://remixicon.com"
           target="_blank"
-          :class="{
-            'text-blue-600': !isDark,
-            'text-blue-400': isDark
-          }"
+          :class="{ 'dark': isDark }"
         >
           Remix Icon
         </a>
@@ -77,10 +62,7 @@
         <a
           href="https://github.com/jpswalsh/academicons"
           target="_blank"
-          :class="{
-            'text-blue-600': !isDark,
-            'text-blue-400': isDark
-          }"
+          :class="{ 'dark': isDark }"
         >
           academicons
         </a>
@@ -88,10 +70,7 @@
         <a
           href="https://game-icons.net"
           target="_blank"
-          :class="{
-            'text-blue-600': !isDark,
-            'text-blue-400': isDark
-          }"
+          :class="{ 'dark': isDark }"
         >
           gameicons
         </a>
@@ -99,38 +78,38 @@
     </div>
 
     <div class="text-left">
-      <h2 :class="{ 'text-gray-800': !isDark, 'text-gray-200': isDark }">
+      <h2 :class="{ 'dark': isDark }">
         Installation and Importing
       </h2>
       <p>
-        Install and import <code>oh-vue-icons</code> follow the instructions
-        <a href="https://github.com/Renovamen/oh-vue-icons#installation" target="_blank" :class="{ 'text-blue-600': !isDark, 'text-blue-400': isDark }">here</a>,
+        Install and import <code :class="{ 'dark': isDark }">oh-vue-icons</code> follow the instructions
+        <a href="https://github.com/Renovamen/oh-vue-icons#installation" target="_blank" :class="{ 'dark': isDark }">here</a>,
         then you can reference any of the icons. See
-        <NuxtLink to="/" :class="{ 'text-blue-600': !isDark, 'text-blue-400': isDark }">here</NuxtLink>
+        <NuxtLink to="/" :class="{ 'dark': isDark }">here</NuxtLink>
         for the full list of the available icons.
       </p>
-      <h2 :class="{ 'text-gray-800': !isDark, 'text-gray-200': isDark }">
+      <h2 :class="{ 'dark': isDark }">
         Basic Use
       </h2>
       <p>
         <OhVueIcon name="fa/flag"/> <OhVueIcon name="ri/bank-card-fill"/> <OhVueIcon name="ai/google-scholar-square"/> <OhVueIcon name="game/battered-axe"/>
       </p>
-      <figure>
+      <figure :class="{ 'dark': isDark }">
         <pre class="language-html"><code class="language-html" v-html="getVueCode('basic')"></code></pre>
       </figure>
 
       <h2
         class="-mb-12"
-        :class="{ 'text-gray-800': !isDark, 'text-gray-200': isDark }"
+        :class="{ 'dark': isDark }"
       >
         Styling
       </h2>
 
-      <h3 :class="{ 'text-gray-800': !isDark, 'text-gray-200': isDark }">
+      <h3 :class="{ 'dark': isDark }">
         Scale
       </h3>
       <p>
-        Use prop <code>scale: number|string</code> to specify the icon size, which is default to <code>1</code>.
+        Use prop <code :class="{ 'dark': isDark }">scale: number|string</code> to specify the icon size, which is default to <code :class="{ 'dark': isDark }">1</code>.
       </p>
       <p>
         <OhVueIcon
@@ -150,15 +129,15 @@
           scale="3"
         />
       </p>
-      <figure>
+      <figure :class="{ 'dark': isDark }">
         <pre class="language-html"><code class="language-html" v-html="getVueCode('scale')"></code></pre>
       </figure>
 
-      <h3 :class="{ 'text-gray-800': !isDark, 'text-gray-200': isDark }">
+      <h3 :class="{ 'dark': isDark }">
         Spin
       </h3>
       <p>
-        Use prop <code>spin: boolean</code> to get any icon to rotate, which is default to <code>false</code>.
+        Use prop <code :class="{ 'dark': isDark }">spin: boolean</code> to get any icon to rotate, which is default to <code :class="{ 'dark': isDark }">false</code>.
       </p>
       <p>
         <OhVueIcon
@@ -178,15 +157,15 @@
           spin
         />
       </p>
-      <figure>
+      <figure :class="{ 'dark': isDark }">
         <pre class="language-html"><code class="language-html" v-html="getVueCode('spin')"></code></pre>
       </figure>
 
-      <h3 :class="{ 'text-gray-800': !isDark, 'text-gray-200': isDark }">
+      <h3 :class="{ 'dark': isDark }">
         Pulse
       </h3>
       <p>
-        Use prop <code>pulse: boolean</code> to have any icon rotate with eight steps, which is default to <code>false</code>.
+        Use prop <code :class="{ 'dark': isDark }">pulse: boolean</code> to have any icon rotate with eight steps, which is default to <code :class="{ 'dark': isDark }">false</code>.
       </p>
       <p>
         <OhVueIcon
@@ -206,19 +185,19 @@
           pulse
         />
       </p>
-      <figure>
+      <figure :class="{ 'dark': isDark }">
         <pre class="language-html"><code class="language-html" v-html="getVueCode('pulse')"></code></pre>
       </figure>
 
-      <h3 :class="{ 'text-gray-800': !isDark, 'text-gray-200': isDark }">
+      <h3 :class="{ 'dark': isDark }">
         Flip
       </h3>
       <p>
-        Use prop <code>flip: 'vertical'|'horizontal'|'both'</code> to mirror an icon:
+        Use prop <code :class="{ 'dark': isDark }">flip: 'vertical'|'horizontal'|'both'</code> to mirror an icon:
         <ul>
-          <li><code>vertical</code>: mirrors an icon vertically</li>
-          <li><code>horizontal</code>: mirrors icon horizontally</li>
-          <li><code>both</code>: mirrors icon vertically and horizontally</li>
+          <li><code :class="{ 'dark': isDark }">vertical</code>: mirrors an icon vertically</li>
+          <li><code :class="{ 'dark': isDark }">horizontal</code>: mirrors icon horizontally</li>
+          <li><code :class="{ 'dark': isDark }">both</code>: mirrors icon vertically and horizontally</li>
         </ul>
       </p>
       <p>
@@ -239,15 +218,15 @@
           flip="vertical"
         />
       </p>
-      <figure>
+      <figure :class="{ 'dark': isDark }">
         <pre class="language-html"><code class="language-html" v-html="getVueCode('flip')"></code></pre>
       </figure>
 
-      <h3 :class="{ 'text-gray-800': !isDark, 'text-gray-200': isDark }">
+      <h3 :class="{ 'dark': isDark }">
         Label
       </h3>
       <p>
-        Specify prop <code>label: string</code> to set the <code>aria-label</code> for the icon if provided.
+        Specify prop <code :class="{ 'dark': isDark }">label: string</code> to set the <code :class="{ 'dark': isDark }">aria-label</code> for the icon if provided.
       </p>
       <p>
         <OhVueIcon
@@ -255,15 +234,15 @@
           label="Source Code"
         />
       </p>
-      <figure>
+      <figure :class="{ 'dark': isDark }">
         <pre class="language-html"><code class="language-html" v-html="getVueCode('label')"></code></pre>
       </figure>
 
-      <h3 :class="{ 'text-gray-800': !isDark, 'text-gray-200': isDark }">
+      <h3 :class="{ 'dark': isDark }">
         Title
       </h3>
       <p>
-        Specify prop <code>title: string</code> to set the title for the icon.
+        Specify prop <code :class="{ 'dark': isDark }">title: string</code> to set the title for the icon.
       </p>
       <p>
         <OhVueIcon
@@ -271,11 +250,11 @@
           title="Vue.js"
         />
       </p>
-      <figure>
+      <figure :class="{ 'dark': isDark }">
         <pre class="language-html"><code class="language-html" v-html="getVueCode('title')"></code></pre>
       </figure>
       
-      <h3 :class="{ 'text-gray-800': !isDark, 'text-gray-200': isDark }">
+      <h3 :class="{ 'dark': isDark }">
         Stacked Icons
       </h3>
       <p>
@@ -291,39 +270,39 @@
           />
         </OhVueIcon>
       </p>
-      <figure>
+      <figure :class="{ 'dark': isDark }">
         <pre class="language-html"><code class="language-html" v-html="getVueCode('stack')"></code></pre>
       </figure>
 
-      <h3 :class="{ 'text-gray-800': !isDark, 'text-gray-200': isDark }">
+      <h3 :class="{ 'dark': isDark }">
         Custom icons
       </h3>
       <p>
         You can register your own icons:
       </p>
-      <figure>
+      <figure :class="{ 'dark': isDark }">
         <pre class="language-javascript"><code class="language-javascript" v-html="getJSCode('custom')"></code></pre>
       </figure>
       <p>
         <OhVueIcon name="baidu"/>
       </p>
-      <figure>
+      <figure :class="{ 'dark': isDark }">
         <pre class="language-html"><code class="language-html" v-html="getVueCode('custom')"></code></pre>
       </figure>
 
-      <h3 :class="{ 'text-gray-800': !isDark, 'text-gray-200': isDark }">
+      <h3 :class="{ 'dark': isDark }">
         Multi-color icons
       </h3>
       <p>
         Register icons in more advanced ways to unleash the full power of SVG:
       </p>
-      <figure>
+      <figure :class="{ 'dark': isDark }">
         <pre class="language-javascript"><code class="language-javascript" v-html="getJSCode('multi')"></code></pre>
       </figure>
       <p>
         <OhVueIcon name="webpack" /> <OhVueIcon name="vue" /> <OhVueIcon name="html5-c" />
       </p>
-      <figure>
+      <figure :class="{ 'dark': isDark }">
         <pre class="language-html"><code class="language-html" v-html="getVueCode('multi')"></code></pre>
       </figure>
     </div>
@@ -508,25 +487,10 @@ export default {
 </script>
 
 <style>
-@import 'prismjs/themes/prism.css';
-
 pre {
   margin: 0;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
-  background-color: #fafafa !important;
-  line-height: 1.1 !important;
-}
-
-code {
-  font-size: 0.9em !important;
-}
-
-:not(pre) > code {
-  background-color: #f5f5f5;
-  padding: 3px 6px;
-  border-radius: 2px;
-  color: #4a5567;
 }
 
 .alert {
@@ -537,7 +501,6 @@ code {
 @media (max-width: 640px) {
   pre {
     box-shadow: none;
-    overflow-x: auto;
   }
 }
 </style>
@@ -546,24 +509,47 @@ code {
 h1 {
   @apply text-3xl font-semibold mt-10 mb-6;
 }
+
 h2 {
   @apply mt-20 text-2xl font-medium pb-2;
 }
+
 h3 {
   @apply my-4 mt-16 text-xl font-medium;
 }
-figure {
-  @apply mt-2 mb-4;
+
+h1, h2, h3 {
+  @apply text-gray-800;
 }
+
+h1.dark, h2.dark, h3.dark {
+  @apply text-gray-200;
+}
+
 p {
   @apply my-2 leading-6;
 }
-a:hover {
+
+.docs a {
+  @apply text-blue-600 font-medium;
+}
+
+.docs a.dark {
+  @apply text-blue-400
+}
+
+.docs a:hover {
   @apply underline;
 }
+
+figure {
+  @apply mt-2 mb-4;
+}
+
 ul {
   @apply my-2;
 }
+
 li {
   @apply ml-8 list-disc leading-7;
 }

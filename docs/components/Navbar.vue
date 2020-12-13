@@ -1,49 +1,43 @@
 <template>
-    <div
-        class="flex items-center justify-end bg-white w-full pt-3 pb-3"
-        :class="{
-            'bg-gray-800': isDark,
-            'bg-white': !isDark,
-            'border-b border-solid border-gray-200': scrollTop > 30 && !isDark,
-            'border-b border-solid border-gray-700': scrollTop > 30 && isDark
-        }"
+<div
+    class="navbar flex items-center justify-end bg-white w-full pt-3 pb-3"
+    :class="{
+        'bg-gray-800': isDark,
+        'bg-white': !isDark,
+        'border-b border-solid border-gray-200': scrollTop > 30 && !isDark,
+        'border-b border-solid border-gray-700': scrollTop > 30 && isDark
+    }"
+>
+    <NuxtLink
+        to="/"
+        class="mr-6"
+        :class="{'dark' : isDark}"
     >
-        <NuxtLink
-            class="mr-6"
+        Icons
+    </NuxtLink>
+    <NuxtLink
+        class="mr-6"
+        to="/docs"
+        :class="{'dark' : isDark}"
+    >
+        Docs
+    </NuxtLink>
+    <ToggleTheme />
+    <a
+        href="https://github.com/Renovamen/oh-vue-icons"
+        target="_blank"
+    >
+        <OhVueIcon
+            name="fa/brands/github"
+            scale="1.7"
+            class="hover:text-blue-400 ml-8 mr-8"
             :class="{
-                'text-gray-600 hover:text-gray-700': !isDark,
-                'text-gray-400 hover:text-gray-300': isDark
+                'text-gray-800': !isDark,
+                'text-white': isDark
             }"
-            to="/"
-        >
-            Icons
-        </NuxtLink>
-        <NuxtLink
-            class="mr-6"
-            :class="{
-                'text-gray-600 hover:text-gray-700': !isDark,
-                'text-gray-300 hover:text-gray-200': isDark
-            }"
-            to="/docs"
-        >
-            Docs
-        </NuxtLink>
-        <ToggleTheme />
-        <a
-            href="https://github.com/Renovamen/oh-vue-icons"
-            target="_blank"
-        >
-            <OhVueIcon
-                name="fa/brands/github"
-                scale="1.7"
-                class="hover:text-blue-400 ml-8 mr-8"
-                :class="{
-                    'text-gray-800': !isDark,
-                    'text-white': isDark
-                }"
-            />
-        </a>
-    </div>
+        />
+    </a>
+</div>
 </template>
 
 <script>
@@ -78,3 +72,21 @@ export default {
     }
 }
 </script>
+
+<style lang="postcss">
+.navbar a {
+    @apply text-gray-600;
+}
+
+.navbar a:hover {
+    @apply text-gray-700;
+}
+
+.navbar a.dark {
+    @apply text-gray-400;
+}
+
+.navbar a.dark:hover {
+    @apply text-gray-300;
+}
+</style>

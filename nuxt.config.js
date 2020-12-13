@@ -16,7 +16,9 @@ export default {
     ]
   },
   css: [
-    './assets/font.css'
+    './assets/font.css',
+    './assets/code-light.css',
+    './assets/code-dark.css'
   ],
   components: true,  // auto import components
   buildModules: [
