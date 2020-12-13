@@ -1,0 +1,87 @@
+figure.dark pre[class*="language-"] {
+    color: #ccc;
+    background: #282c34;
+}
+
+/* Inline code */
+:not(pre) > code.dark {
+	background-color: rgba(76, 86, 128, 0.4);
+	color: #96c2eb;
+	padding: 0.25rem 0.5rem;
+	border-radius: 3px;
+	font-size: 0.9rem;
+}
+
+figure.dark .token.comment,
+figure.dark .token.block-comment,
+figure.dark .token.prolog,
+figure.dark .token.doctype,
+figure.dark .token.cdata {
+    color: #7d8391;
+}
+
+figure.dark .token.punctuation {
+    color: #ccc;
+}
+
+figure.dark .token.tag,
+figure.dark .token.namespace,
+figure.dark .token.deleted {
+    color: #e67b70;
+}
+
+figure.dark .token.function-name,
+figure.dark .token.function {
+    color: #87befd;
+}
+
+figure.dark .token.attr-name,
+figure.dark .token.boolean,
+figure.dark .token.number {
+    color: #fec28c;
+}
+
+figure.dark .token.property,
+figure.dark .token.class-name,
+figure.dark .token.constant,
+figure.dark .token.symbol {
+    color: #fee89c;
+}
+
+figure.dark .token.selector,
+figure.dark .token.important,
+figure.dark .token.atrule,
+figure.dark .token.keyword,
+figure.dark .token.builtin {
+    color: #dd85f8;
+}
+
+figure.dark .token.string,
+figure.dark .token.char,
+figure.dark .token.attr-value,
+figure.dark .token.regex,
+figure.dark .token.variable {
+    color: #a2ce83;
+}
+
+figure.dark .token.operator,
+figure.dark .token.entity,
+figure.dark .token.url {
+    color: #56b6c2;
+}
+
+figure.dark .token.important,
+figure.dark .token.bold {
+    font-weight: bold;
+}
+figure.dark .token.italic {
+    font-style: italic;
+}
+
+figure.dark .token.entity {
+    cursor: help;
+}
+
+figure.dark .token.inserted {
+    color: green;
+}
