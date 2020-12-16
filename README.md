@@ -9,38 +9,19 @@ A [Vue](https://vuejs.org/) component for including inline SVG icons from differ
 
 Some of the icons are resized for better and more consistent user experience.
 
-View the full set of icons and the demo [here](https://oh-vue-icons.vercel.app).
+View the full list of icons and the demo [here](https://oh-vue-icons.vercel.app).
 
-It is based on [Justineo/vue-awesome](https://github.com/Justineo/vue-awesome), so check out that repo for more information.
+It is highly inspired by [Justineo/vue-awesome](https://github.com/Justineo/vue-awesome), so check out that repo for more information.
 
 &nbsp;
 
 ## Installation
-
-### `yarn` / `npm`
 
 ```bash
 yarn add oh-vue-icons
 # or
 npm install oh-vue-icons
 ```
-
-&nbsp;
-
-### CDN
-
-Add the following code to your HTML file:
-
-```html
-<link href="https://cdn.jsdelivr.net/npm/oh-vue-icons@0.1.2/dist/oh-vue-icons.min.js" rel="stylesheet">
-```
-
-&nbsp;
-
-### Download Manually
-
-Download [`dist/oh-vue-icons.min.js`](dist/oh-vue-icons.min.js) and include it in your HTML file.
-
 
 &nbsp;
 
@@ -52,29 +33,28 @@ Import `oh-vue-icons` in your Vue project:
 
 ```js
 import Vue from 'vue'
+import OhVueIcon from 'oh-vue-icons/components/Icon'
 
 /* Import icons */
 
-// only import the icons you use to reduce bundle size
-import 'oh-vue-icons/icons/fa/flag'
+// Only import the icons you use to reduce bundle size:
+import { FaFlag, RiZhihuFill } from 'oh-vue-icons/icons'
+OhVueIcon.add([FaFlag, RiZhihuFill])
 
-// or import a certain icon pack, for example, Font Awesome
-import 'oh-vue-icons/icons/fa'
-
-// or import all icons if you don't care about bundle size
-import 'oh-vue-icons/icons'
+// Or import a certain icon pack if you don't care about bundle size, 
+// for example, Font Awesome:
+import { Fa } from 'oh-vue-icons/icons'
+OhVueIcon.add(Fa)
 
 /* Register component */
 
-import VueIcon from 'oh-vue-icons/components/Icon'
-
 // globally (in your main.js file)
-Vue.component('v-icon', VueIcon)
+Vue.component('v-icon', OhVueIcon)
 
 // or locally (in your component file)
 export default {
   components: {
-    'v-icon': VueIcon
+    'v-icon': OhVueIcon
   }
 }
 ```
@@ -87,25 +67,25 @@ Then you can display icons on your page:
 
 ```html
 <!-- basic -->
-<v-icon name="fa/beer" />
+<v-icon name="fa-beer" />
 
 <!-- with options -->
-<v-icon name="fa/sync" scale="2" spin />
-<v-icon name="ri/playstation-fill" flip="horizontal" />
-<v-icon name="ai/google-scholar" label="Google Scholar" />
+<v-icon name="fa-sync" scale="2" spin />
+<v-icon name="ri-playstation-fill" flip="horizontal" />
+<v-icon name="ai-google-scholar" label="Google Scholar" />
 
 <!-- stacked icons -->
 <v-icon label="No Photos">
-  <v-icon name="fa/camera" />
-  <v-icon name="fa/ban" scale="2" class="alert" />
+  <v-icon name="fa-camera" />
+  <v-icon name="fa-ban" scale="2" class="alert" />
 </v-icon>
 ```
 
 The icons are organized as follows:
 
-- Icons from Font Awesome, Remix Icon and academicons are located in `icons/fa`, `icons/ri`, `icons/ai` directory and the prefixes of their name prop values are `fa`, `ri` and `ai`.
+- The prefixes of the name prop values of icons from Font Awesome, Remix Icon, academicons and gameicons are `fa`, `ri`, `ai` and `game`.
 
-- For Font Awesome icons, icons from regular and brands are located in `icons/fa/regular` and `icons/fa/brands` directory, which have name prop values like `fa/regular/flag` or `fa/brands/reddit`. Icons from solid pack are located in `icons/fa` directory and have name prop values like `fa/beer`.
+- For Font Awesome icons, icons from `regular` pack have name prop values like `fa-regular-flag`. Icons from `solid` and `brands` pack have name prop values like `fa/beer` and `fa/github`.
 
 For more information about the usage, see [here](https://oh-vue-icons.vercel.app).
 
@@ -121,16 +101,22 @@ yarn install
 npm install
 ```
 
+Fetch icon sources:
+
+```bash
+yarn submodule
+```
+
 Download some of the icons packs ([`gameicons`](https://game-icons.net/archives/svg/zip/000000/transparent/game-icons.net.svg.zip)):
 
 ```bash
 yarn download
 ```
 
-Re-generate SVGs under `assets/svg` and files under `src/icons` automatically:
+Re-generate files under `src/icons` automatically:
 
 ```bash
-yarn icons
+yarn build
 ```
 
 Run docs:

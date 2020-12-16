@@ -1,4 +1,3 @@
-yarn icons
 yarn build
 cp -r ./src/components ./components
 cp -r ./src/icons ./icons

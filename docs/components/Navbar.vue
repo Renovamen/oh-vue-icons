@@ -27,26 +27,25 @@
         href="https://github.com/Renovamen/oh-vue-icons"
         target="_blank"
     >
-        <OhVueIcon
-            name="fa/brands/github"
+        <v-icon
+            name="fa-github"
             scale="1.7"
-            class="hover:text-blue-400 ml-8 mr-8"
+            class="hover:text-blue-500 ml-8 mr-8"
             :class="{
                 'text-gray-800': !isDark,
                 'text-white': isDark
             }"
         />
+
     </a>
 </div>
 </template>
 
 <script>
-import OhVueIcon from '../../src/components/Icon.vue'
 import ToggleTheme from './ToggleTheme.vue'
 
 export default {
     components: {
-        OhVueIcon,
         ToggleTheme
     },
     data () {
