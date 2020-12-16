@@ -1,6 +1,6 @@
 <template>
   <div class="layout">
-    <Navbar class="fixed z-20 top-0" />
+    <Navbar class="fixed z-30 top-0" />
     <Nuxt />
     <Footer />
   </div>

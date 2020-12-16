@@ -17,6 +17,7 @@ export default {
     name: {
       type: String,
       validator (val) {
+        // console.log(icons)
         if (val && !(val in icons)) {
           warn(
             `Invalid prop: prop "name" is referring to an unregistered icon "${val}".\n` +
@@ -240,18 +241,21 @@ export default {
     )
   },
   register (data) {
-    for (let name in data) {
-      let icon = data[name]
-      let { paths = [], d, polygons = [], points } = icon
+    let { name, paths = [], d, polygons = [], points } = data
 
-      if (d) paths.push({ d })
-      if (points) polygons.push({ points })
+    if (d) paths.push({ d })
+    if (points) polygons.push({ points })
 
-      icons[name] = assign({}, icon, {
-        paths,
-        polygons
-      })
+    icons[name] = assign({}, data, {
+      paths,
+      polygons
+    })
+  },
+  add (data) {
+    if (Array.isArray(data)) {
+      for (let icon of data) this.register(icon)
     }
+    else this.register(data)
   },
   icons
 }
@@ -263,12 +267,12 @@ function hasOwn (obj, key) {
 function assign (obj, ...sources) {
   sources.forEach(source => {
     for (let key in source) {
-      if (hasOwn(source, key)) {
+      if(key === 'name') continue
+      if(hasOwn(source, key)) {
         obj[key] = source[key]
       }
     }
   })
-
   return obj
 }
 

@@ -11,7 +11,7 @@
       'bg-gray-700 text-blue-400 hover:bg-blue-400 hover:text-gray-700': !isDark
     }"
   >
-    <OhVueIcon
+    <v-icon
       ref="logo"
       :playing="playing"
       :name="name"
@@ -22,7 +22,6 @@
 </template>
 
 <script>
-import '../../src/icons'
 import OhVueIcon from '../../src/components/Icon.vue'
 const keys = Object.keys(OhVueIcon.icons)
 
@@ -31,9 +30,6 @@ function randomIcon () {
 }
 
 export default {
-  components: {
-    OhVueIcon
-  },
   data () {
     return {
       name: randomIcon(),

@@ -8,7 +8,7 @@
         <div class="flex items-center justify-between flex-wrap">
           <div class="w-0 flex-1 flex items-center">
             <span class="flex p-2 rounded-lg bg-blue-700 text-white">
-              <OhVueIcon
+              <v-icon
                 :name="iconComponent"
                 scale="1.5"
               />
@@ -28,8 +28,8 @@
                 class="flex items-center justify-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-blue-600 bg-white hover:text-blue-700 focus:outline-none focus:shadow-outline transition ease-in-out duration-150"
                 @click="onDownloadSVG"
               >
-                <OhVueIcon
-                  name="ri/download-fill"
+                <v-icon
+                  name="ri-download-fill"
                   class="h-4 w-4 mr-1"
                 />
                 <span>SVG</span>
@@ -38,8 +38,8 @@
                 class="ml-4 flex items-center justify-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-blue-600 bg-white hover:text-blue-700 focus:outline-none focus:shadow-outline transition ease-in-out duration-150"
                 @click="copyToClipboard"
               >
-                <OhVueIcon
-                  name="fa/regular/copy"
+                <v-icon
+                  name="fa-regular-copy"
                   class="h-5 w-5 mr-1"
                 />
                 <span>Copy</span>
@@ -52,8 +52,8 @@
               class="-mr-1 flex p-2 rounded-md hover:bg-blue-400 focus:outline-none focus:bg-blue-400 transition ease-in-out duration-150"
               @click="onCloseClick"
             >
-              <OhVueIcon
-                name="ri/close-fill"
+              <v-icon
+                name="ri-close-fill"
                 class="h-6 w-6 text-white"
               />
             </button>
@@ -65,13 +65,9 @@
 </template>
 
 <script>
-import '../../src/icons'
-import OhVueIcon from '../../src/components/Icon.vue'
+import camelcase from 'camelcase'
 
 export default {
-  components: {
-    OhVueIcon
-  },
   props: {
     categorySelected: {},
     iconSelected: {}
@@ -86,7 +82,8 @@ export default {
       return this.iconSelected
     },
     importCode() {
-      return `import "oh-vue-icons/${this.iconSelected}"`;
+      const moduleName = camelcase(this.iconSelected, {pascalCase: true})
+      return `import { ${moduleName} } from 'oh-vue-icons/icons'`
     }
   },
   watch: {
@@ -98,7 +95,7 @@ export default {
     copyToClipboard() {
       const $input = document.createElement("input")
       $input.type = "text"
-      $input.value = this.iconSelected
+      $input.value = camelcase(this.iconSelected, {pascalCase: true})
       document.body.appendChild($input)
       $input.select()
 
@@ -118,15 +115,10 @@ export default {
       this.$emit('close')
     },
     onDownloadSVG() {
-      let iconSet = this.iconSelected.slice(0, this.iconSelected.indexOf("/"))
-      let svgName = this.iconSelected.substring(this.iconSelected.lastIndexOf("/") + 1)
-      let fileName = `${iconSet}-${svgName}.svg`
-      let dirName = this.iconSelected.substring(0, this.iconSelected.lastIndexOf("/"))
-      if(dirName === 'fa/regular') dirName = 'fa'
-      else if(dirName === 'fa') dirName = 'fa/solid'
+      const iconSet = this.iconSelected.slice(0, this.iconSelected.indexOf('-'))
+      const url = `https://cdn.jsdelivr.net/gh/Renovamen/oh-vue-icons@master/assets/${iconSet}/${this.iconSelected}.svg`
+      const xhr = new XMLHttpRequest()
 
-      let url = `https://cdn.jsdelivr.net/gh/Renovamen/oh-vue-icons@master/assets/svg/${dirName}/${fileName}`
-      let xhr = new XMLHttpRequest()
       xhr.responseType = 'blob'
       xhr.onload = function() {
         let a = document.createElement('a')
