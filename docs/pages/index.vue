@@ -48,8 +48,8 @@
         <div class="grid grid-cols-8 sm:grid-cols-12 rounded-md
                     border border-gray-500 transition duration-200">
           <div class="relative col-start-1 col-span-1">
-            <OhVueIcon
-              name="ri/search-2-line"
+            <v-icon
+              name="ri-search-2-line"
               scale="1.3"
               class="absolute h-full right-0 mr-2 sm:mr-4 transition duration-200"
               :class="{
@@ -98,7 +98,7 @@
                     @click="selectIcon(icon, iconSet.tab.toLowerCase())"
                   >
                     <div class="flex justify-center">
-                      <OhVueIcon
+                      <v-icon
                         :name="icon"
                         scale="2"
                       />
@@ -114,6 +114,7 @@
         :iconSelected="iconSelected"
         :categorySelected="categorySelected"
         @close="resetSelectedIcon"
+        class="z-20"
       />
     </div>
   </div>
@@ -124,7 +125,6 @@ import OhVueIcon from '../../src/components/Icon.vue'
 import Navbar from "../components/Navbar.vue"
 import IconInfo from "../components/IconInfo.vue"
 import Footer from "../components/Footer.vue"
-import '../../src/icons'
 
 var iconKeys = Object.keys(OhVueIcon.icons)
 // Font Awesome
@@ -146,8 +146,7 @@ var gameIcons = iconKeys.filter(function (x) {
 
 export default {
   components: { 
-    IconInfo,
-    OhVueIcon
+    IconInfo
   },
   data() {
     return {

@@ -26,8 +26,8 @@
                 }"
                 class="absolute inset-0 h-full w-full flex items-center justify-center transition-opacity"
             >
-                <OhVueIcon
-                    name="ri/sun-line"
+                <v-icon
+                    name="ri-sun-line"
                     class="h-3 w-3 text-blue-600"
                 />
             </span>
@@ -38,8 +38,8 @@
                 }"
                 class="absolute inset-0 h-full w-full flex items-center justify-center transition-opacity"
             >
-                <OhVueIcon
-                    name="ri/moon-clear-line"
+                <v-icon
+                    name="ri-moon-clear-line"
                     class="h-3 w-3 text-blue-600"
                 />
             </span>
@@ -48,13 +48,9 @@
 </template>
 
 <script>
-import OhVueIcon from '../../src/components/Icon.vue'
 import { mapMutations } from 'vuex'
 
 export default {
-    components: {
-        OhVueIcon
-    },
     computed: {
         isDark() {
             return this.$store.state.theme.isDark

@@ -1,0 +1,91 @@
+const path = require('path')
+const fs = require('fs').promises
+const camelcase = require('camelcase')
+const rimraf = require('rimraf')
+
+const { icons } = require('../icons')
+const { getIconFiles, optimizeSVG, parseSVG, writeSVG } = require('./utils')
+
+const ignore = (err) => {
+    if (err.code === 'EEXIST') return
+    throw err
+}
+
+const excludes = [
+    'fa-font-awesome-logo-full'
+]
+
+async function dirInit(DIST, ASSETS) {
+    rimraf.sync(DIST)
+    await fs.mkdir(DIST, { recursive: true }).catch(ignore)
+    
+    rimraf.sync(ASSETS)
+    await fs.mkdir(ASSETS, { recursive: true }).catch(ignore)
+
+    const write = (filePath, str) =>
+        fs.writeFile(path.resolve(DIST, filePath), str, 'utf8').catch(ignore)
+
+    for (const icon of icons) {
+        await write(
+            `${icon.id}.js`,
+            '// THIS FILE IS AUTO GENERATED\n'
+        )
+    }
+
+    await write('index.js', '// THIS FILE IS AUTO GENERATED\n')
+}
+
+async function writeIconModule(icon, DIST, ASSETS) {
+    const entryModule = `export * from './${icon.id}'\n`
+    await fs.appendFile(path.resolve(DIST, "index.js"), entryModule, "utf8");
+
+    const iconPrefix = icon.id.slice(0, 1).toUpperCase() + icon.id.slice(1)
+    
+    const importModule = `import * as ${iconPrefix}Icons from './${icon.id}'\n`
+    await fs.appendFile(path.resolve(DIST, "index.js"), importModule, 'utf8')
+    
+    const exportIcons = `export const ${iconPrefix} = Object.values({ ...${iconPrefix}Icons })\n`
+    await fs.appendFile(path.resolve(DIST, "index.js"), exportIcons, 'utf8')
+    
+    const svgDir = path.resolve(ASSETS, `${icon.id}`)
+    rimraf.sync(svgDir)
+    await fs.mkdir(svgDir, { recursive: true }).catch(ignore)
+    
+    const exists = new Set()
+    
+    for (const content of icon.contents) {
+        const files = await getIconFiles(content)
+        for (const file of files) {
+            const svgStrRaw = await fs.readFile(file, 'utf8')
+            const svgStr = content.processWithSVGO
+                ? await optimizeSVG.optimize(svgStrRaw).then((result) => result.data)
+                : svgStrRaw
+
+            const rawName = path.basename(file, path.extname(file))
+            if(excludes.indexOf(icon.id + '-' + rawName) !== -1) continue
+
+            const pascalName = camelcase(rawName, { pascalCase: true })
+            const name = (content.formatter && content.formatter(pascalName)) || pascalName
+            if (exists.has(name)) continue  // for remove duplicate
+            exists.add(name)
+            
+            const prefixName = (content.prefix && content.prefix(rawName)) || rawName
+            const iconData = await parseSVG(icon.id, prefixName, svgStr)
+
+            await fs.appendFile(
+                path.resolve(DIST, `${icon.id}.js`),
+                `export const ${name} = ${JSON.stringify(iconData)}\n`,
+                "utf8"
+            )
+
+            await writeSVG(svgDir, iconData)
+
+            exists.add(file)
+        }
+    }
+}
+
+module.exports = {
+  dirInit,
+  writeIconModule
+}

@@ -27,7 +27,8 @@ export default {
   build: {
   },
   plugins: [
-    '~/plugins/lazyload.js'
+    '~/plugins/lazyload.js',
+    '~/plugins/icons.js'
   ],
   tailwindcss: {
     config: {

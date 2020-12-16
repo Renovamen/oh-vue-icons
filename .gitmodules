@@ -1,0 +1,9 @@
+[submodule "icons/fontawesome"]
+	path = icons/fontawesome
+	url = https://github.com/FortAwesome/Font-Awesome.git
+[submodule "icons/remixicon"]
+	path = icons/remixicon
+	url = https://github.com/Remix-Design/RemixIcon.git
+[submodule "icons/academicons"]
+	path = icons/academicons
+	url = https://github.com/jpswalsh/academicons.git
