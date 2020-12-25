@@ -1,4 +1,4 @@
-const { icons } = require("../icons")
+const { icons } = require("../iconpacks")
 const path = require('path')
 const task = require("./tasks")
 const performance = require("perf_hooks").performance

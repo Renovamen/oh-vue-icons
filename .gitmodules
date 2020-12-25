@@ -1,9 +1,9 @@
-[submodule "icons/fontawesome"]
-	path = icons/fontawesome
+[submodule "iconpacks/fontawesome"]
+	path = iconpacks/fontawesome
 	url = https://github.com/FortAwesome/Font-Awesome.git
-[submodule "icons/remixicon"]
-	path = icons/remixicon
+[submodule "iconpacks/remixicon"]
+	path = iconpacks/remixicon
 	url = https://github.com/Remix-Design/RemixIcon.git
-[submodule "icons/academicons"]
-	path = icons/academicons
+[submodule "iconpacks/academicons"]
+	path = iconpacks/academicons
 	url = https://github.com/jpswalsh/academicons.git

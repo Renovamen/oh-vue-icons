@@ -1,7 +1,7 @@
 {
   "name": "oh-vue-icons",
-  "version": "0.1.2",
-  "description": "Include inline SVG icons from different icon packs in Vue easily, based on vue-awesome.",
+  "version": "0.1.5",
+  "description": "Include inline SVG icons from different icon packs in Vue easily.",
   "author": "Renovamen <renovamenzxh@gmail.com>",
   "license": "MIT",
   "homepage": "https://oh-vue-icons.vercel.app",
@@ -15,22 +15,19 @@
   "scripts": {
     "dev": "nuxt",
     "start": "nuxt start",
-    "build": "node -r esm scripts/build.js",
+    "build": "node scripts/build.js",
     "build:docs": "nuxt generate",
     "preview:docs": "cd docs/dist && http-server",
     "download": "sh ./scripts/download.sh",
     "pub": "sh ./scripts/publish.sh",
     "submodule": "git submodule update --init"
   },
-  "main": "dist/oh-vue-icons.js",
-  "module": "index.js",
   "dependencies": {
     "core-js": "^3.4.4"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^3.1.0",
     "cross-env": "^5.2.1",
-    "esm": "^3.2.25",
     "glob-promise": "^3.4.0",
     "nuxt": "^2.14.6",
     "prismjs": "^1.22.0",

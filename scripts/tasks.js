@@ -3,7 +3,7 @@ const fs = require('fs').promises
 const camelcase = require('camelcase')
 const rimraf = require('rimraf')
 
-const { icons } = require('../icons')
+const { icons } = require('../iconpacks')
 const { getIconFiles, optimizeSVG, parseSVG, writeSVG } = require('./utils')
 
 const ignore = (err) => {
