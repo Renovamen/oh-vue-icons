@@ -1,7 +1,8 @@
-build
 src
+scripts
+iconpacks
 assets
+docs
 .*
 *.config.js
-*.sh
 *.lock

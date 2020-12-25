@@ -97,8 +97,6 @@ Install dependencies:
 
 ```bash
 yarn install
-# or
-npm install
 ```
 
 Fetch icon sources:
