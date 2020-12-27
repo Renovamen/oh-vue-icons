@@ -7,3 +7,6 @@
 [submodule "iconpacks/academicons"]
 	path = iconpacks/academicons
 	url = https://github.com/jpswalsh/academicons.git
+[submodule "iconpacks/simple-icons"]
+	path = iconpacks/simple-icons
+	url = https://github.com/simple-icons/simple-icons.git

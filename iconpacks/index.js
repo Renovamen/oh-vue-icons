@@ -53,6 +53,20 @@ module.exports = {
       licenseUrl: "http://scripts.sil.org/OFL"
     },
     {
+      id: "si",
+      name: "Simple Icons",
+      contents: [
+        {
+          files: path.resolve(__dirname, "simple-icons/icons/*.svg"),
+          formatter: (name) => `Si${name}`,
+          prefix: (name) => `si-${name}`
+        },
+      ],
+      projectUrl: "https://simpleicons.org/",
+      license: "CC0 1.0 Universal",
+      licenseUrl: "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
       id: "game",
       name: "gameicons",
       contents: [

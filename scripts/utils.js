@@ -143,6 +143,9 @@ function modifySVG(prefix, width, height, d) {
     case 'ai':
       newW = newW * 1.17, newH = newH * 1.17
       break
+    case 'si':
+      newW = newW * 1.28, newH = newH * 1.28
+      break
   }
   
   let newD = svgpath(d).translate((newW - width) / 2, (newH - height) / 2).toString()

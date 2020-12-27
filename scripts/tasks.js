@@ -52,6 +52,7 @@ async function writeIconModule(icon, DIST, ASSETS) {
     await fs.mkdir(svgDir, { recursive: true }).catch(ignore)
     
     const exists = new Set()
+    var iconNum = 0
     
     for (const content of icon.contents) {
         const files = await getIconFiles(content)
@@ -82,7 +83,10 @@ async function writeIconModule(icon, DIST, ASSETS) {
 
             exists.add(file)
         }
+        iconNum += files.length
     }
+
+    console.log(`- ${iconNum} icons from ${icon.name} done`)
 }
 
 module.exports = {
