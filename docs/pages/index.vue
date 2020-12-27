@@ -139,6 +139,10 @@ var riIcons = iconKeys.filter(function (x) {
 var aiIcons = iconKeys.filter(function (x) {
   return x.slice(0, 2) === 'ai'
 })
+// Simple Icons
+var siIcons = iconKeys.filter(function (x) {
+  return x.slice(0, 2) === 'si'
+})
 // gameicons
 var gameIcons = iconKeys.filter(function (x) {
   return x.slice(0, 4) === 'game'
@@ -157,6 +161,7 @@ export default {
         "Font Awesome",
         "Remix Icon",
         "academicons",
+        "Simple Icons",
         "gameicons"
       ],
       tabSelected: "All",
@@ -179,6 +184,11 @@ export default {
           count: aiIcons.length
         },
         {
+          tab: "Simple Icons",
+          components: siIcons,
+          count: siIcons.length
+        },
+        {
           tab: "gameicons",
           components: gameIcons,
           count: gameIcons.length
@@ -191,6 +201,7 @@ export default {
       if (this.tabSelected === "Font Awesome") return faIcons.length
       else if (this.tabSelected === "Remix Icon") return riIcons.length
       else if (this.tabSelected === "academicons") return aiIcons.length
+      else if (this.tabSelected === "Simple Icons") return siIcons.length
       else if (this.tabSelected === "gameicons") return gameIcons.length
       else if (this.tabSelected === "All") return iconKeys.length
     },

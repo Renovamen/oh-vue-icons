@@ -68,6 +68,14 @@
         </a>
         ·
         <a
+          href="https://simpleicons.org"
+          target="_blank"
+          :class="{ 'dark': isDark }"
+        >
+          Simple Icons
+        </a>
+        ·
+        <a
           href="https://game-icons.net"
           target="_blank"
           :class="{ 'dark': isDark }"
@@ -92,7 +100,7 @@
         Basic Use
       </h2>
       <p>
-        <v-icon name="fa-flag"/> <v-icon name="ri-bank-card-fill"/> <v-icon name="ai-google-scholar-square"/> <v-icon name="game-battered-axe"/>
+        <v-icon name="fa-flag" /> <v-icon name="ri-bank-card-fill" /> <v-icon name="ai-google-scholar-square" /> <v-icon name="si-unity" /> <v-icon name="game-battered-axe" />
       </p>
       <figure :class="{ 'dark': isDark }">
         <pre class="language-html"><code class="language-html" v-html="getVueCode('basic')"></code></pre>
@@ -125,6 +133,10 @@
           scale="3"
         />
         <v-icon
+          name="si-gatsby"
+          scale="3"
+        />
+        <v-icon
           name="game-ancient-sword"
           scale="3"
         />
@@ -153,6 +165,10 @@
           spin
         />
         <v-icon
+          name="si-grav"
+          spin
+        />
+        <v-icon
           name="game-earth-asia-oceania"
           spin
         />
@@ -178,6 +194,10 @@
         />
         <v-icon
           name="ai-osf"
+          pulse
+        />
+        <v-icon
+          name="si-atom"
           pulse
         />
         <v-icon
@@ -212,6 +232,10 @@
         <v-icon
           name="ai-google-scholar"
           flip="vertical"
+        />
+        <v-icon
+          name="si-internetexplorer"
+          flip="horizontal"
         />
         <v-icon
           name="game-campfire"
@@ -315,34 +339,39 @@ import RandomIcon from '../components/RandomIcon'
 import Prism from 'prismjs'
 
 const vue = {
-  basic: `<v-icon name="fa-flag"/>
-<v-icon name="ri-bank-card-fill"/>
-<v-icon name="ai-google-scholar-square"/>
-<v-icon name="game-battered-axe"/>`,
-  scale: `<v-icon name="fa-gamepad" scale="3"/>
-<v-icon name="ri-folder-music-fill" scale="3"/>
-<v-icon name="ai-overleaf" scale="3"/>
-<v-icon name="game-ancient-sword" scale="3"/>`,
-  spin: `<v-icon name="fa-sync" spin/>
-<v-icon name="ri-refresh-line" spin/>
-<v-icon name="ai-doi" spin/>
-<v-icon name="game-earth-asia-oceania" spin/>`,
-  pulse: `<v-icon name="fa-spinner" pulse/>
-<v-icon name="ri-loader-line" pulse/>
-<v-icon name="ai-osf" pulse/>
-<v-icon name="game-american-shield" pulse/>`,
-  flip: `<v-icon name="fa-signal" flip="horizontal"/>
-<v-icon name="ri-playstation-line" flip="both"/>
-<v-icon name="ai-google-scholar" flip="vertical"/>
-<v-icon name="game-campfire" flip="vertical"/>
+  basic: `<v-icon name="fa-flag" />
+<v-icon name="ri-bank-card-fill" />
+<v-icon name="ai-google-scholar-square" />
+<v-icon name="si-unity" />
+<v-icon name="game-battered-axe" />`,
+  scale: `<v-icon name="fa-gamepad" scale="3" />
+<v-icon name="ri-folder-music-fill" scale="3" />
+<v-icon name="ai-overleaf" scale="3" />
+<v-icon name="si-gatsby" scale="3" />
+<v-icon name="game-ancient-sword" scale="3" />`,
+  spin: `<v-icon name="fa-sync" spin />
+<v-icon name="ri-refresh-line" spin />
+<v-icon name="ai-doi" spin />
+<v-icon name="si-grav" spin />
+<v-icon name="game-earth-asia-oceania" spin />`,
+  pulse: `<v-icon name="fa-spinner" pulse />
+<v-icon name="ri-loader-line" pulse />
+<v-icon name="ai-osf" pulse />
+<v-icon name="si-atom" pulse />
+<v-icon name="game-american-shield" pulse />`,
+  flip: `<v-icon name="fa-signal" flip="horizontal" />
+<v-icon name="ri-playstation-line" flip="both" />
+<v-icon name="ai-google-scholar" flip="vertical" />
+<v-icon name="si-internetexplorer" flip="horizontal" />
+<v-icon name="game-campfire" flip="vertical" />
 `,
-  label: `<v-icon name="fa-code" label="Source Code"/>`,
-  title: `<v-icon name="fa-vuejs" title="Vue.js"/>`,
+  label: `<v-icon name="fa-code" label="Source Code" />`,
+  title: `<v-icon name="fa-vuejs" title="Vue.js" />`,
   stack: `<v-icon label="No Photos">
-  <v-icon name="fa-camera"/>
-  <v-icon name="fa-ban" scale="2" class="alert"/>
+  <v-icon name="fa-camera" />
+  <v-icon name="fa-ban" scale="2" class="alert" />
 </v-icon>`,
-  custom: `<v-icon name="baidu"/>`,
+  custom: `<v-icon name="baidu" />`,
   multi: `<v-icon name="webpack" /> <v-icon name="vue" /> <v-icon name="html5-c" />`
 }
 
