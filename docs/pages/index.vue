@@ -23,7 +23,7 @@
         </div>
       </div>
       <div
-        class="tool-bar w-full py-1 -mt-1 -mb-5 z-10"
+        class="tool-bar w-full py-1 sm:py-2 -mt-1 -mb-5 z-10"
         :class="{
           'bg-white': !isDark,
           'bg-gray-800': isDark
