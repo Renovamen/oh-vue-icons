@@ -6,7 +6,12 @@ const path = require('path')
 const fs = require('fs').promises
 
 async function getIconFiles(content) {
-  return glob(content.files)
+  let files = await glob(content.files)
+  files = files.sort(function(a, b) {
+    const namea = a.substr(a.lastIndexOf('/') + 1), nameb = b.substr(b.lastIndexOf('/') + 1)
+    return namea.localeCompare(nameb)
+  })
+  return files
 }
 
 const optimizeSVG = new SVGO({
