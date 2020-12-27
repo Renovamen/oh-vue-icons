@@ -115,15 +115,16 @@ export default {
       this.$emit('close')
     },
     onDownloadSVG() {
-      const iconSet = this.iconSelected.slice(0, this.iconSelected.indexOf('-'))
-      const url = `https://cdn.jsdelivr.net/gh/Renovamen/oh-vue-icons@master/assets/${iconSet}/${this.iconSelected}.svg`
+      const fileName = this.iconSelected
+      const iconSet = fileName.slice(0, fileName.indexOf('-'))
+      const url = `https://cdn.jsdelivr.net/gh/Renovamen/oh-vue-icons@master/assets/${iconSet}/${fileName}.svg`
       const xhr = new XMLHttpRequest()
 
       xhr.responseType = 'blob'
       xhr.onload = function() {
         let a = document.createElement('a')
         a.href = window.URL.createObjectURL(xhr.response)
-        a.download = fileName // Set the file name.
+        a.download = fileName
         a.style.display = 'none'
         document.body.appendChild(a)
         a.click()

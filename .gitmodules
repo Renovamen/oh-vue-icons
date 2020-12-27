@@ -10,3 +10,6 @@
 [submodule "iconpacks/simple-icons"]
 	path = iconpacks/simple-icons
 	url = https://github.com/simple-icons/simple-icons.git
+[submodule "iconpacks/weather-icons"]
+	path = iconpacks/weather-icons
+	url = https://github.com/erikflowers/weather-icons.git
