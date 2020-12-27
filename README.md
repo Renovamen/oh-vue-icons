@@ -1,17 +1,17 @@
-# Oh, Vue icons!
+# Oh, Vue Icons!
 
-A [Vue](https://vuejs.org/) component for including inline SVG icons from different icon packs in easily. Now the following icon packs are supported:
+A [Vue](https://vuejs.org/) component for including inline SVG icons from different icon packs in easily. It is highly inspired by and based on [Justineo/vue-awesome](https://github.com/Justineo/vue-awesome). Now the following icon packs are supported:
 
-- `fa` - [Font Awesome](https://fontawesome.com/)
+- `fa` - [Font Awesome](https://fontawesome.com)
 - `ri` - [Remix Icon](https://github.com/Remix-Design/RemixIcon)
 - `ai` - [academicons](https://github.com/jpswalsh/academicons)
+- `si` - [Simple Icons](https://simpleicons.org)
 - `game` - [gameicons](https://game-icons.net)
 
 Some of the icons are resized for better and more consistent user experience.
 
 View the full list of icons and the demo [here](https://oh-vue-icons.vercel.app).
 
-It is highly inspired by [Justineo/vue-awesome](https://github.com/Justineo/vue-awesome), so check out that repo for more information.
 
 &nbsp;
 
@@ -83,7 +83,7 @@ Then you can display icons on your page:
 
 The icons are organized as follows:
 
-- The prefixes of the name prop values of icons from Font Awesome, Remix Icon, academicons and gameicons are `fa`, `ri`, `ai` and `game`.
+- The prefixes of the name prop values of icons from Font Awesome, Remix Icon, academicons and gameicons are `fa`, `ri`, `ai`, `si` and `game`.
 
 - For Font Awesome icons, icons from `regular` pack have name prop values like `fa-regular-flag`. Icons from `solid` and `brands` pack have name prop values like `fa/beer` and `fa/github`.
 
