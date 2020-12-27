@@ -11,6 +11,9 @@ export const Ai = Object.values({ ...AiIcons })
 export * from './si'
 import * as SiIcons from './si'
 export const Si = Object.values({ ...SiIcons })
+export * from './wi'
+import * as WiIcons from './wi'
+export const Wi = Object.values({ ...WiIcons })
 export * from './game'
 import * as GameIcons from './game'
 export const Game = Object.values({ ...GameIcons })

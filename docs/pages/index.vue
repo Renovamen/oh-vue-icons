@@ -34,7 +34,7 @@
             <button
               v-for="tab in tabs"
               :key="tab"
-              class="sm:mr-4 px-2 py-1 sm:px-3 sm:py-2 font-medium text-sm leading-5 rounded-md text-gray-500
+              class="sm:mr-2 px-2 py-1 sm:px-3 sm:py-2 font-medium text-sm leading-5 rounded-md text-gray-500
                       hover:text-blue-600 focus:outline-none focus:text-blue-600 focus:bg-blue-50"
               :class="{
                 'text-blue-700 bg-blue-100': tabSelected === tab
@@ -143,6 +143,10 @@ var aiIcons = iconKeys.filter(function (x) {
 var siIcons = iconKeys.filter(function (x) {
   return x.slice(0, 2) === 'si'
 })
+// Weather Icons
+var wiIcons = iconKeys.filter(function (x) {
+  return x.slice(0, 2) === 'wi'
+})
 // gameicons
 var gameIcons = iconKeys.filter(function (x) {
   return x.slice(0, 4) === 'game'
@@ -162,6 +166,7 @@ export default {
         "Remix Icon",
         "academicons",
         "Simple Icons",
+        "Weather Icons",
         "gameicons"
       ],
       tabSelected: "All",
@@ -189,6 +194,11 @@ export default {
           count: siIcons.length
         },
         {
+          tab: "Weather Icons",
+          components: wiIcons,
+          count: wiIcons.length
+        },
+        {
           tab: "gameicons",
           components: gameIcons,
           count: gameIcons.length
@@ -202,6 +212,7 @@ export default {
       else if (this.tabSelected === "Remix Icon") return riIcons.length
       else if (this.tabSelected === "academicons") return aiIcons.length
       else if (this.tabSelected === "Simple Icons") return siIcons.length
+      else if (this.tabSelected === "Weather Icons") return wiIcons.length
       else if (this.tabSelected === "gameicons") return gameIcons.length
       else if (this.tabSelected === "All") return iconKeys.length
     },

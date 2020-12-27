@@ -67,6 +67,18 @@ module.exports = {
       licenseUrl: "https://creativecommons.org/publicdomain/zero/1.0/"
     },
     {
+      id: "wi",
+      name: "Weather Icons",
+      contents: [
+        {
+          files: path.resolve(__dirname, "weather-icons/svg/*.svg")
+        },
+      ],
+      projectUrl: "https://erikflowers.github.io/weather-icons/",
+      license: "SIL OFL 1.1",
+      licenseUrl: "http://scripts.sil.org/OFL"
+    },
+    {
       id: "game",
       name: "gameicons",
       contents: [

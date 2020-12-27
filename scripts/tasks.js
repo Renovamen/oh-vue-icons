@@ -51,7 +51,7 @@ async function writeIconModule(icon, DIST, ASSETS) {
     rimraf.sync(svgDir)
     await fs.mkdir(svgDir, { recursive: true }).catch(ignore)
     
-    const exists = new Set()
+    const exists = new Set()  // for remove duplicate
     var iconNum = 0
     
     for (const content of icon.contents) {
