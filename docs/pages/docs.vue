@@ -1,12 +1,13 @@
 <template>
 <div
-  class="page docs text-base pt-20 pb-16"
+  class="page text-base"
   :class="{
     'text-gray-300 bg-gray-800': isDark,
     'text-gray-700 bg-white': !isDark
   }"
 >
-  <div class="page-width">
+  <Sidebar />
+  <div class="page-width docs pt-24 pb-16">
     <div class="text-left sm:text-center">
       <RandomIcon />
       <h1 :class="{ 'dark': isDark }">
@@ -360,6 +361,7 @@
 
 <script>
 import RandomIcon from '../components/RandomIcon'
+import Sidebar from "../components/Sidebar.vue"
 import Prism from 'prismjs'
 
 const vue = {
@@ -454,7 +456,8 @@ const js = {
 
 export default {
   components: {
-    RandomIcon
+    RandomIcon,
+    Sidebar
   },
   computed: {
     isDark() {
