@@ -1,22 +1,21 @@
 <template>
 <div
-    class="navbar flex items-center justify-end bg-white w-full pt-3 pb-3"
+    class="navbar flex items-center justify-end
+        w-full pt-3 pb-3 bg-white border-b border-solid"
     :class="{
-        'bg-gray-800': isDark,
-        'bg-white': !isDark,
-        'border-b border-solid border-gray-200': scrollTop > 30 && !isDark,
-        'border-b border-solid border-gray-700': scrollTop > 30 && isDark
+        'bg-gray-800 border-gray-700': isDark,
+        'bg-white border-gray-200': !isDark
     }"
 >
     <NuxtLink
         to="/"
-        class="mr-6"
+        class="mr-6 hidden sm:block"
         :class="{'dark' : isDark}"
     >
         Icons
     </NuxtLink>
     <NuxtLink
-        class="mr-6"
+        class="mr-6 hidden sm:block"
         to="/docs"
         :class="{'dark' : isDark}"
     >
@@ -26,23 +25,30 @@
     <a
         href="https://github.com/Renovamen/oh-vue-icons"
         target="_blank"
+        class="px-2 py-1 ml-6 mr-2 sm:mr-4 text-sm github"
+        :class="{'dark' : isDark}"
+    >
+        v1.5.0
+    </a>
+    <a
+        class="mx-4 sm:hidden block"
+        @click="toggleSidebar()"
     >
         <v-icon
-            name="fa-github"
-            scale="1.7"
-            class="hover:text-blue-500 ml-8 mr-8"
+            name="ri-menu-line"
+            scale="1.5"
             :class="{
-                'text-gray-800': !isDark,
-                'text-white': isDark
+                'text-gray-700': !isDark,
+                'text-gray-300': isDark
             }"
         />
-
     </a>
 </div>
 </template>
 
 <script>
 import ToggleTheme from './ToggleTheme.vue'
+import { mapMutations } from 'vuex'
 
 export default {
     components: {
@@ -67,7 +73,10 @@ export default {
     methods: {
         handleScroll () {
             this.scrollTop = window.pageYOffset
-        }
+        },
+        ...mapMutations({
+            toggleSidebar: 'sidebar/toggleSidebar'
+        })
     }
 }
 </script>
@@ -87,5 +96,21 @@ export default {
 
 .navbar a.dark:hover {
     @apply text-gray-300;
+}
+
+.navbar .github {
+    @apply border-solid border border-gray-700 rounded;
+}
+
+.navbar .github:hover {
+    @apply bg-gray-100;
+}
+
+.navbar .github.dark {
+    @apply border-gray-400;
+}
+
+.navbar .github.dark:hover {
+    @apply bg-gray-700;
 }
 </style>

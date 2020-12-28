@@ -6,8 +6,13 @@
       'text-white bg-gray-800': isDark
     }"
   >
-    <div class="page-width pb-16 pt-20">
-      <div class="flex justify-center font-medium pt-12 pb-12">
+    <Sidebar
+      @change-tab="changeTab"
+      :itemSelected="tabSelected"
+      :items="tabs"
+    />
+    <div class="page-width py-16">
+      <div class="flex justify-center font-medium pt-16 pb-6">
         <div class="flex flex-col text-center">
           <div class="text-3xl font-semibold">Oh, Vue Icons!</div>
           <div
@@ -23,28 +28,12 @@
         </div>
       </div>
       <div
-        class="tool-bar w-full py-1 sm:py-2 -mt-1 -mb-5 z-10"
+        class="search-box w-full pt-3 pb-1 -mt-1 -mb-5 z-10"
         :class="{
           'bg-white': !isDark,
           'bg-gray-800': isDark
         }"
       >
-        <div class="mb-2 flex text-left justify-center">
-          <nav>
-            <button
-              v-for="tab in tabs"
-              :key="tab"
-              class="sm:mr-2 px-2 py-1 sm:px-3 sm:py-2 font-medium text-sm leading-5 rounded-md text-gray-500
-                      hover:text-blue-600 focus:outline-none focus:text-blue-600 focus:bg-blue-50"
-              :class="{
-                'text-blue-700 bg-blue-100': tabSelected === tab
-              }"
-              @click="changeTab(tab)"
-            >
-              {{ tab }}
-            </button>
-          </nav>
-        </div>
         <div class="grid grid-cols-8 sm:grid-cols-12 rounded-md
                     border border-gray-500 transition duration-200">
           <div class="relative col-start-1 col-span-1">
@@ -114,7 +103,7 @@
         :iconSelected="iconSelected"
         :categorySelected="categorySelected"
         @close="resetSelectedIcon"
-        class="z-20"
+        class="z-30"
       />
     </div>
   </div>
@@ -122,9 +111,8 @@
 
 <script>
 import OhVueIcon from '../../src/components/Icon.vue'
-import Navbar from "../components/Navbar.vue"
 import IconInfo from "../components/IconInfo.vue"
-import Footer from "../components/Footer.vue"
+import Sidebar from "../components/Sidebar.vue"
 
 var iconKeys = Object.keys(OhVueIcon.icons)
 // Font Awesome
@@ -154,12 +142,16 @@ var gameIcons = iconKeys.filter(function (x) {
 
 export default {
   components: { 
-    IconInfo
+    IconInfo,
+    Sidebar
   },
   data() {
     return {
       search: "",
       isSearchFocused: false,
+      tabSelected: "All",
+      iconSelected: "",
+      categorySelected: "",
       tabs: [
         "All",
         "Font Awesome",
@@ -169,9 +161,6 @@ export default {
         "Weather Icons",
         "gameicons"
       ],
-      tabSelected: "All",
-      iconSelected: "",
-      categorySelected: "",
       iconSets: [
         {
           tab: "Font Awesome",
@@ -243,9 +232,9 @@ export default {
 </script>
 
 <style scoped>
-.tool-bar {
+.search-box {
   position: -webkit-sticky;
   position: sticky;
-  top: 58px;
+  top: 53px;
 }
 </style>
