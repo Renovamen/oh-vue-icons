@@ -480,21 +480,9 @@ export default {
 </script>
 
 <style>
-pre {
-  margin: 0;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-}
-
 .alert {
   color: #c33;
   opacity: 0.8;
-}
-
-@media (max-width: 640px) {
-  pre {
-    box-shadow: none;
-  }
 }
 </style>
 
@@ -537,6 +525,14 @@ p {
 
 figure {
   @apply mt-2 mb-4;
+}
+
+figure pre {
+  @apply m-0 rounded border border-solid border-gray-300;
+}
+
+figure.dark pre {
+  @apply border-gray-700;
 }
 
 ul {

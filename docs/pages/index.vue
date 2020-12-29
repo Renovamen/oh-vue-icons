@@ -235,6 +235,6 @@ export default {
 .search-box {
   position: -webkit-sticky;
   position: sticky;
-  top: 53px;
+  top: 49px;
 }
 </style>
