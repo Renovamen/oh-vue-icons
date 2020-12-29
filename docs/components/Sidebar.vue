@@ -1,7 +1,7 @@
 <template>
 <div
     class="sidebar fixed h-full w-56 z-20 left-0
-            text-left border-r border-solid transform duration-150"
+            text-left border-r border-solid transform"
     :class="{
         'bg-white text-gray-600 border-gray-200': !isDark,
         'bg-gray-800 text-gray-500 border-gray-700': isDark,
