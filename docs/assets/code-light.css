@@ -6,8 +6,6 @@
 
 pre[class*="language-"] {
 	color: black;
-	background-color: #f8f8f8;
-	/* text-shadow: 0 1px white; */
 	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 	font-size: 0.9rem;
 	text-align: left;
@@ -29,7 +27,7 @@ pre[class*="language-"] {
 
 /* Code blocks */
 pre[class*="language-"] {
-	padding: 1em;
+	padding: 1em 1.3em;
 	margin: .5em 0;
 	overflow: auto;
 }
