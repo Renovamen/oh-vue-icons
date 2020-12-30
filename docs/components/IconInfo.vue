@@ -23,7 +23,7 @@
           <div
             class="order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto"
           >
-            <div class="flex rounded-md shadow-sm">
+            <div class="flex rounded-md">
               <button
                 class="flex items-center justify-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-blue-600 bg-white hover:text-blue-700 focus:outline-none focus:shadow-outline transition ease-in-out duration-150"
                 @click="onDownloadSVG"

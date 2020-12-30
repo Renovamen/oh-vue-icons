@@ -96,7 +96,7 @@
 
     <div class="text-left">
       <h2 :class="{ 'dark': isDark }">
-        Installation and Importing
+        Quick Start
       </h2>
       <p>
         Install and import <code :class="{ 'dark': isDark }">oh-vue-icons</code> follow the instructions
@@ -105,8 +105,10 @@
         <NuxtLink to="/" :class="{ 'dark': isDark }">here</NuxtLink>
         for the full list of the available icons.
       </p>
+
+
       <h2 :class="{ 'dark': isDark }">
-        Basic Use
+        Basic Usage
       </h2>
       <p>
         <v-icon name="fa-flag" /> <v-icon name="ri-bank-card-fill" /> <v-icon name="ai-google-scholar-square" /> <v-icon name="si-unity" /> <v-icon name="wi-day-lightning" /> <v-icon name="game-battered-axe" />
@@ -115,11 +117,121 @@
         <pre class="language-html"><code class="language-html" v-html="getVueCode('basic')"></code></pre>
       </figure>
 
+
       <h2
         class="-mb-12"
         :class="{ 'dark': isDark }"
       >
-        Styling
+        Animations
+      </h2>
+      
+      <h3 :class="{ 'dark': isDark }">
+        Spin
+      </h3>
+      <p>
+        Use prop <code :class="{ 'dark': isDark }">spin: boolean</code> to get any icon to rotate, which is default to <code :class="{ 'dark': isDark }">false</code>.
+      </p>
+      <p>
+        <v-icon
+          name="ri-refresh-line"
+          spin
+        />
+      </p>
+      <figure :class="{ 'dark': isDark }">
+        <pre class="language-html"><code class="language-html" v-html="getVueCode('spin')"></code></pre>
+      </figure>
+
+      <h3 :class="{ 'dark': isDark }">
+        Spin Pulse
+      </h3>
+      <p>
+        Use prop <code :class="{ 'dark': isDark }">spulse: boolean</code> to have any icon rotate with eight steps, default to <code :class="{ 'dark': isDark }">false</code>.
+      </p>
+      <p>
+        <v-icon
+          name="fa-spinner"
+          spulse
+        />
+      </p>
+      <figure :class="{ 'dark': isDark }">
+        <pre class="language-html"><code class="language-html" v-html="getVueCode('spulse')"></code></pre>
+      </figure>
+
+      <h3 :class="{ 'dark': isDark }">
+        Wrench
+      </h3>
+      <p>
+        Type: <code :class="{ 'dark': isDark }">wrench: boolean</code>, default: <code :class="{ 'dark': isDark }">false</code>.
+      </p>
+      <p>
+        <v-icon
+          name="game-piercing-sword"
+          wrench
+        />
+      </p>
+      <figure :class="{ 'dark': isDark }">
+        <pre class="language-html"><code class="language-html" v-html="getVueCode('wrench')"></code></pre>
+      </figure>
+
+      <h3 :class="{ 'dark': isDark }">
+        Ring
+      </h3>
+      <p>
+        Type: <code :class="{ 'dark': isDark }">ring: boolean</code>, default: <code :class="{ 'dark': isDark }">false</code>.
+      </p>
+      <p>
+        <v-icon
+          name="fa-regular-bell"
+          ring
+        />
+      </p>
+      <figure :class="{ 'dark': isDark }">
+        <pre class="language-html"><code class="language-html" v-html="getVueCode('ring')"></code></pre>
+      </figure>
+
+      <h3 :class="{ 'dark': isDark }">
+        Pulse
+      </h3>
+      <p>
+        Type: <code :class="{ 'dark': isDark }">pulse: boolean</code>, default: <code :class="{ 'dark': isDark }">false</code>.
+      </p>
+      <p>
+        <v-icon
+          name="fa-heart"
+          pulse
+        />
+      </p>
+      <figure :class="{ 'dark': isDark }">
+        <pre class="language-html"><code class="language-html" v-html="getVueCode('pulse')"></code></pre>
+      </figure>
+
+      <h3 :class="{ 'dark': isDark }">
+        Hover
+      </h3>
+      <p>
+        Use prop <code :class="{ 'dark': isDark }">hover: boolean</code> to enable animation only when the icons are hoverd, default to <code :class="{ 'dark': isDark }">false</code>.
+        Hover the following icons to have a look.
+      </p>
+      <p>
+        <v-icon
+          name="ri-refresh-line"
+          spin hover
+        />
+        <v-icon
+          name="fa-regular-bell"
+          wrench hover
+        />
+      </p>
+      <figure :class="{ 'dark': isDark }">
+        <pre class="language-html"><code class="language-html" v-html="getVueCode('hover')"></code></pre>
+      </figure>
+
+
+      <h2
+        class="-mb-12"
+        :class="{ 'dark': isDark }"
+      >
+        Other Styles
       </h2>
 
       <h3 :class="{ 'dark': isDark }">
@@ -159,78 +271,6 @@
       </figure>
 
       <h3 :class="{ 'dark': isDark }">
-        Spin
-      </h3>
-      <p>
-        Use prop <code :class="{ 'dark': isDark }">spin: boolean</code> to get any icon to rotate, which is default to <code :class="{ 'dark': isDark }">false</code>.
-      </p>
-      <p>
-        <v-icon
-          name="fa-sync"
-          spin
-        />
-        <v-icon
-          name="ri-refresh-line"
-          spin
-        />
-        <v-icon
-          name="ai-doi"
-          spin
-        />
-        <v-icon
-          name="si-grav"
-          spin
-        />
-        <v-icon
-          name="wi-day-sunny"
-          spin
-        />
-        <v-icon
-          name="game-earth-asia-oceania"
-          spin
-        />
-      </p>
-      <figure :class="{ 'dark': isDark }">
-        <pre class="language-html"><code class="language-html" v-html="getVueCode('spin')"></code></pre>
-      </figure>
-
-      <h3 :class="{ 'dark': isDark }">
-        Pulse
-      </h3>
-      <p>
-        Use prop <code :class="{ 'dark': isDark }">pulse: boolean</code> to have any icon rotate with eight steps, which is default to <code :class="{ 'dark': isDark }">false</code>.
-      </p>
-      <p>
-        <v-icon
-          name="fa-spinner"
-          pulse
-        />
-        <v-icon
-          name="ri-loader-line"
-          pulse
-        />
-        <v-icon
-          name="ai-osf"
-          pulse
-        />
-        <v-icon
-          name="si-atom"
-          pulse
-        />
-        <v-icon
-          name="wi-solar-eclipse"
-          pulse
-        />
-        <v-icon
-          name="game-american-shield"
-          pulse
-        />
-      </p>
-      <figure :class="{ 'dark': isDark }">
-        <pre class="language-html"><code class="language-html" v-html="getVueCode('pulse')"></code></pre>
-      </figure>
-
-      <h3 :class="{ 'dark': isDark }">
         Flip
       </h3>
       <p>
@@ -243,15 +283,7 @@
       </p>
       <p>
         <v-icon
-          name="fa-signal"
-          flip="horizontal"
-        />
-        <v-icon
           name="ri-playstation-line"
-          flip="both"
-        />
-        <v-icon
-          name="ai-google-scholar"
           flip="vertical"
         />
         <v-icon
@@ -259,16 +291,32 @@
           flip="horizontal"
         />
         <v-icon
-          name="wi-umbrella"
-          flip="vertical"
-        />
-        <v-icon
-          name="game-campfire"
-          flip="vertical"
+          name="ai-google-scholar"
+          flip="both"
         />
       </p>
       <figure :class="{ 'dark': isDark }">
         <pre class="language-html"><code class="language-html" v-html="getVueCode('flip')"></code></pre>
+      </figure>
+
+      <h3 :class="{ 'dark': isDark }">
+        Stacked Icons
+      </h3>
+      <p>
+        Stack your icons easily jusy like in FontAwesome, even more powerful.
+      </p>
+      <p>
+        <v-icon label="No Photo">
+          <v-icon name="fa-camera"/>
+          <v-icon
+            name="fa-ban"
+            scale="2"
+            class="alert"
+          />
+        </v-icon>
+      </p>
+      <figure :class="{ 'dark': isDark }">
+        <pre class="language-html"><code class="language-html" v-html="getVueCode('stack')"></code></pre>
       </figure>
 
       <h3 :class="{ 'dark': isDark }">
@@ -302,26 +350,14 @@
       <figure :class="{ 'dark': isDark }">
         <pre class="language-html"><code class="language-html" v-html="getVueCode('title')"></code></pre>
       </figure>
-      
-      <h3 :class="{ 'dark': isDark }">
-        Stacked Icons
-      </h3>
-      <p>
-        Stack your icons easily jusy like in FontAwesome, even more powerful.
-      </p>
-      <p>
-        <v-icon label="No Photo">
-          <v-icon name="fa-camera"/>
-          <v-icon
-            name="fa-ban"
-            scale="2"
-            class="alert"
-          />
-        </v-icon>
-      </p>
-      <figure :class="{ 'dark': isDark }">
-        <pre class="language-html"><code class="language-html" v-html="getVueCode('stack')"></code></pre>
-      </figure>
+
+
+      <h2
+        class="-mb-12"
+        :class="{ 'dark': isDark }"
+      >
+        Advanced Usage
+      </h2>
 
       <h3 :class="{ 'dark': isDark }">
         Custom icons
@@ -377,25 +413,16 @@ const vue = {
 <v-icon name="si-gatsby" scale="3" />
 <v-icon name="wi-day-sunny-overcast" scale="3" />
 <v-icon name="game-ancient-sword" scale="3" />`,
-  spin: `<v-icon name="fa-sync" spin />
-<v-icon name="ri-refresh-line" spin />
-<v-icon name="ai-doi" spin />
-<v-icon name="si-grav" spin />
-<v-icon name="wi-day-sunny" spin />
-<v-icon name="game-earth-asia-oceania" spin />`,
-  pulse: `<v-icon name="fa-spinner" pulse />
-<v-icon name="ri-loader-line" pulse />
-<v-icon name="ai-osf" pulse />
-<v-icon name="si-atom" pulse />
-<v-icon name="wi-solar-eclipse" pulse />
-<v-icon name="game-american-shield" pulse />`,
-  flip: `<v-icon name="fa-signal" flip="horizontal" />
-<v-icon name="ri-playstation-line" flip="both" />
-<v-icon name="ai-google-scholar" flip="vertical" />
+  spin: `<v-icon name="ri-refresh-line" spin />`,
+  spulse: `<v-icon name="fa-spinner" spulse />`,
+  wrench: `<v-icon name="game-piercing-sword" wrench />`,
+  ring: `<v-icon name="fa-regular-bell" ring />`,
+  pulse: `<v-icon name="fa-heart" pulse />`,
+  flip: `<v-icon name="ri-playstation-line" flip="vertical" />
 <v-icon name="si-internetexplorer" flip="horizontal" />
-<v-icon name="wi-umbrella" flip="vertical" />
-<v-icon name="game-campfire" flip="vertical" />
-`,
+<v-icon name="ai-google-scholar" flip="both" />`,
+  hover: `<v-icon name="ri-refresh-line" spin hover />
+<v-icon name="fa-regular-bell" wrench hover />`,
   label: `<v-icon name="fa-code" label="Source Code" />`,
   title: `<v-icon name="fa-vuejs" title="Vue.js" />`,
   stack: `<v-icon label="No Photos">

@@ -13,15 +13,39 @@
     >
       <ToolSidebar
         class="sm:hidden"
+        :spin="iconSpin"
+        :spinPulse="iconSpinPulse"
+        :wrench="iconWrench"
+        :ring="iconRing"
+        :pulse="iconPulse"
+        :flip="iconFlip"
         @set-size="setSize"
         @set-color="setColor"
+        @change-spin="changeSpin"
+        @change-spin-pulse="changeSpinPulse"
+        @change-wrench="changeWrench"
+        @change-ring="changeRing"
+        @change-pulse="changePulse"
+        @change-flip="changeFlip"
       />
     </Sidebar>
 
     <ToolSidebar
       class="hidden sm:block"
+      :spin="iconSpin"
+      :spinPulse="iconSpinPulse"
+      :wrench="iconWrench"
+      :ring="iconRing"
+      :pulse="iconPulse"
+      :flip="iconFlip"
       @set-size="setSize"
       @set-color="setColor"
+      @change-spin="changeSpin"
+      @change-spin-pulse="changeSpinPulse"
+      @change-wrench="changeWrench"
+      @change-ring="changeRing"
+      @change-pulse="changePulse"
+      @change-flip="changeFlip"
     />
 
     <div class="page-width pt-16">
@@ -100,13 +124,12 @@
                   :key="`icon-${index}`"
                 >
                   <div
-                    class="w-20 h-20 cursor-pointer rounded-lg
-                            flex justify-center items-center
-                            transition ease-out duration-300"
+                    class="w-20 h-20 cursor-pointer rounded-lg flex justify-center items-center
+                            transition ease-out duration-300 border border-solid border-transparent"
                     :class="{
                       'bg-gray-200': !isDark && iconSelected === icon,
                       'bg-gray-700': isDark && iconSelected === icon,
-                      'hover:shadow-icon': !(iconSelected === icon)
+                      'hover:border-gray-500': !(iconSelected === icon)
                     }"
                     :style="{ color: iconColor }"
                     @click="selectIcon(icon, iconSet.tab.toLowerCase())"
@@ -114,6 +137,12 @@
                     <v-icon
                       :name="icon"
                       :scale="iconSize"
+                      :spin="iconSpin"
+                      :spulse="iconSpinPulse"
+                      :wrench="iconWrench"
+                      :ring="iconRing"
+                      :pulse="iconPulse"
+                      :flip="iconFlip"
                     />
                   </div>
                 </lazy-component>
@@ -139,31 +168,33 @@ import IconInfo from "../components/IconInfo.vue"
 import Sidebar from "../components/Sidebar.vue"
 import ToolSidebar from "../components/ToolSidebar.vue"
 
-var iconKeys = Object.keys(OhVueIcon.icons)
+const iconKeys = Object.keys(OhVueIcon.icons)
 // Font Awesome
-var faIcons = iconKeys.filter(function (x) {
+const faIcons = iconKeys.filter(function (x) {
   return x.slice(0, 2) === 'fa'
 })
 // Remix Icon
-var riIcons = iconKeys.filter(function (x) {
+const riIcons = iconKeys.filter(function (x) {
   return x.slice(0, 2) === 'ri'
 })
 // academicons
-var aiIcons = iconKeys.filter(function (x) {
+const aiIcons = iconKeys.filter(function (x) {
   return x.slice(0, 2) === 'ai'
 })
 // Simple Icons
-var siIcons = iconKeys.filter(function (x) {
+const siIcons = iconKeys.filter(function (x) {
   return x.slice(0, 2) === 'si'
 })
 // Weather Icons
-var wiIcons = iconKeys.filter(function (x) {
+const wiIcons = iconKeys.filter(function (x) {
   return x.slice(0, 2) === 'wi'
 })
 // gameicons
-var gameIcons = iconKeys.filter(function (x) {
+const gameIcons = iconKeys.filter(function (x) {
   return x.slice(0, 4) === 'game'
 })
+
+const flipOptions = ['normal', 'horizontal', 'vertical', 'both']
 
 export default {
   components: { 
@@ -220,7 +251,13 @@ export default {
         }
       ],
       iconSize: 2.4,
-      iconColor: '#272E39'
+      iconColor: '#222F3D',
+      iconSpin: false,
+      iconSpinPulse: false,
+      iconPulse: false,
+      iconWrench: false,
+      iconRing: false,
+      iconFlip: 'normal'
     }
   },
   computed: {
@@ -261,6 +298,31 @@ export default {
     setColor(value) {
       this.iconColor = value
       console.log('change color')
+    },
+    changeSpin() {
+      this.iconSpin = !this.iconSpin
+      this.iconSpinPulse = this.iconWrench = this.iconRing = this.iconPulse = false
+    },
+    changeSpinPulse() {
+      this.iconSpinPulse = !this.iconSpinPulse
+      this.iconSpin = this.iconWrench = this.iconRing = this.iconPulse = false
+    },
+    changeWrench() {
+      this.iconWrench = !this.iconWrench
+      this.iconSpin = this.iconSpinPulse = this.iconRing = this.iconPulse = false
+    },
+    changeRing() {
+      this.iconRing = !this.iconRing
+      this.iconSpin = this.iconSpinPulse = this.iconWrench = this.iconPulse = false
+    },
+    changePulse() {
+      this.iconPulse = !this.iconPulse
+      this.iconSpin = this.iconSpinPulse = this.iconWrench = this.iconRing = false
+    },
+    changeFlip() {
+      const currentIndex = flipOptions.indexOf(this.iconFlip)
+			const nextIndex = (currentIndex + 1) % flipOptions.length
+			this.iconFlip = flipOptions[nextIndex]
     }
   }
 }
