@@ -1,6 +1,6 @@
 <template>
 <div
-    class="sidebar fixed h-full w-56 z-20 left-0 top-0
+    class="sidebar fixed h-full w-64 sm:w-56 z-20 left-0 top-0 overflow-y-scroll
             text-left border-r border-solid transform"
     :class="{
         'bg-white text-gray-600 border-gray-200': !isDark,
@@ -11,7 +11,7 @@
     }"
 >
     <ul
-        class="mt-16 pb-2 border-b border-solid sm:hidden"
+        class="nav-links mt-16 pb-2 text-sm border-b border-solid sm:hidden"
         :class="{
             'border-gray-200': !isDark,
             'border-gray-700': isDark,
@@ -37,6 +37,7 @@
             v-for="item in items"
             :key="item"
             :class="{
+                'border-transparent': itemSelected !== item,
                 'text-blue-700 bg-blue-100 border-blue-700': itemSelected === item && !isDark,
                 'text-gray-300 bg-gray-700 border-blue-500': itemSelected === item && isDark,
                 'hover:text-blue-600': !isDark,
@@ -55,10 +56,6 @@
 <script>
 export default {
     props: ['itemSelected', 'items'],
-    props: {
-        itemSelected: null,
-        items: null
-    },
     data () {
         return {
             screenWidth: 0
@@ -86,9 +83,18 @@ export default {
 
 <style lang="postcss">
 .sidebar li {
-    @apply leading-9 list-none cursor-pointer ml-0 px-4 border-l-2 border-solid border-transparent;
+    @apply leading-9 list-none cursor-pointer ml-0 px-4 border-l-2 border-solid;
+}
+.sidebar .nav-links li {
+    @apply border-transparent;
 }
 .sidebar .toolbar {
-    @apply relative h-auto w-auto pt-0
+    @apply relative border-none w-auto h-auto pt-0 pb-8;
+}
+</style>
+
+<style>
+.sidebar .toolbar .icon-color input {
+    width: 10.5rem;
 }
 </style>

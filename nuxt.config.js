@@ -29,14 +29,5 @@ export default {
   plugins: [
     '~/plugins/lazyload.js',
     '~/plugins/icons.js'
-  ],
-  tailwindcss: {
-    config: {
-      theme: {
-        boxShadow: {
-          'icon': '0 1px 3px 0 rgba(0, 0, 0, 0.3)'
-        }
-      }
-    }
-  }
+  ]
 }
