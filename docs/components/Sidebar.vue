@@ -1,6 +1,6 @@
 <template>
 <div
-    class="sidebar fixed h-full w-56 z-20 left-0
+    class="sidebar fixed h-full w-56 z-20 left-0 top-0
             text-left border-r border-solid transform"
     :class="{
         'bg-white text-gray-600 border-gray-200': !isDark,
@@ -25,7 +25,14 @@
         </li>
     </ul>
 
-    <ul v-if="items" class="mt-4 sm:mt-20">
+    <ul
+        v-if="items"
+        class="mt-2 sm:mt-20 pb-2 border-b border-solid sm:border-none"
+        :class="{
+            'border-gray-200': !isDark,
+            'border-gray-700': isDark,
+        }"
+    >
         <li
             v-for="item in items"
             :key="item"
@@ -40,6 +47,8 @@
             {{ item }}
         </li>
     </ul>
+
+    <slot></slot>
 </div>
 </template>
 
@@ -77,6 +86,9 @@ export default {
 
 <style lang="postcss">
 .sidebar li {
-  @apply leading-9 list-none cursor-pointer ml-0 px-4 border-l-2 border-solid border-transparent;
+    @apply leading-9 list-none cursor-pointer ml-0 px-4 border-l-2 border-solid border-transparent;
+}
+.sidebar .toolbar {
+    @apply relative h-auto w-auto pt-0
 }
 </style>

@@ -2,19 +2,40 @@
   <div
     class="page"
     :class="{
-      'text-gray-900 bg-white': !isDark,
-      'text-white bg-gray-800': isDark
+      'bg-white': !isDark,
+      'bg-gray-800': isDark
     }"
   >
     <Sidebar
       @change-tab="changeTab"
       :itemSelected="tabSelected"
       :items="tabs"
+    >
+      <ToolSidebar
+        class="sm:hidden"
+        @set-size="setSize"
+        @set-color="setColor"
+      />
+    </Sidebar>
+
+    <ToolSidebar
+      class="hidden sm:block"
+      @set-size="setSize"
+      @set-color="setColor"
     />
-    <div class="page-width py-16">
+
+    <div class="page-width pt-16">
       <div class="flex justify-center font-medium pt-16 pb-6">
         <div class="flex flex-col text-center">
-          <div class="text-3xl font-semibold">Oh, Vue Icons!</div>
+          <div
+            class="text-3xl font-semibold"
+            :class="{
+              'text-gray-900': !isDark,
+              'text-white': isDark
+            }"
+          >
+            Oh, Vue Icons!
+          </div>
           <div
             class="mt-3 px-2"
             :class="{
@@ -27,6 +48,9 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="page-width pb-16">
       <div
         class="search-box w-full pt-3 pb-1 -mt-1 -mb-5 z-10"
         :class="{
@@ -65,6 +89,7 @@
           />
         </div>
       </div>
+
       <div>
         <div class="mt-10">
           <div v-for="(iconSet, index) in iconSets" :key="`set-${index}`">
@@ -75,23 +100,21 @@
                   :key="`icon-${index}`"
                 >
                   <div
-                    class="px-4 py-5 cursor-pointer rounded-lg
+                    class="w-20 h-20 cursor-pointer rounded-lg
+                            flex justify-center items-center
                             transition ease-out duration-300"
                     :class="{
-                      'text-gray-300': isDark,
-                      'text-gray-800': !isDark,
                       'bg-gray-200': !isDark && iconSelected === icon,
                       'bg-gray-700': isDark && iconSelected === icon,
                       'hover:shadow-icon': !(iconSelected === icon)
                     }"
+                    :style="{ color: iconColor }"
                     @click="selectIcon(icon, iconSet.tab.toLowerCase())"
                   >
-                    <div class="flex justify-center">
-                      <v-icon
-                        :name="icon"
-                        scale="2"
-                      />
-                    </div>
+                    <v-icon
+                      :name="icon"
+                      :scale="iconSize"
+                    />
                   </div>
                 </lazy-component>
               </div>
@@ -99,13 +122,14 @@
           </div>
         </div>
       </div>
-      <IconInfo
-        :iconSelected="iconSelected"
-        :categorySelected="categorySelected"
-        @close="resetSelectedIcon"
-        class="z-30"
-      />
     </div>
+
+    <IconInfo
+      :iconSelected="iconSelected"
+      :categorySelected="categorySelected"
+      @close="resetSelectedIcon"
+      class="z-30"
+    />
   </div>
 </template>
 
@@ -113,6 +137,7 @@
 import OhVueIcon from '../../src/components/Icon.vue'
 import IconInfo from "../components/IconInfo.vue"
 import Sidebar from "../components/Sidebar.vue"
+import ToolSidebar from "../components/ToolSidebar.vue"
 
 var iconKeys = Object.keys(OhVueIcon.icons)
 // Font Awesome
@@ -143,7 +168,8 @@ var gameIcons = iconKeys.filter(function (x) {
 export default {
   components: { 
     IconInfo,
-    Sidebar
+    Sidebar,
+    ToolSidebar
   },
   data() {
     return {
@@ -192,7 +218,9 @@ export default {
           components: gameIcons,
           count: gameIcons.length
         }
-      ]
+      ],
+      iconSize: 2.4,
+      iconColor: '#272E39'
     }
   },
   computed: {
@@ -226,6 +254,13 @@ export default {
     resetSelectedIcon() {
       this.iconSelected = ""
       this.categorySelected = ""
+    },
+    setSize(value) {
+      this.iconSize = value
+    },
+    setColor(value) {
+      this.iconColor = value
+      console.log('change color')
     }
   }
 }
