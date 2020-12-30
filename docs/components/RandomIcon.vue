@@ -7,7 +7,7 @@
     @click="change"
     class="absolute rounded-full transition-all duration-300 cursor-pointer"
     :class="{
-      'bg-gray-400 text-blue-600 hover:bg-blue-600 hover:text-gray-400': isDark,
+      'bg-gray-300 text-blue-600 hover:bg-blue-600 hover:text-gray-400': isDark,
       'bg-gray-700 text-blue-400 hover:bg-blue-400 hover:text-gray-700': !isDark
     }"
   >
