@@ -1,24 +1,16 @@
 <template>
-<div
-    class="navbar w-full py-3 bg-white border-b border-solid"
-    :class="{
-        'bg-gray-800 border-gray-700': isDark,
-        'bg-white border-gray-200': !isDark
-    }"
->
-    <div class="logo absolute ml-3 sm:ml-4">
+<div class="navbar">
+    <div class="site-name absolute ml-3 sm:ml-4">
         <NuxtLink
             to="/"
-            class="text-lg font-medium inline-block align-middle"
-            :class="{'dark' : isDark}"
+            class="text-lg font-medium inline-block"
         >
             Oh, Vue Icons!
         </NuxtLink>
         <a
             href="https://github.com/Renovamen/oh-vue-icons"
             target="_blank"
-            class="px-2 py-1 ml-2 sm:ml-3 text-sm inline-block github"
-            :class="{'dark' : isDark}"
+            class="px-2 py-1 ml-2 sm:ml-3 text-sm inline-block align-middle github"
         >
             v0.1.5
         </a>
@@ -27,29 +19,23 @@
         <NuxtLink
             to="/"
             class="mr-6 hidden sm:block"
-            :class="{'dark' : isDark}"
         >
             Icons
         </NuxtLink>
         <NuxtLink
             class="mr-6 hidden sm:block"
             to="/docs"
-            :class="{'dark' : isDark}"
         >
             Docs
         </NuxtLink>
         <ToggleTheme class="mr-6" />
         <a
-            class="mr-4 sm:hidden block"
+            class="sidebar-toggler mr-4 sm:hidden block"
             @click="toggleSidebar()"
         >
             <v-icon
                 name="ri-menu-line"
                 scale="1.5"
-                :class="{
-                    'text-gray-700': !isDark,
-                    'text-gray-300': isDark
-                }"
             />
         </a>
     </div>
@@ -67,11 +53,6 @@ export default {
     data () {
         return {
             scrollTop: 0
-        }
-    },
-    computed: {
-        isDark() {
-            return this.$store.state.theme.isDark
         }
     },
     mounted () {
@@ -92,6 +73,14 @@ export default {
 </script>
 
 <style lang="postcss">
+.navbar {
+    @apply w-full py-3 bg-white border-b border-solid border-gray-200;
+}
+
+.dark-mode .navbar {
+    @apply bg-gray-800 border-gray-700;
+}
+
 .navbar a {
     @apply text-gray-600;
 }
@@ -100,53 +89,58 @@ export default {
     @apply text-gray-700;
 }
 
-.navbar a.dark {
+.dark-mode .navbar a {
     @apply text-gray-400;
 }
 
-.navbar a.dark:hover {
+.dark-mode .navbar a:hover {
     @apply text-gray-300;
 }
 
-.navbar .logo {
+.navbar .site-name a {
+    @apply text-gray-800;
     margin-top: 2px;
 }
 
 @media (min-width: 640px) {
-    .navbar .logo {
-        margin-top: -2px;
+    .navbar .site-name a {
+        margin-top: -3px;
     }
 }
 
-.navbar .logo a {
-    @apply text-gray-800;
-}
-
-.navbar .logo a:hover {
+.navbar .site-name a:hover {
     @apply text-gray-900;
 }
 
-.navbar .logo a.dark {
+.dark-mode .navbar .site-name a {
     @apply text-gray-300;
 }
 
-.navbar .logo a.dark:hover {
+.dark-mode .navbar .site-name a:hover {
     @apply text-gray-200;
 }
 
-.navbar .logo .github {
+.navbar .site-name .github {
     @apply border-solid border border-gray-700 rounded;
 }
 
-.navbar .logo .github:hover {
+.navbar .site-name .github:hover {
     @apply bg-gray-100;
 }
 
-.navbar .logo .github.dark {
+.dark-mode .navbar .site-name .github {
     @apply border-gray-500;
 }
 
-.navbar .logo .github.dark:hover {
+.dark-mode .navbar .site-name .github:hover {
     @apply bg-gray-700;
+}
+
+.navbar .sidebar-toggler {
+    @apply text-gray-700;
+}
+
+.dark-mode .navbar .sidebar-toggler {
+    @apply text-gray-300;
 }
 </style>

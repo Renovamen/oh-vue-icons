@@ -1,0 +1,120 @@
+.v-spin:not(.v-hover) > g,
+.v-spin.v-hover:hover > g,
+.v-parent.v-hover:hover > .v-spin > g {
+    animation: v-spin 1s 0s infinite linear;
+}
+
+.v-spin-pulse:not(.v-hover) > g,
+.v-spin-pulse.v-hover:hover > g,
+.v-parent.v-hover:hover > .v-spin-pulse > g {
+    animation: v-spin 1s infinite steps(8);
+}
+
+.v-wrench:not(.v-hover) > g,
+.v-wrench.v-hover:hover > g,
+.v-parent.v-hover:hover > .v-wrench > g {
+    animation: v-wrench 2.5s ease infinite;
+}
+
+.v-ring:not(.v-hover) > g,
+.v-ring.v-hover:hover > g,
+.v-parent.v-hover:hover > .v-ring > g {
+    animation: v-ring 2s ease infinite;
+}
+
+.v-pulse:not(.v-hover) > g,
+.v-pulse.v-hover:hover > g,
+.v-parent.v-hover:hover > .v-pulse > g {
+    animation: v-pulse 2s linear infinite;
+}
+
+@keyframes v-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+  
+@keyframes v-wrench {
+    0% {
+        transform: rotate(-12deg);
+    }
+  
+    8% {
+        transform: rotate(12deg);
+    }
+  
+    10%, 28%, 30%, 48%, 50%, 68% {
+        transform: rotate(24deg);
+    }
+  
+    18%, 20%, 38%, 40%, 58%, 60% {
+        transform: rotate(-24deg);
+    }
+  
+    75%, 100% {
+        transform: rotate(0deg);
+    }
+}
+  
+@keyframes v-ring {
+    0% {
+        transform: rotate(-15deg);
+    }
+  
+    2% {
+        transform: rotate(15deg);
+    }
+  
+    4%, 12% {
+        transform: rotate(-18deg);
+    }
+  
+    6% {
+        transform: rotate(18deg);
+    }
+  
+    8% {
+        transform: rotate(-22deg);
+    }
+  
+    10% {
+        transform: rotate(22deg);
+    }
+  
+    12% {
+        transform: rotate(-18deg);
+    }
+  
+    14% {
+        transform: rotate(18deg);
+    }
+  
+    16% {
+        transform: rotate(-12deg);
+    }
+  
+    18% {
+        transform: rotate(12deg);
+    }
+  
+    20%, 100% {
+        transform: rotate(0deg);
+    }
+}
+  
+@keyframes v-pulse {
+    0% {
+        transform: scale(1.1);
+    }
+  
+    50% {
+        transform: scale(0.8);
+    }
+  
+    100% {
+        transform: scale(1.1);
+    }
+}
