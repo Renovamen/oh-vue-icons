@@ -32,7 +32,7 @@ npm install oh-vue-icons
 The latest version can be downloaded from [Github](https://github.com/Renovamen/oh-vue-icons).
 
 
-## Quick Start
+## Import
 
 ### Global Import
 
@@ -100,15 +100,16 @@ export default {
 
 ## Props
 
-| Name        | Description                              | Type      | Accepted Values                                     | Default value |
-| ----------- | ---------------------------------------- | --------- | --------------------------------------------------- | ------------- |
-| `scale`     | Icon size                                | `number`  | /                                                   | `1`           |
-| `animation` | Type of animation                        | `string`  | `wrench` / `ring` / `pulse` / `spin` / `spin-pulse` | /             |
-| `hover`     | Enable animation only when being hovered | `boolean` | `true` / `false`                                    | `false`       |
-| `flip`      | Used to flip icon                        | `string`  | `vertical` / `horizontal` / `both`                  | /             |
-| `label`     | Icon lable                               | `string`  | /                                                   | /             |
-| `title`     | Icon title                               | `string`  | /                                                   | /             |
-| `inverse`   | Make icon color white?                   | `boolean` | `true` / `false`                                    | `false`       |
+| Name        | Description                              | Type      | Accepted Values                                     | Default value  |
+| ----------- | ---------------------------------------- | --------- | --------------------------------------------------- | -------------- |
+| `scale`     | Icon size                                | `number`  | /                                                   | `1`            |
+| `animation` | Type of animation                        | `string`  | `wrench` / `ring` / `pulse` / `spin` / `spin-pulse` | /              |
+| `hover`     | Enable animation only when being hovered | `boolean` | `true` / `false`                                    | `false`        |
+| `flip`      | Used to flip icon                        | `string`  | `vertical` / `horizontal` / `both`                  | /              |
+| `fill`      | Fill color of icon                       | `string`  | HEX color code or color name                        | `currentColor` |
+| `label`     | Icon lable                               | `string`  | /                                                   | /              |
+| `title`     | Icon title                               | `string`  | /                                                   | /              |
+| `inverse`   | Make icon color white?                   | `boolean` | `true` / `false`                                    | `false`        |
 
 
 ## Examples
@@ -182,6 +183,25 @@ Use `flip: string` to mirror an icon:
 <v-icon name="ai-google-scholar" flip="both" />
 ```
 
+### Fill
+
+Set color for icons via prop `fill: string`:
+
+<p>
+  <v-icon name="fa-thermometer-empty" fill="green"></v-icon>
+  <v-icon name="fa-thermometer-half" fill="orange"></v-icon>
+  <v-icon name="fa-thermometer-full" fill="red"></v-icon>
+</p>
+
+```html
+<v-icon name="fa-thermometer-empty" fill="green" />
+<v-icon name="fa-thermometer-half" fill="orange" />
+<v-icon name="fa-thermometer-full" fill="red" />
+```
+
+**Note:** this will not work when [`inverse`](#inverse) is set to `true`.
+
+
 ### Stacked Icons
 
 Stack your icons easily jusy like in FontAwesome, even more powerful.
@@ -189,14 +209,14 @@ Stack your icons easily jusy like in FontAwesome, even more powerful.
 <p>
   <v-icon label="No Photo">
     <v-icon name="fa-camera"></v-icon>
-    <v-icon name="fa-ban" scale="2" class="alert"></v-icon>
+    <v-icon name="fa-ban" scale="2" fill="#fC644d"></v-icon>
   </v-icon>
 </p>
 
 ```html
 <v-icon label="No Photos">
   <v-icon name="fa-camera" />
-  <v-icon name="fa-ban" scale="2" class="alert" />
+  <v-icon name="fa-ban" scale="2" fill="#fC644d" />
 </v-icon>
 ```
 
@@ -206,14 +226,14 @@ Use `inverse: boolean` to make the color of icon white (`#fff`):
 
 <p>
   <v-icon label="Wechat Logo">
-    <v-icon name="fa-square" scale="1.5" class="wechat-bg"></v-icon>
+    <v-icon name="fa-square" scale="1.5" fill="#57C181"></v-icon>
     <v-icon name="si-wechat" inverse></v-icon>
   </v-icon>
 </p>
 
 ```html
 <v-icon label="Wechat Logo">
-  <v-icon name="fa-square" scale="1.5" class="wechat-bg" />
+  <v-icon name="fa-square" scale="1.5" fill="#57C181" />
   <v-icon name="si-wechat" inverse />
 </v-icon>
 ```
@@ -314,3 +334,13 @@ OhVueIcon.register(
 ```html
 <v-icon name="webpack" /> <v-icon name="vue" /> <v-icon name="html5-c" />
 ```
+
+
+## Acknowledgements
+
+This project is inspired by and based on [Justineo/vue-awesome](https://github.com/Justineo/vue-awesome).
+
+
+## License
+
+[MIT](https://github.com/Renovamen/oh-vue-icons/blob/master/LICENSE)

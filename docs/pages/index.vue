@@ -78,7 +78,6 @@
                 <div
                   class="icon-block"
                   :class="{ 'selected': iconSelected === icon }"
-                  :style="{ color: iconColor }"
                   @click="selectIcon(icon, iconSet.tab.toLowerCase())"
                 >
                   <v-icon
@@ -86,6 +85,7 @@
                     :scale="iconSize"
                     :animation="iconAnimation"
                     :flip="iconFlip"
+                    :fill="iconColor"
                   />
                 </div>
               </lazy-component>

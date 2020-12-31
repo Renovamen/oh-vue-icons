@@ -6,9 +6,6 @@
 .dark-mode :not(pre) > code {
 	background-color: rgba(76, 86, 128, 0.4);
 	color: #96c2eb;
-	padding: 0.25rem 0.5rem;
-	border-radius: 3px;
-	font-size: 0.9rem;
 }
 
 .dark-mode .token.comment,

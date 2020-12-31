@@ -126,12 +126,4 @@ export default {
 .docs-content li {
   @apply ml-8 list-disc leading-7;
 }
-
-.docs-content .alert {
-  @apply text-red-500;
-}
-
-.docs-content .wechat-bg {
-  @apply text-green-500;
-}
 </style>
