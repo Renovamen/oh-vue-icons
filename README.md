@@ -1,6 +1,6 @@
 # Oh, Vue Icons!
 
-A [Vue](https://vuejs.org/) component for including inline SVG icons from different icon packs in easily. It is highly inspired by and based on [Justineo/vue-awesome](https://github.com/Justineo/vue-awesome). Now the following icon packs are supported:
+A [Vue](https://vuejs.org/) component for including inline SVG icons from different icon packs in easily. Now the following icon packs are supported:
 
 - `fa` - [Font Awesome](https://fontawesome.com)
 - `ri` - [Remix Icon](https://github.com/Remix-Design/RemixIcon)
@@ -9,9 +9,12 @@ A [Vue](https://vuejs.org/) component for including inline SVG icons from differ
 - `wi` - [Weather Icons](https://erikflowers.github.io/weather-icons/)
 - `game` - [gameicons](https://game-icons.net)
 
-Some of the icons are resized for better and more consistent user experience.
 
-View the full list of icons and the demo [here](https://oh-vue-icons.vercel.app).
+&nbsp;
+
+## Documentation
+
+Search for icons and view the documentation [here](https://oh-vue-icons.vercel.app).
 
 
 &nbsp;
@@ -26,7 +29,7 @@ npm install oh-vue-icons
 
 &nbsp;
 
-## Quick Start
+## Import
 
 ### Global Import
 
@@ -77,22 +80,13 @@ export default {
 
 ## Usage
 
-Then you can display icons on your page:
-
 ```html
-<!-- basic -->
-<v-icon name="fa-beer" />
-
-<!-- with options -->
-<v-icon name="fa-sync" scale="2" animation="spin" />
-<v-icon name="ri-playstation-fill" flip="horizontal" />
-<v-icon name="ai-google-scholar" label="Google Scholar" />
-
-<!-- stacked icons -->
-<v-icon label="No Photos">
-  <v-icon name="fa-camera" />
-  <v-icon name="fa-ban" scale="2" class="alert" />
-</v-icon>
+<template>
+  <div>
+    <v-icon name="fa-flag" />
+    <v-icon name="ri-zhihu-fill" />
+  </div>
+</template>
 ```
 
 The icons are organized as follows:
@@ -101,7 +95,26 @@ The icons are organized as follows:
 
 - For Font Awesome icons, icons from `regular` pack have name prop values like `fa-regular-flag`. Icons from `solid` and `brands` pack have name prop values like `fa/beer` and `fa/github`.
 
-For more information about the usage, see [here](https://oh-vue-icons.vercel.app).
+See the [documentation](https://oh-vue-icons.vercel.app) for more about the usage.
+
+
+&nbsp;
+
+## Props
+
+| Name        | Description                              | Type      | Accepted Values                                     | Default value  |
+| ----------- | ---------------------------------------- | --------- | --------------------------------------------------- | -------------- |
+| `scale`     | Icon size                                | `number`  | /                                                   | `1`            |
+| `animation` | Type of animation                        | `string`  | `wrench` / `ring` / `pulse` / `spin` / `spin-pulse` | /              |
+| `hover`     | Enable animation only when being hovered | `boolean` | `true` / `false`                                    | `false`        |
+| `flip`      | Used to flip icon                        | `string`  | `vertical` / `horizontal` / `both`                  | /              |
+| `fill`      | Fill color of icon                       | `string`  | HEX color code or color name                        | `currentColor` |
+| `label`     | Icon lable                               | `string`  | /                                                   | /              |
+| `title`     | Icon title                               | `string`  | /                                                   | /              |
+| `inverse`   | Make icon color white?                   | `boolean` | `true` / `false`                                    | `false`        |
+
+Some examples could be found in the [documentation](https://oh-vue-icons.vercel.app).
+
 
 &nbsp;
 
@@ -136,6 +149,13 @@ Run docs:
 ```bash
 yarn dev
 ```
+
+
+&nbsp;
+
+## Acknowledgements
+
+This project is inspired by and based on [Justineo/vue-awesome](https://github.com/Justineo/vue-awesome).
 
 
 &nbsp;
