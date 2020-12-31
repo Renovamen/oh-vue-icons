@@ -30,6 +30,7 @@ export default {
       }
     },
     title: String,
+    fill: String,
     scale: [Number, String],
     animation: {
       validator (val) {
@@ -205,7 +206,8 @@ export default {
         width: this.width,
         height: this.height,
         viewBox: this.box,
-        focusable: this.focusable
+        focusable: this.focusable,
+        fill: this.fill ? this.fill : 'currentColor'
       },
       on: this.$listeners
     }
@@ -306,7 +308,6 @@ function escapeHTML (html) {
 
 .v-icon {
   display: inline-block;
-  fill: currentColor;
   overflow: visible;
   vertical-align: -0.125em;
 }
