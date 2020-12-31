@@ -2,14 +2,10 @@
 <div class="h-40 w-40 mt-4 mx-auto block relative">
   <figure
     id="logo"
+    class="absolute rounded-full transition-all duration-300 cursor-pointer"
     @mouseenter="toggle"
     @mouseleave="toggle"
     @click="change"
-    class="absolute rounded-full transition-all duration-300 cursor-pointer"
-    :class="{
-      'bg-gray-300 text-blue-600 hover:bg-blue-600 hover:text-gray-400': isDark,
-      'bg-gray-700 text-blue-400 hover:bg-blue-400 hover:text-gray-700': !isDark
-    }"
   >
     <v-icon
       ref="logo"
@@ -43,11 +39,6 @@ export default {
       }
     }, 200)
   },
-  computed: {
-    isDark() {
-      return this.$store.state.theme.isDark
-    }
-  },
   methods: {
     change () {
       this.name = randomIcon()
@@ -58,6 +49,21 @@ export default {
   }
 }
 </script>
+
+<style lang="postcss">
+#logo {
+  @apply bg-gray-700 text-blue-400;
+}
+#logo:hover {
+  @apply bg-blue-400 text-gray-700;
+}
+.dark-mode #logo {
+  @apply bg-gray-300 text-blue-600;
+}
+.dark-mode #logo:hover {
+  @apply bg-blue-600 text-gray-400;
+}
+</style>
 
 <style scoped>
 #logo {

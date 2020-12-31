@@ -1,12 +1,5 @@
 <template>
-<div
-    class="toolbar fixed h-full w-56 pt-16 z-20 top-0 right-0
-            text-left border-l border-solid"
-    :class="{
-        'text-gray-600 border-gray-200': !isDark,
-        'text-gray-500 border-gray-700': isDark,
-    }"
->
+<div class="toolbar">
     <div class="p-2 mx-2">
         <div class="m-3 ml-0 mr-4 text-left">Size</div>
         <div class="flex flex-1">
@@ -26,8 +19,7 @@
         <div class="flex flex-1">
             <v-swatches class="flex-1" v-model="color" />
             <input
-                class="bg-transparent border border-solid
-                        outline-none rounded-md px-1"
+                class="bg-transparent border border-solid outline-none rounded-md px-1"
                 :style="{ borderColor: isColorFocused ? color : '#A0AEBF' }"
                 slot="trigger"
                 v-model="color"
@@ -40,32 +32,32 @@
         <div class="m-3 ml-0 mr-4 text-left">Animation</div>
         <div class="grid grid-cols-2 gap-2 text-sm">
             <button
-                @click="$emit('change-spin')"
-                :class="{ 'dark': isDark, 'clicked': spin }"
+                @click="$emit('set-animation', 'spin')"
+                :class="{ 'clicked': animation === 'spin' }"
             >
                 Spin
             </button>
             <button
-                @click="$emit('change-spin-pulse')"
-                :class="{ 'dark': isDark, 'clicked': spinPulse }"
+                @click="$emit('set-animation', 'spin-pulse')"
+                :class="{ 'clicked': animation === 'spin-pulse' }"
             >
                 Spin Pulse
             </button>
             <button
-                @click="$emit('change-wrench')"
-                :class="{ 'dark': isDark, 'clicked': wrench }"
+                @click="$emit('set-animation', 'wrench')"
+                :class="{ 'clicked': animation === 'wrench' }"
             >
                 Wrench
             </button>
             <button
-                @click="$emit('change-ring')"
-                :class="{ 'dark': isDark, 'clicked': ring }"
+                @click="$emit('set-animation', 'ring')"
+                :class="{ 'clicked': animation === 'ring' }"
             >
                 Ring
             </button>
             <button
-                @click="$emit('change-pulse')"
-                :class="{ 'dark': isDark, 'clicked': pulse }"
+                @click="$emit('set-animation', 'pulse')"
+                :class="{ 'clicked': animation === 'pulse' }"
             >
                 Pulse
             </button>
@@ -74,9 +66,8 @@
     <div class="p-2 mx-2">
         <div class="m-3 ml-0 mr-4 text-left">Flip</div>
         <button
-            @click="$emit('change-flip')"
+            @click="$emit('set-flip')"
             class="w-full capitalize"
-            :class="{ 'dark': isDark }"
         >
             {{ flip }}
         </button>
@@ -95,11 +86,11 @@ export default {
         VueSlider,
         VSwatches
     },
-    props: ['spin', 'spinPulse', 'wrench', 'pulse', 'ring', 'flip'],
+    props: ['iconSize', 'iconColor', 'animation', 'flip'],
     data() {
         return {
-            size: 2.4,
-            color: '#222F3D',
+            size: 0.1,
+            color: '',
             isColorFocused: false
         }
     },
@@ -111,10 +102,9 @@ export default {
             this.$emit('set-color', value)
         }
     },
-    computed: {
-        isDark() {
-            return this.$store.state.theme.isDark
-        }
+    mounted () {
+        this.size = this.iconSize
+        this.color = this.iconColor
     }
 }
 </script>
@@ -123,19 +113,26 @@ export default {
 .vue-slider-process {
     @apply bg-blue-500;
 }
+.toolbar {
+    @apply fixed h-full w-56 pt-16 z-20 top-0 right-0 text-left border-l border-solid
+           bg-white text-gray-600 border-gray-200;
+}
+.dark-mode .toolbar {
+    @apply bg-gray-800 text-gray-500 border-gray-700;
+}
 .toolbar button {
     @apply border border-solid border-gray-500 outline-none rounded h-8;
 }
 .toolbar button:hover {
     @apply bg-gray-100;
 }
-.toolbar button.dark:hover {
+.dark-mode .toolbar button:hover {
     @apply bg-gray-700;
 }
 .toolbar button.clicked {
     @apply bg-gray-200 border-transparent;
 }
-.toolbar button.dark.clicked {
+.dark-mode .toolbar button.clicked {
     @apply bg-gray-600 text-gray-300;
 }
 </style>

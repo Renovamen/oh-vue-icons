@@ -31,12 +31,11 @@ export default {
     },
     title: String,
     scale: [Number, String],
-    spin: Boolean,
-    spulse: Boolean,
-    inverse: Boolean,
-    wrench: Boolean,
-    ring: Boolean,
-    pulse: Boolean,
+    animation: {
+      validator (val) {
+        return val === 'spin' || val === 'spin-pulse' || val === 'wrench' || val === 'ring' || val === 'pulse'
+      }
+    },
     hover: Boolean,
     flip: {
       validator (val) {
@@ -44,6 +43,7 @@ export default {
       }
     },
     label: String,
+    inverse: Boolean,
     tabindex: [Number, String]
   },
   data() {
@@ -68,15 +68,15 @@ export default {
     klass() {
       let classes = {
         'v-icon': true,
+        'v-inverse': this.inverse,
         'v-flip-horizontal': this.flip === 'horizontal',
         'v-flip-vertical': this.flip === 'vertical',
         'v-flip-both': this.flip === 'both',
-        'v-spin': this.spin,
-        'v-spin-pulse': this.spulse,
-        'v-inverse': this.inverse,
-        'v-wrench': this.wrench,
-        'v-ring': this.ring,
-        'v-pulse': this.pulse,
+        'v-spin': this.animation === 'spin',
+        'v-spin-pulse': this.animation === 'spin-pulse',
+        'v-wrench': this.animation === 'wrench',
+        'v-ring': this.animation === 'ring',
+        'v-pulse': this.animation === 'pulse',
         'v-hover': this.hover
       }
 
@@ -302,6 +302,8 @@ function escapeHTML (html) {
 </script>
 
 <style>
+@import './animation.css';
+
 .v-icon {
   display: inline-block;
   fill: currentColor;
@@ -325,166 +327,7 @@ function escapeHTML (html) {
   transform: scale(-1, -1);
 }
 
-.v-spin:not(.v-hover) > g,
-.v-spin.v-hover:hover {
-  animation: v-spin 1s 0s infinite linear;
-}
-
-.v-spin-pulse:not(.v-hover) > g,
-.v-spin-pulse.v-hover:hover {
-  animation: v-spin 1s infinite steps(8);
-}
-
-.v-wrench:not(.v-hover) > g,
-.v-wrench.v-hover:hover > g {
-  animation: v-wrench 2.5s ease infinite;
-}
-
-.v-ring:not(.v-hover) > g,
-.v-ring.v-hover:hover {
-  animation: v-ring 2s ease infinite;
-}
-
-.v-pulse:not(.v-hover) > g,
-.v-pulse.v-hover:hover {
-  animation: v-pulse 2s linear infinite;
-}
-
 .v-inverse {
   color: #fff;
-}
-
-@keyframes v-spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes v-wrench {
-  0% {
-    transform: rotate(-12deg);
-  }
-
-  8% {
-    transform: rotate(12deg);
-  }
-
-  10% {
-    transform: rotate(24deg);
-  }
-
-  18% {
-    transform: rotate(-24deg);
-  }
-
-  20% {
-    transform: rotate(-24deg);
-  }
-
-  28% {
-    transform: rotate(24deg);
-  }
-
-  30% {
-    transform: rotate(24deg);
-  }
-
-  38% {
-    transform: rotate(-24deg);
-  }
-
-  40% {
-    transform: rotate(-24deg);
-  }
-
-  48% {
-    transform: rotate(24deg);
-  }
-
-  50% {
-    transform: rotate(24deg);
-  }
-
-  58% {
-    transform: rotate(-24deg);
-  }
-
-  60% {
-    transform: rotate(-24deg);
-  }
-
-  68% {
-    transform: rotate(24deg);
-  }
-
-  75%, 100% {
-    transform: rotate(0deg);
-  }
-}
-
-@keyframes v-ring {
-  0% {
-    transform: rotate(-15deg);
-  }
-
-  2% {
-    transform: rotate(15deg);
-  }
-
-  4% {
-    transform: rotate(-18deg);
-  }
-
-  6% {
-    transform: rotate(18deg);
-  }
-
-  8% {
-    transform: rotate(-22deg);
-  }
-
-  10% {
-    transform: rotate(22deg);
-  }
-
-  12% {
-    transform: rotate(-18deg);
-  }
-
-  14% {
-    transform: rotate(18deg);
-  }
-
-  16% {
-    transform: rotate(-12deg);
-  }
-
-  18% {
-    transform: rotate(12deg);
-  }
-
-  20%, 100% {
-    transform: rotate(0deg);
-  }
-}
-
-@keyframes v-pulse {
-  0% {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-  }
-
-  50% {
-    -webkit-transform: scale(0.8);
-    transform: scale(0.8);
-  }
-
-  100% {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-  }
 }
 </style>
