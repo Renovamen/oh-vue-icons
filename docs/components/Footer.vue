@@ -1,11 +1,5 @@
 <template>
-    <footer
-        class="pb-8 pt-8 font-normal text-center"
-        :class="{
-            'text-gray-600 bg-white': !isDark,
-            'text-gray-500 bg-gray-800': isDark
-        }"
-    >
+    <footer class="pb-8 pt-8 font-normal text-center">
         <a
             href="https://github.com/Renovamen"
             target="_blank"
@@ -32,12 +26,11 @@
     </footer>
 </template>
 
-<script>
-export default {
-    computed: {
-        isDark() {
-            return this.$store.state.theme.isDark
-        }
-    },
+<style lang="postcss">
+footer {
+    @apply text-gray-600 bg-white;
 }
-</script>
+.dark-mode footer {
+    @apply text-gray-500 bg-gray-800;
+}
+</style>

@@ -12,7 +12,8 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.svg' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.svg' },
+      // { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700' }
     ]
   },
   css: [
@@ -21,8 +22,11 @@ export default {
     './assets/code-dark.css'
   ],
   components: true,  // auto import components
+  modules: [
+    '@nuxt/content'
+  ],
   buildModules: [
-    '@nuxtjs/tailwindcss',
+    '@nuxtjs/tailwindcss'
   ],
   build: {
   },

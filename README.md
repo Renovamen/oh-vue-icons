@@ -26,33 +26,46 @@ npm install oh-vue-icons
 
 &nbsp;
 
-## Usage
+## Quick Start
 
-### Import
+### Global Import
 
-Import `oh-vue-icons` in your Vue project:
+Import `oh-vue-icons` and install it into Vue in `main.js`. You can choose to only import the icons you use to reduce bundle size, for example:
 
 ```js
+// main.js
 import Vue from 'vue'
+import App from './App.vue'
 import OhVueIcon from 'oh-vue-icons/components/Icon'
 
-/* Import icons */
-
-// Only import the icons you use to reduce bundle size:
 import { FaFlag, RiZhihuFill } from 'oh-vue-icons/icons'
 OhVueIcon.add([FaFlag, RiZhihuFill])
 
-// Or import a certain icon pack if you don't care about bundle size, 
-// for example, Font Awesome:
-import { Fa } from 'oh-vue-icons/icons'
-OhVueIcon.add(Fa)
-
-/* Register component */
-
-// globally (in your main.js file)
 Vue.component('v-icon', OhVueIcon)
 
-// or locally (in your component file)
+new Vue({
+  render: h => h(App)
+}).$mount('#app')
+```
+
+Or you can also import a whole icon pack if you don't care about bundle size, for example:
+
+```js
+// main.js
+// import Font Awesome and Remix Icon
+import { Fa, Ri } from 'oh-vue-icons/icons'
+
+OhVueIcon.add(Fa)
+OhVueIcon.add(Ri)
+```
+
+&nbsp;
+
+### Local Import
+
+```js
+import OhVueIcon from 'oh-vue-icons/components/Icon'
+
 export default {
   components: {
     'v-icon': OhVueIcon
@@ -62,7 +75,7 @@ export default {
 
 &nbsp;
 
-### Use
+## Usage
 
 Then you can display icons on your page:
 
@@ -71,7 +84,7 @@ Then you can display icons on your page:
 <v-icon name="fa-beer" />
 
 <!-- with options -->
-<v-icon name="fa-sync" scale="2" spin />
+<v-icon name="fa-sync" scale="2" animation="spin" />
 <v-icon name="ri-playstation-fill" flip="horizontal" />
 <v-icon name="ai-google-scholar" label="Google Scholar" />
 
