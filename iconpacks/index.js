@@ -79,13 +79,13 @@ module.exports = {
       licenseUrl: "http://scripts.sil.org/OFL"
     },
     {
-      id: "game",
+      id: "gi",
       name: "gameicons",
       contents: [
         {
           files: path.resolve(__dirname, "gameicons/transparent/1x1/*/*.svg"),
-          formatter: (name) => `Game${name}`,
-          prefix: (name) => `game-${name}`
+          formatter: (name) => `Gi${name}`,
+          prefix: (name) => `gi-${name}`
         },
       ],
       projectUrl: "https://game-icons.net/",
