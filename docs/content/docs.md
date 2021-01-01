@@ -86,7 +86,7 @@ export default {
   <v-icon name="ai-google-scholar-square"></v-icon>
   <v-icon name="si-unity"></v-icon>
   <v-icon name="wi-day-lightning"></v-icon>
-  <v-icon name="game-battered-axe"></v-icon>
+  <v-icon name="gi-battered-axe"></v-icon>
 </p>
 
 ```html
@@ -97,7 +97,7 @@ export default {
     <v-icon name="ai-google-scholar-square" />
     <v-icon name="si-unity" />
     <v-icon name="wi-day-lightning" />
-    <v-icon name="game-battered-axe" />
+    <v-icon name="gi-battered-axe" />
   </div>
 </template>
 ```
@@ -128,7 +128,7 @@ Use prop `scale: number | string` to specify the icon size:
   <v-icon name="ai-overleaf" scale="2.5"></v-icon>
   <v-icon name="si-gatsby" scale="3"></v-icon>
   <v-icon name="wi-day-sunny-overcast" scale="3.5"></v-icon>
-  <v-icon name="game-ancient-sword" scale="4"></v-icon>
+  <v-icon name="gi-ancient-sword" scale="4"></v-icon>
 </p>
 
 ```html
@@ -137,7 +137,7 @@ Use prop `scale: number | string` to specify the icon size:
 <v-icon name="ai-overleaf" scale="2.5"/>
 <v-icon name="si-gatsby" scale="3"/>
 <v-icon name="wi-day-sunny-overcast" scale="3.5"/>
-<v-icon name="game-ancient-sword" scale="4"/>
+<v-icon name="gi-ancient-sword" scale="4"/>
 ```
 
 ### Animations
@@ -147,14 +147,14 @@ Use `animation: string` to enablle animations:
 <p>
   <v-icon name="ri-refresh-line" animation="spin"></v-icon>
   <v-icon name="fa-spinner" animation="spin-pulse"></v-icon>
-  <v-icon name="game-piercing-sword" animation="wrench"></v-icon> <v-icon name="fa-regular-bell" animation="ring"></v-icon>
+  <v-icon name="gi-piercing-sword" animation="wrench"></v-icon> <v-icon name="fa-regular-bell" animation="ring"></v-icon>
   <v-icon name="ri-heart-pulse-line" animation="pulse"></v-icon>
 </p>
 
 ```html
 <v-icon name="ri-refresh-line" animation="spin" />
 <v-icon name="fa-spinner" animation="spin-pulse" />
-<v-icon name="game-piercing-sword" animation="wrench" />
+<v-icon name="gi-piercing-sword" animation="wrench" />
 <v-icon name="fa-regular-bell" animation="ring" />
 <v-icon name="ri-heart-pulse-line" animation="pulse" />
 ```

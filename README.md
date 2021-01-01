@@ -7,7 +7,7 @@ A [Vue](https://vuejs.org/) component for including inline SVG icons from differ
 - `ai` - [academicons](https://github.com/jpswalsh/academicons)
 - `si` - [Simple Icons](https://simpleicons.org)
 - `wi` - [Weather Icons](https://erikflowers.github.io/weather-icons/)
-- `game` - [gameicons](https://game-icons.net)
+- `gi` - [gameicons](https://game-icons.net)
 
 
 &nbsp;
@@ -91,7 +91,7 @@ export default {
 
 The icons are organized as follows:
 
-- The prefixes of the name prop values of icons from Font Awesome, Remix Icon, academicons and gameicons are `fa`, `ri`, `ai`, `si`, `wi` and `game`.
+- The prefixes of the name prop values of icons from Font Awesome, Remix Icon, academicons and gameicons are `fa`, `ri`, `ai`, `si`, `wi` and `gi`.
 
 - For Font Awesome icons, icons from `regular` pack have name prop values like `fa-regular-flag`. Icons from `solid` and `brands` pack have name prop values like `fa-beer` and `fa-github`.
 

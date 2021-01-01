@@ -14,6 +14,6 @@ export const Si = Object.values({ ...SiIcons })
 export * from './wi'
 import * as WiIcons from './wi'
 export const Wi = Object.values({ ...WiIcons })
-export * from './game'
-import * as GameIcons from './game'
-export const Game = Object.values({ ...GameIcons })
+export * from './gi'
+import * as GiIcons from './gi'
+export const Gi = Object.values({ ...GiIcons })
