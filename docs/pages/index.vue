@@ -106,36 +106,12 @@
 
 <script>
 import OhVueIcon from '../../src/components/Icon.vue'
-import IconInfo from "../components/IconInfo.vue"
-import Sidebar from "../components/Sidebar.vue"
-import ToolSidebar from "../components/ToolSidebar.vue"
+import IconInfo from '../components/IconInfo.vue'
+import Sidebar from '../components/Sidebar.vue'
+import ToolSidebar from '../components/ToolSidebar.vue'
+import { icons } from '../../iconpacks'
 
 const iconKeys = Object.keys(OhVueIcon.icons)
-// Font Awesome
-const faIcons = iconKeys.filter(function (x) {
-  return x.slice(0, 2) === 'fa'
-})
-// Remix Icon
-const riIcons = iconKeys.filter(function (x) {
-  return x.slice(0, 2) === 'ri'
-})
-// academicons
-const aiIcons = iconKeys.filter(function (x) {
-  return x.slice(0, 2) === 'ai'
-})
-// Simple Icons
-const siIcons = iconKeys.filter(function (x) {
-  return x.slice(0, 2) === 'si'
-})
-// Weather Icons
-const wiIcons = iconKeys.filter(function (x) {
-  return x.slice(0, 2) === 'wi'
-})
-// gameicons
-const gameIcons = iconKeys.filter(function (x) {
-  return x.slice(0, 4) === 'game'
-})
-
 const flipOptions = ['normal', 'horizontal', 'vertical', 'both']
 
 export default {
@@ -146,65 +122,37 @@ export default {
   },
   data() {
     return {
-      search: "",
+      search: '',
       isSearchFocused: false,
-      tabSelected: "All",
-      iconSelected: "",
-      categorySelected: "",
-      tabs: [
-        "All",
-        "Font Awesome",
-        "Remix Icon",
-        "academicons",
-        "Simple Icons",
-        "Weather Icons",
-        "gameicons"
-      ],
-      iconSets: [
-        {
-          tab: "Font Awesome",
-          components: faIcons,
-          count: faIcons.length
-        },
-        {
-          tab: "Remix Icon",
-          components: riIcons,
-          count: riIcons.length
-        },
-        {
-          tab: "academicons",
-          components: aiIcons,
-          count: aiIcons.length
-        },
-        {
-          tab: "Simple Icons",
-          components: siIcons,
-          count: siIcons.length
-        },
-        {
-          tab: "Weather Icons",
-          components: wiIcons,
-          count: wiIcons.length
-        },
-        {
-          tab: "gameicons",
-          components: gameIcons,
-          count: gameIcons.length
-        }
-      ],
+      tabSelected: 'All',
+      iconSelected: '',
+      categorySelected: '',
+      tabs: ['All'],
+      iconSets: [],
       iconSize: 2.4,
       iconColor: '#222F3D',
       iconAnimation: null,
       iconFlip: 'normal'
     }
   },
+  mounted () {
+    for(let icon of icons) {
+      this.iconSets.push({
+        tab: icon.name,
+        components: iconKeys.filter(function (x) {
+          return x.slice(0, icon.id.length) === icon.id
+        })
+      })
+      this.tabs.push(icon.name)
+    }
+  },
   computed: {
     countIconsByTab() {
       const tabSelected = this.tabSelected
-      if (tabSelected === "All") return iconKeys.length
+      if (tabSelected === 'All') return iconKeys.length
       return this.iconSets.find(x => {
         return x.tab === tabSelected
-      }).count
+      }).components.length
     }
   },
   methods: {
@@ -222,8 +170,8 @@ export default {
       )
     },
     resetSelectedIcon() {
-      this.iconSelected = ""
-      this.categorySelected = ""
+      this.iconSelected = ''
+      this.categorySelected = ''
     },
     setSize(value) {
       this.iconSize = value

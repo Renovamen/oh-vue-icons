@@ -90,12 +90,16 @@ export default {
 </p>
 
 ```html
-<v-icon name="fa-flag"></v-icon>
-<v-icon name="ri-bank-card-fill"></v-icon>
-<v-icon name="ai-google-scholar-square"></v-icon>
-<v-icon name="si-unity"></v-icon>
-<v-icon name="wi-day-lightning"></v-icon>
-<v-icon name="game-battered-axe"></v-icon>
+<template>
+  <div>
+    <v-icon name="fa-flag" />
+    <v-icon name="ri-bank-card-fill" />
+    <v-icon name="ai-google-scholar-square" />
+    <v-icon name="si-unity" />
+    <v-icon name="wi-day-lightning" />
+    <v-icon name="game-battered-axe" />
+  </div>
+</template>
 ```
 
 ## Props
@@ -119,21 +123,21 @@ export default {
 Use prop `scale: number | string` to specify the icon size:
 
 <p>
-  <v-icon name="fa-gamepad" scale="3"></v-icon>
-  <v-icon name="ri-folder-music-fill" scale="3"></v-icon>
-  <v-icon name="ai-overleaf" scale="3"></v-icon>
+  <v-icon name="fa-gamepad" scale="1.5"></v-icon>
+  <v-icon name="ri-folder-music-fill" scale="2"></v-icon>
+  <v-icon name="ai-overleaf" scale="2.5"></v-icon>
   <v-icon name="si-gatsby" scale="3"></v-icon>
-  <v-icon name="wi-day-sunny-overcast" scale="3"></v-icon>
-  <v-icon name="game-ancient-sword" scale="3"></v-icon>
+  <v-icon name="wi-day-sunny-overcast" scale="3.5"></v-icon>
+  <v-icon name="game-ancient-sword" scale="4"></v-icon>
 </p>
 
 ```html
-<v-icon name="fa-gamepad" scale="3" />
-<v-icon name="ri-folder-music-fill" scale="3" />
-<v-icon name="ai-overleaf" scale="3" />
-<v-icon name="si-gatsby" scale="3" />
-<v-icon name="wi-day-sunny-overcast" scale="3" />
-<v-icon name="game-ancient-sword" scale="3" />
+<v-icon name="fa-gamepad" scale="1.5"/>
+<v-icon name="ri-folder-music-fill" scale="2"/>
+<v-icon name="ai-overleaf" scale="2.5"/>
+<v-icon name="si-gatsby" scale="3"/>
+<v-icon name="wi-day-sunny-overcast" scale="3.5"/>
+<v-icon name="game-ancient-sword" scale="4"/>
 ```
 
 ### Animations
@@ -185,7 +189,7 @@ Use `flip: string` to mirror an icon:
 
 ### Fill
 
-Set color for icons via prop `fill: string`:
+Set fill color for icons via prop `fill: string`:
 
 <p>
   <v-icon name="fa-thermometer-empty" fill="green"></v-icon>
@@ -198,8 +202,6 @@ Set color for icons via prop `fill: string`:
 <v-icon name="fa-thermometer-half" fill="orange" />
 <v-icon name="fa-thermometer-full" fill="red" />
 ```
-
-**Note:** this will not work when [`inverse`](#inverse) is set to `true`.
 
 
 ### Stacked Icons
@@ -292,11 +294,11 @@ OhVueIcon.register(
     height: 1200,
     paths: [
       {
-        style: 'fill:#8ED6FB',
+        fill: '#8ED6FB',
         d: 'M1035.6 879.3l-418.1 236.5V931.6L878 788.3l157.6 91zm28.6-25.9V358.8l-153 88.3V765l153 88.4zm-901.5 25.9l418.1 236.5V931.6L320.3 788.3l-157.6 91zm-28.6-25.9V358.8l153 88.3V765l-153 88.4zM152 326.8L580.8 84.2v178.1L306.1 413.4l-2.1 1.2-152-87.8zm894.3 0L617.5 84.2v178.1l274.7 151.1 2.1 1.2 152-87.8z'
       },
       {
-        style: 'fill:#1C78C0',
+        fill: '#1C78C0',
         d: 'M580.8 889.7l-257-141.3v-280l257 148.4v272.9zm36.7 0l257-141.3v-280l-257 148.4v272.9zm-18.3-283.6zM341.2 436l258-141.9 258 141.9-258 149-258-149z'
       }
     ]
@@ -307,11 +309,11 @@ OhVueIcon.register(
     height: 221,
     polygons: [
       {
-        style: 'fill:#41B883',
+        fill: '#41B883',
         points: '0,0 128,220.8 256,0 204.8,0 128,132.48 50.56,0 0,0'
       },
       {
-        style: 'fill:#35495E',
+        fill: '#35495E',
         points: '50.56,0 128,133.12 204.8,0 157.44,0 128,51.2 97.92,0 50.56,0'
       }
     ]
