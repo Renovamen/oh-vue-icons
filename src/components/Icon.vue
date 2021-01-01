@@ -309,7 +309,7 @@ function escapeHTML (html) {
 .v-icon {
   display: inline-block;
   overflow: visible;
-  vertical-align: -0.125em;
+  vertical-align: -0.2em;
 }
 
 .v-icon > g {

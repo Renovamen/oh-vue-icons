@@ -93,9 +93,9 @@ The icons are organized as follows:
 
 - The prefixes of the name prop values of icons from Font Awesome, Remix Icon, academicons and gameicons are `fa`, `ri`, `ai`, `si`, `wi` and `game`.
 
-- For Font Awesome icons, icons from `regular` pack have name prop values like `fa-regular-flag`. Icons from `solid` and `brands` pack have name prop values like `fa/beer` and `fa/github`.
+- For Font Awesome icons, icons from `regular` pack have name prop values like `fa-regular-flag`. Icons from `solid` and `brands` pack have name prop values like `fa-beer` and `fa-github`.
 
-See the [documentation](https://oh-vue-icons.vercel.app) for more about the usage.
+See the [documentation](https://oh-vue-icons.vercel.app/docs#basic-usage) for more about the usage.
 
 
 &nbsp;
@@ -113,7 +113,7 @@ See the [documentation](https://oh-vue-icons.vercel.app) for more about the usag
 | `title`     | Icon title                               | `string`  | /                                                   | /              |
 | `inverse`   | Make icon color white?                   | `boolean` | `true` / `false`                                    | `false`        |
 
-Some examples could be found in the [documentation](https://oh-vue-icons.vercel.app).
+Some examples could be found in the [documentation](https://oh-vue-icons.vercel.app/docs#examples).
 
 
 &nbsp;
