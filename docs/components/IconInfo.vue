@@ -3,6 +3,7 @@
     v-if="iconComponent && close === false"
     class="fixed bottom-0 inset-x-0 pb-2 sm:pb-5"
   >
+    <Message ref="msg" />
     <div class="max-w-screen-xl mx-auto px-2 sm:px-6 lg:px-8">
       <div class="p-2 rounded-lg bg-blue-500 shadow-lg sm:p-3">
         <div class="flex items-center justify-between flex-wrap">
@@ -66,8 +67,12 @@
 
 <script>
 import camelcase from 'camelcase'
+import Message from './Message.vue'
 
 export default {
+  components: {
+    Message
+  },
   props: {
     categorySelected: {},
     iconSelected: {}
@@ -81,9 +86,11 @@ export default {
     iconComponent() {
       return this.iconSelected
     },
+    moduleName() {
+      return camelcase(this.iconSelected, {pascalCase: true})
+    },
     importCode() {
-      const moduleName = camelcase(this.iconSelected, {pascalCase: true})
-      return `import { ${moduleName} } from 'oh-vue-icons/icons'`
+      return `import { ${this.moduleName} } from 'oh-vue-icons/icons'`
     }
   },
   watch: {
@@ -109,6 +116,8 @@ export default {
       }
 
       $input.remove()
+
+      this.$refs.msg.startTimer(this.moduleName)
     },
     onCloseClick() {
       this.close = true

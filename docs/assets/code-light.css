@@ -11,7 +11,7 @@ pre[class*="language-"] {
 	color: #c52950;
 	padding: 0.2rem 0.4rem;
 	border-radius: 3px;
-	font-size: 0.9rem;
+	font-size: 85%;
 }
 
 .token {
