@@ -18,7 +18,7 @@
 export default {
   data() {
     return {
-      duration: 3000,
+      duration: 2000,
       timer: null,
       show: false,
       icon: ''

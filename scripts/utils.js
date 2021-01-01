@@ -134,8 +134,8 @@ function modifySVG(prefix, width, height, d) {
   let newH = width > height ? width : height
 
   switch(prefix) {
-    case 'game':
-      newW = newW * 1.15, newH = newH * 1.15
+    case 'gi':
+      newW = newW * 1.14, newH = newH * 1.14
       break
     case 'fa':
       newW = newW * 1.17, newH = newH * 1.17
