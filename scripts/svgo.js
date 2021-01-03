@@ -105,18 +105,13 @@ const svgo = new SVGO({
       removeDimensions: true
     },
     {
-      removeAttributesBySelector: {
-        selector: "*:not(svg)",
-        attributes: ["stroke"]
-      },
-    },
-    {
       removeAttrs: {
         elemSeparator: "^",
         attrs: [
           "data.*",
           "version",
           "svg^fill",
+          "svg^aria-label",
           "xmlns:xlink"
         ]
       }
