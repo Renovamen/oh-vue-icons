@@ -226,6 +226,23 @@ Stack your icons easily jusy like in FontAwesome, even more powerful.
 </v-icon>
 ```
 
+You can also add animations to them:
+
+<p>
+  <v-icon label="No Photo" animation="wrench">
+    <v-icon name="fa-camera"></v-icon>
+    <v-icon name="fa-ban" scale="2" fill="#fC644d"></v-icon>
+  </v-icon>
+</p>
+
+```html
+<v-icon label="No Photos" animation="wrench">
+  <v-icon name="fa-camera" />
+  <v-icon name="fa-ban" scale="2" fill="#fC644d" />
+</v-icon>
+```
+
+
 ### Inverse
 
 Use `inverse: boolean` to make the color of icon white (`#fff`):

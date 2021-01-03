@@ -59,9 +59,7 @@ async function writeIconModule(icon, DIST, ASSETS) {
         const files = await getIconFiles(content)
         for (const file of files) {
             const svgStrRaw = await fs.readFile(file, 'utf8')
-            const svgStr = content.processWithSVGO
-                ? svgStrRaw
-                : await svgo.optimize(svgStrRaw).then((result) => result.data)
+            const svgStr = await svgo.optimize(svgStrRaw).then((result) => result.data)
 
             const rawName = path.basename(file, path.extname(file))
             if(excludes.indexOf(icon.id + '-' + rawName) !== -1) continue
