@@ -112,9 +112,12 @@ const svgo = new SVGO({
     },
     {
       removeAttrs: {
+        elemSeparator: "^",
         attrs: [
           "data.*",
-          "version"
+          "version",
+          "svg^fill",
+          "xmlns:xlink"
         ]
       }
     },

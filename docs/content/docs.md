@@ -7,20 +7,22 @@ links:
   - name: npm
     link: https://www.npmjs.com/package/oh-vue-icons
 iconsets:
-  - name: Font Awesome
-    link: https://fontawesome.com
-  - name: Remix Icon
-    link: https://remixicon.com
   - name: academicons
     link: https://github.com/jpswalsh/academicons
-  - name: Simple Icons
-    link: https://simpleicons.org
-  - name: Weather Icons
-    link: https://erikflowers.github.io/weather-icons
+  - name: Crypto Icons
+    link: http://cryptoicons.co/
+  - name: Font Awesome
+    link: https://fontawesome.com/
   - name: Flat Color Icons
     link: https://github.com/icons8/flat-color-icons
   - name: gameicons
-    link: https://game-icons.net
+    link: https://game-icons.net/
+  - name: Remix Icon
+    link: https://remixicon.com/
+  - name: Simple Icons
+    link: https://simpleicons.org/
+  - name: Weather Icons
+    link: https://erikflowers.github.io/weather-icons/
 ---
 
 ## Installation
@@ -85,25 +87,27 @@ export default {
 The icon names should be passed using **kebab-case**.
 
 <p>
-  <v-icon name="fa-flag"></v-icon>
-  <v-icon name="ri-bank-card-fill"></v-icon>
   <v-icon name="ai-google-scholar-square"></v-icon>
-  <v-icon name="si-unity"></v-icon>
-  <v-icon name="wi-day-lightning"></v-icon>
+  <v-icon name="ci-color-bch"></v-icon>
+  <v-icon name="fa-flag"></v-icon>
   <v-icon name="fc-globe"></v-icon>
   <v-icon name="gi-battered-axe"></v-icon>
+  <v-icon name="ri-bank-card-fill"></v-icon>
+  <v-icon name="si-unity"></v-icon>
+  <v-icon name="wi-day-lightning"></v-icon>
 </p>
 
 ```html
 <template>
   <div>
-    <v-icon name="fa-flag" />
-    <v-icon name="ri-bank-card-fill" />
     <v-icon name="ai-google-scholar-square" />
-    <v-icon name="si-unity" />
-    <v-icon name="wi-day-lightning" />
+    <v-icon name="ci-color-bch" />
+    <v-icon name="fa-flag" />
     <v-icon name="fc-globe" />
     <v-icon name="gi-battered-axe" />
+    <v-icon name="ri-bank-card-fill" />
+    <v-icon name="si-unity" />
+    <v-icon name="wi-day-lightning" />
   </div>
 </template>
 ```
