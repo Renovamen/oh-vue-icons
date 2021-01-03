@@ -1,12 +1,13 @@
 import Vue from 'vue'
 import OhVueIcon from '../../src/components/Icon.vue'
-import { Fa, Ri, Ai, Si, Wi, Gi } from '../../src/icons'
+import { Fa, Ri, Ai, Si, Wi, Fc, Gi } from '../../src/icons'
 
 OhVueIcon.add(Fa)
 OhVueIcon.add(Ri)
 OhVueIcon.add(Ai)
 OhVueIcon.add(Si)
 OhVueIcon.add(Wi)
+OhVueIcon.add(Fc)
 OhVueIcon.add(Gi)
 
 OhVueIcon.add([

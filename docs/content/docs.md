@@ -17,6 +17,8 @@ iconsets:
     link: https://simpleicons.org
   - name: Weather Icons
     link: https://erikflowers.github.io/weather-icons
+  - name: Flat Color Icons
+    link: https://github.com/icons8/flat-color-icons
   - name: gameicons
     link: https://game-icons.net
 ---
@@ -86,6 +88,7 @@ export default {
   <v-icon name="ai-google-scholar-square"></v-icon>
   <v-icon name="si-unity"></v-icon>
   <v-icon name="wi-day-lightning"></v-icon>
+  <v-icon name="fc-globe"></v-icon>
   <v-icon name="gi-battered-axe"></v-icon>
 </p>
 
@@ -97,6 +100,7 @@ export default {
     <v-icon name="ai-google-scholar-square" />
     <v-icon name="si-unity" />
     <v-icon name="wi-day-lightning" />
+    <v-icon name="fc-globe" />
     <v-icon name="gi-battered-axe" />
   </div>
 </template>

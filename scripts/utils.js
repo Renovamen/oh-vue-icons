@@ -1,7 +1,4 @@
 const glob = require('glob-promise')
-const SVGO = require('svgo')
-const xml2js = require('xml2js')
-const svgpath = require ('svgpath')
 const path = require('path')
 const fs = require('fs').promises
 
@@ -14,176 +11,54 @@ async function getIconFiles(content) {
   return files
 }
 
-const optimizeSVG = new SVGO({
-  plugins: [
-    {
-      cleanupAttrs: true
-    },
-    {
-      removeDoctype: true
-    },
-    {
-      removeXMLProcInst: true
-    },
-    {
-      removeComments: true
-    },
-    {
-      removeMetadata: true
-    },
-    {
-      removeTitle: true
-    },
-    {
-      removeDesc: true
-    },
-    {
-      removeUselessDefs: true
-    },
-    {
-      removeEditorsNSData: true
-    },
-    {
-      removeEmptyAttrs: true
-    },
-    {
-      removeHiddenElems: true
-    },
-    {
-      removeEmptyText: true
-    },
-    {
-      removeEmptyContainers: true
-    },
-    {
-      removeViewBox: false
-    },
-    {
-      cleanupEnableBackground: true
-    },
-    {
-      convertStyleToAttrs: true
-    },
-    {
-      convertColors: {
-        currentColor: true
-      }
-    },
-    {
-      convertPathData: true
-    },
-    {
-      convertTransform: true
-    },
-    {
-      removeUnknownsAndDefaults: true
-    },
-    {
-      removeNonInheritableGroupAttrs: true
-    },
-    {
-      removeUselessStrokeAndFill: true
-    },
-    {
-      removeUnusedNS: true
-    },
-    {
-      cleanupIDs: true
-    },
-    {
-      cleanupNumericValues: true
-    },
-    {
-      moveElemsAttrsToGroup: true
-    },
-    {
-      moveGroupAttrsToElems: true
-    },
-    {
-      collapseGroups: true
-    },
-    {
-      removeRasterImages: false
-    },
-    {
-      mergePaths: true
-    },
-    {
-      convertShapeToPath: true
-    },
-    {
-      sortAttrs: true
-    },
-    {
-      removeDimensions: true
-    },
-    {
-      removeAttributesBySelector: {
-        selector: "*:not(svg)",
-        attributes: ["stroke"]
-      },
-    },
-    {
-      removeAttrs: { attrs: "data.*" }
-    }
-  ]
-})
+async function convertSVG(prefix, name, svg) {
+  const svgMatch = svg.match(
+    /<svg viewBox="(.*?)">(.*?)<\/svg>/
+  )
 
-function modifySVG(prefix, width, height, d) {
-  let newW = width > height ? width : height
-  let newH = width > height ? width : height
+  const viewbox = svgMatch[1].split(' ')
+  const initW = Number(viewbox[2]), initH = Number(viewbox[3])
+  const raw = svgMatch[2]
+
+  let width = initW > initH ? initW : initH
+  let height = initW > initH ? initW : initH
 
   switch(prefix) {
     case 'gi':
-      newW = newW * 1.14, newH = newH * 1.14
+      width = width * 1.14, height = height * 1.14
       break
     case 'fa':
-      newW = newW * 1.17, newH = newH * 1.17
+      width = width * 1.17, height = height * 1.17
       break
     case 'ai':
-      newW = newW * 1.17, newH = newH * 1.17
+      width = width * 1.17, height = height * 1.17
       break
     case 'si':
-      newW = newW * 1.28, newH = newH * 1.28
+      width = width * 1.28, height = height * 1.28
       break
   }
-  
-  let newD = svgpath(d).translate((newW - width) / 2, (newH - height) / 2).toString()
-  
-  return {
-    width: newW,
-    height: newH,
-    d: newD
-  }
-}
 
-async function parseSVG(prefix, name, svg) {
-  var icon = {}
-  const parser = new xml2js.Parser()
-  parser.parseString(svg, (err, root) => {
-    if (err) throw err
-  
-    const viewBox = root.svg.$.viewBox.split(' ')
-    let width = viewBox[2]
-    let height = viewBox[3]
-    let d = root.svg.path ?
-            root.svg.path[0].$.d :
-            root.svg.g[0].path.slice(-1)[0].$.d
-    icon = modifySVG(prefix, width, height, d)
-    icon.name = name
-  })
-  return icon
+  const minX = Number((- (width - initW) / 2).toFixed(3))
+  const minY = Number((- (height - initH) / 2).toFixed(3))
+
+  return {
+    name: name,
+    minX: minX,
+    minY: minY,
+    width: width,
+    height: height,
+    raw: raw
+  }
 }
 
 async function writeSVG(dir, icon) {
   const filePath = path.resolve(dir, `${icon.name}.svg`)
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 ${icon.width} ${icon.height}"><path d="${icon.d}" /></svg>`
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="${icon.minX} ${icon.minY} ${icon.width} ${icon.height}">${icon.raw}</svg>`
   await fs.writeFile(filePath, svg)
 }
 
 module.exports = {
   getIconFiles,
-  optimizeSVG,
-  parseSVG,
+  convertSVG,
   writeSVG
 }
