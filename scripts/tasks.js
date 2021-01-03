@@ -4,7 +4,8 @@ const camelcase = require('camelcase')
 const rimraf = require('rimraf')
 
 const { icons } = require('../iconpacks')
-const { getIconFiles, optimizeSVG, parseSVG, writeSVG } = require('./utils')
+const { getIconFiles, convertSVG, writeSVG } = require('./utils')
+const svgo = require('./svgo')
 
 const ignore = (err) => {
     if (err.code === 'EEXIST') return
@@ -59,8 +60,8 @@ async function writeIconModule(icon, DIST, ASSETS) {
         for (const file of files) {
             const svgStrRaw = await fs.readFile(file, 'utf8')
             const svgStr = content.processWithSVGO
-                ? await optimizeSVG.optimize(svgStrRaw).then((result) => result.data)
-                : svgStrRaw
+                ? svgStrRaw
+                : await svgo.optimize(svgStrRaw).then((result) => result.data)
 
             const rawName = path.basename(file, path.extname(file))
             if(excludes.indexOf(icon.id + '-' + rawName) !== -1) continue
@@ -71,7 +72,7 @@ async function writeIconModule(icon, DIST, ASSETS) {
             exists.add(name)
             
             const prefixName = (content.prefix && content.prefix(rawName)) || rawName
-            const iconData = await parseSVG(icon.id, prefixName, svgStr)
+            const iconData = await convertSVG(icon.id, prefixName, svgStr)
 
             await fs.appendFile(
                 path.resolve(DIST, `${icon.id}.js`),

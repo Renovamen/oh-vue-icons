@@ -79,11 +79,25 @@ module.exports = {
       licenseUrl: "http://scripts.sil.org/OFL"
     },
     {
+      id: "fc",
+      name: "Flat Color Icons",
+      contents: [
+        {
+          files: path.resolve(__dirname, "flat-color-icons/svg/*.svg"),
+          formatter: (name) => `Fc${name}`,
+          prefix: (name) => `fc-${name}`
+        },
+      ],
+      projectUrl: "https://github.com/icons8/flat-color-icons",
+      license: "MIT",
+      licenseUrl: "https://opensource.org/licenses/MIT",
+    },
+    {
       id: "gi",
       name: "gameicons",
       contents: [
         {
-          files: path.resolve(__dirname, "gameicons/transparent/1x1/*/*.svg"),
+          files: path.resolve(__dirname, "gameicons/*/*.svg"),
           formatter: (name) => `Gi${name}`,
           prefix: (name) => `gi-${name}`
         },
