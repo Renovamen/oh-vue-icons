@@ -61,7 +61,9 @@ async function writeIconModule(icon, DIST, ASSETS) {
             const svgStrRaw = await fs.readFile(file, 'utf8')
             const svgStr = await svgo.optimize(svgStrRaw).then((result) => result.data)
 
-            const rawName = path.basename(file, path.extname(file)).replace(/_/g, '-')
+            const rawName = path.basename(file, path.extname(file))
+                                .replace(/_/g, '-')
+                                .replace(/\$/g, '')               
             if(excludes.indexOf(icon.id + '-' + rawName) !== -1) continue
 
             const pascalName = camelcase(rawName, { pascalCase: true })
