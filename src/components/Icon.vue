@@ -95,7 +95,7 @@ export default {
     },
     box() {
       if (this.icon) {
-        return `0 0 ${this.icon.width} ${this.icon.height}`
+        return `${this.icon.minX} ${this.icon.minY} ${this.icon.width} ${this.icon.height}`
       }
       return `0 0 ${this.width} ${this.height}`
     },
@@ -212,8 +212,10 @@ export default {
       on: this.$listeners
     }
 
+    const transOri = this.icon ? `${Number((this.icon.width / 2 + this.icon.minX).toFixed(3))} ${Number((this.icon.height / 2 + this.icon.minY).toFixed(3))}` : `50% 50%`
+
     if (this.raw) {
-      let html = `<g>${this.raw}</g>`
+      let html = `<g transform-origin="${transOri}">${this.raw}</g>`
       if (this.title) html = `<title>${escapeHTML(this.title)}</title>${html}`
 
       options.domProps = { innerHTML: html }
@@ -228,7 +230,11 @@ export default {
         ? null
         : content.concat([
           h(
-            'g',
+            'g', {
+              attrs: {
+                'transform-origin': `${transOri}`
+              }
+            },
             this.$slots.default ||
                 (this.icon
                   ? [
@@ -260,6 +266,9 @@ export default {
       paths,
       polygons
     })
+
+    if(!icons[name].minX) icons[name].minX = 0
+    if(!icons[name].minY) icons[name].minY = 0
   },
   add (data) {
     if (Array.isArray(data)) {
@@ -310,10 +319,6 @@ function escapeHTML (html) {
   display: inline-block;
   overflow: visible;
   vertical-align: -0.2em;
-}
-
-.v-icon > g {
-  transform-origin: 50% 50%;
 }
 
 .v-flip-horizontal {

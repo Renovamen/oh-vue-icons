@@ -85,7 +85,7 @@
                     :scale="iconSize"
                     :animation="iconAnimation"
                     :flip="iconFlip"
-                    :fill="iconColor"
+                    :fill="isMultiColor ? null : iconColor"
                   />
                 </div>
               </lazy-component>
@@ -113,6 +113,7 @@ import { icons } from '../../iconpacks'
 
 const iconKeys = Object.keys(OhVueIcon.icons)
 const flipOptions = ['normal', 'horizontal', 'vertical', 'both']
+const multiColor = ['Flat Color Icons']
 
 export default {
   components: { 
@@ -153,6 +154,9 @@ export default {
       return this.iconSets.find(x => {
         return x.tab === tabSelected
       }).components.length
+    },
+    isMultiColor() {
+      return multiColor.includes(this.tabSelected)
     }
   },
   methods: {
