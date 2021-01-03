@@ -81,6 +81,8 @@ export default {
 
 ## Usage
 
+The icon names should be passed using **kebab-case**.
+
 ```html
 <template>
   <div>
