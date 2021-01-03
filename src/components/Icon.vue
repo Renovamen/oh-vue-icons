@@ -40,7 +40,7 @@ export default {
     hover: Boolean,
     flip: {
       validator (val) {
-        return val === 'normal' || val === 'horizontal' || val === 'vertical' || val === 'both'
+        return val === 'horizontal' || val === 'vertical' || val === 'both'
       }
     },
     label: String,
