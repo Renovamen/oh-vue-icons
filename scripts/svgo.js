@@ -117,6 +117,9 @@ const svgo = new SVGO({
           "version"
         ]
       }
+    },
+    {
+      removeOffCanvasPaths: true
     }
   ]
 })
