@@ -16,6 +16,8 @@ async function convertSVG(prefix, name, svg) {
     /<svg viewBox="(.*?)">(.*?)<\/svg>/
   )
 
+  if(!svgMatch) console.log(name, svg)
+
   const viewbox = svgMatch[1].split(' ')
   const initW = Number(viewbox[2]), initH = Number(viewbox[3])
   const raw = svgMatch[2]
@@ -24,14 +26,17 @@ async function convertSVG(prefix, name, svg) {
   let height = initW > initH ? initW : initH
 
   switch(prefix) {
-    case 'gi':
-      width = width * 1.14, height = height * 1.14
+    case 'ai':
+      width = width * 1.17, height = height * 1.17
+      break
+    case 'ci':
+      width = width * 1.2, height = height * 1.2
       break
     case 'fa':
       width = width * 1.17, height = height * 1.17
       break
-    case 'ai':
-      width = width * 1.17, height = height * 1.17
+    case 'gi':
+      width = width * 1.14, height = height * 1.14
       break
     case 'si':
       width = width * 1.28, height = height * 1.28

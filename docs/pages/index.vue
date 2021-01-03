@@ -3,7 +3,7 @@
     <Sidebar
       @change-tab="changeTab"
       :itemSelected="tabSelected"
-      :items="tabs"
+      :items="iconSets"
     >
       <ToolSidebar
         class="sm:hidden"
@@ -69,7 +69,7 @@
 
       <div class="mt-10">
         <div v-for="(iconSet, index) in iconSets" :key="`set-${index}`">
-          <div v-if="tabSelected === iconSet.tab || tabSelected === 'All'">
+          <div v-if="tabSelected === iconSet.tab">
             <div class="grid grid-cols-4 sm:grid-cols-8 gap-3">
               <lazy-component
                 v-for="(icon, index) in filterBySearch(iconSet.components)"
@@ -85,7 +85,7 @@
                     :scale="iconSize"
                     :animation="iconAnimation"
                     :flip="iconFlip === 'normal' ? null : iconFlip"
-                    :fill="isMultiColor ? null : iconColor"
+                    :fill="iconColor"
                   />
                 </div>
               </lazy-component>
@@ -113,7 +113,6 @@ import { icons } from '../../iconpacks'
 
 const iconKeys = Object.keys(OhVueIcon.icons)
 const flipOptions = ['normal', 'horizontal', 'vertical', 'both']
-const multiColor = ['Flat Color Icons']
 
 export default {
   components: { 
@@ -128,8 +127,10 @@ export default {
       tabSelected: 'All',
       iconSelected: '',
       categorySelected: '',
-      tabs: ['All'],
-      iconSets: [],
+      iconSets: [{
+        tab: 'All',
+        components: iconKeys
+      }],
       iconSize: 2.4,
       iconColor: '#222F3D',
       iconAnimation: null,
@@ -142,21 +143,17 @@ export default {
         tab: icon.name,
         components: iconKeys.filter(function (x) {
           return x.slice(0, icon.id.length) === icon.id
-        })
+        }),
+        multiColor: icon.multiColor
       })
-      this.tabs.push(icon.name)
     }
   },
   computed: {
     countIconsByTab() {
       const tabSelected = this.tabSelected
-      if (tabSelected === 'All') return iconKeys.length
       return this.iconSets.find(x => {
         return x.tab === tabSelected
       }).components.length
-    },
-    isMultiColor() {
-      return multiColor.includes(this.tabSelected)
     }
   },
   methods: {

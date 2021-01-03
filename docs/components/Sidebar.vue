@@ -23,11 +23,12 @@
     >
         <li
             v-for="item in items"
-            :key="item"
-            :class="{ 'selected': itemSelected === item }"
-            @click="$emit('change-tab', item)"
+            :key="item.tab"
+            :class="{ 'selected': itemSelected === item.tab }"
+            @click="$emit('change-tab', item.tab)"
         >
-            {{ item }}
+            {{ item.tab }}
+            <v-icon v-if="item.multiColor" name="fc-picture" class="ml-1" />
         </li>
     </ul>
 

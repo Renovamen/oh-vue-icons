@@ -2,13 +2,14 @@
 
 A [Vue](https://vuejs.org/) component for including inline SVG icons from different icon packs in easily. Now the following icon packs are supported:
 
-- `fa` - [Font Awesome](https://fontawesome.com)
-- `ri` - [Remix Icon](https://github.com/Remix-Design/RemixIcon)
 - `ai` - [academicons](https://github.com/jpswalsh/academicons)
-- `si` - [Simple Icons](https://simpleicons.org)
-- `wi` - [Weather Icons](https://erikflowers.github.io/weather-icons/)
+- `ci` - [Cryptocurrency Icons](https://github.com/spothq/cryptocurrency-icons)
+- `fa` - [Font Awesome 5](https://fontawesome.com/)
 - `fc` - [Flat Color Icons](https://github.com/icons8/flat-color-icons)
-- `gi` - [gameicons](https://game-icons.net)
+- `gi` - [gameicons](https://game-icons.net/)
+- `ri` - [Remix Icon](https://github.com/Remix-Design/RemixIcon)
+- `si` - [Simple Icons](https://simpleicons.org/)
+- `wi` - [Weather Icons](https://erikflowers.github.io/weather-icons/)
 
 
 &nbsp;
@@ -94,9 +95,9 @@ The icon names should be passed using **kebab-case**.
 
 The icons are organized as follows:
 
-- The prefixes of the name prop values of icons from Font Awesome, Remix Icon, academicons, Flat Color Icons and gameicons are `fa`, `ri`, `ai`, `si`, `wi`, `fc` and `gi`.
+- The prefixes of the name prop values of icons from [academicons](https://github.com/jpswalsh/academicons),  [Cryptocurrency Icons](https://github.com/spothq/cryptocurrency-icons), [Font Awesome 5](https://fontawesome.com/), [Flat Color Icons](https://github.com/icons8/flat-color-icons), [gameicons](https://game-icons.net/), [Remix Icon](https://github.com/Remix-Design/RemixIcon), [Simple Icons](https://simpleicons.org/) and [Weather Icons](https://erikflowers.github.io/weather-icons/) are `ai`, `ci`, `fa`, `fc`, `gi`, `ri`, `si` and `wi`.
 
-- For Font Awesome icons, icons from `regular` pack have name prop values like `fa-regular-flag`. Icons from `solid` and `brands` pack have name prop values like `fa-beer` and `fa-github`.
+- For [Font Awesome 5](https://fontawesome.com/) icons, icons from `regular` pack have name prop values like `fa-regular-flag`. Icons from `solid` and `brands` pack have name prop values like `fa-beer` and `fa-github`.
 
 See the [documentation](https://oh-vue-icons.vercel.app/docs#basic-usage) for more about the usage.
 
