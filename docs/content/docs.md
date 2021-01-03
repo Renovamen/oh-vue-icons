@@ -82,6 +82,8 @@ export default {
 
 ## Basic Usage
 
+The icon names should be passed using **kebab-case**.
+
 <p>
   <v-icon name="fa-flag"></v-icon>
   <v-icon name="ri-bank-card-fill"></v-icon>
@@ -226,7 +228,7 @@ Stack your icons easily jusy like in FontAwesome, even more powerful.
 </v-icon>
 ```
 
-You can also add animations to them:
+You can also make it animated:
 
 <p>
   <v-icon label="No Photo" animation="wrench">

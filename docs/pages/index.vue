@@ -84,7 +84,7 @@
                     :name="icon"
                     :scale="iconSize"
                     :animation="iconAnimation"
-                    :flip="iconFlip"
+                    :flip="iconFlip === 'normal' ? null : iconFlip"
                     :fill="isMultiColor ? null : iconColor"
                   />
                 </div>

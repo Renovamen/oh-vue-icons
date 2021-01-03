@@ -126,4 +126,8 @@ export default {
 .docs-content li {
   @apply ml-8 list-disc leading-7;
 }
+
+.docs-content strong {
+  @apply font-semibold;
+}
 </style>
