@@ -1,6 +1,24 @@
 import Vue from 'vue'
 import OhVueIcon from '../../src/components/Icon.vue'
-import { Ai, Ci, Fa, Fc, Gi, Ri, Si, Wi } from '../../src/icons'
+
+import * as AiIcons from '../../src/icons/ai'
+import * as CiIcons from '../../src/icons/ci'
+import * as FaIcons from '../../src/icons/fa'
+import * as FcIcons from '../../src/icons/fc'
+import * as GiIcons from '../../src/icons/gi'
+import * as RiIcons from '../../src/icons/ri'
+import * as SiIcons from '../../src/icons/si'
+import * as WiIcons from '../../src/icons/wi'
+
+const
+    Ai = Object.values({ ...AiIcons }),
+    Ci = Object.values({ ...CiIcons }),
+    Fa = Object.values({ ...FaIcons }),
+    Fc = Object.values({ ...FcIcons }),
+    Gi = Object.values({ ...GiIcons }),
+    Ri = Object.values({ ...RiIcons }),
+    Si = Object.values({ ...SiIcons }),
+    Wi = Object.values({ ...WiIcons })
 
 OhVueIcon.add(Ai)
 OhVueIcon.add(Ci)

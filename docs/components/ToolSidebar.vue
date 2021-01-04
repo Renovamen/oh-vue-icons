@@ -76,15 +76,13 @@
 </template>
 
 <script>
-import VueSlider from 'vue-slider-component'
-import VSwatches from 'vue-swatches'
+import VueSlider from 'vue-slider-component/dist-css/vue-slider-component.umd.min.js'
+import 'vue-slider-component/dist-css/vue-slider-component.css'
 import 'vue-slider-component/theme/default.css'
-import 'vue-swatches/dist/vue-swatches.css'
 
 export default {
     components: {
-        VueSlider,
-        VSwatches
+        VueSlider
     },
     props: ['iconSize', 'iconColor', 'animation', 'flip'],
     data() {
