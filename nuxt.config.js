@@ -25,7 +25,8 @@ export default {
     '@nuxt/content'
   ],
   buildModules: [
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    'vue-swatches/nuxt'
   ],
   build: {
   },

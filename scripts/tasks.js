@@ -27,9 +27,21 @@ async function dirInit(DIST, ASSETS) {
         fs.writeFile(path.resolve(DIST, filePath), str, 'utf8').catch(ignore)
 
     for (const icon of icons) {
+        await fs.mkdir(path.resolve(DIST, icon.id)).catch(ignore)
         await write(
-            `${icon.id}.js`,
+            `${icon.id}/index.js`,
             '// THIS FILE IS AUTO GENERATED\n'
+        )
+        await write(
+            `${icon.id}/package.json`,
+            JSON.stringify(
+                {
+                  sideEffects: false,
+                  module: "./index.js",
+                },
+                null,
+                2
+            ) + "\n"
         )
     }
 
@@ -37,17 +49,9 @@ async function dirInit(DIST, ASSETS) {
 }
 
 async function writeIconModule(icon, DIST, ASSETS) {
-    const entryModule = `export * from './${icon.id}'\n`
+    const entryModule = `export * from './${icon.id}';\n`
     await fs.appendFile(path.resolve(DIST, "index.js"), entryModule, "utf8");
 
-    const iconPrefix = icon.id.slice(0, 1).toUpperCase() + icon.id.slice(1)
-    
-    const importModule = `import * as ${iconPrefix}Icons from './${icon.id}'\n`
-    await fs.appendFile(path.resolve(DIST, "index.js"), importModule, 'utf8')
-    
-    const exportIcons = `export const ${iconPrefix} = Object.values({ ...${iconPrefix}Icons })\n`
-    await fs.appendFile(path.resolve(DIST, "index.js"), exportIcons, 'utf8')
-    
     const svgDir = path.resolve(ASSETS, `${icon.id}`)
     rimraf.sync(svgDir)
     await fs.mkdir(svgDir, { recursive: true }).catch(ignore)
@@ -75,8 +79,8 @@ async function writeIconModule(icon, DIST, ASSETS) {
             const iconData = await convertSVG(icon.id, prefixName, svgStr)
 
             await fs.appendFile(
-                path.resolve(DIST, `${icon.id}.js`),
-                `export const ${name} = ${JSON.stringify(iconData)}\n`,
+                path.resolve(DIST, `${icon.id}/index.js`),
+                `export const ${name} = ${JSON.stringify(iconData)};\n`,
                 "utf8"
             )
 
