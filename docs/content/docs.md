@@ -58,15 +58,15 @@ new Vue({
 }).$mount('#app')
 ```
 
-Or you can also import a whole icon pack if you don't care about bundle size, for example:
+If you don't care about the bundle size and want to import a whole icon pack, you may should:
 
 ```js
 // main.js
-// import Font Awesome and Remix Icon
-import { Fa, Ri } from 'oh-vue-icons/icons'
+// import Font Awesome
+import * as FaIcons from 'oh-vue-icons/icons/fa'
 
+const Fa = Object.values({ ...FaIcons })
 OhVueIcon.add(Fa)
-OhVueIcon.add(Ri)
 ```
 
 ### Local Import
