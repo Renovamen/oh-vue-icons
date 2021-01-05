@@ -1,7 +1,7 @@
 <template>
 <div class="toolbar">
     <div class="p-2 mx-2">
-        <div class="m-3 ml-0 mr-4 text-left">Size</div>
+        <div class="m-3 ml-0 mr-4 text-left">Scale</div>
         <div class="flex flex-1">
             <vue-slider
                 class="flex-1"
@@ -11,7 +11,7 @@
                 v-bind:interval="0.1"
                 tooltip="none"
             />
-            <div class="w-12 ml-4 text-right">{{ size }}em</div>
+            <div class="w-10 text-right">{{ size }}</div>
         </div>
     </div>
     <div class="icon-color p-2 mx-2">

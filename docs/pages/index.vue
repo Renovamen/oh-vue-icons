@@ -31,7 +31,7 @@
     />
 
     <div class="page-width pt-16">
-      <div class="flex justify-center font-medium pt-16 pb-6">
+      <div class="flex justify-center pt-16 pb-6">
         <div class="flex flex-col text-center">
           <h1>Oh, Vue Icons!</h1>
           <p class="desc">
@@ -236,7 +236,7 @@ export default {
 }
 
 p.desc {
-  @apply text-gray-600 mt-3;
+  @apply text-gray-600 font-medium mt-3;
 }
 .dark-mode p.desc {
   @apply text-gray-500;

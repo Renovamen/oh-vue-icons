@@ -19,3 +19,6 @@
 [submodule "iconpacks/cryptocurrency-icons"]
 	path = iconpacks/cryptocurrency-icons
 	url = https://github.com/spothq/cryptocurrency-icons.git
+[submodule "iconpacks/flag-icon"]
+	path = iconpacks/flag-icon
+	url = https://github.com/lipis/flag-icon-css.git
