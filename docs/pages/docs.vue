@@ -22,23 +22,6 @@
         </span>
         <NuxtLink to="/">icons</NuxtLink>
       </p>
-      <p class="my-0">
-        Now the following icon packs are supported:
-      </p>
-      <p class="mt-0 mb-20">
-        <span
-          v-for="(iconset, index) in page.iconsets"
-          :key="`doc-set-${index}`"
-        >
-          <a
-            :href="iconset.link"
-            target="_blank"
-          >
-            {{ iconset.name }}
-          </a>
-          <span v-if="index !== page.iconsets.length - 1">·</span>
-        </span>
-      </p>
     </div>
 
     <div class="text-left">

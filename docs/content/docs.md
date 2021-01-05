@@ -6,24 +6,24 @@ links:
     link: https://github.com/Renovamen/oh-vue-icons
   - name: npm
     link: https://www.npmjs.com/package/oh-vue-icons
-iconsets:
-  - name: academicons
-    link: https://github.com/jpswalsh/academicons
-  - name: Crypto Icons
-    link: http://cryptoicons.co/
-  - name: Font Awesome
-    link: https://fontawesome.com/
-  - name: Flat Color Icons
-    link: https://github.com/icons8/flat-color-icons
-  - name: gameicons
-    link: https://game-icons.net/
-  - name: Remix Icon
-    link: https://remixicon.com/
-  - name: Simple Icons
-    link: https://simpleicons.org/
-  - name: Weather Icons
-    link: https://erikflowers.github.io/weather-icons/
 ---
+
+## Supported Icon Packs
+
+Now the following icon packs are supported:
+
+| Icon Pack                                                    | Prefix | License                                                      | Icon Numer |
+| ------------------------------------------------------------ | ------ | ------------------------------------------------------------ | ---------- |
+| [academicons](https://github.com/jpswalsh/academicons)       | `ai`   | [SIL OFL 1.1](http://scripts.sil.org/OFL)                    | 145        |
+| [Cryptocurrency Icons](https://github.com/spothq/cryptocurrency-icons) (Colorful) | `ci`   | [CC0 1.0 Universal](https://github.com/spothq/cryptocurrency-icons/blob/master/LICENSE.md) | 866        |
+| [Font Awesome 5](https://fontawesome.com/) (Free)            | `fa`   | [CC BY 4.0](https://github.com/FortAwesome/Font-Awesome/blob/master/LICENSE.txt) | 1609       |
+| [Flat Color Icons](https://github.com/icons8/flat-color-icons) (Colorful) | `fc`   | [MIT](https://github.com/icons8/flat-color-icons/blob/master/LICENSE.md) | 329        |
+| [Flag Icon](https://flagicons.lipis.dev/) (Colorful)         | `fi`   | [MIT](https://github.com/lipis/flag-icon-css/blob/master/LICENSE) | 516        |
+| [gameicons](https://game-icons.net/)                         | `gi`   | [CC BY 3.0](https://github.com/game-icons/icons/blob/master/license.txt) | 3927       |
+| [Remix Icon](https://github.com/Remix-Design/RemixIcon)      | `ri`   | [Apache 2.0](https://github.com/Remix-Design/RemixIcon/blob/master/License) | 2271       |
+| [Simple Icons](https://simpleicons.org/)                     | `si`   | [CC0 1.0 Universal](https://github.com/simple-icons/simple-icons/blob/develop/LICENSE.md) | 1512       |
+| [Weather Icons](https://erikflowers.github.io/weather-icons/) | `wi`   | [SIL OFL 1.1](http://scripts.sil.org/OFL)                    | 219        |
+
 
 ## Installation
 
@@ -91,6 +91,7 @@ The icon names should be passed using **kebab-case**.
   <v-icon name="ci-color-bch"></v-icon>
   <v-icon name="fa-flag"></v-icon>
   <v-icon name="fc-globe"></v-icon>
+  <v-icon name="fi-square-cn"></v-icon>
   <v-icon name="gi-battered-axe"></v-icon>
   <v-icon name="ri-bank-card-fill"></v-icon>
   <v-icon name="si-unity"></v-icon>
@@ -104,6 +105,7 @@ The icon names should be passed using **kebab-case**.
     <v-icon name="ci-color-bch" />
     <v-icon name="fa-flag" />
     <v-icon name="fc-globe" />
+    <v-icon name="fi-square-cn" />
     <v-icon name="gi-battered-axe" />
     <v-icon name="ri-bank-card-fill" />
     <v-icon name="si-unity" />
@@ -367,7 +369,7 @@ OhVueIcon.register(
 
 ## Acknowledgements
 
-This project is inspired by and based on [Justineo/vue-awesome](https://github.com/Justineo/vue-awesome).
+This project is inspired by and based on [Justineo/vue-awesome](https://github.com/Justineo/vue-awesome) and [react-icons](https://github.com/react-icons/react-icons).
 
 
 ## License
