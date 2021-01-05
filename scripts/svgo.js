@@ -57,7 +57,7 @@ const svgo = new SVGO({
       convertColors: true
     },
     {
-      convertPathData: false
+      convertPathData: true
     },
     {
       convertTransform: true
