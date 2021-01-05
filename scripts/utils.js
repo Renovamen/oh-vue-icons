@@ -29,8 +29,14 @@ async function convertSVG(prefix, name, svg) {
     case 'ai':
       width = width * 1.17, height = height * 1.17
       break
+    case 'bi':
+      width = width * 1.2, height = height * 1.2
+      break
     case 'ci':
       width = width * 1.2, height = height * 1.2
+      break
+    case 'gi':
+      width = width * 1.14, height = height * 1.14
       break
     case 'fa':
       width = width * 1.17, height = height * 1.17
@@ -39,9 +45,6 @@ async function convertSVG(prefix, name, svg) {
       if (name.includes('fi-square')) {
         width = width * 1.33, height = height * 1.33
       }
-      break
-    case 'gi':
-      width = width * 1.14, height = height * 1.14
       break
     case 'si':
       width = width * 1.28, height = height * 1.28

@@ -18,6 +18,21 @@ module.exports = {
       licenseUrl: "http://scripts.sil.org/OFL"
     },
     {
+      id: "bi",
+      name: "Bootstrap Icons",
+      contents: [
+        {
+          files: path.resolve(__dirname, "bootstrap-icons/icons/*.svg"),
+          formatter: (name) => `Bi${name}`,
+          prefix: (name) => `bi-${name}`
+        },
+      ],
+      projectUrl: "https://github.com/twbs/icons",
+      website: "https://icons.getbootstrap.com/",
+      license: "MIT",
+      licenseUrl: "https://opensource.org/licenses/MIT"
+    },
+    {
       id: "ci",
       name: "Crypto Icons",
       contents: [
@@ -75,7 +90,7 @@ module.exports = {
       projectUrl: "https://github.com/icons8/flat-color-icons",
       website: "https://icons8.com/icons/color",
       license: "MIT",
-      licenseUrl: "https://opensource.org/licenses/MIT",
+      licenseUrl: "https://opensource.org/licenses/MIT"
     },
     {
       id: "fi",
@@ -96,7 +111,7 @@ module.exports = {
       projectUrl: "https://github.com/lipis/flag-icon-css",
       website: "https://flagicons.lipis.dev/",
       license: "MIT",
-      licenseUrl: "https://opensource.org/licenses/MIT",
+      licenseUrl: "https://opensource.org/licenses/MIT"
     },
     {
       id: "gi",

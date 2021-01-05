@@ -57,7 +57,7 @@ const svgo = new SVGO({
       convertColors: true
     },
     {
-      convertPathData: true
+      convertPathData: false
     },
     {
       convertTransform: true
@@ -112,6 +112,7 @@ const svgo = new SVGO({
           "version",
           "svg^fill",
           "svg^aria-label",
+          "svg^class",
           "xmlns:xlink"
         ]
       }
