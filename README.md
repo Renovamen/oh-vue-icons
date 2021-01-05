@@ -7,6 +7,7 @@ A [Vue](https://vuejs.org/) component for including inline SVG icons from differ
 | Icon Pack                                                    | Prefix | License                                                      | Icon Numer |
 | ------------------------------------------------------------ | ------ | ------------------------------------------------------------ | ---------- |
 | [academicons](https://github.com/jpswalsh/academicons)       | `ai`   | [SIL OFL 1.1](http://scripts.sil.org/OFL)                    | 145        |
+| [Bootstrap Icons](https://icons.getbootstrap.com/)           | `bi`   | [MIT](https://github.com/twbs/icons/blob/main/LICENSE.md)    | 1201       |
 | [Cryptocurrency Icons](https://github.com/spothq/cryptocurrency-icons) (Colorful) | `ci`   | [CC0 1.0 Universal](https://github.com/spothq/cryptocurrency-icons/blob/master/LICENSE.md) | 866        |
 | [Font Awesome 5](https://fontawesome.com/) (Free)            | `fa`   | [CC BY 4.0](https://github.com/FortAwesome/Font-Awesome/blob/master/LICENSE.txt) | 1609       |
 | [Flat Color Icons](https://github.com/icons8/flat-color-icons) (Colorful) | `fc`   | [MIT](https://github.com/icons8/flat-color-icons/blob/master/LICENSE.md) | 329        |
@@ -64,6 +65,7 @@ If you don't care about the bundle size and want to import a whole icon pack, yo
 // main.js
 // import Font Awesome
 import * as FaIcons from 'oh-vue-icons/icons/fa'
+
 const Fa = Object.values({ ...FaIcons })
 OhVueIcon.add(Fa)
 ```
@@ -97,11 +99,7 @@ The icon names should be passed using **kebab-case**.
 </template>
 ```
 
-The icons are organized as follows:
-
-- The prefixes of the name prop values of icons from [academicons](https://github.com/jpswalsh/academicons),  [Cryptocurrency Icons](https://github.com/spothq/cryptocurrency-icons), [Font Awesome 5](https://fontawesome.com/), [Flat Color Icons](https://github.com/icons8/flat-color-icons), [gameicons](https://game-icons.net/), [Remix Icon](https://github.com/Remix-Design/RemixIcon), [Simple Icons](https://simpleicons.org/) and [Weather Icons](https://erikflowers.github.io/weather-icons/) are `ai`, `ci`, `fa`, `fc`, `gi`, `ri`, `si` and `wi`.
-
-- For [Font Awesome 5](https://fontawesome.com/) icons, icons from `regular` pack have name prop values like `fa-regular-flag`. Icons from `solid` and `brands` pack have name prop values like `fa-beer` and `fa-github`.
+For [Font Awesome 5](https://fontawesome.com/) icons, icons from `regular` pack have name prop values like `fa-regular-flag`. Icons from `solid` and `brands` pack have name prop values like `fa-beer` and `fa-github`.
 
 See the [documentation](https://oh-vue-icons.vercel.app/docs#basic-usage) for more about the usage.
 
