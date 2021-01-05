@@ -22,3 +22,6 @@
 [submodule "iconpacks/flag-icon"]
 	path = iconpacks/flag-icon
 	url = https://github.com/lipis/flag-icon-css.git
+[submodule "iconpacks/bootstrap-icons"]
+	path = iconpacks/bootstrap-icons
+	url = https://github.com/twbs/icons.git

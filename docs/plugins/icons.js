@@ -3,6 +3,7 @@ import OhVueIcon from '../../src/components/Icon.vue'
 
 import * as AiIcons from '../../src/icons/ai'
 import * as CiIcons from '../../src/icons/ci'
+import * as BiIcons from '../../src/icons/bi'
 import * as FiIcons from '../../src/icons/fi'
 import * as FaIcons from '../../src/icons/fa'
 import * as FcIcons from '../../src/icons/fc'
@@ -13,6 +14,7 @@ import * as WiIcons from '../../src/icons/wi'
 
 const
     Ai = Object.values({ ...AiIcons }),
+    Bi = Object.values({ ...BiIcons }),
     Ci = Object.values({ ...CiIcons }),
     Fi = Object.values({ ...FiIcons }),
     Fa = Object.values({ ...FaIcons }),
@@ -23,6 +25,7 @@ const
     Wi = Object.values({ ...WiIcons })
 
 OhVueIcon.add(Ai)
+OhVueIcon.add(Bi)
 OhVueIcon.add(Ci)
 OhVueIcon.add(Fi)
 OhVueIcon.add(Fa)

@@ -15,6 +15,7 @@ Now the following icon packs are supported:
 | Icon Pack                                                    | Prefix | License                                                      | Icon Numer |
 | ------------------------------------------------------------ | ------ | ------------------------------------------------------------ | ---------- |
 | [academicons](https://github.com/jpswalsh/academicons)       | `ai`   | [SIL OFL 1.1](http://scripts.sil.org/OFL)                    | 145        |
+| [Bootstrap Icons](https://icons.getbootstrap.com/)           | `bi`   | [MIT](https://github.com/twbs/icons/blob/main/LICENSE.md)    | 1201       |
 | [Cryptocurrency Icons](https://github.com/spothq/cryptocurrency-icons) (Colorful) | `ci`   | [CC0 1.0 Universal](https://github.com/spothq/cryptocurrency-icons/blob/master/LICENSE.md) | 866        |
 | [Font Awesome 5](https://fontawesome.com/) (Free)            | `fa`   | [CC BY 4.0](https://github.com/FortAwesome/Font-Awesome/blob/master/LICENSE.txt) | 1609       |
 | [Flat Color Icons](https://github.com/icons8/flat-color-icons) (Colorful) | `fc`   | [MIT](https://github.com/icons8/flat-color-icons/blob/master/LICENSE.md) | 329        |
@@ -88,6 +89,7 @@ The icon names should be passed using **kebab-case**.
 
 <p>
   <v-icon name="ai-google-scholar-square"></v-icon>
+  <v-icon name="bi-music-player"></v-icon>
   <v-icon name="ci-color-bch"></v-icon>
   <v-icon name="fa-flag"></v-icon>
   <v-icon name="fc-globe"></v-icon>
@@ -102,6 +104,7 @@ The icon names should be passed using **kebab-case**.
 <template>
   <div>
     <v-icon name="ai-google-scholar-square" />
+    <v-icon name="bi-music-player" />
     <v-icon name="ci-color-bch" />
     <v-icon name="fa-flag" />
     <v-icon name="fc-globe" />
