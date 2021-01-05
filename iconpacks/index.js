@@ -129,6 +129,22 @@ module.exports = {
       licenseUrl: "https://creativecommons.org/licenses/by/3.0/"
     },
     {
+      id: "pi",
+      name: "Pokemon Icons",
+      contents: [
+        {
+          files: path.resolve(__dirname, "pokemon-icons/_icons/SVG/*.svg"),
+          formatter: (name) => `Pi${name}`,
+          prefix: (name) => `pi-${name}`
+        }
+      ],
+      multiColor: true,
+      projectUrl: "https://github.com/TheArtificial/pokemon-icons",
+      website: "https://theartificial.github.io/pokemon-icons/",
+      license: "CC BY",
+      licenseUrl: "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
       id: "ri",
       name: "Remix Icon",
       contents: [
