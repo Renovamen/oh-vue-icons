@@ -78,6 +78,27 @@ module.exports = {
       licenseUrl: "https://opensource.org/licenses/MIT",
     },
     {
+      id: "fi",
+      name: "Flag Icon",
+      contents: [
+        {
+          files: path.resolve(__dirname, "flag-icon/flags/4x3/*.svg"),
+          formatter: (name) => `Fi${name}`,
+          prefix: (name) => `fi-${name}`
+        },
+        {
+          files: path.resolve(__dirname, "flag-icon/flags/1x1/*.svg"),
+          formatter: (name) => `FiSquare${name}`,
+          prefix: (name) => `fi-square-${name}`
+        }
+      ],
+      multiColor: true,
+      projectUrl: "https://github.com/lipis/flag-icon-css",
+      website: "https://flagicons.lipis.dev/",
+      license: "MIT",
+      licenseUrl: "https://opensource.org/licenses/MIT",
+    },
+    {
       id: "gi",
       name: "gameicons",
       contents: [
@@ -87,7 +108,7 @@ module.exports = {
           prefix: (name) => `gi-${name}`
         },
       ],
-      projectUrl: "https://github.com/game-icons",
+      projectUrl: "https://github.com/game-icons/icons",
       website: "https://game-icons.net/",
       license: "CC BY 3.0",
       licenseUrl: "https://creativecommons.org/licenses/by/3.0/"
