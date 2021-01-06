@@ -15,10 +15,9 @@
               />
             </span>
             <p class="ml-3 font-medium text-white code truncate">
-              <span class="md:hidden text-xs">
+              <span class="text-xs md:inline md:text-base">
                 {{ importCode }}
               </span>
-              <span class="hidden md:inline "> {{ importCode }} </span>
             </p>
           </div>
           <div
