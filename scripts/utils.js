@@ -46,6 +46,9 @@ async function convertSVG(prefix, name, svg) {
         width = width * 1.33, height = height * 1.33
       }
       break
+    case 'oi':
+      width = width * 1.2, height = height * 1.2
+      break
     case 'pi':
       width = width * 1.17, height = height * 1.17
       break

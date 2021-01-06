@@ -28,3 +28,6 @@
 [submodule "iconpacks/pokemon-icons"]
 	path = iconpacks/pokemon-icons
 	url = https://github.com/TheArtificial/pokemon-icons.git
+[submodule "iconpacks/octicons"]
+	path = iconpacks/octicons
+	url = https://github.com/primer/octicons.git

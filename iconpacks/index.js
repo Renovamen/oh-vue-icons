@@ -129,6 +129,21 @@ module.exports = {
       licenseUrl: "https://creativecommons.org/licenses/by/3.0/"
     },
     {
+      id: "oi",
+      name: "Octicons",
+      contents: [
+        {
+          files: path.resolve(__dirname, "octicons/icons/*-16.svg"),
+          formatter: (name) => `Oi${name}`,
+          prefix: (name) => `oi-${name}`
+        },
+      ],
+      projectUrl: "https://github.com/primer/octicons",
+      website: "https://primer.style/octicons/",
+      license: "MIT",
+      licenseUrl: "https://opensource.org/licenses/MIT"
+    },
+    {
       id: "pi",
       name: "Pokemon Icons",
       contents: [
@@ -141,7 +156,7 @@ module.exports = {
       multiColor: true,
       projectUrl: "https://github.com/TheArtificial/pokemon-icons",
       website: "https://theartificial.github.io/pokemon-icons/",
-      license: "CC BY",
+      license: "CC BY 4.0",
       licenseUrl: "https://creativecommons.org/licenses/by/4.0/"
     },
     {
