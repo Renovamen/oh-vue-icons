@@ -68,7 +68,14 @@ async function writeIconModule(icon, DIST, ASSETS) {
             let rawName = path.basename(file, path.extname(file))
                                 .replace(/_/g, '-')
                                 .replace(/\$/g, '')    
-            if(icon.id === 'pi') rawName = rawName.substr(4)
+            switch(icon.id) {
+                case 'pi':
+                    rawName = rawName.substr(4)
+                    break
+                case 'oi':
+                    rawName = rawName.slice(0, -3)
+                    break
+            }
             if(excludes.indexOf(icon.id + '-' + rawName) !== -1) continue
 
             const pascalName = camelcase(rawName, { pascalCase: true })

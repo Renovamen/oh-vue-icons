@@ -12,19 +12,20 @@ links:
 
 Now the following icon packs are supported:
 
-| Icon Pack                                                     | Prefix | License                                                      | Icon Numer |
-| ------------------------------------------------------------- | ------ | ------------------------------------------------------------ | ---------- |
-| [academicons](https://github.com/jpswalsh/academicons)        | `ai`   | [SIL OFL 1.1](http://scripts.sil.org/OFL)                    | 145        |
-| [Bootstrap Icons](https://icons.getbootstrap.com/)            | `bi`   | [MIT](https://github.com/twbs/icons/blob/main/LICENSE.md)    | 1201       |
+| Icon Pack                                                     | Prefix | License                                                       | Icon Numer |
+| ------------------------------------------------------------- | ------ | ------------------------------------------------------------- | ---------- |
+| [academicons](https://github.com/jpswalsh/academicons)        | `ai`   | [SIL OFL 1.1](http://scripts.sil.org/OFL)                     | 145        |
+| [Bootstrap Icons](https://icons.getbootstrap.com/)            | `bi`   | [MIT](https://github.com/twbs/icons/blob/main/LICENSE.md)     | 1201       |
 | [Cryptocurrency Icons](https://github.com/spothq/cryptocurrency-icons) (Colorful) | `ci`   | [CC0 1.0 Universal](https://github.com/spothq/cryptocurrency-icons/blob/master/LICENSE.md) | 866        |
 | [Font Awesome 5](https://fontawesome.com/) (Free)             | `fa`   | [CC BY 4.0](https://github.com/FortAwesome/Font-Awesome/blob/master/LICENSE.txt) | 1609       |
 | [Flat Color Icons](https://github.com/icons8/flat-color-icons) (Colorful) | `fc`   | [MIT & Good Boy](https://github.com/icons8/flat-color-icons/blob/master/LICENSE.md) | 329        |
 | [Flag Icon](https://flagicons.lipis.dev/) (Colorful)          | `fi`   | [MIT](https://github.com/lipis/flag-icon-css/blob/master/LICENSE) | 516        |
 | [gameicons](https://game-icons.net/)                          | `gi`   | [CC BY 3.0](https://github.com/game-icons/icons/blob/master/license.txt) | 3927       |
+| [Octicons](https://primer.style/octicons/)                    | `oi`   | [MIT](https://github.com/primer/octicons/blob/master/LICENSE) | 206        |
 | [Pokemon Icons](https://theartificial.github.io/pokemon-icons/) (Colorful)| `pi`   | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | 1453      |
 | [Remix Icon](https://github.com/Remix-Design/RemixIcon)       | `ri`   | [Apache 2.0](https://github.com/Remix-Design/RemixIcon/blob/master/License) | 2271       |
 | [Simple Icons](https://simpleicons.org/)                      | `si`   | [CC0 1.0 Universal](https://github.com/simple-icons/simple-icons/blob/develop/LICENSE.md) | 1512       |
-| [Weather Icons](https://erikflowers.github.io/weather-icons/) | `wi`   | [SIL OFL 1.1](http://scripts.sil.org/OFL)                    | 219        |
+| [Weather Icons](https://erikflowers.github.io/weather-icons/) | `wi`   | [SIL OFL 1.1](http://scripts.sil.org/OFL)                     | 219        |
 
 
 ## Installation
@@ -96,6 +97,7 @@ The icon names should be passed using **kebab-case**.
   <v-icon name="fc-globe"></v-icon>
   <v-icon name="fi-square-cn"></v-icon>
   <v-icon name="gi-battered-axe"></v-icon>
+  <v-icon name="oi-repo-pull"></v-icon>
   <v-icon name="pi-charizard"></v-icon>
   <v-icon name="ri-bank-card-fill"></v-icon>
   <v-icon name="si-unity"></v-icon>
@@ -112,6 +114,7 @@ The icon names should be passed using **kebab-case**.
     <v-icon name="fc-globe" />
     <v-icon name="fi-square-cn" />
     <v-icon name="gi-battered-axe" />
+    <v-icon name="oi-repo-pull" />
     <v-icon name="pi-charizard" />
     <v-icon name="ri-bank-card-fill" />
     <v-icon name="si-unity" />

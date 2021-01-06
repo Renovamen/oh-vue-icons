@@ -8,7 +8,7 @@
     >
       <span class="msg-box">
         <v-icon name="ri-checkbox-circle-fill" />
-        Copied '{{ icon }}' to clipboard!
+        Copied '{{ icon }}'
       </span>
     </div>
   </transition>

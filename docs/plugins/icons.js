@@ -8,6 +8,7 @@ import * as FiIcons from '../../src/icons/fi'
 import * as FaIcons from '../../src/icons/fa'
 import * as FcIcons from '../../src/icons/fc'
 import * as GiIcons from '../../src/icons/gi'
+import * as OiIcons from '../../src/icons/oi'
 import * as PiIcons from '../../src/icons/pi'
 import * as RiIcons from '../../src/icons/ri'
 import * as SiIcons from '../../src/icons/si'
@@ -21,6 +22,7 @@ const
     Fa = Object.values({ ...FaIcons }),
     Fc = Object.values({ ...FcIcons }),
     Gi = Object.values({ ...GiIcons }),
+    Oi = Object.values({ ...OiIcons }),
     Pi = Object.values({ ...PiIcons }),
     Ri = Object.values({ ...RiIcons }),
     Si = Object.values({ ...SiIcons }),
@@ -33,6 +35,7 @@ OhVueIcon.add(Fi)
 OhVueIcon.add(Fa)
 OhVueIcon.add(Fc)
 OhVueIcon.add(Gi)
+OhVueIcon.add(Oi)
 OhVueIcon.add(Pi)
 OhVueIcon.add(Ri)
 OhVueIcon.add(Si)
