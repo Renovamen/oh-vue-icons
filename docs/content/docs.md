@@ -125,16 +125,17 @@ The icon names should be passed using **kebab-case**.
 
 ## Props
 
-| Name        | Description                              | Type      | Accepted Values                                     | Default value  |
-| ----------- | ---------------------------------------- | --------- | --------------------------------------------------- | -------------- |
-| `scale`     | Icon size                                | `number`  | /                                                   | `1`            |
-| `animation` | Type of animation                        | `string`  | `wrench` / `ring` / `pulse` / `spin` / `spin-pulse` | /              |
-| `hover`     | Enable animation only when being hovered | `boolean` | `true` / `false`                                    | `false`        |
-| `flip`      | Used to flip icon                        | `string`  | `vertical` / `horizontal` / `both`                  | /              |
-| `fill`      | Fill color of icon                       | `string`  | HEX color code or color name                        | `currentColor` |
-| `label`     | Icon lable                               | `string`  | /                                                   | /              |
-| `title`     | Icon title                               | `string`  | /                                                   | /              |
-| `inverse`   | Make icon color white?                   | `boolean` | `true` / `false`                                    | `false`        |
+| Name        | Description                              | Type      | Accepted Values                                               | Default value  |
+| ----------- | ---------------------------------------- | --------- | ------------------------------------------------------------- | -------------- |
+| `scale`     | Icon size                                | `number`  | /                                                             | `1`            |
+| `animation` | Type of animation                        | `string`  | `wrench` / `ring` / `pulse` / `spin` / `spin-pulse` / `flash` | /              |
+| `speed`     | Animation speed                          | `string`  | `slow` / `fast`                                               | /              |
+| `hover`     | Enable animation only when being hovered | `boolean` | `true` / `false`                                              | `false`        |
+| `flip`      | Used to flip icon                        | `string`  | `vertical` / `horizontal` / `both`                            | /              |
+| `fill`      | Fill color of icon                       | `string`  | HEX color code or color name                                  | `currentColor` |
+| `label`     | Icon lable                               | `string`  | /                                                             | /              |
+| `title`     | Icon title                               | `string`  | /                                                             | /              |
+| `inverse`   | Make icon color white?                   | `boolean` | `true` / `false`                                              | `false`        |
 
 
 ## Examples
@@ -168,8 +169,10 @@ Use `animation: string` to enablle animations:
 <p>
   <v-icon name="ri-refresh-line" animation="spin"></v-icon>
   <v-icon name="fa-spinner" animation="spin-pulse"></v-icon>
-  <v-icon name="gi-piercing-sword" animation="wrench"></v-icon> <v-icon name="fa-regular-bell" animation="ring"></v-icon>
+  <v-icon name="gi-piercing-sword" animation="wrench"></v-icon>
+  <v-icon name="fa-regular-bell" animation="ring"></v-icon>
   <v-icon name="ri-heart-pulse-line" animation="pulse"></v-icon>
+  <v-icon name="bi-lightning" animation="flash"></v-icon>
 </p>
 
 ```html
@@ -178,6 +181,7 @@ Use `animation: string` to enablle animations:
 <v-icon name="gi-piercing-sword" animation="wrench" />
 <v-icon name="fa-regular-bell" animation="ring" />
 <v-icon name="ri-heart-pulse-line" animation="pulse" />
+<v-icon name="bi-lightning" animation="flash" />
 ```
 
 Use `hover: boolean` to enable the animation only when the icon is hoverd:
@@ -186,6 +190,20 @@ Use `hover: boolean` to enable the animation only when the icon is hoverd:
 
 ```html
 <v-icon name="ri-refresh-line" animation="spin" hover />
+```
+
+Use `speed: string` to control the animation speed:
+
+<p>
+  Normal: <v-icon name="ri-refresh-line" animation="spin" speed="slow"></v-icon>,
+  Slow: <v-icon name="ri-refresh-line" animation="spin"></v-icon>,
+  Fast: <v-icon name="ri-refresh-line" animation="spin" speed="fast"></v-icon>
+</p>
+
+```html
+<v-icon name="ri-refresh-line" animation="spin" speed="slow" />
+<v-icon name="ri-refresh-line" animation="spin" />
+<v-icon name="ri-refresh-line" animation="spin" speed="fast" />
 ```
 
 ### Flip
