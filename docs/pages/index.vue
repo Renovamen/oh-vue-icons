@@ -10,10 +10,12 @@
         :iconSize="iconSize"
         :iconColor="iconColor"
         :animation="iconAnimation"
+        :animSpeed="iconAnimSpeed"
         :flip="iconFlip"
         @set-size="setSize"
         @set-color="setColor"
         @set-animation="setAnimation"
+        @set-animation-speed="setAnimSpeed"
         @set-flip="setFlip"
       />
     </Sidebar>
@@ -23,10 +25,12 @@
       :iconSize="iconSize"
       :iconColor="iconColor"
       :animation="iconAnimation"
+      :animSpeed="iconAnimSpeed"
       :flip="iconFlip"
       @set-size="setSize"
       @set-color="setColor"
       @set-animation="setAnimation"
+      @set-animation-speed="setAnimSpeed"
       @set-flip="setFlip"
     />
 
@@ -84,6 +88,7 @@
                     :name="icon"
                     :scale="iconSize"
                     :animation="iconAnimation"
+                    :speed="iconAnimSpeed === 'normal' ? null : iconAnimSpeed"
                     :flip="iconFlip === 'normal' ? null : iconFlip"
                     :fill="iconColor"
                   />
@@ -113,6 +118,7 @@ import { icons } from '../../iconpacks'
 
 const iconKeys = Object.keys(OhVueIcon.icons)
 const flipOptions = ['normal', 'horizontal', 'vertical', 'both']
+const speedOptions = ['normal', 'slow', 'fast']
 
 export default {
   components: { 
@@ -134,7 +140,8 @@ export default {
       iconSize: 2.4,
       iconColor: '#222F3D',
       iconAnimation: null,
-      iconFlip: 'normal'
+      iconFlip: 'normal',
+      iconAnimSpeed: 'normal'
     }
   },
   mounted () {
@@ -183,6 +190,11 @@ export default {
     setAnimation(value) {
       if(this.iconAnimation === value) this.iconAnimation = null
       else this.iconAnimation = value
+    },
+    setAnimSpeed(value) {
+      const currentIndex = speedOptions.indexOf(this.iconAnimSpeed)
+			const nextIndex = (currentIndex + 1) % speedOptions.length
+			this.iconAnimSpeed = speedOptions[nextIndex]
     },
     setFlip() {
       const currentIndex = flipOptions.indexOf(this.iconFlip)

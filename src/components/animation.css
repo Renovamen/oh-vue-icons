@@ -1,7 +1,20 @@
+/* ---------------- spin ---------------- */
 .v-spin:not(.v-hover) > g,
 .v-spin.v-hover:hover > g,
 .v-parent.v-hover:hover > .v-spin > g {
-    animation: v-spin 1s 0s infinite linear;
+    animation: v-spin 1s linear infinite;
+}
+
+.v-spin:not(.v-hover).v-fast > g,
+.v-spin.v-hover.v-fast:hover > g,
+.v-parent.v-hover:hover > .v-spin.v-fast > g {
+  animation: v-spin 0.7s linear infinite;
+}
+
+.v-spin:not(.v-hover).v-slow > g,
+.v-spin.v-hover.v-slow:hover > g,
+.v-parent.v-hover:hover > .v-spin.v-slow > g {
+  animation: v-spin 2s linear infinite;
 }
 
 .v-spin-pulse:not(.v-hover) > g,
@@ -10,22 +23,16 @@
     animation: v-spin 1s infinite steps(8);
 }
 
-.v-wrench:not(.v-hover) > g,
-.v-wrench.v-hover:hover > g,
-.v-parent.v-hover:hover > .v-wrench > g {
-    animation: v-wrench 2.5s ease infinite;
+.v-spin-pulse:not(.v-hover).v-fast > g,
+.v-spin-pulse.v-hover.v-fast:hover > g,
+.v-parent.v-hover:hover > .v-spin-pulse.v-fast > g {
+    animation: v-spin 0.7s infinite steps(8);
 }
 
-.v-ring:not(.v-hover) > g,
-.v-ring.v-hover:hover > g,
-.v-parent.v-hover:hover > .v-ring > g {
-    animation: v-ring 2s ease infinite;
-}
-
-.v-pulse:not(.v-hover) > g,
-.v-pulse.v-hover:hover > g,
-.v-parent.v-hover:hover > .v-pulse > g {
-    animation: v-pulse 2s linear infinite;
+.v-spin-pulse:not(.v-hover).v-slow > g,
+.v-spin-pulse.v-hover.v-slow:hover > g,
+.v-parent.v-hover:hover > .v-spin-pulse.v-slow > g {
+    animation: v-spin 2s infinite steps(8);
 }
 
 @keyframes v-spin {
@@ -36,7 +43,26 @@
         transform: rotate(360deg);
     }
 }
-  
+
+/* ---------------- wrench ---------------- */
+.v-wrench:not(.v-hover) > g,
+.v-wrench.v-hover:hover > g,
+.v-parent.v-hover:hover > .v-wrench > g {
+    animation: v-wrench 2.5s ease infinite;
+}
+
+.v-wrench:not(.v-hover).v-fast > g,
+.v-wrench.v-hover.v-fast:hover > g,
+.v-parent.v-hover:hover > .v-wrench.v-fast > g {
+    animation: v-wrench 1.2s ease infinite;
+}
+
+.v-wrench:not(.v-hover).v-slow > g,
+.v-wrench.v-hover.v-slow:hover > g,
+.v-parent.v-hover:hover > .v-wrench.v-slow > g {
+    animation: v-wrench 3.7s ease infinite;
+}
+
 @keyframes v-wrench {
     0% {
         transform: rotate(-12deg);
@@ -58,7 +84,26 @@
         transform: rotate(0deg);
     }
 }
-  
+
+/* ---------------- ring ---------------- */
+.v-ring:not(.v-hover) > g,
+.v-ring.v-hover:hover > g,
+.v-parent.v-hover:hover > .v-ring > g {
+    animation: v-ring 2s ease infinite;
+}
+
+.v-ring:not(.v-hover).v-fast > g,
+.v-ring.v-hover.v-fast:hover > g,
+.v-parent.v-hover:hover > .v-ring.v-fast > g {
+    animation: v-ring 1s ease infinite;
+}
+
+.v-ring:not(.v-hover).v-slow > g,
+.v-ring.v-hover.v-slow:hover > g,
+.v-parent.v-hover:hover > .v-ring.v-slow > g {
+    animation: v-ring 3s ease infinite;
+}
+
 @keyframes v-ring {
     0% {
         transform: rotate(-15deg);
@@ -104,7 +149,26 @@
         transform: rotate(0deg);
     }
 }
-  
+
+/* ---------------- pulse ---------------- */
+.v-pulse:not(.v-hover) > g,
+.v-pulse.v-hover:hover > g,
+.v-parent.v-hover:hover > .v-pulse > g {
+    animation: v-pulse 2s linear infinite;
+}
+
+.v-pulse:not(.v-hover).v-fast > g,
+.v-pulse.v-hover.v-fast:hover > g,
+.v-parent.v-hover:hover > .v-pulse.v-fast > g {
+    animation: v-pulse 1s linear infinite;
+}
+
+.v-pulse:not(.v-hover).v-slow > g,
+.v-pulse.v-hover.v-slow:hover > g,
+.v-parent.v-hover:hover > .v-pulse.v-slow > g {
+    animation: v-pulse 3s linear infinite;
+}
+
 @keyframes v-pulse {
     0% {
         transform: scale(1.1);
@@ -116,5 +180,33 @@
   
     100% {
         transform: scale(1.1);
+    }
+}
+
+/* ---------------- flash ---------------- */
+.v-flash:not(.v-hover) > g,
+.v-flash.v-hover:hover > g,
+.v-parent.v-hover:hover > .v-flash > g {
+    animation: v-flash 2s ease infinite;
+}
+
+.v-flash:not(.v-hover).v-fast > g,
+.v-flash.v-hover.v-fast:hover > g,
+.v-parent.v-hover:hover > .v-flash.v-fast > g {
+    animation: v-flash 1s ease infinite;
+}
+
+.v-flash:not(.v-hover).v-slow > g,
+.v-flash.v-hover.v-slow:hover > g,
+.v-parent.v-hover:hover > .v-flash.v-slow > g {
+    animation: v-flash 3s ease infinite;
+}
+
+@keyframes v-flash {
+    0%, 100%, 50%{
+        opacity: 1;
+    }
+    25%, 75%{
+        opacity: 0;
     }
 }

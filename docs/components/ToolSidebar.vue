@@ -1,7 +1,7 @@
 <template>
 <div class="toolbar">
-    <div class="p-2 mx-2">
-        <div class="m-3 ml-0 mr-4 text-left">Scale</div>
+    <div class="section">
+        <div class="title">Scale</div>
         <div class="flex flex-1">
             <vue-slider
                 class="flex-1"
@@ -14,8 +14,8 @@
             <div class="w-10 text-right">{{ size }}</div>
         </div>
     </div>
-    <div class="icon-color p-2 mx-2">
-        <div class="m-3 ml-0 mr-4 text-left">Color</div>
+    <div class="icon-color section">
+        <div class="title">Color</div>
         <div class="flex flex-1">
             <v-swatches class="flex-1" v-model="color" />
             <input
@@ -28,8 +28,8 @@
             />
         </div>
     </div>
-    <div class="p-2 mx-2">
-        <div class="m-3 ml-0 mr-4 text-left">Animation</div>
+    <div class="section">
+        <div class="title">Animation</div>
         <div class="grid grid-cols-2 gap-2 text-sm">
             <button
                 @click="$emit('set-animation', 'spin')"
@@ -61,10 +61,25 @@
             >
                 Pulse
             </button>
+            <button
+                @click="$emit('set-animation', 'flash')"
+                :class="{ 'clicked': animation === 'flash' }"
+            >
+                Flash
+            </button>
         </div>
     </div>
-    <div class="p-2 mx-2">
-        <div class="m-3 ml-0 mr-4 text-left">Flip</div>
+    <div class="section">
+        <div class="title">Animation Speed</div>
+        <button
+            @click="$emit('set-animation-speed')"
+            class="w-full capitalize"
+        >
+            {{ animSpeed }}
+        </button>
+    </div>
+    <div class="section">
+        <div class="title">Flip</div>
         <button
             @click="$emit('set-flip')"
             class="w-full capitalize"
@@ -84,7 +99,7 @@ export default {
     components: {
         VueSlider
     },
-    props: ['iconSize', 'iconColor', 'animation', 'flip'],
+    props: ['iconSize', 'iconColor', 'animation', 'animSpeed', 'flip'],
     data() {
         return {
             size: 0.1,
@@ -117,6 +132,12 @@ export default {
 }
 .dark-mode .toolbar {
     @apply bg-gray-800 text-gray-500 border-gray-700;
+}
+.toolbar .section {
+    @apply p-2 mx-2;
+}
+.toolbar .title {
+    @apply m-3 ml-0 mr-4 text-left;
 }
 .toolbar button {
     @apply border border-solid border-gray-500 outline-none rounded h-8;
