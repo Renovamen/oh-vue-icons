@@ -110,16 +110,17 @@ See the [documentation](https://oh-vue-icons.vercel.app/docs#basic-usage) for mo
 
 ## Props
 
-| Name        | Description                              | Type      | Accepted Values                                     | Default value  |
-| ----------- | ---------------------------------------- | --------- | --------------------------------------------------- | -------------- |
-| `scale`     | Icon size                                | `number`  | /                                                   | `1`            |
-| `animation` | Type of animation                        | `string`  | `wrench` / `ring` / `pulse` / `spin` / `spin-pulse` | /              |
-| `hover`     | Enable animation only when being hovered | `boolean` | `true` / `false`                                    | `false`        |
-| `flip`      | Used to flip icon                        | `string`  | `vertical` / `horizontal` / `both`                  | /              |
-| `fill`      | Fill color of icon                       | `string`  | HEX color code or color name                        | `currentColor` |
-| `label`     | Icon lable                               | `string`  | /                                                   | /              |
-| `title`     | Icon title                               | `string`  | /                                                   | /              |
-| `inverse`   | Make icon color white?                   | `boolean` | `true` / `false`                                    | `false`        |
+| Name        | Description                              | Type      | Accepted Values                                               | Default value  |
+| ----------- | ---------------------------------------- | --------- | ------------------------------------------------------------- | -------------- |
+| `scale`     | Icon size                                | `number`  | /                                                             | `1`            |
+| `animation` | Type of animation                        | `string`  | `wrench` / `ring` / `pulse` / `spin` / `spin-pulse` / `flash` | /              |
+| `speed`     | Animation speed                          | `string`  | `slow` / `fast`                                               | /              |
+| `hover`     | Enable animation only when being hovered | `boolean` | `true` / `false`                                              | `false`        |
+| `flip`      | Used to flip icon                        | `string`  | `vertical` / `horizontal` / `both`                            | /              |
+| `fill`      | Fill color of icon                       | `string`  | HEX color code or color name                                  | `currentColor` |
+| `label`     | Icon lable                               | `string`  | /                                                             | /              |
+| `title`     | Icon title                               | `string`  | /                                                             | /              |
+| `inverse`   | Make icon color white?                   | `boolean` | `true` / `false`                                              | `false`        |
 
 Some examples could be found in the [documentation](https://oh-vue-icons.vercel.app/docs#examples).
 

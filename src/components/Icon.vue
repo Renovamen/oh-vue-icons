@@ -34,13 +34,19 @@ export default {
     scale: [Number, String],
     animation: {
       validator (val) {
-        return val === 'spin' || val === 'spin-pulse' || val === 'wrench' || val === 'ring' || val === 'pulse'
+        return val === 'spin' || val === 'spin-pulse' || val === 'wrench'
+            || val === 'ring' || val === 'pulse' || val === 'flash'
       }
     },
     hover: Boolean,
     flip: {
       validator (val) {
         return val === 'horizontal' || val === 'vertical' || val === 'both'
+      }
+    },
+    speed: {
+      validator (val) {
+        return val === 'fast' || val === 'slow'
       }
     },
     label: String,
@@ -78,7 +84,10 @@ export default {
         'v-wrench': this.animation === 'wrench',
         'v-ring': this.animation === 'ring',
         'v-pulse': this.animation === 'pulse',
-        'v-hover': this.hover
+        'v-flash': this.animation === 'flash',
+        'v-hover': this.hover,
+        'v-fast': this.speed === 'fast',
+        'v-slow': this.speed === 'slow'
       }
 
       if (this.classes) {
