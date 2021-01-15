@@ -195,8 +195,8 @@ Use `hover: boolean` to enable the animation only when the icon is hoverd:
 Use `speed: string` to control the animation speed:
 
 <p>
-  Normal: <v-icon name="ri-refresh-line" animation="spin" speed="slow"></v-icon>,
-  Slow: <v-icon name="ri-refresh-line" animation="spin"></v-icon>,
+  Slow: <v-icon name="ri-refresh-line" animation="spin" speed="slow"></v-icon>,
+  Normal: <v-icon name="ri-refresh-line" animation="spin"></v-icon>,
   Fast: <v-icon name="ri-refresh-line" animation="spin" speed="fast"></v-icon>
 </p>
 

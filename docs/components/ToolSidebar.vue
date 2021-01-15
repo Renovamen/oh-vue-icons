@@ -69,14 +69,19 @@
             </button>
         </div>
     </div>
-    <div class="section">
+    <div class="section mt-3">
         <div class="title">Animation Speed</div>
-        <button
-            @click="$emit('set-animation-speed')"
-            class="w-full capitalize"
-        >
-            {{ animSpeed }}
-        </button>
+        <div class="flex flex-1">
+            <vue-slider
+                class="flex-1"
+                v-model="speed"
+                v-bind:max="3"
+                v-bind:min="1"
+                v-bind:interval="1"
+                :tooltip-formatter="formatter"
+            />
+            <div class="w-8 text-right">{{ speed }}</div>
+        </div>
     </div>
     <div class="section">
         <div class="title">Flip</div>
@@ -95,6 +100,8 @@ import VueSlider from 'vue-slider-component/dist-css/vue-slider-component.umd.mi
 import 'vue-slider-component/dist-css/vue-slider-component.css'
 import 'vue-slider-component/theme/default.css'
 
+const speedOptions = ['slow', 'normal', 'fast']
+
 export default {
     components: {
         VueSlider
@@ -104,7 +111,9 @@ export default {
         return {
             size: 0.1,
             color: '',
-            isColorFocused: false
+            isColorFocused: false,
+            speed: 2,
+            formatter: v => speedOptions[(v - 1) % 3],
         }
     },
     watch: {
@@ -113,11 +122,15 @@ export default {
         },
         color(value) {
             this.$emit('set-color', value)
+        },
+        speed(value) {
+            this.$emit('set-animation-speed', speedOptions[(value - 1) % 3])
         }
     },
     mounted () {
         this.size = this.iconSize
         this.color = this.iconColor
+        this.speed = (speedOptions.findIndex((n) => n === this.animSpeed) + 1) % 3
     }
 }
 </script>
