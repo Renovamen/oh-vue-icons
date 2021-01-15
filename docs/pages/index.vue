@@ -118,7 +118,6 @@ import { icons } from '../../iconpacks'
 
 const iconKeys = Object.keys(OhVueIcon.icons)
 const flipOptions = ['normal', 'horizontal', 'vertical', 'both']
-const speedOptions = ['normal', 'slow', 'fast']
 
 export default {
   components: { 
@@ -192,9 +191,7 @@ export default {
       else this.iconAnimation = value
     },
     setAnimSpeed(value) {
-      const currentIndex = speedOptions.indexOf(this.iconAnimSpeed)
-			const nextIndex = (currentIndex + 1) % speedOptions.length
-			this.iconAnimSpeed = speedOptions[nextIndex]
+			this.iconAnimSpeed = value
     },
     setFlip() {
       const currentIndex = flipOptions.indexOf(this.iconFlip)
