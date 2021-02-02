@@ -12,7 +12,7 @@
             target="_blank"
             class="px-2 py-1 ml-2 sm:ml-3 text-sm inline-block align-middle github"
         >
-            v0.1.7
+            v0.1.8
         </a>
     </div>
     <div class="flex items-center justify-end">
