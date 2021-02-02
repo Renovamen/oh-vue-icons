@@ -20,7 +20,8 @@
     "preview:docs": "cd docs/dist && http-server",
     "download": "sh ./scripts/download.sh",
     "pub": "sh ./scripts/publish.sh",
-    "submodule": "git submodule update --init"
+    "submodule": "git submodule update --init",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
   "dependencies": {
     "core-js": "^3.4.4"
