@@ -1,9 +1,9 @@
 export const state = () => ({
-    isDark: false
-})
+  isDark: false
+});
 
 export const mutations = {
-    toggleTheme(state) {
-        state.isDark = !state.isDark
-    }
-}
+  toggleTheme(state) {
+    state.isDark = !state.isDark;
+  }
+};

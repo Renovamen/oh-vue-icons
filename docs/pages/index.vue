@@ -39,17 +39,19 @@
         <div class="flex flex-col text-center">
           <h1>Oh, Vue Icons!</h1>
           <p class="desc">
-            A Vue component for including inline SVG icons from different
-            icon packs easily.
+            A Vue component for including inline SVG icons from different icon
+            packs easily.
           </p>
         </div>
       </div>
     </div>
 
     <div class="page-width pb-16">
+      <!----------------- Search Box ----------------->
       <div class="search-box w-full pt-3 pb-1 -mt-4 -mb-5 z-10">
-        <div class="grid grid-cols-8 sm:grid-cols-12 rounded-md
-                    border border-gray-500 transition duration-200">
+        <div
+          class="grid grid-cols-8 sm:grid-cols-12 rounded-md border border-gray-500 transition duration-200"
+        >
           <div class="relative col-start-1 col-span-1">
             <v-icon
               name="ri-search-2-line"
@@ -62,8 +64,7 @@
             ref="search"
             id="search"
             v-model="search"
-            class="col-start-2 col-span-7 sm:col-span-11 py-3 sm:py-4 inline-block
-                   align-middle text-base bg-transparent focus:outline-none"
+            class="col-start-2 col-span-7 sm:col-span-11 py-3 sm:py-4 inline-block align-middle text-base bg-transparent focus:outline-none"
             :placeholder="`Search ${countIconsByTab} icons...`"
             @focus="isSearchFocused = true"
             @blur="isSearchFocused = false"
@@ -71,32 +72,33 @@
         </div>
       </div>
 
+      <!----------------- Icons ----------------->
       <div class="mt-10">
-        <div v-for="(iconSet, index) in iconSets" :key="`set-${index}`">
-          <div v-if="tabSelected === iconSet.tab">
-            <div class="grid grid-cols-4 sm:grid-cols-8 gap-3">
-              <lazy-component
-                v-for="(icon, index) in filterBySearch(iconSet.components)"
-                :key="`icon-${index}`"
-              >
-                <div
-                  class="icon-block"
-                  :class="{ 'selected': iconSelected === icon }"
-                  @click="selectIcon(icon, iconSet.tab.toLowerCase())"
-                >
-                  <v-icon
-                    :name="icon"
-                    :scale="iconSize"
-                    :animation="iconAnimation"
-                    :speed="iconAnimSpeed === 'normal' ? null : iconAnimSpeed"
-                    :flip="iconFlip === 'normal' ? null : iconFlip"
-                    :fill="iconColor"
-                  />
-                </div>
-              </lazy-component>
-            </div>
+        <div class="grid grid-cols-4 sm:grid-cols-8 gap-3">
+          <div
+            v-for="(icon, index) in filterBySearch(getIconSet.components).slice(0, maxIcons)"
+            :key="`icon-${index}`"
+            class="icon-block"
+            :class="{ selected: iconSelected === icon }"
+            @click="selectIcon(icon, getIconSet.tab.toLowerCase())"
+          >
+            <v-icon
+              :name="icon"
+              :scale="iconSize"
+              :animation="iconAnimation"
+              :speed="iconAnimSpeed === 'normal' ? null : iconAnimSpeed"
+              :flip="iconFlip === 'normal' ? null : iconFlip"
+              :fill="iconColor"
+            />
           </div>
         </div>
+        <button
+          class="load-btn"
+          v-if="filterBySearch(getIconSet.components).length > maxIcons"
+          @click="loadMore"
+        >
+          Load More
+        </button>
       </div>
     </div>
 
@@ -110,96 +112,107 @@
 </template>
 
 <script>
-import OhVueIcon from '../../src/components/Icon.vue'
-import IconInfo from '../components/IconInfo.vue'
-import Sidebar from '../components/Sidebar.vue'
-import ToolSidebar from '../components/ToolSidebar.vue'
-import { icons } from '../../iconpacks'
+import OhVueIcon from "../../src/components/Icon.vue";
+import IconInfo from "../components/IconInfo.vue";
+import Sidebar from "../components/Sidebar.vue";
+import ToolSidebar from "../components/ToolSidebar.vue";
+import { icons } from "../icons";
 
-const iconKeys = Object.keys(OhVueIcon.icons)
-const flipOptions = ['normal', 'horizontal', 'vertical', 'both']
+const iconKeys = Object.keys(OhVueIcon.icons);
+const flipOptions = ["normal", "horizontal", "vertical", "both"];
+const max = 304
 
 export default {
-  components: { 
+  components: {
     IconInfo,
     Sidebar,
     ToolSidebar
   },
   data() {
     return {
-      search: '',
+      search: "",
       isSearchFocused: false,
-      tabSelected: 'All',
-      iconSelected: '',
-      categorySelected: '',
-      iconSets: [{
-        tab: 'All',
-        components: iconKeys
-      }],
+      tabSelected: "All",
+      iconSelected: "",
+      categorySelected: "",
+      iconSets: [
+        {
+          tab: "All",
+          components: iconKeys
+        }
+      ],
+      maxIcons: max,
       iconSize: 2.4,
-      iconColor: '#222F3D',
+      iconColor: "#222F3D",
       iconAnimation: null,
-      iconFlip: 'normal',
-      iconAnimSpeed: 'normal'
-    }
+      iconFlip: "normal",
+      iconAnimSpeed: "normal"
+    };
   },
-  mounted () {
-    for(let icon of icons) {
+  mounted() {
+    for (let icon of icons) {
       this.iconSets.push({
         tab: icon.name,
-        components: iconKeys.filter(function (x) {
-          return x.slice(0, icon.id.length) === icon.id
+        components: iconKeys.filter(function(x) {
+          return x.slice(0, icon.id.length) === icon.id;
         }),
         multiColor: icon.multiColor
-      })
+      });
     }
   },
   computed: {
-    countIconsByTab() {
-      const tabSelected = this.tabSelected
+    getIconSet() {
+      const tabSelected = this.tabSelected;
       return this.iconSets.find(x => {
-        return x.tab === tabSelected
-      }).components.length
+        return x.tab === tabSelected;
+      });
+    },
+    countIconsByTab() {
+      return this.getIconSet.components.length;
     }
   },
   methods: {
     selectIcon(name, category) {
-      this.iconSelected = name
-      this.categorySelected = category
+      this.iconSelected = name;
+      this.categorySelected = category;
     },
     changeTab(name) {
-      this.resetSelectedIcon()
-      this.tabSelected = name
+      this.resetSelectedIcon();
+      this.tabSelected = name;
+      this.maxIcons = max;
     },
     filterBySearch(components) {
       return Object.values(components).filter(component =>
         component.toLowerCase().includes(this.search.toLowerCase())
-      )
+      );
     },
     resetSelectedIcon() {
-      this.iconSelected = ''
-      this.categorySelected = ''
+      this.iconSelected = "";
+      this.categorySelected = "";
+    },
+    loadMore() {
+      this.maxIcons += max;
     },
     setSize(value) {
-      this.iconSize = value
+      this.iconSize = value;
     },
     setColor(value) {
-      this.iconColor = value
+      this.iconColor = value;
     },
     setAnimation(value) {
-      if(this.iconAnimation === value) this.iconAnimation = null
-      else this.iconAnimation = value
+      if (this.iconAnimation === value) this.iconAnimation = null;
+      else this.iconAnimation = value;
     },
     setAnimSpeed(value) {
-			this.iconAnimSpeed = value
+      this.iconAnimSpeed = value;
     },
     setFlip() {
-      const currentIndex = flipOptions.indexOf(this.iconFlip)
-			const nextIndex = (currentIndex + 1) % flipOptions.length
-			this.iconFlip = flipOptions[nextIndex]
+      const currentIndex = flipOptions.indexOf(this.iconFlip);
+      const nextIndex = (currentIndex + 1) % flipOptions.length;
+      this.iconFlip = flipOptions[nextIndex];
     }
   }
-}
+};
 </script>
 
 <style lang="postcss">
@@ -242,6 +255,22 @@ export default {
 }
 .dark-mode .icon-block:not(.selected):hover {
   @apply border-gray-600;
+}
+
+.load-btn, .load-btn:focus {
+  @apply outline-none;
+}
+.load-btn {
+  @apply mt-6 capitalize text-gray-600 border border-solid border-gray-500 rounded py-1 px-3;
+}
+.load-btn:hover {
+  @apply bg-gray-100;
+}
+.dark-mode .load-btn {
+  @apply text-gray-500;
+}
+.dark-mode .load-btn:hover {
+  @apply bg-gray-700;
 }
 
 p.desc {

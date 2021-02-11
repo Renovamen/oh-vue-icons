@@ -1,22 +1,19 @@
 <template>
-<div
-  class="layout"
-  :class="{ 'dark-mode': isDark }"
->
-  <Navbar class="fixed z-40 top-0" />
-  <Nuxt />
-  <Footer />
-</div>
+  <div class="layout" :class="{ 'dark-mode': isDark }">
+    <Navbar class="fixed z-40 top-0" />
+    <Nuxt />
+    <Footer />
+  </div>
 </template>
 
 <script>
 export default {
   computed: {
     isDark() {
-      return this.$store.state.theme.isDark
+      return this.$store.state.theme.isDark;
     }
   }
-}
+};
 </script>
 
 <style lang="postcss">
@@ -40,11 +37,14 @@ h3 {
   @apply text-xl;
 }
 
-h2, h3 {
+h2,
+h3 {
   @apply font-semibold;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   @apply text-gray-800;
 }
 

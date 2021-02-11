@@ -31,7 +31,6 @@ export default {
   build: {
   },
   plugins: [
-    '~/plugins/lazyload.js',
     '~/plugins/icons.js'
   ]
 }

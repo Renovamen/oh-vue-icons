@@ -1,6 +1,8 @@
 docs/dist/
 iconpacks/gameicons/
 *.zip
+.yarnrc
+.npmrc
 
 # Logs
 logs
