@@ -1,177 +1,173 @@
 <template>
-<div class="toolbar">
+  <div class="toolbar">
     <div class="section">
-        <div class="title">Scale</div>
-        <div class="flex flex-1">
-            <vue-slider
-                class="flex-1"
-                v-model="size"
-                v-bind:max="3"
-                v-bind:min="0.1"
-                v-bind:interval="0.1"
-                tooltip="none"
-            />
-            <div class="w-10 text-right">{{ size }}</div>
-        </div>
+      <div class="title">Scale</div>
+      <div class="flex flex-1">
+        <vue-slider
+          class="flex-1"
+          v-model="size"
+          v-bind:max="3"
+          v-bind:min="0.1"
+          v-bind:interval="0.1"
+          tooltip="none"
+        />
+        <div class="w-10 text-right">{{ size }}</div>
+      </div>
     </div>
     <div class="icon-color section">
-        <div class="title">Color</div>
-        <div class="flex flex-1">
-            <v-swatches class="flex-1" v-model="color" />
-            <input
-                class="bg-transparent border border-solid outline-none rounded-md px-1"
-                :style="{ borderColor: isColorFocused ? color : '#A0AEBF' }"
-                slot="trigger"
-                v-model="color"
-                @focus="isColorFocused = true"
-                @blur="isColorFocused = false"
-            />
-        </div>
+      <div class="title">Color</div>
+      <div class="flex flex-1">
+        <v-swatches class="flex-1" v-model="color" />
+        <input
+          class="bg-transparent border border-solid outline-none rounded-md px-1"
+          :style="{ borderColor: isColorFocused ? color : '#A0AEBF' }"
+          slot="trigger"
+          v-model="color"
+          @focus="isColorFocused = true"
+          @blur="isColorFocused = false"
+        />
+      </div>
     </div>
     <div class="section">
-        <div class="title">Animation</div>
-        <div class="grid grid-cols-2 gap-2 text-sm">
-            <button
-                @click="$emit('set-animation', 'spin')"
-                :class="{ 'clicked': animation === 'spin' }"
-            >
-                Spin
-            </button>
-            <button
-                @click="$emit('set-animation', 'spin-pulse')"
-                :class="{ 'clicked': animation === 'spin-pulse' }"
-            >
-                Spin Pulse
-            </button>
-            <button
-                @click="$emit('set-animation', 'wrench')"
-                :class="{ 'clicked': animation === 'wrench' }"
-            >
-                Wrench
-            </button>
-            <button
-                @click="$emit('set-animation', 'ring')"
-                :class="{ 'clicked': animation === 'ring' }"
-            >
-                Ring
-            </button>
-            <button
-                @click="$emit('set-animation', 'pulse')"
-                :class="{ 'clicked': animation === 'pulse' }"
-            >
-                Pulse
-            </button>
-            <button
-                @click="$emit('set-animation', 'flash')"
-                :class="{ 'clicked': animation === 'flash' }"
-            >
-                Flash
-            </button>
-        </div>
+      <div class="title">Animation</div>
+      <div class="grid grid-cols-2 gap-2 text-sm">
+        <button
+          @click="$emit('set-animation', 'spin')"
+          :class="{ clicked: animation === 'spin' }"
+        >
+          Spin
+        </button>
+        <button
+          @click="$emit('set-animation', 'spin-pulse')"
+          :class="{ clicked: animation === 'spin-pulse' }"
+        >
+          Spin Pulse
+        </button>
+        <button
+          @click="$emit('set-animation', 'wrench')"
+          :class="{ clicked: animation === 'wrench' }"
+        >
+          Wrench
+        </button>
+        <button
+          @click="$emit('set-animation', 'ring')"
+          :class="{ clicked: animation === 'ring' }"
+        >
+          Ring
+        </button>
+        <button
+          @click="$emit('set-animation', 'pulse')"
+          :class="{ clicked: animation === 'pulse' }"
+        >
+          Pulse
+        </button>
+        <button
+          @click="$emit('set-animation', 'flash')"
+          :class="{ clicked: animation === 'flash' }"
+        >
+          Flash
+        </button>
+      </div>
     </div>
     <div class="section mt-3">
-        <div class="title">Animation Speed</div>
-        <div class="flex flex-1">
-            <vue-slider
-                class="flex-1"
-                v-model="speed"
-                v-bind:max="3"
-                v-bind:min="1"
-                v-bind:interval="1"
-                :tooltip-formatter="formatter"
-            />
-            <div class="w-8 text-right">{{ speed }}</div>
-        </div>
+      <div class="title">Animation Speed</div>
+      <div class="flex flex-1">
+        <vue-slider
+          class="flex-1"
+          v-model="speed"
+          v-bind:max="3"
+          v-bind:min="1"
+          v-bind:interval="1"
+          :tooltip-formatter="formatter"
+        />
+        <div class="w-8 text-right">{{ speed }}</div>
+      </div>
     </div>
     <div class="section">
-        <div class="title">Flip</div>
-        <button
-            @click="$emit('set-flip')"
-            class="w-full capitalize"
-        >
-            {{ flip }}
-        </button>
+      <div class="title">Flip</div>
+      <button @click="$emit('set-flip')" class="w-full capitalize">
+        {{ flip }}
+      </button>
     </div>
-</div>
+  </div>
 </template>
 
 <script>
-import VueSlider from 'vue-slider-component/dist-css/vue-slider-component.umd.min.js'
-import 'vue-slider-component/dist-css/vue-slider-component.css'
-import 'vue-slider-component/theme/default.css'
+import VueSlider from "vue-slider-component/dist-css/vue-slider-component.umd.min.js";
+import "vue-slider-component/dist-css/vue-slider-component.css";
+import "vue-slider-component/theme/default.css";
 
-const speedOptions = ['slow', 'normal', 'fast']
+const speedOptions = ["slow", "normal", "fast"];
 
 export default {
-    components: {
-        VueSlider
+  components: {
+    VueSlider
+  },
+  props: ["iconSize", "iconColor", "animation", "animSpeed", "flip"],
+  data() {
+    return {
+      size: 0.1,
+      color: "",
+      isColorFocused: false,
+      speed: 2,
+      formatter: v => speedOptions[(v - 1) % 3]
+    };
+  },
+  watch: {
+    size(value) {
+      this.$emit("set-size", value);
     },
-    props: ['iconSize', 'iconColor', 'animation', 'animSpeed', 'flip'],
-    data() {
-        return {
-            size: 0.1,
-            color: '',
-            isColorFocused: false,
-            speed: 2,
-            formatter: v => speedOptions[(v - 1) % 3],
-        }
+    color(value) {
+      this.$emit("set-color", value);
     },
-    watch: {
-        size(value) {
-            this.$emit('set-size', value)
-        },
-        color(value) {
-            this.$emit('set-color', value)
-        },
-        speed(value) {
-            this.$emit('set-animation-speed', speedOptions[(value - 1) % 3])
-        }
-    },
-    mounted () {
-        this.size = this.iconSize
-        this.color = this.iconColor
-        this.speed = (speedOptions.findIndex((n) => n === this.animSpeed) + 1) % 3
+    speed(value) {
+      this.$emit("set-animation-speed", speedOptions[(value - 1) % 3]);
     }
-}
+  },
+  mounted() {
+    this.size = this.iconSize;
+    this.color = this.iconColor;
+    this.speed = (speedOptions.findIndex(n => n === this.animSpeed) + 1) % 3;
+  }
+};
 </script>
 
 <style lang="postcss">
 .vue-slider-process {
-    @apply bg-blue-500;
+  @apply bg-blue-500;
 }
 .toolbar {
-    @apply fixed h-full w-56 pt-16 z-20 top-0 right-0 text-left border-l border-solid
-           bg-white text-gray-600 border-gray-200;
+  @apply fixed h-full w-56 pt-16 z-20 top-0 right-0 text-left border-l border-solid bg-white text-gray-600 border-gray-200;
 }
 .dark-mode .toolbar {
-    @apply bg-gray-800 text-gray-500 border-gray-700;
+  @apply bg-gray-800 text-gray-500 border-gray-700;
 }
 .toolbar .section {
-    @apply p-2 mx-2;
+  @apply p-2 mx-2;
 }
 .toolbar .title {
-    @apply m-3 ml-0 mr-4 text-left;
+  @apply m-3 ml-0 mr-4 text-left;
 }
 .toolbar button {
-    @apply border border-solid border-gray-500 outline-none rounded h-8;
+  @apply border border-solid border-gray-500 outline-none rounded h-8;
 }
 .toolbar button:hover {
-    @apply bg-gray-100;
+  @apply bg-gray-100;
 }
 .dark-mode .toolbar button:hover {
-    @apply bg-gray-700;
+  @apply bg-gray-700;
 }
 .toolbar button.clicked {
-    @apply bg-gray-200 border-transparent;
+  @apply bg-gray-200 border-transparent;
 }
 .dark-mode .toolbar button.clicked {
-    @apply bg-gray-600 text-gray-300;
+  @apply bg-gray-600 text-gray-300;
 }
 </style>
 
 <style>
 .toolbar .icon-color input {
-    width: 8.5rem;
-    height: 2.65rem;
+  width: 8.5rem;
+  height: 2.65rem;
 }
 </style>

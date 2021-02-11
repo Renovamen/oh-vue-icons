@@ -1,53 +1,48 @@
 <template>
-<div class="h-40 w-40 mt-4 mx-auto block relative">
-  <figure
-    id="logo"
-    class="absolute rounded-full transition-all duration-300 cursor-pointer"
-    @mouseenter="toggle"
-    @mouseleave="toggle"
-    @click="change"
-  >
-    <v-icon
-      ref="logo"
-      :playing="playing"
-      :name="name"
-      scale="4"
-    />
-  </figure>
-</div>
+  <div class="h-40 w-40 mt-4 mx-auto block relative">
+    <figure
+      id="logo"
+      class="absolute rounded-full transition-all duration-300 cursor-pointer"
+      @mouseenter="toggle"
+      @mouseleave="toggle"
+      @click="change"
+    >
+      <v-icon ref="logo" :playing="playing" :name="name" scale="4" />
+    </figure>
+  </div>
 </template>
 
 <script>
-import OhVueIcon from '../../src/components/Icon.vue'
-const keys = Object.keys(OhVueIcon.icons)
+import OhVueIcon from "../../src/components/Icon.vue";
+const keys = Object.keys(OhVueIcon.icons);
 
-function randomIcon () {
-  return keys[Math.floor(Math.random() * keys.length)]
+function randomIcon() {
+  return keys[Math.floor(Math.random() * keys.length)];
 }
 
 export default {
-  data () {
+  data() {
     return {
       name: randomIcon(),
       playing: true
-    }
+    };
   },
-  mounted () {
+  mounted() {
     setInterval(() => {
       if (this.playing) {
-        this.change()
+        this.change();
       }
-    }, 200)
+    }, 200);
   },
   methods: {
-    change () {
-      this.name = randomIcon()
+    change() {
+      this.name = randomIcon();
     },
-    toggle: function () {
-      this.playing = !this.playing
+    toggle: function() {
+      this.playing = !this.playing;
     }
   }
-}
+};
 </script>
 
 <style lang="postcss">
