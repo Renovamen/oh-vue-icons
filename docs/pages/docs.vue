@@ -1,52 +1,46 @@
 <template>
-<div class="page">
-  <Sidebar />
-  
-  <div class="page-width docs-content">
-    <div class="text-left sm:text-center">
-      <RandomIcon />
-      <h1>{{ page.title }}</h1>
-      <p class="my-0">{{ page.desc }}</p>
-      <p class="my-0">
-        <span
-          v-for="(item, index) in page.links"
-          :key="`doc-link-${index}`"
-        >
-          <a
-            :href="item.link"
-            target="_blank"
-          >
-            {{ item.name }}
-          </a>
-          ·
-        </span>
-        <NuxtLink to="/">icons</NuxtLink>
-      </p>
-    </div>
+  <div class="page">
+    <Sidebar />
 
-    <div class="text-left">
-      <nuxt-content :document="page" />
+    <div class="page-width docs-content">
+      <div class="text-left sm:text-center">
+        <RandomIcon />
+        <h1>{{ page.title }}</h1>
+        <p class="my-0">{{ page.desc }}</p>
+        <p class="my-0">
+          <span v-for="(item, index) in page.links" :key="`doc-link-${index}`">
+            <a :href="item.link" target="_blank">
+              {{ item.name }}
+            </a>
+            ·
+          </span>
+          <NuxtLink to="/">icons</NuxtLink>
+        </p>
+      </div>
+
+      <div class="text-left">
+        <nuxt-content :document="page" />
+      </div>
     </div>
   </div>
-</div>
 </template>
 
 <script>
-import RandomIcon from '../components/RandomIcon'
-import Sidebar from "../components/Sidebar.vue"
+import RandomIcon from "../components/RandomIcon";
+import Sidebar from "../components/Sidebar.vue";
 
 export default {
   components: {
     RandomIcon,
     Sidebar
   },
-  async asyncData ({ $content }) {
-    const page = await $content('docs').fetch()
+  async asyncData({ $content }) {
+    const page = await $content("docs").fetch();
     return {
       page
-    }
+    };
   }
-}
+};
 </script>
 
 <style lang="postcss">
@@ -87,7 +81,7 @@ export default {
 }
 
 .dark-mode .docs-content a {
-  @apply text-blue-400
+  @apply text-blue-400;
 }
 
 .nuxt-content-highlight {

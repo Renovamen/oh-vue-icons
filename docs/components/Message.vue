@@ -21,31 +21,31 @@ export default {
       duration: 2000,
       timer: null,
       show: false,
-      icon: ''
-    }
+      icon: ""
+    };
   },
   methods: {
     close() {
-      this.show = false
+      this.show = false;
     },
     clearTimer() {
-      clearTimeout(this.timer)
+      clearTimeout(this.timer);
     },
     startTimer(iconName) {
-      this.show = true
-      this.icon = iconName
-      this.clearTimer()
+      this.show = true;
+      this.icon = iconName;
+      this.clearTimer();
 
       if (this.duration > 0) {
         this.timer = setTimeout(() => {
           if (this.show) {
-            this.close()
+            this.close();
           }
-        }, this.duration)
+        }, this.duration);
       }
     }
   }
-}
+};
 </script>
 
 <style lang="postcss">

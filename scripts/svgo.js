@@ -1,4 +1,4 @@
-const SVGO = require('svgo')
+const SVGO = require("svgo");
 
 const svgo = new SVGO({
   plugins: [
@@ -121,6 +121,6 @@ const svgo = new SVGO({
       removeOffCanvasPaths: true
     }
   ]
-})
+});
 
-module.exports = svgo
+module.exports = svgo;
