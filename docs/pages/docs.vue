@@ -6,15 +6,25 @@
       <div class="text-left sm:text-center">
         <RandomIcon />
         <h1>{{ page.title }}</h1>
-        <p class="my-0">{{ page.desc }}</p>
         <p class="my-0">
-          <span v-for="(item, index) in page.links" :key="`doc-link-${index}`">
-            <a :href="item.link" target="_blank">
+          {{ page.desc }}
+        </p>
+        <p class="my-0">
+          <span
+            v-for="(item, index) in page.links"
+            :key="`doc-link-${index}`"
+          >
+            <a
+              :href="item.link"
+              target="_blank"
+            >
               {{ item.name }}
             </a>
             ·
           </span>
-          <NuxtLink to="/">icons</NuxtLink>
+          <NuxtLink to="/">
+            icons
+          </NuxtLink>
         </p>
       </div>
 

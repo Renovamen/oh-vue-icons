@@ -1,7 +1,10 @@
 <template>
   <div class="navbar">
     <div class="site-name absolute ml-3 sm:ml-4">
-      <NuxtLink to="/" class="text-lg font-medium inline-block">
+      <NuxtLink
+        to="/"
+        class="text-lg font-medium inline-block"
+      >
         Oh, Vue Icons!
       </NuxtLink>
       <a
@@ -13,15 +16,27 @@
       </a>
     </div>
     <div class="flex items-center justify-end">
-      <NuxtLink to="/" class="mr-6 hidden sm:block">
+      <NuxtLink
+        to="/"
+        class="mr-6 hidden sm:block"
+      >
         Icons
       </NuxtLink>
-      <NuxtLink class="mr-6 hidden sm:block" to="/docs">
+      <NuxtLink
+        class="mr-6 hidden sm:block"
+        to="/docs"
+      >
         Docs
       </NuxtLink>
       <ToggleTheme class="mr-6" />
-      <a class="sidebar-toggler mr-4 sm:hidden block" @click="toggleSidebar()">
-        <v-icon name="ri-menu-line" scale="1.5" />
+      <a
+        class="sidebar-toggler mr-4 sm:hidden block"
+        @click="toggleSidebar()"
+      >
+        <v-icon
+          name="ri-menu-line"
+          scale="1.5"
+        />
       </a>
     </div>
   </div>

@@ -9,7 +9,10 @@
         <div class="flex items-center justify-between flex-wrap">
           <div class="w-0 flex-1 flex items-center">
             <span class="flex p-2 rounded-lg bg-blue-700 text-white">
-              <v-icon :name="iconComponent" scale="1.5" />
+              <v-icon
+                :name="iconComponent"
+                scale="1.5"
+              />
             </span>
             <p class="ml-3 font-medium text-white code truncate">
               <span class="text-xs md:inline md:text-base">
@@ -25,14 +28,20 @@
                 class="flex items-center justify-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-blue-600 bg-white hover:text-blue-700 focus:outline-none focus:shadow-outline transition ease-in-out duration-150"
                 @click="onDownloadSVG"
               >
-                <v-icon name="ri-download-fill" class="h-4 w-4 mr-1" />
+                <v-icon
+                  name="ri-download-fill"
+                  class="h-4 w-4 mr-1"
+                />
                 <span>SVG</span>
               </button>
               <button
                 class="ml-4 flex items-center justify-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-blue-600 bg-white hover:text-blue-700 focus:outline-none focus:shadow-outline transition ease-in-out duration-150"
                 @click="copyToClipboard"
               >
-                <v-icon name="fa-regular-copy" class="h-5 w-5 mr-1" />
+                <v-icon
+                  name="fa-regular-copy"
+                  class="h-5 w-5 mr-1"
+                />
                 <span>Copy</span>
               </button>
             </div>
@@ -43,7 +52,10 @@
               class="-mr-1 flex p-2 rounded-md hover:bg-blue-400 focus:outline-none focus:bg-blue-400 transition ease-in-out duration-150"
               @click="onCloseClick"
             >
-              <v-icon name="ri-close-fill" class="h-6 w-6 text-white" />
+              <v-icon
+                name="ri-close-fill"
+                class="h-6 w-6 text-white"
+              />
             </button>
           </div>
         </div>

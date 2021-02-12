@@ -1,8 +1,8 @@
 <template>
   <transition name="slide-fade">
     <div
-      class="text-center mb-6"
       v-if="show"
+      class="text-center mb-6"
       @mouseenter="clearTimer"
       @mouseleave="startTimer(icon)"
     >
