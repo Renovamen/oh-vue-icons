@@ -9,10 +9,14 @@
   >
     <ul class="nav-links mt-16 pb-2 text-base border-b border-solid sm:hidden">
       <li>
-        <NuxtLink to="/">Icons</NuxtLink>
+        <NuxtLink to="/">
+          Icons
+        </NuxtLink>
       </li>
       <li>
-        <NuxtLink to="/docs">Docs</NuxtLink>
+        <NuxtLink to="/docs">
+          Docs
+        </NuxtLink>
       </li>
     </ul>
 
@@ -27,11 +31,15 @@
         @click="$emit('change-tab', item.tab)"
       >
         {{ item.tab }}
-        <v-icon v-if="item.multiColor" name="fc-picture" class="ml-1" />
+        <v-icon
+          v-if="item.multiColor"
+          name="fc-picture"
+          class="ml-1"
+        />
       </li>
     </ul>
 
-    <slot></slot>
+    <slot />
   </div>
 </template>
 
@@ -43,6 +51,11 @@ export default {
       screenWidth: 0
     };
   },
+  computed: {
+    isSidebarOpen() {
+      return this.screenWidth >= 640 || this.$store.state.sidebar.isSidebarOpen;
+    }
+  },
   mounted() {
     const that = this;
     that.screenWidth = document.body.clientWidth;
@@ -51,11 +64,6 @@ export default {
         that.screenWidth = document.body.clientWidth;
       })();
     };
-  },
-  computed: {
-    isSidebarOpen() {
-      return this.screenWidth >= 640 || this.$store.state.sidebar.isSidebarOpen;
-    }
   }
 };
 </script>

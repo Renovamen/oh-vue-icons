@@ -8,9 +8,9 @@
     }"
     role="checkbox"
     tabindex="0"
+    :aria-checked="isDark.toString()"
     @click="toggleTheme()"
     @keydown.space.prevent="toggleTheme()"
-    :aria-checked="isDark.toString()"
   >
     <span
       aria-hidden="true"
@@ -27,7 +27,10 @@
         }"
         class="absolute inset-0 h-full w-full flex items-center justify-center transition-opacity"
       >
-        <v-icon name="ri-sun-line" class="h-3 w-3 text-blue-600" />
+        <v-icon
+          name="ri-sun-line"
+          class="h-3 w-3 text-blue-600"
+        />
       </span>
       <span
         :class="{
@@ -36,7 +39,10 @@
         }"
         class="absolute inset-0 h-full w-full flex items-center justify-center transition-opacity"
       >
-        <v-icon name="ri-moon-clear-line" class="h-3 w-3 text-blue-600" />
+        <v-icon
+          name="ri-moon-clear-line"
+          class="h-3 w-3 text-blue-600"
+        />
       </span>
     </span>
   </span>
