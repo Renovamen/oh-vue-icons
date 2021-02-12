@@ -1,0 +1,32 @@
+root: true
+
+env:
+  node: true
+  es6: true
+
+extends:
+  - eslint:recommended
+  - plugin:vue/recommended
+
+parserOptions:
+  parser: babel-eslint
+  sourceType: module
+  allowImportExportEverywhere: true
+
+ignorePatterns:
+  - node_modules/
+  - iconpacks/
+  - ./assets/
+  - .nuxt/
+  - docs/dist/
+  - src/icons/
+
+rules:
+  no-unused-vars:
+    - 2
+    - vars: all
+      args: none
+  vue/no-v-html: 0
+  vue/component-definition-name-casing: 0
+  vue/require-default-prop: 0
+  vue/require-prop-types: 0

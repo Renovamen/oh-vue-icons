@@ -1,16 +1,16 @@
 <template>
   <div class="page">
     <Sidebar
-      @change-tab="changeTab"
-      :itemSelected="tabSelected"
+      :item-selected="tabSelected"
       :items="iconSets"
+      @change-tab="changeTab"
     >
       <ToolSidebar
         class="sm:hidden"
-        :iconSize="iconSize"
-        :iconColor="iconColor"
+        :icon-size="iconSize"
+        :icon-color="iconColor"
         :animation="iconAnimation"
-        :animSpeed="iconAnimSpeed"
+        :anim-speed="iconAnimSpeed"
         :flip="iconFlip"
         @set-size="setSize"
         @set-color="setColor"
@@ -22,10 +22,10 @@
 
     <ToolSidebar
       class="hidden sm:block"
-      :iconSize="iconSize"
-      :iconColor="iconColor"
+      :icon-size="iconSize"
+      :icon-color="iconColor"
       :animation="iconAnimation"
-      :animSpeed="iconAnimSpeed"
+      :anim-speed="iconAnimSpeed"
       :flip="iconFlip"
       @set-size="setSize"
       @set-color="setColor"
@@ -61,14 +61,14 @@
             />
           </div>
           <input
-            ref="search"
             id="search"
+            ref="search"
             v-model="search"
             class="col-start-2 col-span-7 sm:col-span-11 py-3 sm:py-4 inline-block align-middle text-base bg-transparent focus:outline-none"
             :placeholder="`Search ${countIconsByTab} icons...`"
             @focus="isSearchFocused = true"
             @blur="isSearchFocused = false"
-          />
+          >
         </div>
       </div>
 
@@ -93,8 +93,8 @@
           </div>
         </div>
         <button
-          class="load-btn"
           v-if="filterBySearch(getIconSet.components).length > maxIcons"
+          class="load-btn"
           @click="loadMore"
         >
           Load More
@@ -103,10 +103,10 @@
     </div>
 
     <IconInfo
-      :iconSelected="iconSelected"
-      :categorySelected="categorySelected"
-      @close="resetSelectedIcon"
+      :icon-selected="iconSelected"
+      :category-selected="categorySelected"
       class="z-30"
+      @close="resetSelectedIcon"
     />
   </div>
 </template>
@@ -149,17 +149,6 @@ export default {
       iconAnimSpeed: "normal"
     };
   },
-  mounted() {
-    for (let icon of icons) {
-      this.iconSets.push({
-        tab: icon.name,
-        components: iconKeys.filter(function(x) {
-          return x.slice(0, icon.id.length) === icon.id;
-        }),
-        multiColor: icon.multiColor
-      });
-    }
-  },
   computed: {
     getIconSet() {
       const tabSelected = this.tabSelected;
@@ -169,6 +158,17 @@ export default {
     },
     countIconsByTab() {
       return this.getIconSet.components.length;
+    }
+  },
+  mounted() {
+    for (let icon of icons) {
+      this.iconSets.push({
+        tab: icon.name,
+        components: iconKeys.filter(function(x) {
+          return x.slice(0, icon.id.length) === icon.id;
+        }),
+        multiColor: icon.multiColor
+      });
     }
   },
   methods: {

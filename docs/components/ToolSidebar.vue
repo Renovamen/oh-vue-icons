@@ -1,91 +1,111 @@
 <template>
   <div class="toolbar">
     <div class="section">
-      <div class="title">Scale</div>
+      <div class="title">
+        Scale
+      </div>
       <div class="flex flex-1">
         <vue-slider
-          class="flex-1"
           v-model="size"
-          v-bind:max="3"
-          v-bind:min="0.1"
-          v-bind:interval="0.1"
+          class="flex-1"
+          :max="3"
+          :min="0.1"
+          :interval="0.1"
           tooltip="none"
         />
-        <div class="w-10 text-right">{{ size }}</div>
+        <div class="w-10 text-right">
+          {{ size }}
+        </div>
       </div>
     </div>
     <div class="icon-color section">
-      <div class="title">Color</div>
+      <div class="title">
+        Color
+      </div>
       <div class="flex flex-1">
-        <v-swatches class="flex-1" v-model="color" />
+        <v-swatches
+          v-model="color"
+          class="flex-1"
+        />
         <input
-          class="bg-transparent border border-solid outline-none rounded-md px-1"
-          :style="{ borderColor: isColorFocused ? color : '#A0AEBF' }"
           slot="trigger"
           v-model="color"
+          class="bg-transparent border border-solid outline-none rounded-md px-1"
+          :style="{ borderColor: isColorFocused ? color : '#A0AEBF' }"
           @focus="isColorFocused = true"
           @blur="isColorFocused = false"
-        />
+        >
       </div>
     </div>
     <div class="section">
-      <div class="title">Animation</div>
+      <div class="title">
+        Animation
+      </div>
       <div class="grid grid-cols-2 gap-2 text-sm">
         <button
-          @click="$emit('set-animation', 'spin')"
           :class="{ clicked: animation === 'spin' }"
+          @click="$emit('set-animation', 'spin')"
         >
           Spin
         </button>
         <button
-          @click="$emit('set-animation', 'spin-pulse')"
           :class="{ clicked: animation === 'spin-pulse' }"
+          @click="$emit('set-animation', 'spin-pulse')"
         >
           Spin Pulse
         </button>
         <button
-          @click="$emit('set-animation', 'wrench')"
           :class="{ clicked: animation === 'wrench' }"
+          @click="$emit('set-animation', 'wrench')"
         >
           Wrench
         </button>
         <button
-          @click="$emit('set-animation', 'ring')"
           :class="{ clicked: animation === 'ring' }"
+          @click="$emit('set-animation', 'ring')"
         >
           Ring
         </button>
         <button
-          @click="$emit('set-animation', 'pulse')"
           :class="{ clicked: animation === 'pulse' }"
+          @click="$emit('set-animation', 'pulse')"
         >
           Pulse
         </button>
         <button
-          @click="$emit('set-animation', 'flash')"
           :class="{ clicked: animation === 'flash' }"
+          @click="$emit('set-animation', 'flash')"
         >
           Flash
         </button>
       </div>
     </div>
     <div class="section mt-3">
-      <div class="title">Animation Speed</div>
+      <div class="title">
+        Animation Speed
+      </div>
       <div class="flex flex-1">
         <vue-slider
-          class="flex-1"
           v-model="speed"
-          v-bind:max="3"
-          v-bind:min="1"
-          v-bind:interval="1"
+          class="flex-1"
+          :max="3"
+          :min="1"
+          :interval="1"
           :tooltip-formatter="formatter"
         />
-        <div class="w-8 text-right">{{ speed }}</div>
+        <div class="w-8 text-right">
+          {{ speed }}
+        </div>
       </div>
     </div>
     <div class="section">
-      <div class="title">Flip</div>
-      <button @click="$emit('set-flip')" class="w-full capitalize">
+      <div class="title">
+        Flip
+      </div>
+      <button
+        class="w-full capitalize"
+        @click="$emit('set-flip')"
+      >
         {{ flip }}
       </button>
     </div>

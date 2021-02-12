@@ -1,5 +1,8 @@
 <template>
-  <div class="layout" :class="{ 'dark-mode': isDark }">
+  <div
+    class="layout"
+    :class="{ 'dark-mode': isDark }"
+  >
     <Navbar class="fixed z-40 top-0" />
     <Nuxt />
     <Footer />

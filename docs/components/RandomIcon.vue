@@ -7,7 +7,12 @@
       @mouseleave="toggle"
       @click="change"
     >
-      <v-icon ref="logo" :playing="playing" :name="name" scale="4" />
+      <v-icon
+        ref="logo"
+        :playing="playing"
+        :name="name"
+        scale="4"
+      />
     </figure>
   </div>
 </template>
