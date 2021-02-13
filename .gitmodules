@@ -37,3 +37,6 @@
 [submodule "iconpacks/line-awesome"]
 	path = iconpacks/line-awesome
 	url = https://github.com/icons8/line-awesome.git
+[submodule "iconpacks/vscode-icons"]
+	path = iconpacks/vscode-icons
+	url = https://github.com/vscode-icons/vscode-icons.git

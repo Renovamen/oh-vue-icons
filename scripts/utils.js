@@ -56,6 +56,9 @@ async function convertSVG(prefix, name, svg) {
     case "si":
       (width = width * 1.25), (height = height * 1.25);
       break;
+    case "vi":
+      (width = width * 1.04), (height = height * 1.04);
+      break;
   }
 
   const minX = Number((-(width - initW) / 2).toFixed(3));

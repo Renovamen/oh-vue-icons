@@ -220,6 +220,22 @@ module.exports = {
       licenseUrl: "https://creativecommons.org/publicdomain/zero/1.0/"
     },
     {
+      id: "vi",
+      name: "VSCode Icons",
+      contents: [
+        {
+          files: path.resolve(__dirname, "vscode-icons/icons/*.svg"),
+          formatter: (name) => `Vi${name}`,
+          prefix: (name) => `vi-${name}`
+        },
+      ],
+      multiColor: true,
+      projectUrl: "https://github.com/vscode-icons/vscode-icons",
+      website: "https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons",
+      license: "CC BY-SA 4.0",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
       id: "wi",
       name: "Weather Icons",
       contents: [
