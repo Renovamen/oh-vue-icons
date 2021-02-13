@@ -190,4 +190,7 @@ export default {
   width: 8.5rem;
   height: 2.65rem;
 }
+.toolbar::-webkit-scrollbar {
+  display: none;
+}
 </style>
