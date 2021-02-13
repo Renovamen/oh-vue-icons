@@ -89,7 +89,7 @@ module.exports = {
       multiColor: true,
       projectUrl: "https://github.com/icons8/flat-color-icons",
       website: "https://icons8.com/icons/color",
-      license: "MIT & Good Boy",
+      license: "MIT / Good Boy",
       licenseUrl: "https://github.com/icons8/flat-color-icons/blob/master/LICENSE.md"
     },
     {
@@ -127,6 +127,21 @@ module.exports = {
       website: "https://game-icons.net/",
       license: "CC BY 3.0",
       licenseUrl: "https://creativecommons.org/licenses/by/3.0/"
+    },
+    {
+      id: "la",
+      name: "Line Awesome",
+      contents: [
+        {
+          files: path.resolve(__dirname, "line-awesome/svg/*.svg"),
+          formatter: (name) => `La${name}`,
+          prefix: (name) => `la-${name}`
+        },
+      ],
+      projectUrl: "https://github.com/icons8/line-awesome",
+      website: "https://icons8.com/line-awesome",
+      license: "MIT / Good Boy",
+      licenseUrl: "https://github.com/icons8/line-awesome/blob/master/LICENSE.md"
     },
     {
       id: "oi",
