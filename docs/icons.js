@@ -56,6 +56,11 @@ module.exports = {
       name: "Simple Icons"
     },
     {
+      id: "vi",
+      name: "VSCode Icons",
+      multiColor: true
+    },
+    {
       id: "wi",
       name: "Weather Icons"
     }
