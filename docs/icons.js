@@ -40,6 +40,10 @@ module.exports = {
       multiColor: true
     },
     {
+      id: "px",
+      name: "Pixel Icons"
+    },
+    {
       id: "ri",
       name: "Remix Icon"
     },

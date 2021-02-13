@@ -89,8 +89,8 @@ module.exports = {
       multiColor: true,
       projectUrl: "https://github.com/icons8/flat-color-icons",
       website: "https://icons8.com/icons/color",
-      license: "MIT",
-      licenseUrl: "https://opensource.org/licenses/MIT"
+      license: "MIT & Good Boy",
+      licenseUrl: "https://github.com/icons8/flat-color-icons/blob/master/LICENSE.md"
     },
     {
       id: "fi",
@@ -158,6 +158,21 @@ module.exports = {
       website: "https://theartificial.github.io/pokemon-icons/",
       license: "CC BY 4.0",
       licenseUrl: "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      id: "px",
+      name: "Pixel Icons",
+      contents: [
+        {
+          files: path.resolve(__dirname, "pixelarticons/svg/*.svg"),
+          formatter: (name) => `Px${name}`,
+          prefix: (name) => `px-${name}`
+        }
+      ],
+      projectUrl: "https://github.com/halfmage/pixelarticons",
+      website: "https://pixelarticons.com/",
+      license: "MIT",
+      licenseUrl: "https://opensource.org/licenses/MIT"
     },
     {
       id: "ri",

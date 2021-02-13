@@ -10,6 +10,7 @@ import * as FcIcons from '../../src/icons/fc'
 import * as GiIcons from '../../src/icons/gi'
 import * as OiIcons from '../../src/icons/oi'
 import * as PiIcons from '../../src/icons/pi'
+import * as PxIcons from '../../src/icons/px'
 import * as RiIcons from '../../src/icons/ri'
 import * as SiIcons from '../../src/icons/si'
 import * as WiIcons from '../../src/icons/wi'
@@ -24,6 +25,7 @@ const
   Gi = Object.values({ ...GiIcons }),
   Oi = Object.values({ ...OiIcons }),
   Pi = Object.values({ ...PiIcons }),
+  Px = Object.values({ ...PxIcons }),
   Ri = Object.values({ ...RiIcons }),
   Si = Object.values({ ...SiIcons }),
   Wi = Object.values({ ...WiIcons })
@@ -37,6 +39,7 @@ OhVueIcon.add(Fc)
 OhVueIcon.add(Gi)
 OhVueIcon.add(Oi)
 OhVueIcon.add(Pi)
+OhVueIcon.add(Px)
 OhVueIcon.add(Ri)
 OhVueIcon.add(Si)
 OhVueIcon.add(Wi)
