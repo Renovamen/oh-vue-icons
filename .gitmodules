@@ -34,3 +34,6 @@
 [submodule "iconpacks/pixelarticons"]
 	path = iconpacks/pixelarticons
 	url = https://github.com/halfmage/pixelarticons.git
+[submodule "iconpacks/line-awesome"]
+	path = iconpacks/line-awesome
+	url = https://github.com/icons8/line-awesome.git

@@ -157,7 +157,7 @@ export default {
   @apply bg-blue-500;
 }
 .toolbar {
-  @apply fixed h-full w-56 overflow-y-scroll pt-16 z-20 top-0 right-0 text-left border-l border-solid bg-white text-gray-600 border-gray-200;
+  @apply fixed h-full w-56 pt-16 z-20 top-0 right-0 text-left border-l border-solid bg-white text-gray-600 border-gray-200;
 }
 .dark-mode .toolbar {
   @apply bg-gray-800 text-gray-500 border-gray-700;
@@ -189,8 +189,5 @@ export default {
 .toolbar .icon-color input {
   width: 8.5rem;
   height: 2.65rem;
-}
-.toolbar::-webkit-scrollbar {
-  display: none;
 }
 </style>
