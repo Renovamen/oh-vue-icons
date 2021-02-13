@@ -1,7 +1,20 @@
 # Change Log
 
-## [0.1.8](https://github.com/Renovamen/oh-vue-icons/compare/v0.1.7...v0.1.8) (2021-02-02)
+## [0.1.9](https://github.com/Renovamen/oh-vue-icons/compare/v0.1.8...v0.1.9) (2021-02-13)
 
+### Features
+
+- **iconpack:** add [Line Awesome](https://icons8.com/line-awesome) ([#2](https://github.com/Renovamen/oh-vue-icons/issues/2)) ([ebff0d0](https://github.com/Renovamen/oh-vue-icons/commit/ebff0d0cf4db8d778783709aba65fd86eef16fdd))
+- **iconpack:** add [Pixel Icons](https://pixelarticons.com/) ([e648337](https://github.com/Renovamen/oh-vue-icons/commit/e6483375bf5a859e985e9d085fae64adc6483e71))
+- **iconpack:** add [VSCode Icons](https://github.com/vscode-icons/vscode-icons) ([1a42006](https://github.com/Renovamen/oh-vue-icons/commit/1a42006dad7776a723e201ca078e19c2eabd053a))
+- **iconpack:** upgrade:
+  - [Bootstrap Icons](https://icons.getbootstrap.com/) (v1.3.0): 64 more icons
+  - [Cryptocurrency Icons](https://github.com/spothq/cryptocurrency-icons) (v0.17.1): 26 more icons
+  - [Octicons](https://primer.style/octicons/) (v12.0.0): 3 more icons
+  - [Simple Icons](https://simpleicons.org/) (v4.10.0): 238 more icons
+
+
+## [0.1.8](https://github.com/Renovamen/oh-vue-icons/compare/v0.1.7...v0.1.8) (2021-02-02)
 
 ### Features
 
@@ -9,14 +22,11 @@
 - **animation**: support adjusting animation speed, add `flash` animation ([fab2b2b](https://github.com/Renovamen/oh-vue-icons/commit/fab2b2b92e3da703770a88141aabc2fdc90fe5df))
 
 
-
 ## [0.1.7](https://github.com/Renovamen/oh-vue-icons/compare/v0.1.6...v0.1.7) (2021-01-05)
-
 
 ### Bug Fixes
 
 - fix tree shaking problems (which occured due to the code sructure change in v0.1.5) ([5f3f4b8](https://github.com/Renovamen/oh-vue-icons/commit/5f3f4b8ca91974236db1a243c11c5029252f5f2a))
-
 
 ### Features
 
@@ -25,9 +35,7 @@
 - **iconpack**: add [Pokemon Icons](https://theartificial.github.io/pokemon-icons/) ([e471360](https://github.com/Renovamen/oh-vue-icons/commit/e471360b6cd625729a7e651335fe107927fbf5ee))
 
 
-
 ## [0.1.6](https://github.com/Renovamen/oh-vue-icons/compare/v0.1.5...v0.1.6) (2021-01-03)
-
 
 ### Features
 
@@ -42,38 +50,30 @@
 
 ## [0.1.5](https://github.com/Renovamen/oh-vue-icons/compare/v0.1.2...v0.1.5) (2020-12-25)
 
-
 ### Features
 
 - **iconpack**: add [gameicons](https://game-icons.net/) ([6a65a46](https://github.com/Renovamen/oh-vue-icons/commit/6a65a4663149b5838166fbdf8a4aa4663cdb4928))
-
 
 ### BREAKING CHANGES
 
 - change the way of importing icons ([537ada3](https://github.com/Renovamen/oh-vue-icons/commit/537ada37d4c9bd4cf0277f45e14f2306c0d6c300))
 
 
-
 ## [0.1.2](https://github.com/Renovamen/oh-vue-icons/compare/v0.1.1...v0.1.2) (2020-12-06)
-
 
 ### Features
 
 - resize some of the icons for better and more consistent user experience ([97c3120](https://github.com/Renovamen/oh-vue-icons/commit/97c31200aeea28b0fe6a1b8fa72b9c3338a0aafa))
 
 
-
 ## [0.1.1](https://github.com/Renovamen/oh-vue-icons/compare/v0.1.0...v0.1.1) (2020-12-06)
-
 
 ### Bug Fixes
 
 - upgrade some packages to generate svgs correctly ([c9b8fd7](https://github.com/Renovamen/oh-vue-icons/commit/c9b8fd76d0ad3acf477da00a0a5f273a9c9de3fe))
 
 
-
 # [0.1.0](https://github.com/Renovamen/oh-vue-icons/compare/19c8c9d74ebf5a23c5dc34aace3b2807b06c9a9a...v0.1.0) (2020-12-04)
-
 
 ### Features
 
