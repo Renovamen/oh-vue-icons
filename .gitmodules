@@ -31,3 +31,6 @@
 [submodule "iconpacks/octicons"]
 	path = iconpacks/octicons
 	url = https://github.com/primer/octicons.git
+[submodule "iconpacks/pixelarticons"]
+	path = iconpacks/pixelarticons
+	url = https://github.com/halfmage/pixelarticons.git

@@ -23,6 +23,7 @@ Now the following icon packs are supported:
 | [gameicons](https://game-icons.net/)                          | `gi`   | [CC BY 3.0](https://github.com/game-icons/icons/blob/master/license.txt) | 3927       |
 | [Octicons](https://primer.style/octicons/)                    | `oi`   | [MIT](https://github.com/primer/octicons/blob/master/LICENSE) | 209        |
 | [Pokemon Icons](https://theartificial.github.io/pokemon-icons/) (Colorful)| `pi`   | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | 1453      |
+| [Pixel Icons](https://pixelarticons.com/)                     | `px`   | [MIT](https://github.com/halfmage/pixelarticons/blob/master/LICENSE) | 451       |
 | [Remix Icon](https://github.com/Remix-Design/RemixIcon)       | `ri`   | [Apache 2.0](https://github.com/Remix-Design/RemixIcon/blob/master/License) | 2271       |
 | [Simple Icons](https://simpleicons.org/)                      | `si`   | [CC0 1.0 Universal](https://github.com/simple-icons/simple-icons/blob/develop/LICENSE.md) | 1750       |
 | [Weather Icons](https://erikflowers.github.io/weather-icons/) | `wi`   | [SIL OFL 1.1](http://scripts.sil.org/OFL)                     | 219        |
@@ -90,35 +91,19 @@ export default {
 The icon names should be passed using **kebab-case**.
 
 <p>
-  <v-icon name="ai-google-scholar-square"></v-icon>
   <v-icon name="bi-music-player"></v-icon>
-  <v-icon name="ci-color-bch"></v-icon>
-  <v-icon name="fa-flag"></v-icon>
   <v-icon name="fc-globe"></v-icon>
-  <v-icon name="fi-square-cn"></v-icon>
-  <v-icon name="gi-battered-axe"></v-icon>
   <v-icon name="oi-repo-pull"></v-icon>
   <v-icon name="pi-charizard"></v-icon>
-  <v-icon name="ri-bank-card-fill"></v-icon>
-  <v-icon name="si-unity"></v-icon>
-  <v-icon name="wi-day-lightning"></v-icon>
 </p>
 
 ```html
 <template>
   <div>
-    <v-icon name="ai-google-scholar-square" />
     <v-icon name="bi-music-player" />
-    <v-icon name="ci-color-bch" />
-    <v-icon name="fa-flag" />
     <v-icon name="fc-globe" />
-    <v-icon name="fi-square-cn" />
-    <v-icon name="gi-battered-axe" />
     <v-icon name="oi-repo-pull" />
     <v-icon name="pi-charizard" />
-    <v-icon name="ri-bank-card-fill" />
-    <v-icon name="si-unity" />
-    <v-icon name="wi-day-lightning" />
   </div>
 </template>
 ```
