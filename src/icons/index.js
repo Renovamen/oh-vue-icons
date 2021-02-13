@@ -12,4 +12,5 @@ export * from './pi';
 export * from './px';
 export * from './ri';
 export * from './si';
+export * from './vi';
 export * from './wi';
