@@ -1,6 +1,6 @@
 ---
 title: Oh, Vue Icons!
-desc: A Vue component for including inline SVG icons from different icon packs easily.
+desc: A Vue component for including inline SVG icons from different popular iconpacks easily.
 links:
   - name: github
     link: https://github.com/Renovamen/oh-vue-icons

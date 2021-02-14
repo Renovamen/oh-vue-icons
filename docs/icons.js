@@ -19,7 +19,8 @@ module.exports = {
     },
     {
       id: "fc",
-      name: "Flat Color Icons"
+      name: "Flat Color Icons",
+      multiColor: true
     },
     {
       id: "fi",
