@@ -2,7 +2,9 @@
 
 [![npm](https://img.shields.io/npm/v/oh-vue-icons.svg?style=flat-square)](https://www.npmjs.com/package/oh-vue-icons) ![downloads](https://img.shields.io/npm/dt/oh-vue-icons.svg?style=flat-square) [![license](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
 
-A [Vue](https://vuejs.org/) component for including inline SVG icons from different icon packs in easily. Now the following icon packs are supported:
+A [Vue](https://vuejs.org/) component for including inline SVG icons from different popular iconpacks easily. It is tree-shakable and allows only importing the used icons.
+
+Now the following icon packs are supported:
 
 | Icon Pack                                                     | Prefix | License                                                       | Icon Numer |
 | ------------------------------------------------------------- | ------ | ------------------------------------------------------------- | ---------- |
@@ -130,37 +132,9 @@ Some examples could be found in the [documentation](https://oh-vue-icons.vercel.
 
 &nbsp;
 
-## Development
+## Contributing
 
-Install dependencies:
-
-```bash
-yarn install
-```
-
-Fetch icon sources:
-
-```bash
-yarn submodule
-```
-
-Download some of the icons packs ([`gameicons`](https://game-icons.net/archives/svg/zip/000000/transparent/game-icons.net.svg.zip)):
-
-```bash
-yarn download
-```
-
-Re-generate files under `src/icons` automatically:
-
-```bash
-yarn build
-```
-
-Run docs:
-
-```bash
-yarn dev
-```
+Contributions are welcomed, learn how to contribute [here](CONTRIBUTING.md).
 
 
 &nbsp;
