@@ -44,7 +44,8 @@
     "lint-fix": "eslint --fix --ext .js,.vue ./",
     "pub": "sh ./scripts/publish.sh",
     "start": "nuxt start",
-    "submodule": "git submodule update --init"
+    "submodule": "git submodule update --init",
+    "update": "sh ./scripts/update.sh"
   },
   "husky": {
     "hooks": {
