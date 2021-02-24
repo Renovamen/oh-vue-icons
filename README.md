@@ -11,7 +11,7 @@ Now the following icon packs are supported:
 | [academicons](https://github.com/jpswalsh/academicons)        | `ai`   | [SIL OFL 1.1](http://scripts.sil.org/OFL)                     | 145        |
 | [Bootstrap Icons](https://icons.getbootstrap.com/)            | `bi`   | [MIT](https://github.com/twbs/icons/blob/main/LICENSE.md)     | 1265       |
 | [Cryptocurrency Icons](https://github.com/spothq/cryptocurrency-icons) (Colorful) | `ci`   | [CC0 1.0 Universal](https://github.com/spothq/cryptocurrency-icons/blob/master/LICENSE.md) | 892        |
-| [Font Awesome 5](https://fontawesome.com/) (Free)             | `fa`   | [CC BY 4.0](https://github.com/FortAwesome/Font-Awesome/blob/master/LICENSE.txt) | 1609       |
+| [Font Awesome 5 Free](https://fontawesome.com/)               | `fa`   | [CC BY 4.0](https://github.com/FortAwesome/Font-Awesome/blob/master/LICENSE.txt) | 1609       |
 | [Flat Color Icons](https://github.com/icons8/flat-color-icons) (Colorful) | `fc`   | [MIT / Good Boy](https://github.com/icons8/flat-color-icons/blob/master/LICENSE.md) | 329        |
 | [Flag Icon](https://flagicons.lipis.dev/) (Colorful)          | `fi`   | [MIT](https://github.com/lipis/flag-icon-css/blob/master/LICENSE) | 516        |
 | [gameicons](https://game-icons.net/)                          | `gi`   | [CC BY 3.0](https://github.com/game-icons/icons/blob/master/license.txt) | 3927       |
@@ -21,7 +21,7 @@ Now the following icon packs are supported:
 | [Pixel Icons](https://pixelarticons.com/)                     | `px`   | [MIT](https://github.com/halfmage/pixelarticons/blob/master/LICENSE) | 451       |
 | [Remix Icon](https://github.com/Remix-Design/RemixIcon)       | `ri`   | [Apache 2.0](https://github.com/Remix-Design/RemixIcon/blob/master/License) | 2271       |
 | [Simple Icons](https://simpleicons.org/)                      | `si`   | [CC0 1.0 Universal](https://github.com/simple-icons/simple-icons/blob/develop/LICENSE.md) | 1750       |
-| [VSCode Icons](https://github.com/vscode-icons/vscode-icons)  | `vi`   | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | 1061       |
+| [VSCode Icons](https://github.com/vscode-icons/vscode-icons) (Colorful) | `vi`   | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | 1061       |
 | [Weather Icons](https://erikflowers.github.io/weather-icons/) | `wi`   | [SIL OFL 1.1](http://scripts.sil.org/OFL)                     | 219        |
 
 
@@ -132,6 +132,24 @@ Some examples could be found in the [documentation](https://oh-vue-icons.vercel.
 
 &nbsp;
 
+## Nuxt.js
+
+When using Nuxt.js for server side rendering, `oh-vue-icons` should be added to the transpile build option in `nuxt.config.js`:
+
+```js
+export default {
+  // ...
+  build: {
+    transpile: ['oh-vue-icons']
+  }
+}
+```
+
+or it will not be bundled, see [Nuxt's documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins) for details.
+
+
+&nbsp;
+
 ## Contributing
 
 Contributions are welcomed, learn how to contribute [here](CONTRIBUTING.md).
@@ -141,7 +159,7 @@ Contributions are welcomed, learn how to contribute [here](CONTRIBUTING.md).
 
 ## Acknowledgements
 
-This project is inspired by and based on [Justineo/vue-awesome](https://github.com/Justineo/vue-awesome) and [react-icons](https://github.com/react-icons/react-icons).
+This project is inspired by and based on [vue-awesome](https://github.com/Justineo/vue-awesome) and [react-icons](https://github.com/react-icons/react-icons).
 
 
 &nbsp;
