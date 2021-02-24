@@ -2,13 +2,13 @@
 
 [![npm](https://img.shields.io/npm/v/oh-vue-icons.svg?style=flat-square)](https://www.npmjs.com/package/oh-vue-icons) ![downloads](https://img.shields.io/npm/dt/oh-vue-icons.svg?style=flat-square) [![license](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
 
-🇬🇧 **English** | 🇨🇳 [中文说明](README-CN.md)
+🇬🇧 [English](README.md) | 🇨🇳 **中文说明**
 
-A [Vue](https://vuejs.org/) component for including inline SVG icons from different popular iconpacks easily. It is tree-shakable and allows only importing the used icons.
+`oh-vue-icons` 是一个能让你在 [Vue](https://vuejs.org/) 中轻松从多个流行图标库中引入 SVG 图标的组件。它是 tree-shakable 的，因此你能够仅引入你需要的图标从而减小打包体积。
 
-Now the following 15 icon packs are supported:
+目前支持以下 15 个图标库：
 
-| Icon Pack                                                     | Prefix | License                                                       | Icon Numer |
+| 图标库                                                         | 前缀    | 协议                                                          | 图标数量     |
 | ------------------------------------------------------------- | ------ | ------------------------------------------------------------- | ---------- |
 | [academicons](https://github.com/jpswalsh/academicons)        | `ai`   | [SIL OFL 1.1](http://scripts.sil.org/OFL)                     | 145        |
 | [Bootstrap Icons](https://icons.getbootstrap.com/)            | `bi`   | [MIT](https://github.com/twbs/icons/blob/main/LICENSE.md)     | 1325       |
@@ -29,28 +29,28 @@ Now the following 15 icon packs are supported:
 
 &nbsp;
 
-## Documentation
+## 文档
 
-Search for icons and view the documentation [here](https://oh-vue-icons.vercel.app).
+在[这里](https://oh-vue-icons.vercel.app)查找图标和查看文档。
 
 
 &nbsp;
 
-## Installation
+## 安装
 
 ```bash
 yarn add oh-vue-icons
-# or
+# 或
 npm install oh-vue-icons
 ```
 
 &nbsp;
 
-## Import
+## 引入
 
-### Global Import
+### 全局引入
 
-Import `oh-vue-icons` and install it into Vue in `main.js`. You can only import the icons you need to reduce the bundle size, for example:
+首先需要在 `main.js` 中引入 `oh-vue-icons`。你可以只引入你需要的图标从而减小打包体积，比如：
 
 ```js
 // main.js
@@ -68,11 +68,11 @@ new Vue({
 }).$mount('#app')
 ```
 
-If you don't care about the bundle size and want to import a whole icon pack, you may should:
+如果你并不在意打包体积，并希望引入某个图标库的所有图标，你可以：
 
 ```js
 // main.js
-// import Font Awesome
+// 引入 Font Awesome
 import * as FaIcons from 'oh-vue-icons/icons/fa'
 
 const Fa = Object.values({ ...FaIcons })
@@ -81,7 +81,7 @@ OhVueIcon.add(Fa)
 
 &nbsp;
 
-### Local Import
+### 局部引入
 
 ```js
 import OhVueIcon from 'oh-vue-icons/components/Icon'
@@ -95,9 +95,9 @@ export default {
 
 &nbsp;
 
-## Usage
+## 用法
 
-The icon names should be passed using **kebab-case**.
+通过 `name` prop 来指定图标名，`name` prop 值需要使用**短横线隔开式**命名：
 
 ```html
 <template>
@@ -108,35 +108,35 @@ The icon names should be passed using **kebab-case**.
 </template>
 ```
 
-For [Font Awesome 5](https://fontawesome.com/) icons, icons from `regular` pack have name prop values like `fa-regular-flag`. Icons from `solid` and `brands` pack have name prop values like `fa-beer` and `fa-github`.
+对于 [Font Awesome 5](https://fontawesome.com/)，来自 `regular` 包的图标的 `name` prop 值的前缀为 `fa-regular-` 而不是 `fa-`，如 `fa-regular-flag`。而 `solid` 和 `brands` 包的图标前缀均为 `fa-`，如 `fa-beer` 和 `fa-github`。
 
-See the [documentation](https://oh-vue-icons.vercel.app/docs#basic-usage) for more about the usage.
+[文档](https://oh-vue-icons.vercel.app/docs#basic-usage)中有更多的用法。
 
 
 &nbsp;
 
 ## Props
 
-| Name        | Description                              | Type      | Accepted Values                                               | Default value  |
-| ----------- | ---------------------------------------- | --------- | ------------------------------------------------------------- | -------------- |
-| `scale`     | Icon size                                | `number`  | /                                                             | `1`            |
-| `animation` | Type of animation                        | `string`  | `wrench` / `ring` / `pulse` / `spin` / `spin-pulse` / `flash` | /              |
-| `speed`     | Animation speed                          | `string`  | `slow` / `fast`                                               | /              |
-| `hover`     | Enable animation only when being hovered | `boolean` | `true` / `false`                                              | `false`        |
-| `flip`      | Used to flip icon                        | `string`  | `vertical` / `horizontal` / `both`                            | /              |
-| `fill`      | Fill color of icon                       | `string`  | HEX color code or color name                                  | `currentColor` |
-| `label`     | Icon lable                               | `string`  | /                                                             | /              |
-| `title`     | Icon title                               | `string`  | /                                                             | /              |
-| `inverse`   | Make icon color white?                   | `boolean` | `true` / `false`                                              | `false`        |
+| 名称         | 描述                 | 类型       | 接受值                                                         | 默认值          |
+| ----------- | ---------------------| --------- | ------------------------------------------------------------- | -------------- |
+| `scale`     | 图标大小               | `number`  | /                                                             | `1`            |
+| `animation` | 动画类型               | `string`  | `wrench` / `ring` / `pulse` / `spin` / `spin-pulse` / `flash` | /              |
+| `speed`     | 动画速度               | `string`  | `slow` / `fast`                                               | /              |
+| `hover`     | 仅在被 hover 时启用动画 | `boolean` | `true` / `false`                                              | `false`        |
+| `flip`      | 翻转类型               | `string`  | `vertical` / `horizontal` / `both`                            | /              |
+| `fill`      | 图标的填充颜色          | `string`  | 颜色名称或十六进制颜色代码                                        | `currentColor` |
+| `label`     | 图标的 lable           | `string`  | /                                                             | /              |
+| `title`     | 图标的 title           | `string`  | /                                                             | /              |
+| `inverse`   | 把图标变成白色          | `boolean` | `true` / `false`                                              | `false`        |
 
-Some examples could be found in the [documentation](https://oh-vue-icons.vercel.app/docs#examples).
+[文档](https://oh-vue-icons.vercel.app/docs#examples)中有一些示例。
 
 
 &nbsp;
 
 ## Nuxt.js
 
-When using Nuxt.js for server side rendering, `oh-vue-icons` should be added to the transpile build option in `nuxt.config.js`:
+当使用 Nuxt.js 的服务端渲染时，需要在 `nuxt.config.js` 的 transpile build 项中添加 `oh-vue-icons`：
 
 ```js
 export default {
@@ -147,25 +147,25 @@ export default {
 }
 ```
 
-or it will not be bundled, see [Nuxt's documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins) for details.
+否则 Nuxt 可能就不会把 `oh-vue-icons` 打包进去，[Nuxt 的文档](https://nuxtjs.org/docs/2.x/directory-structure/plugins)中对此有更详细的说明。
 
 
 &nbsp;
 
-## Contributing
+## 贡献
 
-Contributions are welcomed, learn how to contribute [here](CONTRIBUTING.md).
-
-
-&nbsp;
-
-## Acknowledgements
-
-This project is inspired by and based on [vue-awesome](https://github.com/Justineo/vue-awesome) and [react-icons](https://github.com/react-icons/react-icons).
+欢迎贡献，这里是[贡献指南](CONTRIBUTING.md)。
 
 
 &nbsp;
 
-## License
+## 致谢
 
-This project is [MIT](LICENSE) licensed. Icons are taken from [other projects](#readme), so check the license of each accordingly.
+本项目受到了 [vue-awesome](https://github.com/Justineo/vue-awesome) 和 [react-icons](https://github.com/react-icons/react-icons) 的启发并借鉴了它们的部分代码。
+
+
+&nbsp;
+
+## 开源协议
+
+本项目使用 [MIT](LICENSE) 开源协议。图标来自于[其他项目](#readme)，所以还需要参考这些项目的开源协议。
