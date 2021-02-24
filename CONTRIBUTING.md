@@ -14,10 +14,16 @@ Fetch icon sources:
 yarn submodule
 ```
 
-Download some of the iconspacks ([`gameicons`](https://game-icons.net/archives/svg/zip/000000/transparent/game-icons.net.svg.zip)):
+Download some of the iconpacks ([`gameicons`](https://game-icons.net/archives/svg/zip/000000/transparent/game-icons.net.svg.zip)):
 
 ```bash
 yarn download
+```
+
+Upgrade all iconpacks:
+
+```bash
+yarn update
 ```
 
 Re-generate files under `src/icons` automatically:
