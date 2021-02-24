@@ -3,6 +3,7 @@ scripts
 iconpacks
 assets
 docs
+demo
 .*
 *.config.js
 *.lock

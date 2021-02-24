@@ -20,6 +20,7 @@ ignorePatterns:
   - .nuxt/
   - docs/dist/
   - src/icons/
+  - demo/
 
 rules:
   no-unused-vars:
