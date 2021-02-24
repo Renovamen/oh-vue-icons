@@ -28,16 +28,26 @@ yarn build
 
 &nbsp;
 
+## Demo
+
+To run demo:
+
+```bash
+yarn demo
+```
+
+&nbsp;
+
 ## Website
 
-Our website it built with [Nuxt.js](https://nuxtjs.org) and [tailwindcss](https://tailwindcss.com).
+The source code of our website is under folder [`docs`](docs), which is built with [Nuxt.js](https://nuxtjs.org) and [tailwindcss](https://tailwindcss.com).
 
 ```bash
 # development
 yarn dev
 
 # generate static files
-yarn build:docs
+yarn docs:build
 ```
 
 &nbsp;
