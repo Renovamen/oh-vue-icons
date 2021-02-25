@@ -9,13 +9,13 @@
   >
     <ul class="nav-links mt-16 pb-2 text-base border-b border-solid sm:hidden">
       <li>
-        <NuxtLink to="/">
-          Icons
+        <NuxtLink :to="localePath('index')">
+          {{ $t("nav.icons") }}
         </NuxtLink>
       </li>
       <li>
-        <NuxtLink to="/docs">
-          Docs
+        <NuxtLink :to="localePath('docs')">
+          {{ $t("nav.docs") }}
         </NuxtLink>
       </li>
       <li>
@@ -115,9 +115,7 @@ export default {
 .sidebar .toolbar {
   @apply relative border-none w-auto h-auto pt-0 pb-8;
 }
-</style>
 
-<style>
 .sidebar::-webkit-scrollbar {
   display: none;
 }
