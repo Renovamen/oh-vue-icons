@@ -1,6 +1,5 @@
 ---
 title: Oh, Vue Icons!
-desc: A Vue component for including inline SVG icons from different popular iconpacks easily.
 links:
   - name: github
     link: https://github.com/Renovamen/oh-vue-icons
@@ -156,7 +155,7 @@ Use `animation: string` to enablle animations:
 <p>
   <v-icon name="ri-refresh-line" animation="spin"></v-icon>
   <v-icon name="fa-spinner" animation="spin-pulse"></v-icon>
-  <v-icon name="gi-piercing-sword" animation="wrench"></v-icon>
+  <v-icon name="la-tools-solid" animation="wrench"></v-icon>
   <v-icon name="fa-regular-bell" animation="ring"></v-icon>
   <v-icon name="ri-heart-pulse-line" animation="pulse"></v-icon>
   <v-icon name="bi-lightning" animation="flash"></v-icon>
@@ -165,7 +164,7 @@ Use `animation: string` to enablle animations:
 ```html
 <v-icon name="ri-refresh-line" animation="spin" />
 <v-icon name="fa-spinner" animation="spin-pulse" />
-<v-icon name="gi-piercing-sword" animation="wrench" />
+<v-icon name="la-tools-solid" animation="wrench" />
 <v-icon name="fa-regular-bell" animation="ring" />
 <v-icon name="ri-heart-pulse-line" animation="pulse" />
 <v-icon name="bi-lightning" animation="flash" />
@@ -232,7 +231,7 @@ Set fill color for icons via prop `fill: string`:
 
 ### Stacked Icons
 
-Stack your icons easily jusy like in FontAwesome, even more powerful.
+Stack your icons easily jusy like in Font Awesome, even more powerful.
 
 <p>
   <v-icon label="No Photo">
@@ -267,7 +266,7 @@ You can also make it animated:
 
 ### Inverse
 
-Use `inverse: boolean` to make the color of icon white (`#fff`):
+Use `inverse: boolean` to make the color of icon white (`#fff`), which is **invalid on multi-color icons**:
 
 <p>
   <v-icon label="Wechat Logo">
@@ -296,7 +295,7 @@ Specify prop `label: string` to set the `aria-label` for the icon if provided.
 
 ### Title
 
-Specify prop `title: string` to set the title for the icon.
+Specify prop `title: string` to add a `<title>` tag for the icon.
 
 <p><v-icon name="fa-vuejs" title="Vue.js"></v-icon></p>
 

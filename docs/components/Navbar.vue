@@ -1,33 +1,26 @@
 <template>
   <div class="navbar">
-    <div class="site-name absolute ml-3 sm:ml-4">
-      <NuxtLink
-        to="/"
-        class="text-lg font-medium inline-block"
-      >
-        Oh, Vue Icons!
-      </NuxtLink>
-      <a
-        href="https://github.com/Renovamen/oh-vue-icons"
-        target="_blank"
-        class="px-2 py-1 ml-2 sm:ml-3 text-sm inline-block align-middle github"
-      >
-        v0.1.9
-      </a>
-    </div>
+    <NuxtLink
+      to="/"
+      class="site-name absolute ml-3 sm:ml-4 text-lg font-medium"
+    >
+      Oh, Vue Icons!
+    </NuxtLink>
     <div class="flex items-center justify-end">
       <NuxtLink
-        to="/"
+        :to="localePath('index')"
         class="mr-6 hidden sm:block"
       >
-        Icons
+        {{ $t("nav.icons") }}
       </NuxtLink>
       <NuxtLink
+        :to="localePath('docs')"
         class="mr-6 hidden sm:block"
-        to="/docs"
       >
-        Docs
+        {{ $t("nav.docs") }}
       </NuxtLink>
+      <LangSwitcher class="hidden sm:block" />
+      <GitBadge class="hidden sm:block" />
       <ToggleTheme class="mr-6" />
       <a
         class="sidebar-toggler mr-4 sm:hidden block"
@@ -44,18 +37,29 @@
 
 <script>
 import ToggleTheme from "./ToggleTheme.vue";
-import { mapMutations } from "vuex";
+import LangSwitcher from "./LangSwitcher";
+import GitBadge from "./GitBadge";
+import packageJson from "../../package.json";
 
 export default {
   components: {
-    ToggleTheme
+    ToggleTheme,
+    LangSwitcher,
+    GitBadge
   },
   data() {
     return {
-      scrollTop: 0
+      scrollTop: 0,
+      version: "0.1.0"
     };
   },
+  watch: {
+    '$route' () {
+      this.toggleSidebar(false)
+    }
+  },
   mounted() {
+    this.version = packageJson.version;
     window.addEventListener("scroll", this.handleScroll);
   },
   beforeDestroy() {
@@ -65,9 +69,10 @@ export default {
     handleScroll() {
       this.scrollTop = window.pageYOffset;
     },
-    ...mapMutations({
-      toggleSidebar: "sidebar/toggleSidebar"
-    })
+    toggleSidebar(to) {
+      const payload = typeof to === 'boolean' ? to : !this.$store.state.sidebar.isSidebarOpen
+      this.$store.commit("sidebar/toggleSidebar", payload);
+    }
   }
 };
 </script>
@@ -97,43 +102,23 @@ export default {
   @apply text-gray-300;
 }
 
-.navbar .site-name a {
+.navbar .site-name {
   @apply text-gray-800;
   margin-top: 2px;
 }
-
 @media (min-width: 640px) {
-  .navbar .site-name a {
-    margin-top: -3px;
+  .navbar .site-name {
+    margin-top: -1px;
   }
 }
-
-.navbar .site-name a:hover {
+.navbar .site-name:hover {
   @apply text-gray-900;
 }
-
-.dark-mode .navbar .site-name a {
+.dark-mode .navbar .site-name {
   @apply text-gray-300;
 }
-
-.dark-mode .navbar .site-name a:hover {
+.dark-mode .navbar .site-name:hover {
   @apply text-gray-200;
-}
-
-.navbar .site-name .github {
-  @apply border-solid border border-gray-700 rounded;
-}
-
-.navbar .site-name .github:hover {
-  @apply bg-gray-100;
-}
-
-.dark-mode .navbar .site-name .github {
-  @apply border-gray-500;
-}
-
-.dark-mode .navbar .site-name .github:hover {
-  @apply bg-gray-700;
 }
 
 .navbar .sidebar-toggler {

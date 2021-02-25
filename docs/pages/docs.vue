@@ -7,7 +7,7 @@
         <RandomIcon />
         <h1>{{ page.title }}</h1>
         <p class="my-0">
-          {{ page.desc }}
+          {{ $t("tagline") }}
         </p>
         <p class="my-0">
           <span
@@ -45,10 +45,19 @@ export default {
     Sidebar
   },
   async asyncData({ $content }) {
-    const page = await $content("docs").fetch();
+    const pageEN = await $content("docs-en").fetch();
+    const pageCN = await $content("docs-cn").fetch();
     return {
-      page
+      pages: {
+        en: pageEN,
+        cn: pageCN
+      }
     };
+  },
+  computed: {
+    page() {
+      return this.pages[this.$i18n.locale];
+    }
   }
 };
 </script>
