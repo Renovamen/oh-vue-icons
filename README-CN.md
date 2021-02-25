@@ -31,7 +31,7 @@
 
 ## 文档
 
-在[这里](https://oh-vue-icons.vercel.app)查找图标和查看文档。
+在[这里](https://oh-vue-icons.vercel.app/cn)查找图标和查看文档。
 
 
 &nbsp;
@@ -110,7 +110,7 @@ export default {
 
 对于 [Font Awesome 5](https://fontawesome.com/)，来自 `regular` 包的图标的 `name` prop 值的前缀为 `fa-regular-` 而不是 `fa-`，如 `fa-regular-flag`。而 `solid` 和 `brands` 包的图标前缀均为 `fa-`，如 `fa-beer` 和 `fa-github`。
 
-[文档](https://oh-vue-icons.vercel.app/docs#basic-usage)中有更多的用法。
+[文档](https://oh-vue-icons.vercel.app/cn/docs#基本用法)中有更多的用法。
 
 
 &nbsp;
@@ -129,7 +129,7 @@ export default {
 | `title`     | 图标的 title           | `string`  | /                                                             | /              |
 | `inverse`   | 把图标变成白色          | `boolean` | `true` / `false`                                              | `false`        |
 
-[文档](https://oh-vue-icons.vercel.app/docs#examples)中有一些示例。
+[文档](https://oh-vue-icons.vercel.app/cn/docs#示例)中有一些示例。
 
 
 &nbsp;

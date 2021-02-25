@@ -49,8 +49,6 @@
 </template>
 
 <script>
-import { mapMutations } from "vuex";
-
 export default {
   computed: {
     isDark() {
@@ -58,9 +56,9 @@ export default {
     }
   },
   methods: {
-    ...mapMutations({
-      toggleTheme: "theme/toggleTheme"
-    })
+    toggleTheme() {
+      this.$store.commit("theme/toggleTheme");
+    }
   }
 };
 </script>
