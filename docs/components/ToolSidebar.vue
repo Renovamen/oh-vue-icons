@@ -2,7 +2,7 @@
   <div class="toolbar">
     <div class="section">
       <div class="title">
-        Scale
+        {{ $t("toolbar.scale") }}
       </div>
       <div class="flex flex-1">
         <vue-slider
@@ -20,7 +20,7 @@
     </div>
     <div class="icon-color section">
       <div class="title">
-        Color
+        {{ $t("toolbar.color") }}
       </div>
       <div class="flex flex-1">
         <v-swatches
@@ -39,7 +39,7 @@
     </div>
     <div class="section">
       <div class="title">
-        Animation
+        {{ $t("toolbar.animation") }}
       </div>
       <div class="grid grid-cols-2 gap-2 text-sm">
         <button
@@ -82,7 +82,7 @@
     </div>
     <div class="section mt-3">
       <div class="title">
-        Animation Speed
+        {{ $t("toolbar.animSpeed") }}
       </div>
       <div class="flex flex-1">
         <vue-slider
@@ -100,7 +100,7 @@
     </div>
     <div class="section">
       <div class="title">
-        Flip
+        {{ $t("toolbar.flip") }}
       </div>
       <button
         class="w-full capitalize"

@@ -18,6 +18,12 @@
           Docs
         </NuxtLink>
       </li>
+      <li>
+        <LangSwitcher />
+      </li>
+      <li>
+        <GitBadge />
+      </li>
     </ul>
 
     <ul
@@ -44,7 +50,14 @@
 </template>
 
 <script>
+import LangSwitcher from "./LangSwitcher";
+import GitBadge from "./GitBadge";
+
 export default {
+  components: {
+    LangSwitcher,
+    GitBadge
+  },
   props: ["itemSelected", "items"],
   data() {
     return {
