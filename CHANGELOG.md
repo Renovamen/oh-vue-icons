@@ -1,5 +1,15 @@
 # Change Log
 
+## [0.1.10](https://github.com/Renovamen/oh-vue-icons/compare/v0.1.9...v0.1.10) (2021-02-25)
+
+### Features
+
+- **iconpack:** upgrade ([dafe9e6](https://github.com/Renovamen/oh-vue-icons/commit/dafe9e6dd21c81b9e204cce76324421e2ceff49c)):
+  - [Bootstrap Icons](https://icons.getbootstrap.com/) (v1.4.0): 60 more icons
+  - [Simple Icons](https://simpleicons.org/) (v4.12.0): 49 more icons
+  - [Weather Icons](https://erikflowers.github.io/weather-icons/) (2.0.12): fix 1 icon
+
+
 ## [0.1.9](https://github.com/Renovamen/oh-vue-icons/compare/v0.1.8...v0.1.9) (2021-02-13)
 
 ### Features
@@ -7,7 +17,7 @@
 - **iconpack:** add [Line Awesome](https://icons8.com/line-awesome) ([#2](https://github.com/Renovamen/oh-vue-icons/issues/2)) ([ebff0d0](https://github.com/Renovamen/oh-vue-icons/commit/ebff0d0cf4db8d778783709aba65fd86eef16fdd))
 - **iconpack:** add [Pixel Icons](https://pixelarticons.com/) ([e648337](https://github.com/Renovamen/oh-vue-icons/commit/e6483375bf5a859e985e9d085fae64adc6483e71))
 - **iconpack:** add [VSCode Icons](https://github.com/vscode-icons/vscode-icons) ([1a42006](https://github.com/Renovamen/oh-vue-icons/commit/1a42006dad7776a723e201ca078e19c2eabd053a))
-- **iconpack:** upgrade:
+- **iconpack:** upgrade ([5190be4](https://github.com/Renovamen/oh-vue-icons/commit/5190be40fc81ea9a315b8f62da3d9e2441d75d7e)):
   - [Bootstrap Icons](https://icons.getbootstrap.com/) (v1.3.0): 64 more icons
   - [Cryptocurrency Icons](https://github.com/spothq/cryptocurrency-icons) (v0.17.1): 26 more icons
   - [Octicons](https://primer.style/octicons/) (v12.0.0): 3 more icons
