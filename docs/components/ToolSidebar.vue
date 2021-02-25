@@ -183,9 +183,7 @@ export default {
 .dark-mode .toolbar button.clicked {
   @apply bg-gray-600 text-gray-300;
 }
-</style>
 
-<style>
 .toolbar .icon-color input {
   width: 8.5rem;
   height: 2.65rem;
