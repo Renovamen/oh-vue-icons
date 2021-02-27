@@ -1,5 +1,12 @@
 # Change Log
 
+## [0.1.11](https://github.com/Renovamen/oh-vue-icons/compare/v0.1.10...v0.1.11) (2021-02-27)
+
+### Bug Fixes
+
+- remove `core-js` from dependencies ([#3](https://github.com/Renovamen/oh-vue-icons/issues/3)) ([53f8b69](https://github.com/Renovamen/oh-vue-icons/commit/53f8b69c4213f27128664eba64be66bd98c3daba))
+
+
 ## [0.1.10](https://github.com/Renovamen/oh-vue-icons/compare/v0.1.9...v0.1.10) (2021-02-25)
 
 ### Features
