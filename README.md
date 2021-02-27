@@ -2,7 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/oh-vue-icons.svg?style=flat-square)](https://www.npmjs.com/package/oh-vue-icons) ![downloads](https://img.shields.io/npm/dt/oh-vue-icons.svg?style=flat-square) [![license](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
 
-🇬🇧 **English** | 🇨🇳 [中文说明](README-CN.md)
+**English** | [中文说明](README-CN.md)
 
 A [Vue](https://vuejs.org/) component for including inline SVG icons from different popular iconpacks easily. It is tree-shakable and allows only importing the used icons.
 
@@ -142,7 +142,7 @@ When using Nuxt.js for server side rendering, `oh-vue-icons` should be added to 
 export default {
   // ...
   build: {
-    transpile: ['oh-vue-icons']
+    transpile: ["oh-vue-icons"]
   }
 }
 ```
