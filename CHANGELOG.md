@@ -90,7 +90,7 @@
 - upgrade some packages to generate svgs correctly ([c9b8fd7](https://github.com/Renovamen/oh-vue-icons/commit/c9b8fd76d0ad3acf477da00a0a5f273a9c9de3fe))
 
 
-# [0.1.0](https://github.com/Renovamen/oh-vue-icons/compare/19c8c9d74ebf5a23c5dc34aace3b2807b06c9a9a...v0.1.0) (2020-12-04)
+## [0.1.0](https://github.com/Renovamen/oh-vue-icons/compare/19c8c9d74ebf5a23c5dc34aace3b2807b06c9a9a...v0.1.0) (2020-12-04)
 
 ### Features
 
