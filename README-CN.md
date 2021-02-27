@@ -2,7 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/oh-vue-icons.svg?style=flat-square)](https://www.npmjs.com/package/oh-vue-icons) ![downloads](https://img.shields.io/npm/dt/oh-vue-icons.svg?style=flat-square) [![license](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
 
-🇬🇧 [English](README.md) | 🇨🇳 **中文说明**
+[English](README.md) | **中文说明**
 
 `oh-vue-icons` 是一个能让你在 [Vue](https://vuejs.org/) 中轻松从多个流行图标库中引入 SVG 图标的组件。它是 tree-shakable 的，因此你能够仅引入你需要的图标从而减小打包体积。
 
@@ -142,7 +142,7 @@ export default {
 export default {
   // ...
   build: {
-    transpile: ['oh-vue-icons']
+    transpile: ["oh-vue-icons"]
   }
 }
 ```
