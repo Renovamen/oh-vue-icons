@@ -11,7 +11,7 @@ async function getIconFiles(content) {
   return files;
 }
 
-async function convertSVG(prefix, name, svg) {
+async function convertSVG(scale, name, svg) {
   const svgMatch = svg.match(/<svg viewBox="(.*?)">(.*?)<\/svg>/);
 
   if (!svgMatch) console.log(name, svg);
@@ -20,46 +20,9 @@ async function convertSVG(prefix, name, svg) {
   const initW = Number(viewbox[2]), initH = Number(viewbox[3]);
   const raw = svgMatch[2];
 
-  let width = initW > initH ? initW : initH;
-  let height = initW > initH ? initW : initH;
-
-  switch (prefix) {
-    case "ai":
-      (width = width * 1.17), (height = height * 1.17);
-      break;
-    case "bi":
-      (width = width * 1.2), (height = height * 1.2);
-      break;
-    case "ci":
-      (width = width * 1.2), (height = height * 1.2);
-      break;
-    case "gi":
-      (width = width * 1.14), (height = height * 1.14);
-      break;
-    case "fa":
-      (width = width * 1.17), (height = height * 1.17);
-      break;
-    case "fi":
-      if (name.includes("fi-square")) {
-        (width = width * 1.33), (height = height * 1.33);
-      }
-      break;
-    case "oi":
-      (width = width * 1.2), (height = height * 1.2);
-      break;
-    case "pi":
-      (width = width * 1.17), (height = height * 1.17);
-      break;
-    case "px":
-      (width = width * 1.15), (height = height * 1.15);
-      break;
-    case "si":
-      (width = width * 1.25), (height = height * 1.25);
-      break;
-    case "vi":
-      (width = width * 1.04), (height = height * 1.04);
-      break;
-  }
+  if (!scale) scale = 1;
+  const width = initW > initH ? initW * scale : initH * scale;
+  const height = initW > initH ? initW * scale : initH * scale;
 
   const minX = Number((-(width - initW) / 2).toFixed(3));
   const minY = Number((-(height - initH) / 2).toFixed(3));
