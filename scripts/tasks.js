@@ -79,7 +79,7 @@ async function writeIconModule(icon, DIST, ASSETS) {
       exists.add(name);
 
       const prefixName = (content.prefix && content.prefix(rawName)) || rawName;
-      const iconData = await convertSVG(icon.id, prefixName, svgStr);
+      const iconData = await convertSVG(content.scale, prefixName, svgStr);
 
       await fs.appendFile(
         path.resolve(DIST, `${icon.id}/index.js`),

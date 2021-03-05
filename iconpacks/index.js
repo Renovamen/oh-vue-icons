@@ -9,7 +9,8 @@ module.exports = {
         {
           files: path.resolve(__dirname, "academicons/svg/*.svg"),
           formatter: (name) => `Ai${name}`,
-          prefix: (name) => `ai-${name}`
+          prefix: (name) => `ai-${name}`,
+          scale: 1.17
         },
       ],
       projectUrl: "https://github.com/jpswalsh/academicons",
@@ -24,7 +25,8 @@ module.exports = {
         {
           files: path.resolve(__dirname, "bootstrap-icons/icons/*.svg"),
           formatter: (name) => `Bi${name}`,
-          prefix: (name) => `bi-${name}`
+          prefix: (name) => `bi-${name}`,
+          scale: 1.2
         },
       ],
       projectUrl: "https://github.com/twbs/icons",
@@ -39,12 +41,14 @@ module.exports = {
         {
           files: path.resolve(__dirname, "cryptocurrency-icons/svg/black/*.svg"),
           formatter: (name) => `Ci${name}`,
-          prefix: (name) => `ci-${name}`
+          prefix: (name) => `ci-${name}`,
+          scale: 1.2
         },
         {
           files: path.resolve(__dirname, "cryptocurrency-icons/svg/color/*.svg"),
           formatter: (name) => `CiColor${name}`,
-          prefix: (name) => `ci-color-${name}`
+          prefix: (name) => `ci-color-${name}`,
+          scale: 1.2
         }
       ],
       multiColor: true,
@@ -63,12 +67,14 @@ module.exports = {
             "fontawesome/svgs/+(brands|solid)/*.svg"
           ),
           formatter: (name) => `Fa${name}`,
-          prefix: (name) => `fa-${name}`
+          prefix: (name) => `fa-${name}`,
+          scale: 1.17
         },
         {
           files: path.resolve(__dirname, "fontawesome/svgs/regular/*.svg"),
           formatter: (name) => `FaRegular${name}`,
-          prefix: (name) => `fa-regular-${name}`
+          prefix: (name) => `fa-regular-${name}`,
+          scale: 1.17
         },
       ],
       projectUrl: "https://github.com/FortAwesome/Font-Awesome",
@@ -104,7 +110,8 @@ module.exports = {
         {
           files: path.resolve(__dirname, "flag-icon/flags/1x1/*.svg"),
           formatter: (name) => `FiSquare${name}`,
-          prefix: (name) => `fi-square-${name}`
+          prefix: (name) => `fi-square-${name}`,
+          scale: 1.33
         }
       ],
       multiColor: true,
@@ -120,7 +127,8 @@ module.exports = {
         {
           files: path.resolve(__dirname, "gameicons/*/*.svg"),
           formatter: (name) => `Gi${name}`,
-          prefix: (name) => `gi-${name}`
+          prefix: (name) => `gi-${name}`,
+          scale: 1.14
         },
       ],
       projectUrl: "https://github.com/game-icons/icons",
@@ -150,7 +158,8 @@ module.exports = {
         {
           files: path.resolve(__dirname, "octicons/icons/*-16.svg"),
           formatter: (name) => `Oi${name}`,
-          prefix: (name) => `oi-${name}`
+          prefix: (name) => `oi-${name}`,
+          scale: 1.2
         },
       ],
       projectUrl: "https://github.com/primer/octicons",
@@ -165,7 +174,8 @@ module.exports = {
         {
           files: path.resolve(__dirname, "pokemon-icons/_icons/SVG/*.svg"),
           formatter: (name) => `Pi${name}`,
-          prefix: (name) => `pi-${name}`
+          prefix: (name) => `pi-${name}`,
+          scale: 1.17
         }
       ],
       multiColor: true,
@@ -181,7 +191,8 @@ module.exports = {
         {
           files: path.resolve(__dirname, "pixelarticons/svg/*.svg"),
           formatter: (name) => `Px${name}`,
-          prefix: (name) => `px-${name}`
+          prefix: (name) => `px-${name}`,
+          scale: 1.15
         }
       ],
       projectUrl: "https://github.com/halfmage/pixelarticons",
@@ -211,7 +222,8 @@ module.exports = {
         {
           files: path.resolve(__dirname, "simple-icons/icons/*.svg"),
           formatter: (name) => `Si${name}`,
-          prefix: (name) => `si-${name}`
+          prefix: (name) => `si-${name}`,
+          scale: 1.25
         },
       ],
       projectUrl: "https://github.com/simple-icons/simple-icons",
@@ -226,7 +238,8 @@ module.exports = {
         {
           files: path.resolve(__dirname, "vscode-icons/icons/*.svg"),
           formatter: (name) => `Vi${name}`,
-          prefix: (name) => `vi-${name}`
+          prefix: (name) => `vi-${name}`,
+          scale: 1.04
         },
       ],
       multiColor: true,
