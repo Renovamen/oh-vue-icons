@@ -37,20 +37,27 @@ h3 {
   @apply text-xl;
 }
 
+h4 {
+  @apply text-lg;
+}
+
 h2,
-h3 {
+h3,
+h4 {
   @apply font-semibold;
 }
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   @apply text-gray-800;
 }
 
 .dark-mode h1,
 .dark-mode h2,
-.dark-mode h3 {
+.dark-mode h3,
+.dark-mode h4 {
   @apply text-gray-200;
 }
 
