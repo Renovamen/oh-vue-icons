@@ -49,7 +49,7 @@ npm install oh-vue-icons
 // main.js
 import Vue from 'vue'
 import App from './App.vue'
-import OhVueIcon from 'oh-vue-icons/components/Icon'
+import OhVueIcon from 'oh-vue-icons/components/icon'
 
 import { FaFlag, RiZhihuFill } from 'oh-vue-icons/icons'
 OhVueIcon.add([FaFlag, RiZhihuFill])
