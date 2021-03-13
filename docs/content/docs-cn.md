@@ -7,6 +7,13 @@ links:
     link: https://www.npmjs.com/package/oh-vue-icons
 ---
 
+## 特性
+
+- 它是 tree-shakable 的，因此你能够仅引入你需要的图标从而减小打包体积
+- 支持 Vue 2 和 Vue 3
+- 支持 [15 个流行的图标库](#支持的图标库)
+
+
 ## 支持的图标库
 
 目前支持以下 15 个图标库：
@@ -43,22 +50,24 @@ npm install oh-vue-icons
 
 ### 全局引入
 
-首先需要在 `main.js` 中引入 `oh-vue-icons`。你可以只引入你需要的图标从而减小打包体积，比如：
+首先需要在 `main.js` 中引入 `oh-vue-icons`。你可以只引入你需要的图标从而减小打包体积。
+
+#### Vue 2
 
 ```js
 // main.js
-import Vue from 'vue'
-import App from './App.vue'
-import OhVueIcon from 'oh-vue-icons/components/icon'
+import Vue from "vue";
+import App from "./App.vue";
+import OhVueIcon from "oh-vue-icons/components/icon";
 
-import { FaFlag, RiZhihuFill } from 'oh-vue-icons/icons'
-OhVueIcon.add([FaFlag, RiZhihuFill])
+import { FaFlag, RiZhihuFill } from "oh-vue-icons/icons";
+OhVueIcon.add([FaFlag, RiZhihuFill]);
 
-Vue.component('v-icon', OhVueIcon)
+Vue.component("v-icon", OhVueIcon);
 
 new Vue({
   render: h => h(App)
-}).$mount('#app')
+}).$mount("#app");
 ```
 
 如果你并不在意打包体积，并希望引入某个图标库的所有图标，你可以：
@@ -72,18 +81,32 @@ const Fa = Object.values({ ...FaIcons })
 OhVueIcon.add(Fa)
 ```
 
-&nbsp;
+#### Vue 3
+
+```js
+// main.js
+import { createApp } from "vue";
+import App from "./App.vue";
+import OhVueIcon from "oh-vue-icons/components/icon-v3";
+
+import { FaFlag, RiZhihuFill } from "oh-vue-icons/icons";
+OhVueIcon.add([FaFlag, RiZhihuFill]);
+
+const app = createApp(App);
+app.component("v-icon", OhVueIcon);
+app.mount("#app");
+```
 
 ### 局部引入
 
 ```js
-import OhVueIcon from 'oh-vue-icons/components/Icon'
+import OhVueIcon from "oh-vue-icons/components/icon";
 
 export default {
   components: {
-    'v-icon': OhVueIcon
+    "v-icon": OhVueIcon
   }
-}
+};
 ```
 
 

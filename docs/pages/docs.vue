@@ -70,11 +70,15 @@ export default {
 }
 
 .docs-content h2 {
-  @apply mt-20 text-2xl pb-2;
+  @apply mt-20 mb-4;
 }
 
 .docs-content h3 {
-  @apply my-4 mt-16 text-xl;
+  @apply mt-16 mb-4;
+}
+
+.docs-content h4 {
+  @apply mt-8 mb-2;
 }
 
 .docs-content h2 + h3 {

@@ -7,6 +7,13 @@ links:
     link: https://www.npmjs.com/package/oh-vue-icons
 ---
 
+## Features
+
+- It's tree-shakable, which allows you to only import the used icons
+- Support Vue 2 and Vue 3
+- Support 15 popular icon packs, see [here](#supported-icon-packs)
+
+
 ## Supported Icon Packs
 
 Now the following 15 icon packs are supported:
@@ -45,22 +52,24 @@ The latest version can be downloaded from [Github](https://github.com/Renovamen/
 
 ### Global Import
 
-Import `oh-vue-icons` and install it into Vue in `main.js`. You can choose to only import the icons you use to reduce bundle size, for example:
+Import `oh-vue-icons` and install it into Vue in `main.js`. You can choose to only import the icons you use to reduce bundle size.
+
+#### Vue 2
 
 ```js
 // main.js
-import Vue from 'vue'
-import App from './App.vue'
-import OhVueIcon from 'oh-vue-icons/components/icon'
+import Vue from "vue";
+import App from "./App.vue";
+import OhVueIcon from "oh-vue-icons/components/icon";
 
-import { FaFlag, RiZhihuFill } from 'oh-vue-icons/icons'
-OhVueIcon.add([FaFlag, RiZhihuFill])
+import { FaFlag, RiZhihuFill } from "oh-vue-icons/icons";
+OhVueIcon.add([FaFlag, RiZhihuFill]);
 
-Vue.component('v-icon', OhVueIcon)
+Vue.component("v-icon", OhVueIcon);
 
 new Vue({
   render: h => h(App)
-}).$mount('#app')
+}).$mount("#app");
 ```
 
 If you don't care about the bundle size and want to import a whole icon pack, you may should:
@@ -68,22 +77,38 @@ If you don't care about the bundle size and want to import a whole icon pack, yo
 ```js
 // main.js
 // import Font Awesome
-import * as FaIcons from 'oh-vue-icons/icons/fa'
+import * as FaIcons from "oh-vue-icons/icons/fa";
 
-const Fa = Object.values({ ...FaIcons })
-OhVueIcon.add(Fa)
+const Fa = Object.values({ ...FaIcons });
+OhVueIcon.add(Fa);
+```
+
+#### Vue 3
+
+```js
+// main.js
+import { createApp } from "vue";
+import App from "./App.vue";
+import OhVueIcon from "oh-vue-icons/components/icon-v3";
+
+import { FaFlag, RiZhihuFill } from "oh-vue-icons/icons";
+OhVueIcon.add([FaFlag, RiZhihuFill]);
+
+const app = createApp(App);
+app.component("v-icon", OhVueIcon);
+app.mount("#app");
 ```
 
 ### Local Import
 
 ```js
-import OhVueIcon from 'oh-vue-icons/components/Icon'
+import OhVueIcon from "oh-vue-icons/components/icon";
 
 export default {
   components: {
-    'v-icon': OhVueIcon
+    "v-icon": OhVueIcon
   }
-}
+};
 ```
 
 
@@ -108,6 +133,7 @@ The icon names should be passed using **kebab-case**.
   </div>
 </template>
 ```
+
 
 ## Props
 
