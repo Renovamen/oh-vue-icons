@@ -56,8 +56,7 @@ export default {
       }
     },
     label: String,
-    inverse: Boolean,
-    tabindex: [Number, String]
+    inverse: Boolean
   },
   data() {
     return {
@@ -79,7 +78,7 @@ export default {
       return scale * this.outerScale;
     },
     klass() {
-      let classes = {
+      const classes = {
         "v-icon": true,
         "v-inverse": this.inverse,
         "v-flip-horizontal": this.flip === "horizontal",
@@ -95,13 +94,6 @@ export default {
         "v-fast": this.speed === "fast",
         "v-slow": this.speed === "slow"
       };
-
-      if (this.classes) {
-        Object.keys(this.classes).forEach(c => {
-          if (this.classes[c]) classes[c] = true;
-        });
-      }
-
       return classes;
     },
     icon() {
@@ -163,16 +155,6 @@ export default {
       );
 
       return raw;
-    },
-    focusable() {
-      let { tabindex } = this;
-      if (tabindex == null) return "false";
-
-      let index =
-        typeof tabindex === "string" ? parseInt(tabindex, 10) : tabindex;
-      if (index >= 0) return null;
-
-      return "false";
     }
   },
   mounted() {
@@ -216,17 +198,15 @@ export default {
         role: this.$attrs.role || (this.label || this.title ? "img" : null),
         "aria-label": this.label || null,
         "aria-hidden": !(this.label || this.title),
-        tabindex: this.tabindex,
-        x: this.x,
-        y: this.y,
         width: this.width,
         height: this.height,
         viewBox: this.box,
-        focusable: this.focusable,
         fill: this.fill ? this.fill : "currentColor"
-      },
-      on: this.$listeners
+      }
     };
+
+    if (this.x) options.attrs.x = this.x;
+    if (this.y) options.attrs.y = this.y;
 
     const transOri = this.icon
       ? `${Number((this.icon.width / 2 + this.icon.minX).toFixed(3))} ${Number(

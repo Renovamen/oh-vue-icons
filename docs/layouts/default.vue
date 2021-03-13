@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="layout"
-    :class="{ 'dark-mode': isDark }"
-  >
+  <div class="layout" :class="{ 'dark-mode': isDark }">
     <Navbar class="fixed z-40 top-0" />
     <Nuxt />
     <Footer />
@@ -92,7 +89,11 @@ table tr:nth-child(2n) {
 body {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-html, body, #__nuxt, #__layout, .layout {
+html,
+body,
+#__nuxt,
+#__layout,
+.layout {
   height: 100%;
 }
 .layout {

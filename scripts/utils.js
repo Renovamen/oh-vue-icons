@@ -5,7 +5,8 @@ const fs = require("fs").promises;
 async function getIconFiles(content) {
   let files = await glob(content.files);
   files = files.sort(function(a, b) {
-    const namea = a.substr(a.lastIndexOf("/") + 1), nameb = b.substr(b.lastIndexOf("/") + 1);
+    const namea = a.substr(a.lastIndexOf("/") + 1),
+      nameb = b.substr(b.lastIndexOf("/") + 1);
     return namea.localeCompare(nameb);
   });
   return files;
@@ -17,7 +18,8 @@ async function convertSVG(scale, name, svg) {
   if (!svgMatch) console.log(name, svg);
 
   const viewbox = svgMatch[1].split(" ");
-  const initW = Number(viewbox[2]), initH = Number(viewbox[3]);
+  const initW = Number(viewbox[2]),
+    initH = Number(viewbox[3]);
   const raw = svgMatch[2];
 
   if (!scale) scale = 1;

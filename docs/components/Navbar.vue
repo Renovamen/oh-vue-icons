@@ -7,29 +7,17 @@
       Oh, Vue Icons!
     </NuxtLink>
     <div class="flex items-center justify-end">
-      <NuxtLink
-        :to="localePath('index')"
-        class="mr-6 hidden sm:block"
-      >
+      <NuxtLink :to="localePath('index')" class="mr-6 hidden sm:block">
         {{ $t("nav.icons") }}
       </NuxtLink>
-      <NuxtLink
-        :to="localePath('docs')"
-        class="mr-6 hidden sm:block"
-      >
+      <NuxtLink :to="localePath('docs')" class="mr-6 hidden sm:block">
         {{ $t("nav.docs") }}
       </NuxtLink>
       <LangSwitcher class="hidden sm:block" />
       <GitBadge class="hidden sm:block" />
       <ToggleTheme class="mr-6" />
-      <a
-        class="sidebar-toggler mr-4 sm:hidden block"
-        @click="toggleSidebar()"
-      >
-        <v-icon
-          name="ri-menu-line"
-          scale="1.5"
-        />
+      <a class="sidebar-toggler mr-4 sm:hidden block" @click="toggleSidebar()">
+        <v-icon name="ri-menu-line" scale="1.5" />
       </a>
     </div>
   </div>
@@ -54,8 +42,8 @@ export default {
     };
   },
   watch: {
-    '$route' () {
-      this.toggleSidebar(false)
+    $route() {
+      this.toggleSidebar(false);
     }
   },
   mounted() {
@@ -70,7 +58,8 @@ export default {
       this.scrollTop = window.pageYOffset;
     },
     toggleSidebar(to) {
-      const payload = typeof to === 'boolean' ? to : !this.$store.state.sidebar.isSidebarOpen
+      const payload =
+        typeof to === "boolean" ? to : !this.$store.state.sidebar.isSidebarOpen;
       this.$store.commit("sidebar/toggleSidebar", payload);
     }
   }

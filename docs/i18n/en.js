@@ -1,5 +1,6 @@
 module.exports = {
-  tagline: "A Vue component for including inline SVG icons from different popular iconpacks easily.",
+  tagline:
+    "A Vue component for including inline SVG icons from different popular iconpacks easily.",
   nav: {
     icons: "Icons",
     docs: "Docs",
