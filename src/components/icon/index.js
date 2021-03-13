@@ -1,4 +1,5 @@
-<script>
+import "../style.css";
+
 let icons = {};
 
 function warn(msg, vm) {
@@ -310,30 +311,3 @@ const ESCAPE_MAP = {
 function escapeHTML(html) {
   return html.replace(/[<>"&]/g, c => ESCAPE_MAP[c] || c);
 }
-</script>
-
-<style>
-@import "./animation.css";
-
-.v-icon {
-  display: inline-block;
-  overflow: visible;
-  vertical-align: -0.2em;
-}
-
-.v-flip-horizontal {
-  transform: scale(-1, 1);
-}
-
-.v-flip-vertical {
-  transform: scale(1, -1);
-}
-
-.v-flip-both {
-  transform: scale(-1, -1);
-}
-
-.v-inverse {
-  color: #fff;
-}
-</style>

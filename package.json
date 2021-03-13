@@ -35,7 +35,6 @@
   "scripts": {
     "build": "node scripts/build.js",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
-    "demo": "vue-cli-service serve demo/main.js",
     "dev": "nuxt",
     "docs:build": "nuxt generate",
     "docs:preview": "cd docs/dist && http-server",
@@ -63,7 +62,6 @@
   "devDependencies": {
     "@nuxt/content": "^1.13.1",
     "@nuxtjs/tailwindcss": "^3.4.2",
-    "@vue/cli-service": "^4.5.11",
     "eslint": "^7.20.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-prettier": "^3.3.1",

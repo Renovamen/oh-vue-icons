@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import OhVueIcon from "../../src/components/Icon.vue";
+import OhVueIcon from "../../src/components/icon";
 const keys = Object.keys(OhVueIcon.icons);
 
 function randomIcon() {

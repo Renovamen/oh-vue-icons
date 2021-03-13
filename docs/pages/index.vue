@@ -114,7 +114,7 @@
 </template>
 
 <script>
-import OhVueIcon from "../../src/components/Icon.vue";
+import OhVueIcon from "../../src/components/icon";
 import IconInfo from "../components/IconInfo.vue";
 import Sidebar from "../components/Sidebar.vue";
 import ToolSidebar from "../components/ToolSidebar.vue";
