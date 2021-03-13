@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Demo from "./Demo.vue";
-import OhVueIcon from "../src/components/Icon";
+import OhVueIcon from "../../../src/components/icon";
 
 import {
   FaFlag,
@@ -18,7 +18,7 @@ import {
   FaRegularBell,
   RiHeartPulseLine,
   BiLightning
-} from "../src/icons";
+} from "../../../src/icons";
 
 OhVueIcon.add([
   FaFlag,

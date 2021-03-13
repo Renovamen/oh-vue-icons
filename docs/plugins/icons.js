@@ -1,5 +1,5 @@
 import Vue from "vue";
-import OhVueIcon from "../../src/components/Icon.vue";
+import OhVueIcon from "../../src/components/icon";
 
 import * as AiIcons from "../../src/icons/ai";
 import * as CiIcons from "../../src/icons/ci";
