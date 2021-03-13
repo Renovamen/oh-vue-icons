@@ -37,11 +37,7 @@
         @click="$emit('change-tab', item.tab)"
       >
         {{ item.tab }}
-        <v-icon
-          v-if="item.multiColor"
-          name="fc-picture"
-          class="ml-1"
-        />
+        <v-icon v-if="item.multiColor" name="fc-picture" class="ml-1" />
       </li>
     </ul>
 

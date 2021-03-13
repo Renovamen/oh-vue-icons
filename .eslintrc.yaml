@@ -7,6 +7,7 @@ env:
 extends:
   - eslint:recommended
   - plugin:vue/recommended
+  - plugin:prettier/recommended
 
 parserOptions:
   sourceType: module
@@ -30,3 +31,6 @@ rules:
   vue/component-definition-name-casing: 0
   vue/require-default-prop: 0
   vue/require-prop-types: 0
+  prettier/prettier:
+    - error
+    - trailingComma: none

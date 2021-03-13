@@ -65,6 +65,8 @@
     "@nuxtjs/tailwindcss": "^3.4.2",
     "@vue/cli-service": "^4.5.11",
     "eslint": "^7.20.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^7.6.0",
     "glob-promise": "^4.0.1",
     "husky": "^4.3.8",

@@ -14,7 +14,8 @@ export default {
       {
         hid: "description",
         name: "description",
-        content: "A Vue component for including inline SVG icons from different popular iconpacks easily."
+        content:
+          "A Vue component for including inline SVG icons from different popular iconpacks easily."
       }
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.svg" }]
@@ -25,15 +26,7 @@ export default {
     "./assets/code-dark.css"
   ],
   components: true, // auto import components
-  modules: [
-    "@nuxt/content",
-    ["nuxt-i18n", i18n]
-  ],
-  buildModules: [
-    "@nuxtjs/tailwindcss",
-    "vue-swatches/nuxt"
-  ],
-  plugins: [
-    "~/plugins/icons.js"
-  ]
+  modules: ["@nuxt/content", ["nuxt-i18n", i18n]],
+  buildModules: ["@nuxtjs/tailwindcss", "vue-swatches/nuxt"],
+  plugins: ["~/plugins/icons.js"]
 };

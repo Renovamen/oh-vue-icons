@@ -10,14 +10,8 @@
           {{ $t("tagline") }}
         </p>
         <p class="my-0">
-          <span
-            v-for="(item, index) in page.links"
-            :key="`doc-link-${index}`"
-          >
-            <a
-              :href="item.link"
-              target="_blank"
-            >
+          <span v-for="(item, index) in page.links" :key="`doc-link-${index}`">
+            <a :href="item.link" target="_blank">
               {{ item.name }}
             </a>
             ·

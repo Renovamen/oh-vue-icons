@@ -67,7 +67,7 @@
             :placeholder="`Search ${countIconsByTab} icons...`"
             @focus="isSearchFocused = true"
             @blur="isSearchFocused = false"
-          >
+          />
         </div>
       </div>
 
@@ -75,7 +75,10 @@
       <div class="mt-10">
         <div class="grid grid-cols-4 sm:grid-cols-8 gap-3">
           <div
-            v-for="(icon, index) in filterBySearch(getIconSet.components).slice(0, maxIcons)"
+            v-for="(icon, index) in filterBySearch(getIconSet.components).slice(
+              0,
+              maxIcons
+            )"
             :key="`icon-${index}`"
             class="icon-block"
             :class="{ selected: iconSelected === icon }"
@@ -119,7 +122,7 @@ import { icons } from "../icons";
 
 const iconKeys = Object.keys(OhVueIcon.icons);
 const flipOptions = ["normal", "horizontal", "vertical", "both"];
-const max = 304
+const max = 304;
 
 export default {
   components: {
@@ -256,7 +259,8 @@ export default {
   @apply border-gray-600;
 }
 
-.load-btn, .load-btn:focus {
+.load-btn,
+.load-btn:focus {
   @apply outline-none;
 }
 .load-btn {

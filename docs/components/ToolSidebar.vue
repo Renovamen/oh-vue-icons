@@ -23,10 +23,7 @@
         {{ $t("toolbar.color") }}
       </div>
       <div class="flex flex-1">
-        <v-swatches
-          v-model="color"
-          class="flex-1"
-        />
+        <v-swatches v-model="color" class="flex-1" />
         <input
           slot="trigger"
           v-model="color"
@@ -34,7 +31,7 @@
           :style="{ borderColor: isColorFocused ? color : '#A0AEBF' }"
           @focus="isColorFocused = true"
           @blur="isColorFocused = false"
-        >
+        />
       </div>
     </div>
     <div class="section">
@@ -102,10 +99,7 @@
       <div class="title">
         {{ $t("toolbar.flip") }}
       </div>
-      <button
-        class="w-full capitalize"
-        @click="$emit('set-flip')"
-      >
+      <button class="w-full capitalize" @click="$emit('set-flip')">
         {{ flip }}
       </button>
     </div>
