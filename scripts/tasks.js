@@ -21,7 +21,8 @@ async function dirInit(DIST, ASSETS) {
   rimraf.sync(ASSETS);
   await fs.mkdir(ASSETS, { recursive: true }).catch(ignore);
 
-  const write = (filePath, str) => fs.writeFile(path.resolve(DIST, filePath), str, "utf8").catch(ignore);
+  const write = (filePath, str) =>
+    fs.writeFile(path.resolve(DIST, filePath), str, "utf8").catch(ignore);
 
   for (const icon of icons) {
     await fs.mkdir(path.resolve(DIST, icon.id)).catch(ignore);
@@ -74,7 +75,8 @@ async function writeIconModule(icon, DIST, ASSETS) {
       if (excludes.indexOf(icon.id + "-" + rawName) !== -1) continue;
 
       const pascalName = camelcase(rawName, { pascalCase: true });
-      const name = (content.formatter && content.formatter(pascalName)) || pascalName;
+      const name =
+        (content.formatter && content.formatter(pascalName)) || pascalName;
       if (exists.has(name)) continue; // for remove duplicate
       exists.add(name);
 

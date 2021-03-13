@@ -1,39 +1,17 @@
 <template>
-  <div
-    class="dropdown-wrapper cursor-pointer mr-6 relative"
-    :class="{ open }"
-  >
+  <div class="dropdown-wrapper cursor-pointer mr-6 relative" :class="{ open }">
     <a @click="toggle">
       <span class="title">{{ item.text }}</span>
     </a>
 
-    <ul
-      v-show="open"
-      class="dropdown"
-    >
-      <li
-        v-for="(subItem, index) in item.items"
-        :key="subItem.link || index"
-      >
-        <NuxtLink
-          v-if="!isExternal(subItem.link)"
-          :to="subItem.link"
-        >
-          <v-icon
-            v-if="subItem.icon"
-            :name="subItem.icon"
-          />
+    <ul v-show="open" class="dropdown">
+      <li v-for="(subItem, index) in item.items" :key="subItem.link || index">
+        <NuxtLink v-if="!isExternal(subItem.link)" :to="subItem.link">
+          <v-icon v-if="subItem.icon" :name="subItem.icon" />
           <span>{{ subItem.text }}</span>
         </NuxtLink>
-        <a
-          v-else
-          :href="subItem.link"
-          target="_blank"
-        >
-          <v-icon
-            v-if="subItem.icon"
-            :name="subItem.icon"
-          />
+        <a v-else :href="subItem.link" target="_blank">
+          <v-icon v-if="subItem.icon" :name="subItem.icon" />
           <span>{{ subItem.text }}</span>
         </a>
       </li>
