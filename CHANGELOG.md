@@ -1,5 +1,24 @@
 # Change Log
 
+## [0.2.1](https://github.com/Renovamen/oh-vue-icons/compare/v0.1.11...v0.2.1) (2021-03-14)
+
+### BREAKING CHANGES
+
+- support Vue 3 🎉 ([b7b3eed](https://github.com/Renovamen/oh-vue-icons/commit/b7b3eedf400248aeeb18494ff259faec8bb523ab))
+- import path for Vue 2 has changed:
+
+  ```diff
+  - import OhVueIcon from "oh-vue-icons/components/Icon";
+  + import OhVueIcon from "oh-vue-icons/components/icon";
+  ```
+
+### Features
+
+- **iconpack:** upgrade:
+  - Pixelarticons (v1.4.0): 9 more icons, 1 fixed icon ([36e9465](https://github.com/Renovamen/oh-vue-icons/commit/36e946528fc490b79876567e3631de69e3029c95))
+  - Simple Icons (v4.13.0): 32 more icons, 5 updated icons ([f81ad2c](https://github.com/Renovamen/oh-vue-icons/commit/f81ad2c3ec91d274a3df5897aa254c1f7d8c7343))
+
+
 ## [0.1.11](https://github.com/Renovamen/oh-vue-icons/compare/v0.1.10...v0.1.11) (2021-02-27)
 
 ### Bug Fixes
