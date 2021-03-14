@@ -36,10 +36,20 @@ yarn build
 
 ## Demo
 
-To run demo:
+### Vue 2
 
 ```bash
-yarn demo
+cd demo/v2
+yarn install
+yarn dev
+```
+
+### Vue 3
+
+```bash
+cd demo/v3
+yarn install
+yarn dev
 ```
 
 &nbsp;
