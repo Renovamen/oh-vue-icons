@@ -46,7 +46,7 @@ module.exports = {
     },
     {
       id: "px",
-      name: "Pixel Icons"
+      name: "Pixelarticons"
     },
     {
       id: "ri",

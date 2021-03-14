@@ -186,7 +186,7 @@ module.exports = {
     },
     {
       id: "px",
-      name: "Pixel Icons",
+      name: "Pixelarticons",
       contents: [
         {
           files: path.resolve(__dirname, "pixelarticons/svg/*.svg"),
