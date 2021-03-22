@@ -1,16 +1,7 @@
 import "../style.css";
+import { assign, warn, escapeHTML, getId } from "../utils";
 
 let icons = {};
-
-function warn(msg, vm) {
-  if (!vm) {
-    /* eslint-disable no-console */
-    console.error(msg);
-    /* eslint-enable no-console */
-    return;
-  }
-  vm.constructor.super.util.warn(msg, vm);
-}
 
 export default {
   name: "v-icon",
@@ -154,8 +145,11 @@ export default {
           return `#${ids[id]}`;
         }
       );
-
       return raw;
+    },
+    attribs() {
+      if (!this.icon || !this.icon.attr) return {};
+      return this.icon.attr;
     }
   },
   mounted() {
@@ -177,7 +171,6 @@ export default {
       let height = 0;
       this.$children.forEach(child => {
         child.outerScale = this.normalizedScale;
-
         width = Math.max(width, child.width);
         height = Math.max(height, child.height);
       });
@@ -192,22 +185,30 @@ export default {
   render(h) {
     if (this.name === null) return h();
 
-    let options = {
-      class: this.klass,
-      style: this.style,
-      attrs: {
+    let attrs = Object.assign(
+      {
         role: this.$attrs.role || (this.label || this.title ? "img" : null),
         "aria-label": this.label || null,
         "aria-hidden": !(this.label || this.title),
         width: this.width,
         height: this.height,
-        viewBox: this.box,
-        fill: this.fill ? this.fill : "currentColor"
-      }
-    };
+        viewBox: this.box
+      },
+      this.attribs
+    );
 
-    if (this.x) options.attrs.x = this.x;
-    if (this.y) options.attrs.y = this.y;
+    if (this.attribs.stroke)
+      attrs.stroke = this.fill ? this.fill : "currentColor";
+    else attrs.fill = this.fill ? this.fill : "currentColor";
+
+    if (this.x) attrs.x = this.x;
+    if (this.y) attrs.y = this.y;
+
+    let options = {
+      class: this.klass,
+      style: this.style,
+      attrs: attrs
+    };
 
     const transOri = this.icon
       ? `${Number((this.icon.width / 2 + this.icon.minX).toFixed(3))} ${Number(
@@ -218,7 +219,6 @@ export default {
     if (this.raw) {
       let html = `<g transform-origin="${transOri}">${this.raw}</g>`;
       if (this.title) html = `<title>${escapeHTML(this.title)}</title>${html}`;
-
       options.domProps = { innerHTML: html };
     }
 
@@ -279,35 +279,3 @@ export default {
   },
   icons
 };
-
-function hasOwn(obj, key) {
-  return Object.prototype.hasOwnProperty.call(obj, key);
-}
-
-function assign(obj, ...sources) {
-  sources.forEach(source => {
-    for (let key in source) {
-      if (key === "name") continue;
-      if (hasOwn(source, key)) {
-        obj[key] = source[key];
-      }
-    }
-  });
-  return obj;
-}
-
-let count = 0;
-function getId(prefix = "") {
-  return prefix + count++;
-}
-
-const ESCAPE_MAP = {
-  "<": "&lt;",
-  ">": "&gt;",
-  '"': "&quot;",
-  "&": "&amp;"
-};
-
-function escapeHTML(html) {
-  return html.replace(/[<>"&]/g, c => ESCAPE_MAP[c] || c);
-}

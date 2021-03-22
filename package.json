@@ -59,6 +59,9 @@
       "sort-package-json"
     ]
   },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.5"
+  },
   "devDependencies": {
     "@nuxt/content": "^1.13.1",
     "@nuxtjs/tailwindcss": "^3.4.2",
