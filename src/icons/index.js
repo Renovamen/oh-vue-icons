@@ -6,6 +6,7 @@ export * from './fa';
 export * from './fc';
 export * from './fi';
 export * from './gi';
+export * from './hi';
 export * from './la';
 export * from './oi';
 export * from './pi';

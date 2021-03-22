@@ -32,6 +32,10 @@ module.exports = {
       name: "gameicons"
     },
     {
+      id: "hi",
+      name: "Heroicons"
+    },
+    {
       id: "la",
       name: "Line Awesome"
     },

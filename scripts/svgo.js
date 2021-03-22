@@ -110,7 +110,6 @@ const svgo = new SVGO({
         attrs: [
           "data.*",
           "version",
-          "svg^fill",
           "svg^aria-label",
           "svg^class",
           "xmlns:xlink"

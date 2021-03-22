@@ -1,17 +1,8 @@
 import "../style.css";
+import { assign, warn, escapeHTML, getId } from "../utils";
 import { h } from "vue";
 
 let icons = {};
-
-function warn(msg, vm) {
-  if (!vm) {
-    /* eslint-disable no-console */
-    console.error(msg);
-    /* eslint-enable no-console */
-    return;
-  }
-  vm.constructor.super.util.warn(msg, vm);
-}
 
 export default {
   name: "v-icon",
@@ -155,8 +146,11 @@ export default {
           return `#${ids[id]}`;
         }
       );
-
       return raw;
+    },
+    attribs() {
+      if (!this.icon || !this.icon.attr) return {};
+      return this.icon.attr;
     }
   },
   mounted() {
@@ -196,18 +190,22 @@ export default {
   render() {
     if (this.name === null) return h();
 
-    let options = {
-      class: this.klass,
-      style: this.style,
-      role: this.$attrs.role || (this.label || this.title ? "img" : null),
-      "aria-label": this.label || null,
-      "aria-hidden": !(this.label || this.title),
-      width: this.width,
-      height: this.height,
-      viewBox: this.box,
-      fill: this.fill ? this.fill : "currentColor"
-    };
+    let options = Object.assign(
+      {
+        class: this.klass,
+        style: this.style,
+        role: this.$attrs.role || (this.label || this.title ? "img" : null),
+        "aria-label": this.label || null,
+        "aria-hidden": !(this.label || this.title),
+        width: this.width,
+        height: this.height,
+        viewBox: this.box
+      },
+      this.attribs
+    );
 
+    if (!this.attribs.fill)
+      options.fill = this.fill ? this.fill : "currentColor";
     if (this.x) options.x = this.x;
     if (this.y) options.y = this.y;
 
@@ -279,35 +277,3 @@ export default {
   },
   icons
 };
-
-function hasOwn(obj, key) {
-  return Object.prototype.hasOwnProperty.call(obj, key);
-}
-
-function assign(obj, ...sources) {
-  sources.forEach(source => {
-    for (let key in source) {
-      if (key === "name") continue;
-      if (hasOwn(source, key)) {
-        obj[key] = source[key];
-      }
-    }
-  });
-  return obj;
-}
-
-let count = 0;
-function getId(prefix = "") {
-  return prefix + count++;
-}
-
-const ESCAPE_MAP = {
-  "<": "&lt;",
-  ">": "&gt;",
-  '"': "&quot;",
-  "&": "&amp;"
-};
-
-function escapeHTML(html) {
-  return html.replace(/[<>"&]/g, c => ESCAPE_MAP[c] || c);
-}

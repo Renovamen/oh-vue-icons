@@ -17,7 +17,8 @@ import {
   GiPiercingSword,
   FaRegularBell,
   RiHeartPulseLine,
-  BiLightning
+  BiLightning,
+  HiAcademicCap
 } from "../../../src/icons";
 
 OhVueIcon.add([
@@ -35,7 +36,8 @@ OhVueIcon.add([
   GiPiercingSword,
   FaRegularBell,
   RiHeartPulseLine,
-  BiLightning
+  BiLightning,
+  HiAcademicCap
 ]);
 
 OhVueIcon.add({
