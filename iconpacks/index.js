@@ -137,6 +137,26 @@ module.exports = {
       licenseUrl: "https://creativecommons.org/licenses/by/3.0/"
     },
     {
+      id: "hi",
+      name: "Heroicons",
+      contents: [
+        {
+          files: path.resolve(__dirname, "heroicons/optimized/outline/*.svg"),
+          formatter: (name) => `Hi${name}`,
+          prefix: (name) => `hi-${name}`
+        },
+        {
+          files: path.resolve(__dirname, "heroicons/optimized/solid/*.svg"),
+          formatter: (name) => `HiSolid${name}`,
+          prefix: (name) => `hi-solid-${name}`
+        }
+      ],
+      projectUrl: "https://github.com/tailwindlabs/heroicons",
+      website: "https://heroicons.com/",
+      license: "MIT",
+      licenseUrl: "https://opensource.org/licenses/MIT"
+    },
+    {
       id: "la",
       name: "Line Awesome",
       contents: [

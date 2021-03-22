@@ -40,3 +40,6 @@
 [submodule "iconpacks/vscode-icons"]
 	path = iconpacks/vscode-icons
 	url = https://github.com/vscode-icons/vscode-icons.git
+[submodule "iconpacks/heroicons"]
+	path = iconpacks/heroicons
+	url = https://github.com/tailwindlabs/heroicons.git

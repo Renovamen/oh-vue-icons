@@ -72,7 +72,11 @@ async function writeIconModule(icon, DIST, ASSETS) {
           rawName = rawName.slice(0, -3);
           break;
       }
-      if (excludes.indexOf(icon.id + "-" + rawName) !== -1) continue;
+
+      const prefixName = (content.prefix && content.prefix(rawName)) || rawName;
+      const prefix = prefixName.replace(`-${rawName}`, "");
+
+      if (excludes.includes(prefixName)) continue;
 
       const pascalName = camelcase(rawName, { pascalCase: true });
       const name =
@@ -80,8 +84,12 @@ async function writeIconModule(icon, DIST, ASSETS) {
       if (exists.has(name)) continue; // for remove duplicate
       exists.add(name);
 
-      const prefixName = (content.prefix && content.prefix(rawName)) || rawName;
-      const iconData = await convertSVG(content.scale, prefixName, svgStr);
+      const iconData = await convertSVG(
+        content.scale,
+        prefixName,
+        prefix,
+        svgStr
+      );
 
       await fs.appendFile(
         path.resolve(DIST, `${icon.id}/index.js`),

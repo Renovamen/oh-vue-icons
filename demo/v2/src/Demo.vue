@@ -5,6 +5,7 @@
     <h2>Basic</h2>
     <v-icon name="fa-flag" />
     <v-icon name="fc-linux" />
+    <v-icon name="hi-academic-cap" />
 
     <h2>Scale 3x</h2>
     <v-icon name="fa-flag" scale="3" />
