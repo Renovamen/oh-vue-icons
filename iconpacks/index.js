@@ -205,6 +205,22 @@ module.exports = {
       licenseUrl: "https://creativecommons.org/licenses/by/4.0/"
     },
     {
+      id: "pr",
+      name: "PrimeIcons",
+      contents: [
+        {
+          files: path.resolve(__dirname, "primeicons/raw-svg/*.svg"),
+          formatter: (name) => `Pr${name}`,
+          prefix: (name) => `pr-${name}`,
+          scale: 0.9
+        }
+      ],
+      projectUrl: "https://github.com/primefaces/primeicons",
+      website: "https://www.primefaces.org/primeng/showcase/#/icons",
+      license: "MIT",
+      licenseUrl: "https://opensource.org/licenses/MIT"
+    },
+    {
       id: "px",
       name: "Pixelarticons",
       contents: [

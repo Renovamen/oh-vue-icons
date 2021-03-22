@@ -43,3 +43,6 @@
 [submodule "iconpacks/heroicons"]
 	path = iconpacks/heroicons
 	url = https://github.com/tailwindlabs/heroicons.git
+[submodule "iconpacks/primeicons"]
+	path = iconpacks/primeicons
+	url = https://github.com/primefaces/primeicons.git

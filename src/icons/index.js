@@ -10,6 +10,7 @@ export * from './hi';
 export * from './la';
 export * from './oi';
 export * from './pi';
+export * from './pr';
 export * from './px';
 export * from './ri';
 export * from './si';
