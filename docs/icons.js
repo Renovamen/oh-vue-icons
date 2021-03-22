@@ -49,6 +49,10 @@ module.exports = {
       multiColor: true
     },
     {
+      id: "pr",
+      name: "PrimeIcons"
+    },
+    {
       id: "px",
       name: "Pixelarticons"
     },
