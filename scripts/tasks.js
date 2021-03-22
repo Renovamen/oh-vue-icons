@@ -60,29 +60,22 @@ async function writeIconModule(icon, DIST, ASSETS) {
       const svgStrRaw = await fs.readFile(file, "utf8");
       const svgStr = await svgo.optimize(svgStrRaw).then(result => result.data);
 
-      let rawName = path
+      const name = path
         .basename(file, path.extname(file))
         .replace(/_/g, "-")
         .replace(/\$/g, "");
-      switch (icon.id) {
-        case "pi":
-          rawName = rawName.substr(4);
-          break;
-        case "oi":
-          rawName = rawName.slice(0, -3);
-          break;
-      }
 
+      const rawName = (content.raw && content.raw(name)) || name;
       const prefixName = (content.prefix && content.prefix(rawName)) || rawName;
       const prefix = prefixName.replace(`-${rawName}`, "");
 
       if (excludes.includes(prefixName)) continue;
 
       const pascalName = camelcase(rawName, { pascalCase: true });
-      const name =
+      const prefixPascalName =
         (content.formatter && content.formatter(pascalName)) || pascalName;
-      if (exists.has(name)) continue; // for remove duplicate
-      exists.add(name);
+      if (exists.has(prefixPascalName)) continue; // for remove duplicate
+      exists.add(prefixPascalName);
 
       const iconData = await convertSVG(
         content.scale,
@@ -93,7 +86,7 @@ async function writeIconModule(icon, DIST, ASSETS) {
 
       await fs.appendFile(
         path.resolve(DIST, `${icon.id}/index.js`),
-        `export const ${name} = ${JSON.stringify(iconData)};\n`,
+        `export const ${prefixPascalName} = ${JSON.stringify(iconData)};\n`,
         "utf8"
       );
 
