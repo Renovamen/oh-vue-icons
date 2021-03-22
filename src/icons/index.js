@@ -2,6 +2,7 @@
 export * from './ai';
 export * from './bi';
 export * from './ci';
+export * from './co';
 export * from './fa';
 export * from './fc';
 export * from './fi';

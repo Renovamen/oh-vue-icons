@@ -3,6 +3,7 @@ import OhVueIcon from "../../src/components/icon";
 
 import * as AiIcons from "../../src/icons/ai";
 import * as CiIcons from "../../src/icons/ci";
+import * as CoIcons from "../../src/icons/co";
 import * as BiIcons from "../../src/icons/bi";
 import * as FiIcons from "../../src/icons/fi";
 import * as FaIcons from "../../src/icons/fa";
@@ -23,6 +24,7 @@ import * as WiIcons from "../../src/icons/wi";
 const Ai = Object.values({ ...AiIcons }),
   Bi = Object.values({ ...BiIcons }),
   Ci = Object.values({ ...CiIcons }),
+  Co = Object.values({ ...CoIcons }),
   Fi = Object.values({ ...FiIcons }),
   Fa = Object.values({ ...FaIcons }),
   Fc = Object.values({ ...FcIcons }),
@@ -42,6 +44,7 @@ const Ai = Object.values({ ...AiIcons }),
 OhVueIcon.add(Ai);
 OhVueIcon.add(Bi);
 OhVueIcon.add(Ci);
+OhVueIcon.add(Co);
 OhVueIcon.add(Fi);
 OhVueIcon.add(Fa);
 OhVueIcon.add(Fc);

@@ -11,24 +11,25 @@ links:
 
 - 它是 tree-shakable 的，因此你能够仅引入你需要的图标从而减小打包体积
 - 支持 Vue 2 和 Vue 3
-- 支持 [17 个流行的图标库](#支持的图标库)
+- 支持 [19 个流行的图标库](#支持的图标库)
 
 
 ## 支持的图标库
 
-目前支持以下 17 个图标库：
+目前支持以下 19 个图标库：
 
 | 图标库                                                         | 前缀    | 协议                                                          | 图标数量     |
 | ------------------------------------------------------------- | ------ | ------------------------------------------------------------- | ---------- |
 | [academicons](https://github.com/jpswalsh/academicons)        | `ai`   | [SIL OFL 1.1](http://scripts.sil.org/OFL)                     | 145        |
 | [Bootstrap Icons](https://icons.getbootstrap.com/)            | `bi`   | [MIT](https://github.com/twbs/icons/blob/main/LICENSE.md)     | 1325       |
+| [CoreUI Icons Free](https://github.com/coreui/coreui-icons) (Colorful) | `co`   | [CC BY 4.0 License](https://github.com/coreui/coreui-icons/blob/master/LICENSE) | 1583       |
 | [Cryptocurrency Icons](https://github.com/spothq/cryptocurrency-icons) (Colorful) | `ci`   | [CC0 1.0 Universal](https://github.com/spothq/cryptocurrency-icons/blob/master/LICENSE.md) | 892        |
 | [Font Awesome 5 Free](https://fontawesome.com/)               | `fa`   | [CC BY 4.0](https://github.com/FortAwesome/Font-Awesome/blob/master/LICENSE.txt) | 1609       |
 | [Flat Color Icons](https://github.com/icons8/flat-color-icons) (Colorful) | `fc`   | [MIT / Good Boy](https://github.com/icons8/flat-color-icons/blob/master/LICENSE.md) | 329        |
 | [Flag Icon](https://flagicons.lipis.dev/) (Colorful)          | `fi`   | [MIT](https://github.com/lipis/flag-icon-css/blob/master/LICENSE) | 516        |
 | [gameicons](https://game-icons.net/)                          | `gi`   | [CC BY 3.0](https://github.com/game-icons/icons/blob/master/license.txt) | 3927       |
 | [Heroicons](https://heroicons.com/)                           | `hi`   | [MIT](https://github.com/tailwindlabs/heroicons/blob/master/LICENSE) | 452       |
-| [Ionicons](https://ionicons.com/)                             | `io`   | [MIT](https://github.com/tailwindlabs/heroicons/blob/master/LICENSE) | 1332      |
+| [Ionicons](https://ionicons.com/)                             | `io`   | [MIT](https://github.com/ionic-team/ionicons/blob/master/LICENSE) | 1332      |
 | [Line Awesome](https://icons8.com/line-awesome)               | `la`   | [MIT / Good Boy](https://github.com/icons8/line-awesome/blob/master/LICENSE.md) | 1544      |
 | [Octicons](https://primer.style/octicons/)                    | `oi`   | [MIT](https://github.com/primer/octicons/blob/master/LICENSE) | 209        |
 | [Pokemon Icons](https://theartificial.github.io/pokemon-icons/) (Colorful)| `pi`   | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | 1453      |
