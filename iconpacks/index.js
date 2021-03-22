@@ -58,6 +58,24 @@ module.exports = {
       licenseUrl: "https://creativecommons.org/publicdomain/zero/1.0/"
     },
     {
+      id: "co",
+      name: "CoreUI Icons",
+      contents: [
+        {
+          files: path.resolve(__dirname, "coreui-icons/svg/*/*.svg"),
+          formatter: (name) => `Co${name}`,
+          prefix: (name) => `co-${name}`,
+          raw: (name) => name.substr(4),
+          scale: 1.2
+        }
+      ],
+      multiColor: true,
+      projectUrl: "https://github.com/coreui/coreui-icons",
+      website: "https://icons.coreui.io/icons/",
+      license: "CC BY 4.0",
+      licenseUrl: "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
       id: "fa",
       name: "Font Awesome",
       contents: [
@@ -194,6 +212,7 @@ module.exports = {
           files: path.resolve(__dirname, "octicons/icons/*-16.svg"),
           formatter: (name) => `Oi${name}`,
           prefix: (name) => `oi-${name}`,
+          raw: (name) => name.slice(0, -3),
           scale: 1.2
         },
       ],
@@ -210,6 +229,7 @@ module.exports = {
           files: path.resolve(__dirname, "pokemon-icons/_icons/SVG/*.svg"),
           formatter: (name) => `Pi${name}`,
           prefix: (name) => `pi-${name}`,
+          raw: (name) => name.substr(4),
           scale: 1.17
         }
       ],

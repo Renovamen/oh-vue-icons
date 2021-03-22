@@ -14,6 +14,11 @@ module.exports = {
       multiColor: true
     },
     {
+      id: "co",
+      name: "CoreUI Icons",
+      multiColor: true
+    },
+    {
       id: "fa",
       name: "Font Awesome"
     },
