@@ -157,6 +157,21 @@ module.exports = {
       licenseUrl: "https://opensource.org/licenses/MIT"
     },
     {
+      id: "io",
+      name: "Ionicons",
+      contents: [
+        {
+          files: path.resolve(__dirname, "ionicons/src/svg/*.svg"),
+          formatter: (name) => `Io${name}`,
+          prefix: (name) => `io-${name}`
+        },
+      ],
+      projectUrl: "https://github.com/ionic-team/ionicons",
+      website: "https://ionicons.com/",
+      license: "MIT",
+      licenseUrl: "https://opensource.org/licenses/MIT"
+    },
+    {
       id: "la",
       name: "Line Awesome",
       contents: [

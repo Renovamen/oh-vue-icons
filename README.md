@@ -32,7 +32,8 @@ Now the following 16 icon packs are supported:
 | [Flag Icon](https://flagicons.lipis.dev/) (Colorful)          | `fi`   | [MIT](https://github.com/lipis/flag-icon-css/blob/master/LICENSE) | 516        |
 | [gameicons](https://game-icons.net/)                          | `gi`   | [CC BY 3.0](https://github.com/game-icons/icons/blob/master/license.txt) | 3927       |
 | [Heroicons](https://heroicons.com/)                           | `hi`   | [MIT](https://github.com/tailwindlabs/heroicons/blob/master/LICENSE) | 452       |
-| [Line Awesome](https://icons8.com/line-awesome)               | `la`   | [MIT / Good Boy](https://github.com/icons8/line-awesome/blob/master/LICENSE.md) | 1544      |
+| [Ionicons](https://ionicons.com/)                             | `io`   | [MIT](https://github.com/tailwindlabs/heroicons/blob/master/LICENSE) | 1332      |
+| [Line Awesome](https://icons8.com/line-awesome)               | `la`   | [MIT](https://github.com/ionic-team/ionicons/blob/master/LICENSE) | 1544      |
 | [Octicons](https://primer.style/octicons/)                    | `oi`   | [MIT](https://github.com/primer/octicons/blob/master/LICENSE) | 209        |
 | [Pokemon Icons](https://theartificial.github.io/pokemon-icons/) (Colorful)| `pi`   | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | 1453      |
 | [PrimeIcons](https://github.com/primefaces/primeicons)        | `pr`   | [MIT](https://github.com/primefaces/primeicons/blob/master/LICENSE) | 202       |

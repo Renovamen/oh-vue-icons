@@ -46,3 +46,6 @@
 [submodule "iconpacks/primeicons"]
 	path = iconpacks/primeicons
 	url = https://github.com/primefaces/primeicons.git
+[submodule "iconpacks/ionicons"]
+	path = iconpacks/ionicons
+	url = https://github.com/ionic-team/ionicons.git
