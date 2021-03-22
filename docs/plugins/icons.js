@@ -12,6 +12,7 @@ import * as HiIcons from "../../src/icons/hi";
 import * as LaIcons from "../../src/icons/la";
 import * as OiIcons from "../../src/icons/oi";
 import * as PiIcons from "../../src/icons/pi";
+import * as PrIcons from "../../src/icons/pr";
 import * as PxIcons from "../../src/icons/px";
 import * as RiIcons from "../../src/icons/ri";
 import * as SiIcons from "../../src/icons/si";
@@ -29,6 +30,7 @@ const Ai = Object.values({ ...AiIcons }),
   La = Object.values({ ...LaIcons }),
   Oi = Object.values({ ...OiIcons }),
   Pi = Object.values({ ...PiIcons }),
+  Pr = Object.values({ ...PrIcons }),
   Px = Object.values({ ...PxIcons }),
   Ri = Object.values({ ...RiIcons }),
   Si = Object.values({ ...SiIcons }),
@@ -46,6 +48,7 @@ OhVueIcon.add(Hi);
 OhVueIcon.add(La);
 OhVueIcon.add(Oi);
 OhVueIcon.add(Pi);
+OhVueIcon.add(Pr);
 OhVueIcon.add(Px);
 OhVueIcon.add(Ri);
 OhVueIcon.add(Si);
