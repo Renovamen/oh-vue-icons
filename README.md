@@ -201,6 +201,8 @@ Contributions are welcomed, learn how to contribute [here](CONTRIBUTING.md).
 
 This project is inspired by and based on [vue-awesome](https://github.com/Justineo/vue-awesome) and [react-icons](https://github.com/react-icons/react-icons).
 
+The [website](https://oh-vue-icons.vercel.app/) is hosted by [Vercel](https://vercel.com/).
+
 
 &nbsp;
 
