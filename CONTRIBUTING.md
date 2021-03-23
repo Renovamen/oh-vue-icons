@@ -2,11 +2,13 @@
 
 ## Development
 
-Install dependencies:
+### Install Dependencies
 
 ```bash
 yarn install
 ```
+
+### Icon Packs
 
 Fetch icon sources:
 
@@ -26,31 +28,44 @@ Upgrade all iconpacks:
 yarn update
 ```
 
+### Dev
+
+Vue 2:
+
+```bash
+cd package/icon-v2
+yarn dev
+```
+
+Vue 3:
+
+```bash
+cd package/icon-v3
+yarn dev
+```
+
+### Build
+
 Re-generate files under `src/icons` automatically:
 
 ```bash
+yarn icons
+```
+
+Build Vue 2 component:
+
+```bash
+cd package/icon-v2
 yarn build
 ```
 
-&nbsp;
-
-## Demo
-
-### Vue 2
+Build Vue 3 component:
 
 ```bash
-cd demo/v2
-yarn install
-yarn dev
+cd package/icon-v3
+yarn build
 ```
 
-### Vue 3
-
-```bash
-cd demo/v3
-yarn install
-yarn dev
-```
 
 &nbsp;
 
@@ -65,6 +80,7 @@ yarn dev
 # generate static files
 yarn docs:build
 ```
+
 
 &nbsp;
 
