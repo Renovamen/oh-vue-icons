@@ -1,25 +1,25 @@
 import Vue from "vue";
-import OhVueIcon from "../../src/components/icon";
+import OhVueIcon from "../../package/icon-v2/src";
 
-import * as AiIcons from "../../src/icons/ai";
-import * as CiIcons from "../../src/icons/ci";
-import * as CoIcons from "../../src/icons/co";
-import * as BiIcons from "../../src/icons/bi";
-import * as FiIcons from "../../src/icons/fi";
-import * as FaIcons from "../../src/icons/fa";
-import * as FcIcons from "../../src/icons/fc";
-import * as GiIcons from "../../src/icons/gi";
-import * as HiIcons from "../../src/icons/hi";
-import * as IoIcons from "../../src/icons/io";
-import * as LaIcons from "../../src/icons/la";
-import * as OiIcons from "../../src/icons/oi";
-import * as PiIcons from "../../src/icons/pi";
-import * as PrIcons from "../../src/icons/pr";
-import * as PxIcons from "../../src/icons/px";
-import * as RiIcons from "../../src/icons/ri";
-import * as SiIcons from "../../src/icons/si";
-import * as ViIcons from "../../src/icons/vi";
-import * as WiIcons from "../../src/icons/wi";
+import * as AiIcons from "../../package/icons/ai";
+import * as CiIcons from "../../package/icons/ci";
+import * as CoIcons from "../../package/icons/co";
+import * as BiIcons from "../../package/icons/bi";
+import * as FiIcons from "../../package/icons/fi";
+import * as FaIcons from "../../package/icons/fa";
+import * as FcIcons from "../../package/icons/fc";
+import * as GiIcons from "../../package/icons/gi";
+import * as HiIcons from "../../package/icons/hi";
+import * as IoIcons from "../../package/icons/io";
+import * as LaIcons from "../../package/icons/la";
+import * as OiIcons from "../../package/icons/oi";
+import * as PiIcons from "../../package/icons/pi";
+import * as PrIcons from "../../package/icons/pr";
+import * as PxIcons from "../../package/icons/px";
+import * as RiIcons from "../../package/icons/ri";
+import * as SiIcons from "../../package/icons/si";
+import * as ViIcons from "../../package/icons/vi";
+import * as WiIcons from "../../package/icons/wi";
 
 const Ai = Object.values({ ...AiIcons }),
   Bi = Object.values({ ...BiIcons }),

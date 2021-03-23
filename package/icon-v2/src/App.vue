@@ -12,9 +12,9 @@
     <v-icon name="fc-linux" scale="3" />
 
     <h2>Flip</h2>
-    Vertical: <v-icon name="fc-linux" flip="vertical" />,
-    Horizontal, <v-icon name="fc-linux" flip="horizontal" />,
-    Both: <v-icon name="fc-linux" flip="both" />
+    Vertical: <v-icon name="fc-linux" flip="vertical" />, Horizontal,
+    <v-icon name="fc-linux" flip="horizontal" />, Both:
+    <v-icon name="fc-linux" flip="both" />
 
     <h2>Fill Color</h2>
     <v-icon name="bi-battery-full" fill="green" />
@@ -32,17 +32,15 @@
     <h3>Hover</h3>
     <v-icon name="ri-refresh-line" animation="spin" hover />
     <h3>Parent Hover</h3>
-    <div
-      class="v-parent v-hover"
-      style="cursor: pointer;"
-    >
+    <div class="ov-parent ov-hover" style="cursor: pointer">
       <v-icon name="ri-refresh-line" animation="spin" hover />
       Hover me!
     </div>
     <h3>Speed</h3>
-    Slow: <v-icon name="ri-refresh-line" animation="spin" speed="slow" />
-    Normal: <v-icon name="ri-refresh-line" animation="spin" />
-    Fast: <v-icon name="ri-refresh-line" animation="spin" speed="fast" />
+    Slow:
+    <v-icon name="ri-refresh-line" animation="spin" speed="slow" /> Normal:
+    <v-icon name="ri-refresh-line" animation="spin" /> Fast:
+    <v-icon name="ri-refresh-line" animation="spin" speed="fast" />
 
     <h2>Stacked Icons</h2>
     <v-icon label="No Photos">
@@ -64,3 +62,9 @@
     <v-icon name="baidu" />
   </div>
 </template>
+
+<script>
+export default {
+  name: "App"
+};
+</script>

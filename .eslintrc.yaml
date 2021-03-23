@@ -19,8 +19,7 @@ ignorePatterns:
   - ./assets/
   - .nuxt/
   - docs/dist/
-  - src/icons/
-  - demo/
+  - package/
 
 rules:
   no-unused-vars:

@@ -1,0 +1,36 @@
+{
+  "name": "oh-vue-icons",
+  "version": "0.2.2",
+  "description": "Include inline SVG icons from different popular icon packs in Vue easily.",
+  "keywords": [
+    "font awesome",
+    "remix icon",
+    "bootstrap icons",
+    "line awesome",
+    "octions",
+    "simple icons",
+    "academicons",
+    "weather icons",
+    "pixel icons",
+    "flat color icons",
+    "vscode icons",
+    "game icons",
+    "cryptocurrency Icons",
+    "pokemon icons",
+    "flag icon",
+    "vue",
+    "icons",
+    "iconpacks"
+  ],
+  "homepage": "https://oh-vue-icons.vercel.app",
+  "bugs": {
+    "url": "https://github.com/Renovamen/oh-vue-icons/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Renovamen/oh-vue-icons"
+  },
+  "license": "MIT",
+  "author": "Renovamen <renovamenzxh@gmail.com>",
+  "main": "./dist/v2/icon.umd.min.js"
+}

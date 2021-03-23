@@ -13,7 +13,7 @@ A [Vue](https://vuejs.org/) component for including inline SVG icons from differ
 
 - Tree-shakable, which allows you to only import the used icons
 - Supports Vue 2 and Vue 3
-- Supports 19 popular icon packs, see [here](#supported-icon-packs)
+- Supports 20000+ icons from 19 popular icon packs, see [here](#supported-icon-packs)
 
 
 &nbsp;
