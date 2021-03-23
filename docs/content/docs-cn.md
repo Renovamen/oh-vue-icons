@@ -424,6 +424,8 @@ export default {
 
 本项目受到了 [vue-awesome](https://github.com/Justineo/vue-awesome) 和 [react-icons](https://github.com/react-icons/react-icons) 的启发并借鉴了它们的部分代码。
 
+本站部署在 [Vercel](https://vercel.com/) 上。
+
 
 ## 开源协议
 
