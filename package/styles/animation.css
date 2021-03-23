@@ -1,0 +1,211 @@
+.ov-spin:not(.ov-hover) > g,
+.ov-spin.ov-hover:hover > g,
+.ov-parent.ov-hover:hover > .ov-spin > g {
+  animation: v-spin 1s linear infinite;
+}
+
+.ov-spin:not(.ov-hover).ov-fast > g,
+.ov-spin.ov-hover.ov-fast:hover > g,
+.ov-parent.ov-hover:hover > .ov-spin.ov-fast > g {
+  animation: v-spin 0.7s linear infinite;
+}
+
+.ov-spin:not(.ov-hover).ov-slow > g,
+.ov-spin.ov-hover.ov-slow:hover > g,
+.ov-parent.ov-hover:hover > .ov-spin.ov-slow > g {
+  animation: v-spin 2s linear infinite;
+}
+
+.ov-spin-pulse:not(.ov-hover) > g,
+.ov-spin-pulse.ov-hover:hover > g,
+.ov-parent.ov-hover:hover > .ov-spin-pulse > g {
+  animation: v-spin 1s infinite steps(8);
+}
+
+.ov-spin-pulse:not(.ov-hover).ov-fast > g,
+.ov-spin-pulse.ov-hover.ov-fast:hover > g,
+.ov-parent.ov-hover:hover > .ov-spin-pulse.ov-fast > g {
+  animation: v-spin 0.7s infinite steps(8);
+}
+
+.ov-spin-pulse:not(.ov-hover).ov-slow > g,
+.ov-spin-pulse.ov-hover.ov-slow:hover > g,
+.ov-parent.ov-hover:hover > .ov-spin-pulse.ov-slow > g {
+  animation: v-spin 2s infinite steps(8);
+}
+
+@keyframes v-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ---------------- wrench ---------------- */
+.ov-wrench:not(.ov-hover) > g,
+.ov-wrench.ov-hover:hover > g,
+.ov-parent.ov-hover:hover > .ov-wrench > g {
+  animation: v-wrench 2.5s ease infinite;
+}
+
+.ov-wrench:not(.ov-hover).ov-fast > g,
+.ov-wrench.ov-hover.ov-fast:hover > g,
+.ov-parent.ov-hover:hover > .ov-wrench.ov-fast > g {
+  animation: v-wrench 1.2s ease infinite;
+}
+
+.ov-wrench:not(.ov-hover).ov-slow > g,
+.ov-wrench.ov-hover.ov-slow:hover > g,
+.ov-parent.ov-hover:hover > .ov-wrench.ov-slow > g {
+  animation: v-wrench 3.7s ease infinite;
+}
+
+@keyframes v-wrench {
+  0% {
+    transform: rotate(-12deg);
+  }
+
+  8% {
+    transform: rotate(12deg);
+  }
+
+  10%, 28%, 30%, 48%, 50%, 68% {
+    transform: rotate(24deg);
+  }
+
+  18%, 20%, 38%, 40%, 58%, 60% {
+    transform: rotate(-24deg);
+  }
+
+  75%, 100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* ---------------- ring ---------------- */
+.ov-ring:not(.ov-hover) > g,
+.ov-ring.ov-hover:hover > g,
+.ov-parent.ov-hover:hover > .ov-ring > g {
+  animation: v-ring 2s ease infinite;
+}
+
+.ov-ring:not(.ov-hover).ov-fast > g,
+.ov-ring.ov-hover.ov-fast:hover > g,
+.ov-parent.ov-hover:hover > .ov-ring.ov-fast > g {
+  animation: v-ring 1s ease infinite;
+}
+
+.ov-ring:not(.ov-hover).ov-slow > g,
+.ov-ring.ov-hover.ov-slow:hover > g,
+.ov-parent.ov-hover:hover > .ov-ring.ov-slow > g {
+  animation: v-ring 3s ease infinite;
+}
+
+@keyframes v-ring {
+  0% {
+    transform: rotate(-15deg);
+  }
+
+  2% {
+    transform: rotate(15deg);
+  }
+
+  4%, 12% {
+    transform: rotate(-18deg);
+  }
+
+  6% {
+    transform: rotate(18deg);
+  }
+
+  8% {
+    transform: rotate(-22deg);
+  }
+
+  10% {
+    transform: rotate(22deg);
+  }
+
+  12% {
+    transform: rotate(-18deg);
+  }
+
+  14% {
+    transform: rotate(18deg);
+  }
+
+  16% {
+    transform: rotate(-12deg);
+  }
+
+  18% {
+    transform: rotate(12deg);
+  }
+
+  20%, 100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* ---------------- pulse ---------------- */
+.ov-pulse:not(.ov-hover) > g,
+.ov-pulse.ov-hover:hover > g,
+.ov-parent.ov-hover:hover > .ov-pulse > g {
+  animation: v-pulse 2s linear infinite;
+}
+
+.ov-pulse:not(.ov-hover).ov-fast > g,
+.ov-pulse.ov-hover.ov-fast:hover > g,
+.ov-parent.ov-hover:hover > .ov-pulse.ov-fast > g {
+  animation: v-pulse 1s linear infinite;
+}
+
+.ov-pulse:not(.ov-hover).ov-slow > g,
+.ov-pulse.ov-hover.ov-slow:hover > g,
+.ov-parent.ov-hover:hover > .ov-pulse.ov-slow > g {
+  animation: v-pulse 3s linear infinite;
+}
+
+@keyframes v-pulse {
+  0% {
+    transform: scale(1.1);
+  }
+
+  50% {
+    transform: scale(0.8);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+/* ---------------- flash ---------------- */
+.ov-flash:not(.ov-hover) > g,
+.ov-flash.ov-hover:hover > g,
+.ov-parent.ov-hover:hover > .ov-flash > g {
+  animation: v-flash 2s ease infinite;
+}
+
+.ov-flash:not(.ov-hover).ov-fast > g,
+.ov-flash.ov-hover.ov-fast:hover > g,
+.ov-parent.ov-hover:hover > .ov-flash.ov-fast > g {
+  animation: v-flash 1s ease infinite;
+}
+
+.ov-flash:not(.ov-hover).ov-slow > g,
+.ov-flash.ov-hover.ov-slow:hover > g,
+.ov-parent.ov-hover:hover > .ov-flash.ov-slow > g {
+  animation: v-flash 3s ease infinite;
+}
+
+@keyframes v-flash {
+  0%, 100%, 50%{
+    opacity: 1;
+  }
+  25%, 75%{
+    opacity: 0;
+  }
+}

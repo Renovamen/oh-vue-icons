@@ -1,10 +1,10 @@
-import "../style.css";
-import { assign, warn, escapeHTML, getId } from "../utils";
+import { assign, warn, escapeHTML, getId } from "../../../utils";
+import "../../../styles";
 
 let icons = {};
 
 export default {
-  name: "v-icon",
+  name: "OhVueIcon",
   props: {
     name: {
       type: String,
@@ -71,20 +71,20 @@ export default {
     },
     klass() {
       const classes = {
-        "v-icon": true,
-        "v-inverse": this.inverse,
-        "v-flip-horizontal": this.flip === "horizontal",
-        "v-flip-vertical": this.flip === "vertical",
-        "v-flip-both": this.flip === "both",
-        "v-spin": this.animation === "spin",
-        "v-spin-pulse": this.animation === "spin-pulse",
-        "v-wrench": this.animation === "wrench",
-        "v-ring": this.animation === "ring",
-        "v-pulse": this.animation === "pulse",
-        "v-flash": this.animation === "flash",
-        "v-hover": this.hover,
-        "v-fast": this.speed === "fast",
-        "v-slow": this.speed === "slow"
+        "ov-icon": true,
+        "ov-inverse": this.inverse,
+        "ov-flip-horizontal": this.flip === "horizontal",
+        "ov-flip-vertical": this.flip === "vertical",
+        "ov-flip-both": this.flip === "both",
+        "ov-spin": this.animation === "spin",
+        "ov-spin-pulse": this.animation === "spin-pulse",
+        "ov-wrench": this.animation === "wrench",
+        "ov-ring": this.animation === "ring",
+        "ov-pulse": this.animation === "pulse",
+        "ov-flash": this.animation === "flash",
+        "ov-hover": this.hover,
+        "ov-fast": this.speed === "fast",
+        "ov-slow": this.speed === "slow"
       };
       return classes;
     },

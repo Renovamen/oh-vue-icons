@@ -1,0 +1,8 @@
+icon-v2
+icon-v3
+styles
+utils
+.*
+*.config.js
+*.lock
+*.log
