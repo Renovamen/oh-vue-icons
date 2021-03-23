@@ -13,7 +13,7 @@ async function runTask(name, fn) {
 
 async function main() {
   try {
-    const DIST = path.resolve(__dirname, "../src/icons");
+    const DIST = path.resolve(__dirname, "../package/icons");
     const ASSETS = path.resolve(__dirname, "../assets");
 
     await runTask("Initialize", async () => {

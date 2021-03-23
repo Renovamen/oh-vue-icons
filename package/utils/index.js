@@ -3,7 +3,7 @@ function hasOwn(obj, key) {
 }
 
 function assign(obj, ...sources) {
-  sources.forEach(source => {
+  sources.forEach((source) => {
     for (let key in source) {
       if (key === "name") continue;
       if (hasOwn(source, key)) {
@@ -22,7 +22,7 @@ const ESCAPE_MAP = {
 };
 
 function escapeHTML(html) {
-  return html.replace(/[<>"&]/g, c => ESCAPE_MAP[c] || c);
+  return html.replace(/[<>"&]/g, (c) => ESCAPE_MAP[c] || c);
 }
 
 let id_count = 0;

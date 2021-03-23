@@ -1,4 +1,5 @@
-docs/dist/
+dist/
+dist-css/
 iconpacks/gameicons/
 *.zip
 .yarnrc

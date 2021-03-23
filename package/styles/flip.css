@@ -1,0 +1,15 @@
+.ov-flip-horizontal {
+  transform: scale(-1, 1);
+}
+
+.ov-flip-vertical {
+  transform: scale(1, -1);
+}
+
+.ov-flip-both {
+  transform: scale(-1, -1);
+}
+
+.ov-inverse {
+  color: #fff;
+}

@@ -1,39 +1,11 @@
 {
   "name": "oh-vue-icons",
-  "version": "0.2.2",
+  "private": true,
   "description": "Include inline SVG icons from different popular icon packs in Vue easily.",
-  "keywords": [
-    "font awesome",
-    "remix icon",
-    "bootstrap icons",
-    "line awesome",
-    "octions",
-    "simple icons",
-    "academicons",
-    "weather icons",
-    "pixel icons",
-    "flat color icons",
-    "vscode icons",
-    "game icons",
-    "cryptocurrency Icons",
-    "pokemon icons",
-    "flag icon",
-    "vue",
-    "icons",
-    "iconpacks"
-  ],
-  "homepage": "https://oh-vue-icons.vercel.app",
-  "bugs": {
-    "url": "https://github.com/Renovamen/oh-vue-icons/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Renovamen/oh-vue-icons"
-  },
   "license": "MIT",
   "author": "Renovamen <renovamenzxh@gmail.com>",
   "scripts": {
-    "build": "node scripts/build.js",
+    "icons": "node scripts/build.js",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "dev": "nuxt",
     "docs:build": "nuxt generate",
@@ -42,7 +14,6 @@
     "lint": "eslint --ext .js,.vue ./",
     "lint-fix": "eslint --fix --ext .js,.vue ./",
     "pub": "sh ./scripts/publish.sh",
-    "start": "nuxt start",
     "submodule": "git submodule update --init",
     "update": "sh ./scripts/update.sh"
   },
@@ -57,14 +28,15 @@
     ],
     "package.json": [
       "sort-package-json"
+    ],
+    "package/package.json": [
+      "sort-package-json"
     ]
-  },
-  "dependencies": {
-    "cheerio": "^1.0.0-rc.5"
   },
   "devDependencies": {
     "@nuxt/content": "^1.13.1",
     "@nuxtjs/tailwindcss": "^3.4.2",
+    "cheerio": "^1.0.0-rc.5",
     "eslint": "^7.20.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-prettier": "^3.3.1",
