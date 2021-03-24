@@ -3,10 +3,11 @@
   "private": true,
   "scripts": {
     "dev": "vue-cli-service serve",
-    "build": "npm run build:lib && npm run build:lib-css",
+    "build": "npm run build:lib && npm run build:lib-css && npm run copy",
     "build:lib": "vue-cli-service build --target lib --name icon ./src/index.js",
     "build:lib-css": "EXTRACT_CSS=true npm run build:lib",
     "build:demo": "vue-cli-service build",
+    "copy": "cp dist/icon.umd.min.js ../dist/v3/icon.umd.min.js && cp dist-css/icon.umd.min.js ../dist-css/v3/icon.umd.min.js && cp dist-css/icon.css ../dist-css/v3/icon.css",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {

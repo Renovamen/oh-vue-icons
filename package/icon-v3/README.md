@@ -1,4 +1,4 @@
-# oh-vue-icons for Vue 3
+# `oh-vue-icons` for Vue 3
 
 ## Installation
 
