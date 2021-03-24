@@ -5,6 +5,13 @@ const rimraf = require("rimraf");
 
 const { icons } = require("../iconpacks");
 const { getIconFiles, convertSVG, writeSVG } = require("./utils");
+const {
+  autoGenerateTemplate,
+  packageJsonTemplate,
+  iconDataTemplate,
+  tsDefTemplate,
+  tsDefImportTemplate
+} = require("./templates");
 const svgo = require("./svgo");
 
 const ignore = err => {
@@ -26,26 +33,19 @@ async function dirInit(DIST, ASSETS) {
 
   for (const icon of icons) {
     await fs.mkdir(path.resolve(DIST, icon.id)).catch(ignore);
-    await write(`${icon.id}/index.js`, "// THIS FILE IS AUTO GENERATED\n");
-    await write(
-      `${icon.id}/package.json`,
-      JSON.stringify(
-        {
-          sideEffects: false,
-          module: "./index.js"
-        },
-        null,
-        2
-      ) + "\n"
-    );
+    await write(`${icon.id}/index.js`, autoGenerateTemplate);
+    await write(`${icon.id}/index.d.ts`, tsDefImportTemplate);
+    await write(`${icon.id}/package.json`, packageJsonTemplate);
   }
 
-  await write("index.js", "// THIS FILE IS AUTO GENERATED\n");
+  await write("index.js", autoGenerateTemplate);
+  await write("index.d.ts", autoGenerateTemplate);
 }
 
 async function writeIconModule(icon, DIST, ASSETS) {
-  const entryModule = `export * from './${icon.id}';\n`;
+  const entryModule = `export * from "./${icon.id}";\n`;
   await fs.appendFile(path.resolve(DIST, "index.js"), entryModule, "utf8");
+  await fs.appendFile(path.resolve(DIST, "index.d.ts"), entryModule, "utf8");
 
   const svgDir = path.resolve(ASSETS, `${icon.id}`);
   rimraf.sync(svgDir);
@@ -86,7 +86,13 @@ async function writeIconModule(icon, DIST, ASSETS) {
 
       await fs.appendFile(
         path.resolve(DIST, `${icon.id}/index.js`),
-        `export const ${prefixPascalName} = ${JSON.stringify(iconData)};\n`,
+        iconDataTemplate(prefixPascalName, iconData),
+        "utf8"
+      );
+
+      await fs.appendFile(
+        path.resolve(DIST, `${icon.id}/index.d.ts`),
+        tsDefTemplate(prefixPascalName),
         "utf8"
       );
 
