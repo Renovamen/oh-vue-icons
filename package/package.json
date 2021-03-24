@@ -11,16 +11,18 @@
     "simple icons",
     "academicons",
     "weather icons",
-    "pixel icons",
+    "heroicons",
     "flat color icons",
     "vscode icons",
     "game icons",
     "cryptocurrency Icons",
+    "coreui icons",
     "pokemon icons",
     "flag icon",
+    "ionicons",
     "vue",
-    "icons",
-    "iconpacks"
+    "vue3",
+    "icons"
   ],
   "homepage": "https://oh-vue-icons.vercel.app",
   "bugs": {

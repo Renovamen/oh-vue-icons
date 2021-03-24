@@ -59,7 +59,7 @@ export default {
   @apply bg-gray-700;
 }
 .dropdown li a span,
-.dropdown li a .v-icon {
+.dropdown li a .ov-icon {
   @apply align-middle;
 }
 .dark-mode .dropdown li a span {
