@@ -1,10 +1,10 @@
 import { assign, warn, escapeHTML, getId } from "../../../utils";
-import "../../../styles";
 
 let icons = {};
 
 export default {
   name: "OhVueIcon",
+
   props: {
     name: {
       type: String,
@@ -50,6 +50,7 @@ export default {
     label: String,
     inverse: Boolean
   },
+
   data() {
     return {
       x: false,
@@ -59,6 +60,7 @@ export default {
       outerScale: 1.2
     };
   },
+
   computed: {
     normalizedScale() {
       let scale = this.scale;
@@ -152,12 +154,15 @@ export default {
       return this.icon.attr;
     }
   },
+
   mounted() {
     this.updateStack();
   },
+
   updated() {
     this.updateStack();
   },
+
   methods: {
     updateStack() {
       if (!this.name && this.name !== null && this.$children.length === 0) {
@@ -182,6 +187,7 @@ export default {
       });
     }
   },
+
   render(h) {
     if (this.name === null) return h();
 
@@ -258,6 +264,7 @@ export default {
           ])
     );
   },
+
   register(data) {
     let { name, paths = [], d, polygons = [], points } = data;
 
@@ -272,10 +279,12 @@ export default {
     if (!icons[name].minX) icons[name].minX = 0;
     if (!icons[name].minY) icons[name].minY = 0;
   },
+
   add(data) {
     if (Array.isArray(data)) {
       for (let icon of data) this.register(icon);
     } else this.register(data);
   },
+
   icons
 };

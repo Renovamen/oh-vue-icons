@@ -32,5 +32,6 @@
   },
   "license": "MIT",
   "author": "Renovamen <renovamenzxh@gmail.com>",
-  "main": "./dist/v2/icon.umd.min.js"
+  "main": "./dist/v2/icon.umd.min.js",
+  "types": "./types/index.d.ts"
 }

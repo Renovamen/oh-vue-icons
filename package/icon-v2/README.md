@@ -1,4 +1,4 @@
-# oh-vue-icons for Vue 2
+# `oh-vue-icons` for Vue 2
 
 ## Installation
 
