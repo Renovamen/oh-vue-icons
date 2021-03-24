@@ -1,5 +1,44 @@
 # Change Log
 
+## [0.3.0](https://github.com/Renovamen/oh-vue-icons/compare/v0.2.2...v0.3.0) (2021-03-24)
+
+### Features
+
+- add typescript supports ([#6](https://github.com/Renovamen/oh-vue-icons/issues/6)) ([c21b6cd](https://github.com/Renovamen/oh-vue-icons/commit/c21b6cd37d89adeccb3637c8d55baf90f367da70))
+
+### BREAKING CHANGES
+
+- import paths have changed:
+
+  Vue 2:
+
+  ```diff
+  - import OhVueIcon from "oh-vue-icons/components/icon";
+  + import OhVueIcon from "oh-vue-icons";
+  ```
+
+  Vue 2 SSR:
+
+  ```diff
+  + import OhVueIcon from "oh-vue-icons/dist-css/v2/icon.umd.min";
+  + import 'oh-vue-icons/dist-css/v2/icon.css'
+  ```
+
+  Vue 3:
+
+  ```diff
+  - import OhVueIcon from "oh-vue-icons/components/icon-v3";
+  + import OhVueIcon from "oh-vue-icons/dist/v3/icon.umd.min";
+  ```
+
+  Vue 3 SSR:
+
+  ```diff
+  + import OhVueIcon from "oh-vue-icons/dist-css/v3/icon.umd.min";
+  + import 'oh-vue-icons/dist-css/v3/icon.css'
+  ```
+
+
 ## [0.2.2](https://github.com/Renovamen/oh-vue-icons/compare/v0.2.1...v0.2.2) (2021-03-22)
 
 ### Features
