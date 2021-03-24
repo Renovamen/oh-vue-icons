@@ -6,4 +6,3 @@ declare module "oh-vue-icons" {
    */
   export function add(data: IconDataCustomize | IconDataCustomize[]): void;
 }
-

@@ -77,7 +77,7 @@ Import `oh-vue-icons` and install it into Vue in `main.js`. You can only import 
 // main.js
 import Vue from "vue";
 import App from "./App.vue";
-import OhVueIcon from "oh-vue-icons/components/icon";
+import OhVueIcon from "oh-vue-icons";
 
 import { FaFlag, RiZhihuFill } from "oh-vue-icons/icons";
 OhVueIcon.add([FaFlag, RiZhihuFill]);
@@ -106,7 +106,7 @@ OhVueIcon.add(Fa);
 // main.js
 import { createApp } from "vue";
 import App from "./App.vue";
-import OhVueIcon from "oh-vue-icons/components/icon-v3";
+import OhVueIcon from "oh-vue-icons/dist/v3/icon.umd.min";
 
 import { FaFlag, RiZhihuFill } from "oh-vue-icons/icons";
 OhVueIcon.add([FaFlag, RiZhihuFill]);
@@ -121,8 +121,6 @@ app.mount("#app");
 ### Local Import
 
 ```js
-import OhVueIcon from "oh-vue-icons/components/icon";
-
 export default {
   components: {
     "v-icon": OhVueIcon
@@ -172,9 +170,11 @@ Some examples could be found in the [documentation](https://oh-vue-icons.vercel.
 
 &nbsp;
 
-## Nuxt.js
+## Notes
 
-When using Nuxt.js for server side rendering, `oh-vue-icons` should be added to the transpile build option in `nuxt.config.js`:
+### Nuxt.js
+
+When using Nuxt.js, `oh-vue-icons` should be added to the transpile build option in `nuxt.config.js`:
 
 ```js
 export default {
@@ -186,6 +186,24 @@ export default {
 ```
 
 or it will not be bundled, see [Nuxt's documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins) for details.
+
+&nbsp;
+
+### Server Side Rendering (SSR)
+
+When using server side rendering (SSR) (for example, in Nuxt.js), `oh-vue-icons` should be imported by:
+
+```js
+// Vue 3
+import OhVueIcon from "oh-vue-icons/dist-css/v3/icon.umd.min";
+import 'oh-vue-icons/dist-css/v3/icon.css'
+
+// Vue 2
+import OhVueIcon from "oh-vue-icons/dist-css/v2/icon.umd.min";
+import 'oh-vue-icons/dist-css/v2/icon.css'
+```
+
+or "Document is not defined" error will occured, due to the inline styles in the default imported file.
 
 
 &nbsp;
@@ -199,9 +217,8 @@ Contributions are welcomed, learn how to contribute [here](CONTRIBUTING.md).
 
 ## Acknowledgements
 
-This project is inspired by and based on [vue-awesome](https://github.com/Justineo/vue-awesome) and [react-icons](https://github.com/react-icons/react-icons).
-
-The [website](https://oh-vue-icons.vercel.app/) is hosted by [Vercel](https://vercel.com/).
+- This project is inspired by and based on [vue-awesome](https://github.com/Justineo/vue-awesome) and [react-icons](https://github.com/react-icons/react-icons).
+- The [website](https://oh-vue-icons.vercel.app/) is hosted on [Vercel](https://vercel.com/).
 
 
 &nbsp;

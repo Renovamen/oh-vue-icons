@@ -77,7 +77,7 @@ npm install oh-vue-icons
 // main.js
 import Vue from "vue";
 import App from "./App.vue";
-import OhVueIcon from "oh-vue-icons/components/icon";
+import OhVueIcon from "oh-vue-icons";
 
 import { FaFlag, RiZhihuFill } from "oh-vue-icons/icons";
 OhVueIcon.add([FaFlag, RiZhihuFill]);
@@ -106,7 +106,7 @@ OhVueIcon.add(Fa)
 // main.js
 import { createApp } from "vue";
 import App from "./App.vue";
-import OhVueIcon from "oh-vue-icons/components/icon-v3";
+import OhVueIcon from "oh-vue-icons/dist/v3/icon.umd.min";
 
 import { FaFlag, RiZhihuFill } from "oh-vue-icons/icons";
 OhVueIcon.add([FaFlag, RiZhihuFill]);
@@ -121,8 +121,6 @@ app.mount("#app");
 ### 局部引入
 
 ```js
-import OhVueIcon from "oh-vue-icons/components/icon";
-
 export default {
   components: {
     "v-icon": OhVueIcon
@@ -172,20 +170,40 @@ export default {
 
 &nbsp;
 
-## Nuxt.js
+## 注意
 
-当使用 Nuxt.js 的服务端渲染时，需要在 `nuxt.config.js` 的 transpile build 项中添加 `oh-vue-icons`：
+### Nuxt.js
+
+当使用 Nuxt.js 时，需要在 `nuxt.config.js` 的 `build.transpile` 项中添加 `oh-vue-icons`：
 
 ```js
 export default {
   // ...
   build: {
-    transpile: ["oh-vue-icons"]
+    transpile: ['oh-vue-icons']
   }
 }
 ```
 
 否则 Nuxt 可能就不会把 `oh-vue-icons` 打包进去，[Nuxt 的文档](https://nuxtjs.org/docs/2.x/directory-structure/plugins)中对此有更详细的说明。
+
+&nbsp;
+
+### 服务端渲染 (SSR)
+
+由于默认的打包文件包含内联样式，所以当使用服务端渲染（SSR）时（比如在 Nuxt.js 中使用），需要通过以下方式来引入 `oh-vue-icons`：
+
+```js
+// Vue 3
+import OhVueIcon from "oh-vue-icons/dist-css/v3/icon.umd.min";
+import 'oh-vue-icons/dist-css/v3/icon.css'
+
+// Vue 2
+import OhVueIcon from "oh-vue-icons/dist-css/v2/icon.umd.min";
+import 'oh-vue-icons/dist-css/v2/icon.css'
+```
+
+否则会报“Document is not defined”的错。
 
 
 &nbsp;
@@ -199,9 +217,8 @@ export default {
 
 ## 致谢
 
-本项目受到了 [vue-awesome](https://github.com/Justineo/vue-awesome) 和 [react-icons](https://github.com/react-icons/react-icons) 的启发并借鉴了它们的部分代码。
-
-[文档网站](https://oh-vue-icons.vercel.app/)部署在 [Vercel](https://vercel.com/) 上。
+- 本项目受到了 [vue-awesome](https://github.com/Justineo/vue-awesome) 和 [react-icons](https://github.com/react-icons/react-icons) 的启发并借鉴了它们的部分代码。
+- [文档网站](https://oh-vue-icons.vercel.app/)部署在 [Vercel](https://vercel.com/) 上。
 
 
 &nbsp;
