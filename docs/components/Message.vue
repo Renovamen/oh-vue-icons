@@ -55,7 +55,7 @@ export default {
 .dark-mode .msg-box {
   @apply bg-gray-700 text-gray-400;
 }
-.msg-box .v-icon {
+.msg-box .ov-icon {
   @apply fill-current text-green-500 mr-1;
 }
 

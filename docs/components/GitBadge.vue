@@ -4,7 +4,7 @@
 
 <script>
 import Dropdown from "./Dropdown";
-import packageJson from "../../package.json";
+import packageJson from "../../package/package.json";
 
 export default {
   components: {

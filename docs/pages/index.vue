@@ -232,13 +232,13 @@ export default {
   @apply text-white;
 }
 
-.search-box .v-icon {
+.search-box .ov-icon {
   @apply text-gray-500;
 }
-.search-box .v-icon.search-focused {
+.search-box .ov-icon.search-focused {
   @apply text-blue-600;
 }
-.dark-mode .search-box .v-icon.search-focused {
+.dark-mode .search-box .ov-icon.search-focused {
   @apply text-blue-400;
 }
 

@@ -62,7 +62,7 @@ npm install oh-vue-icons
 // main.js
 import Vue from "vue";
 import App from "./App.vue";
-import OhVueIcon from "oh-vue-icons/components/icon";
+import OhVueIcon from "oh-vue-icons";
 
 import { FaFlag, RiZhihuFill } from "oh-vue-icons/icons";
 OhVueIcon.add([FaFlag, RiZhihuFill]);
@@ -91,7 +91,7 @@ OhVueIcon.add(Fa)
 // main.js
 import { createApp } from "vue";
 import App from "./App.vue";
-import OhVueIcon from "oh-vue-icons/components/icon-v3";
+import OhVueIcon from "oh-vue-icons/dist/v3/icon.umd.min";
 
 import { FaFlag, RiZhihuFill } from "oh-vue-icons/icons";
 OhVueIcon.add([FaFlag, RiZhihuFill]);
@@ -104,8 +104,6 @@ app.mount("#app");
 ### 局部引入
 
 ```js
-import OhVueIcon from "oh-vue-icons/components/icon";
-
 export default {
   components: {
     "v-icon": OhVueIcon
@@ -353,7 +351,7 @@ OhVueIcon.add({
 ### 自定义彩色图标
 
 ```js
-OhVueIcon.register(
+OhVueIcon.add([
   {
     name: 'webpack',
     width: 1200,
@@ -390,7 +388,7 @@ OhVueIcon.register(
     height: 512,
     raw: '<path fill="#E34F26" d="M71,460 L30,0 481,0 440,460 255,512"/><path fill="#EF652A" d="M256,472 L405,431 440,37 256,37"/><path fill="#EBEBEB" d="M256,208 L181,208 176,150 256,150 256,94 255,94 114,94 115,109 129,265 256,265zM256,355 L255,355 192,338 188,293 158,293 132,293 139,382 255,414 256,414z"/><path fill="#FFF" d="M255,208 L255,265 325,265 318,338 255,355 255,414 371,382 372,372 385,223 387,208 371,208zM255,94 L255,129 255,150 255,150 392,150 392,150 392,150 393,138 396,109 397,94z"/>'
   }
-)
+])
 ```
 
 <p>
@@ -404,9 +402,11 @@ OhVueIcon.register(
 ```
 
 
-## Nuxt.js
+## 注意
 
-当使用 Nuxt.js 的服务端渲染时，需要在 `nuxt.config.js` 的 `build.transpile` 项中添加 `oh-vue-icons`：
+### Nuxt.js
+
+当使用 Nuxt.js 时，需要在 `nuxt.config.js` 的 `build.transpile` 项中添加 `oh-vue-icons`：
 
 ```js
 export default {
@@ -420,11 +420,28 @@ export default {
 否则 Nuxt 可能就不会把 `oh-vue-icons` 打包进去，[Nuxt 的文档](https://nuxtjs.org/docs/2.x/directory-structure/plugins)中对此有更详细的说明。
 
 
+### 服务端渲染 (SSR)
+
+由于默认的打包文件包含内联样式，所以当使用服务端渲染（SSR）时（比如在 Nuxt.js 中使用），需要通过以下方式来引入 `oh-vue-icons`：
+
+```js
+// Vue 3
+import OhVueIcon from "oh-vue-icons/dist-css/v3/icon.umd.min";
+import 'oh-vue-icons/dist-css/v3/icon.css'
+
+// Vue 2
+import OhVueIcon from "oh-vue-icons/dist-css/v2/icon.umd.min";
+import 'oh-vue-icons/dist-css/v2/icon.css'
+```
+
+否则会报“Document is not defined”的错。
+
+
 ## 致谢
 
-本项目受到了 [vue-awesome](https://github.com/Justineo/vue-awesome) 和 [react-icons](https://github.com/react-icons/react-icons) 的启发并借鉴了它们的部分代码。
+- 本项目受到了 [vue-awesome](https://github.com/Justineo/vue-awesome) 和 [react-icons](https://github.com/react-icons/react-icons) 的启发并借鉴了它们的部分代码。
 
-本站部署在 [Vercel](https://vercel.com/) 上。
+- 本站部署在 [Vercel](https://vercel.com/) 上。
 
 
 ## 开源协议
