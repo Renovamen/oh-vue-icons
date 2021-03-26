@@ -7,7 +7,7 @@
     "build:lib": "vue-cli-service build --target lib --name icon ./src/index.js",
     "build:lib-css": "EXTRACT_CSS=true npm run build:lib",
     "build:demo": "vue-cli-service build",
-    "copy": "cp dist/icon.umd.min.js ../dist/v3/icon.umd.min.js && cp dist-css/icon.umd.min.js ../dist-css/v3/icon.umd.min.js && cp dist-css/icon.css ../dist-css/v3/icon.css",
+    "copy": "cp dist/icon.umd.min.js ../dist/v3/ && cp {dist-css/icon.umd.min.js,dist-css/icon.css} ../dist-css/v3/",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
