@@ -144,7 +144,7 @@ The icon names should be passed using **kebab-case**.
 | Name        | Description                              | Type      | Accepted Values                                               | Default value  |
 | ----------- | ---------------------------------------- | --------- | ------------------------------------------------------------- | -------------- |
 | `scale`     | Icon size                                | `number`  | /                                                             | `1`            |
-| `animation` | Type of animation                        | `string`  | `wrench` / `ring` / `pulse` / `spin` / `spin-pulse` / `flash` | /              |
+| `animation` | Type of animation                        | `string`  | `wrench` / `ring` / `pulse` / `spin` / `spin-pulse` / `flash` / `float` | /              |
 | `speed`     | Animation speed                          | `string`  | `slow` / `fast`                                               | /              |
 | `hover`     | Enable animation only when being hovered | `boolean` | `true` / `false`                                              | `false`        |
 | `flip`      | Used to flip icon                        | `string`  | `vertical` / `horizontal` / `both`                            | /              |
@@ -189,6 +189,7 @@ Use `animation: string` to enablle animations:
   <v-icon name="fa-regular-bell" animation="ring"></v-icon>
   <v-icon name="ri-heart-pulse-line" animation="pulse"></v-icon>
   <v-icon name="bi-lightning" animation="flash"></v-icon>
+  <v-icon name="ri-sailboat-line" animation="float"></v-icon>
 </p>
 
 ```html
@@ -198,6 +199,7 @@ Use `animation: string` to enablle animations:
 <v-icon name="fa-regular-bell" animation="ring" />
 <v-icon name="ri-heart-pulse-line" animation="pulse" />
 <v-icon name="bi-lightning" animation="flash" />
+<v-icon name="ri-sailboat-line" animation="float" />
 ```
 
 Use `hover: boolean` to enable the animation only when the icon is hoverd:
