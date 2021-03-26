@@ -204,6 +204,7 @@ export default {
     setAnimation(value) {
       if (this.iconAnimation === value) this.iconAnimation = null;
       else this.iconAnimation = value;
+      console.log(value);
     },
     setAnimSpeed(value) {
       this.iconAnimSpeed = value;

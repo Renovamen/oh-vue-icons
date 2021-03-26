@@ -140,7 +140,7 @@ export default {
 | 名称         | 描述                 | 类型       | 接受值                                                         | 默认值          |
 | ----------- | ---------------------| --------- | ------------------------------------------------------------- | -------------- |
 | `scale`     | 图标大小               | `number`  | /                                                             | `1`            |
-| `animation` | 动画类型               | `string`  | `wrench` / `ring` / `pulse` / `spin` / `spin-pulse` / `flash` | /              |
+| `animation` | 动画类型               | `string`  | `wrench` / `ring` / `pulse` / `spin` / `spin-pulse` / `flash` / `float` | /              |
 | `speed`     | 动画速度               | `string`  | `slow` / `fast`                                               | /              |
 | `hover`     | 仅在被 hover 时启用动画 | `boolean` | `true` / `false`                                              | `false`        |
 | `flip`      | 翻转类型               | `string`  | `vertical` / `horizontal` / `both`                            | /              |
