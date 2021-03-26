@@ -1,5 +1,13 @@
 # Change Log
 
+# [0.3.1](https://github.com/Renovamen/oh-vue-icons/compare/v0.3.0...v0.3.1) (2021-03-26)
+
+### Features
+
+- **iconpack:** upgrade [Bootstrap Icons](https://icons.getbootstrap.com/) (17 updated icons) ([dee4165](https://github.com/Renovamen/oh-vue-icons/commit/dee4165c0f71e7e85e7b8962f1fbd4580a90c3d0))
+- **animation:** add `float` animation ([f94d1c3](https://github.com/Renovamen/oh-vue-icons/commit/f94d1c34afc4836be16448f4a9a7b3975b44f803))
+
+
 ## [0.3.0](https://github.com/Renovamen/oh-vue-icons/compare/v0.2.2...v0.3.0) (2021-03-24)
 
 ### Features
