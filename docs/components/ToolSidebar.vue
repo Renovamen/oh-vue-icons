@@ -38,7 +38,7 @@
       <div class="title">
         {{ $t("toolbar.animation") }}
       </div>
-      <div class="grid grid-cols-2 gap-2 text-sm">
+      <div class="grid grid-cols-3 gap-1 text-xs leading-3">
         <button
           :class="{ clicked: animation === 'spin' }"
           @click="$emit('set-animation', 'spin')"
@@ -74,6 +74,12 @@
           @click="$emit('set-animation', 'flash')"
         >
           Flash
+        </button>
+        <button
+          :class="{ clicked: animation === 'float' }"
+          @click="$emit('set-animation', 'float')"
+        >
+          Float
         </button>
       </div>
     </div>

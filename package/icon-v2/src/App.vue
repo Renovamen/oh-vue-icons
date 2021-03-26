@@ -29,13 +29,14 @@
     <v-icon name="fa-regular-bell" animation="ring" />
     <v-icon name="ri-heart-pulse-line" animation="pulse" />
     <v-icon name="bi-lightning" animation="flash" />
+    <v-icon name="ri-sailboat-line" animation="float" />
     <h3>Hover</h3>
     <v-icon name="ri-refresh-line" animation="spin" hover />
     <h3>Parent Hover</h3>
-    <div class="ov-parent ov-hover" style="cursor: pointer">
+    <span class="ov-parent ov-hover" style="cursor: pointer">
       <v-icon name="ri-refresh-line" animation="spin" hover />
       Hover me!
-    </div>
+    </span>
     <h3>Speed</h3>
     Slow:
     <v-icon name="ri-refresh-line" animation="spin" speed="slow" /> Normal:

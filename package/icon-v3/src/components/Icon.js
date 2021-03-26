@@ -32,7 +32,8 @@ export default {
           val === "wrench" ||
           val === "ring" ||
           val === "pulse" ||
-          val === "flash"
+          val === "flash" ||
+          val === "float"
         );
       }
     },
@@ -85,6 +86,7 @@ export default {
         "ov-ring": this.animation === "ring",
         "ov-pulse": this.animation === "pulse",
         "ov-flash": this.animation === "flash",
+        "ov-float": this.animation === "float",
         "ov-hover": this.hover,
         "ov-fast": this.speed === "fast",
         "ov-slow": this.speed === "slow"
@@ -216,15 +218,10 @@ export default {
     if (this.x) options.x = this.x;
     if (this.y) options.y = this.y;
 
-    const transOri = this.icon
-      ? `${Number((this.icon.width / 2 + this.icon.minX).toFixed(3))} ${Number(
-          (this.icon.height / 2 + this.icon.minY).toFixed(3)
-        )}`
-      : `50% 50%`;
-
     if (this.raw) {
-      let html = `<g transform-origin="${transOri}">${this.raw}</g>`;
-      if (this.title) html = `<title>${escapeHTML(this.title)}</title>${html}`;
+      const html = this.title
+        ? `<title>${escapeHTML(this.title)}</title>${this.raw}`
+        : this.raw;
       options.innerHTML = html;
     }
 
@@ -236,30 +233,24 @@ export default {
       this.raw
         ? null
         : content.concat([
-            h(
-              "g",
-              {
-                "transform-origin": `${transOri}`
-              },
-              this.$slots.default
-                ? this.$slots.default()
-                : this.icon
-                ? [
-                    ...this.icon.paths.map((path, i) =>
-                      h("path", {
-                        ...path,
-                        key: `path-${i}`
-                      })
-                    ),
-                    ...this.icon.polygons.map((polygon, i) =>
-                      h("polygon", {
-                        ...polygon,
-                        key: `polygon-${i}`
-                      })
-                    )
-                  ]
-                : []
-            )
+            this.$slots.default
+              ? this.$slots.default()
+              : this.icon
+              ? [
+                  ...this.icon.paths.map((path, i) =>
+                    h("path", {
+                      ...path,
+                      key: `path-${i}`
+                    })
+                  ),
+                  ...this.icon.polygons.map((polygon, i) =>
+                    h("polygon", {
+                      ...polygon,
+                      key: `polygon-${i}`
+                    })
+                  )
+                ]
+              : []
           ])
     );
   },

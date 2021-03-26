@@ -15,7 +15,8 @@
     "lint-fix": "eslint --fix --ext .js,.vue ./",
     "pub": "sh ./scripts/publish.sh",
     "submodule": "git submodule update --init",
-    "update": "sh ./scripts/update.sh"
+    "update": "sh ./scripts/update.sh",
+    "cp-readme": "cp {README.md,README-CN.md} package/"
   },
   "husky": {
     "hooks": {

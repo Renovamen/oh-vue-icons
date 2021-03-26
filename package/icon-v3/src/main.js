@@ -18,7 +18,8 @@ import {
   FaRegularBell,
   RiHeartPulseLine,
   BiLightning,
-  HiAcademicCap
+  HiAcademicCap,
+  RiSailboatLine
 } from "../../icons";
 
 OhVueIcon.add([
@@ -37,7 +38,8 @@ OhVueIcon.add([
   FaRegularBell,
   RiHeartPulseLine,
   BiLightning,
-  HiAcademicCap
+  HiAcademicCap,
+  RiSailboatLine
 ]);
 
 OhVueIcon.add({
