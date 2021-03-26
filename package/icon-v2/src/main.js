@@ -22,7 +22,7 @@ import {
   RiSailboatLine
 } from "../../icons";
 
-OhVueIcon.add([
+OhVueIcon.add(
   FaFlag,
   FcLinux,
   BiBattery,
@@ -40,7 +40,7 @@ OhVueIcon.add([
   BiLightning,
   HiAcademicCap,
   RiSailboatLine
-]);
+);
 
 OhVueIcon.add({
   name: "baidu",

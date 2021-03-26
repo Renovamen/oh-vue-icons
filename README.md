@@ -80,7 +80,7 @@ import App from "./App.vue";
 import OhVueIcon from "oh-vue-icons";
 
 import { FaFlag, RiZhihuFill } from "oh-vue-icons/icons";
-OhVueIcon.add([FaFlag, RiZhihuFill]);
+OhVueIcon.add(FaFlag, RiZhihuFill);
 
 Vue.component("v-icon", OhVueIcon);
 
@@ -109,7 +109,7 @@ import App from "./App.vue";
 import OhVueIcon from "oh-vue-icons/dist/v3/icon.umd.min";
 
 import { FaFlag, RiZhihuFill } from "oh-vue-icons/icons";
-OhVueIcon.add([FaFlag, RiZhihuFill]);
+OhVueIcon.add(FaFlag, RiZhihuFill);
 
 const app = createApp(App);
 app.component("v-icon", OhVueIcon);
