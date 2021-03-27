@@ -269,10 +269,8 @@ export default {
     if (!icons[name].minY) icons[name].minY = 0;
   },
 
-  add(data) {
-    if (Array.isArray(data)) {
-      for (let icon of data) this.register(icon);
-    } else this.register(data);
+  add(...data) {
+    for (const icon of data) this.register(icon);
   },
 
   icons

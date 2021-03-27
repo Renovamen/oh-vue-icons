@@ -2,13 +2,16 @@ iconpacks/gameicons/
 *.zip
 .yarnrc
 .npmrc
-
 docs/dist/
 package/*/dist/
 package/*/dist-css/
 package/dist/*/*.js
 package/dist-css/*/*.js
 package/dist-css/*/*.css
+
+
+# vscode settings
+.vscode
 
 # Logs
 logs
