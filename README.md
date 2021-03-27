@@ -97,7 +97,7 @@ If you don't care about the bundle size and want to import a whole icon pack, yo
 import * as FaIcons from "oh-vue-icons/icons/fa";
 
 const Fa = Object.values({ ...FaIcons });
-OhVueIcon.add(Fa);
+OhVueIcon.add(...Fa);
 ```
 
 #### Vue 3

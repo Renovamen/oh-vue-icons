@@ -65,7 +65,7 @@ import App from "./App.vue";
 import OhVueIcon from "oh-vue-icons";
 
 import { FaFlag, RiZhihuFill } from "oh-vue-icons/icons";
-OhVueIcon.add([FaFlag, RiZhihuFill]);
+OhVueIcon.add(FaFlag, RiZhihuFill);
 
 Vue.component("v-icon", OhVueIcon);
 
@@ -79,10 +79,10 @@ new Vue({
 ```js
 // main.js
 // 引入 Font Awesome
-import * as FaIcons from 'oh-vue-icons/icons/fa'
+import * as FaIcons from "oh-vue-icons/icons/fa";
 
-const Fa = Object.values({ ...FaIcons })
-OhVueIcon.add(Fa)
+const Fa = Object.values({ ...FaIcons });
+OhVueIcon.add(...Fa);
 ```
 
 #### Vue 3
@@ -94,7 +94,7 @@ import App from "./App.vue";
 import OhVueIcon from "oh-vue-icons/dist/v3/icon.umd.min";
 
 import { FaFlag, RiZhihuFill } from "oh-vue-icons/icons";
-OhVueIcon.add([FaFlag, RiZhihuFill]);
+OhVueIcon.add(FaFlag, RiZhihuFill);
 
 const app = createApp(App);
 app.component("v-icon", OhVueIcon);
