@@ -67,7 +67,7 @@ import App from "./App.vue";
 import OhVueIcon from "oh-vue-icons";
 
 import { FaFlag, RiZhihuFill } from "oh-vue-icons/icons";
-OhVueIcon.add([FaFlag, RiZhihuFill]);
+OhVueIcon.add(FaFlag, RiZhihuFill);
 
 Vue.component("v-icon", OhVueIcon);
 
@@ -84,7 +84,7 @@ If you don't care about the bundle size and want to import a whole icon pack, yo
 import * as FaIcons from "oh-vue-icons/icons/fa";
 
 const Fa = Object.values({ ...FaIcons });
-OhVueIcon.add(Fa);
+OhVueIcon.add(...Fa);
 ```
 
 #### Vue 3
@@ -96,7 +96,7 @@ import App from "./App.vue";
 import OhVueIcon from "oh-vue-icons/dist/v3/icon.umd.min";
 
 import { FaFlag, RiZhihuFill } from "oh-vue-icons/icons";
-OhVueIcon.add([FaFlag, RiZhihuFill]);
+OhVueIcon.add(FaFlag, RiZhihuFill);
 
 const app = createApp(App);
 app.component("v-icon", OhVueIcon);
