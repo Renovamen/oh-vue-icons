@@ -3,12 +3,8 @@ iconpacks/gameicons/
 .yarnrc
 .npmrc
 docs/dist/
-package/*/dist/
-package/*/dist-css/
 package/dist/*/*.js
-package/dist-css/*/*.js
-package/dist-css/*/*.css
-
+package/*/dist/
 
 # vscode settings
 .vscode

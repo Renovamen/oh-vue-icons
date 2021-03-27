@@ -1,6 +1,6 @@
 import { IconDataCustomize } from "../../types/icons";
 
-declare module "oh-vue-icons/dist-css/v3/icon.umd.min" {
+declare module "oh-vue-icons/dist/v2/icon.umd" {
   /**
    * Register icons to the component
    */
