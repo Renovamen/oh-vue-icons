@@ -271,7 +271,7 @@ export default {
   },
 
   add(...data) {
-    for (const icon of data) this.register(icon)
+    for (const icon of data) this.register(icon);
   },
 
   icons
