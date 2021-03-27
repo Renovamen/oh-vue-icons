@@ -21,7 +21,7 @@ Import `oh-vue-icons` and install it into Vue in `main.js`. You can only import 
 // main.js
 import Vue from "vue";
 import App from "./App.vue";
-import OhVueIcon from "oh-vue-icons/dist/v3/icon.umd.min";
+import OhVueIcon from "oh-vue-icons/dist/v3/icon.es";
 
 import { FaFlag, RiZhihuFill } from "oh-vue-icons/icons";
 OhVueIcon.add(FaFlag, RiZhihuFill);
@@ -55,20 +55,6 @@ export default {
   }
 };
 ```
-
-
-&nbsp;
-
-## Server Side Rendering (SSR)
-
-When using server side rendering (SSR), `oh-vue-icons` should be imported by:
-
-```js
-import OhVueIcon from "oh-vue-icons/dist-css/v3/icon.umd.min";
-import 'oh-vue-icons/dist-css/v3/icon.css'
-```
-
-or "Document is not defined" error will occured, due to the inline styles in the default imported file.
 
 
 &nbsp;

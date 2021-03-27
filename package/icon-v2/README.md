@@ -76,15 +76,6 @@ export default {
 
 or it will not be bundled, see [Nuxt's documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins) for details.
 
-Then import the component by:
-
-```js
-import OhVueIcon from "oh-vue-icons/dist-css/v2/icon.umd.min";
-import 'oh-vue-icons/dist-css/v2/icon.css'
-```
-
-or "Document is not defined" error will occured, due to the inline styles in the default imported file.
-
 
 &nbsp;
 

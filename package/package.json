@@ -1,6 +1,6 @@
 {
   "name": "oh-vue-icons",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "Include inline SVG icons from different popular icon packs in Vue easily.",
   "keywords": [
     "font awesome",
@@ -34,6 +34,7 @@
   },
   "license": "MIT",
   "author": "Renovamen <renovamenzxh@gmail.com>",
-  "main": "./dist/v2/icon.umd.min.js",
+  "main": "./dist/v2/icon.umd.js",
+  "module": "./dist/v2/icon.es.js",
   "types": "./types/index.d.ts"
 }

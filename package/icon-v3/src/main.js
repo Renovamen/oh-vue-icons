@@ -1,6 +1,6 @@
 import { createApp } from "vue";
 import App from "./App.vue";
-import OhVueIcon from ".";
+import OhVueIcon from "./components";
 
 import {
   FaFlag,

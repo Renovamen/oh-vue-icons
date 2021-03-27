@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import OhVueIcon from "../../package/icon-v2/src";
+import OhVueIcon from "../../package/icon-v2/src/components";
 const keys = Object.keys(OhVueIcon.icons);
 
 function randomIcon() {
