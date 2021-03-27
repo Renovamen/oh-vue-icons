@@ -4,5 +4,5 @@ declare module "oh-vue-icons" {
   /**
    * Register icons to the component
    */
-  export function add(data: IconDataCustomize | IconDataCustomize[]): void;
+  export function add(...data: IconDataCustomize[]): void;
 }
