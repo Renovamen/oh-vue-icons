@@ -106,7 +106,7 @@ OhVueIcon.add(...Fa);
 // main.js
 import { createApp } from "vue";
 import App from "./App.vue";
-import OhVueIcon from "oh-vue-icons/dist/v3/icon.umd.min";
+import OhVueIcon from "oh-vue-icons/dist/v3/icon.es";
 
 import { FaFlag, RiZhihuFill } from "oh-vue-icons/icons";
 OhVueIcon.add(FaFlag, RiZhihuFill);
@@ -170,9 +170,7 @@ Some examples could be found in the [documentation](https://oh-vue-icons.vercel.
 
 &nbsp;
 
-## Notes
-
-### Nuxt.js
+## Nuxt.js
 
 When using Nuxt.js, `oh-vue-icons` should be added to the transpile build option in `nuxt.config.js`:
 
@@ -186,24 +184,6 @@ export default {
 ```
 
 or it will not be bundled, see [Nuxt's documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins) for details.
-
-&nbsp;
-
-### Server Side Rendering (SSR)
-
-When using server side rendering (SSR) (for example, in Nuxt.js), `oh-vue-icons` should be imported by:
-
-```js
-// Vue 3
-import OhVueIcon from "oh-vue-icons/dist-css/v3/icon.umd.min";
-import 'oh-vue-icons/dist-css/v3/icon.css'
-
-// Vue 2
-import OhVueIcon from "oh-vue-icons/dist-css/v2/icon.umd.min";
-import 'oh-vue-icons/dist-css/v2/icon.css'
-```
-
-or "Document is not defined" error will occured, due to the inline styles in the default imported file.
 
 
 &nbsp;
