@@ -52,3 +52,6 @@
 [submodule "iconpacks/coreui-icons"]
 	path = iconpacks/coreui-icons
 	url = https://github.com/coreui/coreui-icons.git
+[submodule "iconpacks/material-design-icons"]
+	path = iconpacks/material-design-icons
+	url = https://github.com/google/material-design-icons.git

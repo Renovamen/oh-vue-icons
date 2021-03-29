@@ -11,12 +11,12 @@ links:
 
 - Tree-shakable, which allows you to only import the used icons
 - Supports Vue 2 and Vue 3
-- Supports 20000+ icons from 19 popular icon packs, see [here](#supported-icon-packs)
+- Supports 28000+ icons from 20 popular icon packs, see [here](#supported-icon-packs)
 
 
 ## Supported Icon Packs
 
-Now the following 19 icon packs are supported:
+Now the following 20 icon packs are supported:
 
 | Icon Pack                                                     | Prefix | License                                                       | Icon Numer |
 | ------------------------------------------------------------- | ------ | ------------------------------------------------------------- | ---------- |
@@ -31,6 +31,7 @@ Now the following 19 icon packs are supported:
 | [Heroicons](https://heroicons.com/)                           | `hi`   | [MIT](https://github.com/tailwindlabs/heroicons/blob/master/LICENSE) | 452       |
 | [Ionicons](https://ionicons.com/)                             | `io`   | [MIT](https://github.com/ionic-team/ionicons/blob/master/LICENSE) | 1332      |
 | [Line Awesome](https://icons8.com/line-awesome)               | `la`   | [MIT / Good Boy](https://github.com/icons8/line-awesome/blob/master/LICENSE.md) | 1544      |
+| [Material Design icons](https://github.com/google/material-design-icons) | `md`   | [Apache 2.0](https://github.com/google/material-design-icons/blob/master/LICENSE) | 6911      |
 | [Octicons](https://primer.style/octicons/)                    | `oi`   | [MIT](https://github.com/primer/octicons/blob/master/LICENSE) | 209        |
 | [Pokemon Icons](https://theartificial.github.io/pokemon-icons/) (Colorful)| `pi`   | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | 1453      |
 | [PrimeIcons](https://github.com/primefaces/primeicons)        | `pr`   | [MIT](https://github.com/primefaces/primeicons/blob/master/LICENSE) | 202       |
@@ -124,7 +125,7 @@ The icon names should be passed using **kebab-case**.
   <v-icon name="bi-music-player"></v-icon>
   <v-icon name="fc-globe"></v-icon>
   <v-icon name="oi-repo-pull"></v-icon>
-  <v-icon name="pi-charizard"></v-icon>
+  <v-icon name="vi-file-type-gridsome"></v-icon>
 </p>
 
 ```html
@@ -133,7 +134,7 @@ The icon names should be passed using **kebab-case**.
     <v-icon name="bi-music-player" />
     <v-icon name="fc-globe" />
     <v-icon name="oi-repo-pull" />
-    <v-icon name="pi-charizard" />
+    <v-icon name="vi-file-type-gridsome" />
   </div>
 </template>
 ```

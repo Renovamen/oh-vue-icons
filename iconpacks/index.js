@@ -205,6 +205,29 @@ module.exports = {
       licenseUrl: "https://github.com/icons8/line-awesome/blob/master/LICENSE.md"
     },
     {
+      id: "md",
+      name: "Material Design icons",
+      contents: [
+        {
+          files: path.resolve(__dirname, "material-design-icons/src/*/*/*/24px.svg"),
+          formatter: (name) => `Md${name}`,
+          nameFromPath: (file) => {
+            const match = file.match(/material-design-icons\/src\/(.*?)\/(.*?)\/(.*?)\/24px.svg/);
+            let name = match[2].replace(/_/g, "");
+            const style = match[3].replace(/materialicons/g, "");
+            if (style !== "") name = `${name}-${style}`;
+            return name;
+          },
+          prefix: (name) => `md-${name}`,
+          scale: 0.96
+        },
+      ],
+      projectUrl: "https://github.com/google/material-design-icons",
+      website: "http://google.github.io/material-design-icons/",
+      license: "Apache License Version 2.0",
+      licenseUrl: "http://www.apache.org/licenses/"
+    },
+    {
       id: "oi",
       name: "Octicons",
       contents: [

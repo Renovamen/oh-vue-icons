@@ -60,10 +60,12 @@ async function writeIconModule(icon, DIST, ASSETS) {
       const svgStrRaw = await fs.readFile(file, "utf8");
       const svgStr = await svgo.optimize(svgStrRaw).then(result => result.data);
 
-      const name = path
-        .basename(file, path.extname(file))
-        .replace(/_/g, "-")
-        .replace(/\$/g, "");
+      const name =
+        (content.nameFromPath && content.nameFromPath(file)) ||
+        path
+          .basename(file, path.extname(file))
+          .replace(/_/g, "-")
+          .replace(/\$/g, "");
 
       const rawName = (content.raw && content.raw(name)) || name;
       const prefixName = (content.prefix && content.prefix(rawName)) || rawName;

@@ -13,14 +13,14 @@
 
 - 它是 tree-shakable 的，因此你能够仅引入你需要的图标从而减小打包体积
 - 支持 Vue 2 和 Vue 3
-- 支持来自 [19 个流行的图标库](#支持的图标库)的 20000+ 个图标
+- 支持来自 [20 个流行的图标库](#支持的图标库)的 28000+ 个图标
 
 
 &nbsp;
 
 ## 支持的图标库
 
-目前支持以下 19 个图标库：
+目前支持以下 20 个图标库：
 
 | 图标库                                                         | 前缀    | 协议                                                          | 图标数量     |
 | ------------------------------------------------------------- | ------ | ------------------------------------------------------------- | ---------- |
@@ -35,6 +35,7 @@
 | [Heroicons](https://heroicons.com/)                           | `hi`   | [MIT](https://github.com/tailwindlabs/heroicons/blob/master/LICENSE) | 452       |
 | [Ionicons](https://ionicons.com/)                             | `io`   | [MIT](https://github.com/ionic-team/ionicons/blob/master/LICENSE) | 1332      |
 | [Line Awesome](https://icons8.com/line-awesome)               | `la`   | [MIT / Good Boy](https://github.com/icons8/line-awesome/blob/master/LICENSE.md) | 1544      |
+| [Material Design icons](https://github.com/google/material-design-icons) | `md`   | [Apache 2.0](https://github.com/google/material-design-icons/blob/master/LICENSE) | 6911      |
 | [Octicons](https://primer.style/octicons/)                    | `oi`   | [MIT](https://github.com/primer/octicons/blob/master/LICENSE) | 209        |
 | [Pokemon Icons](https://theartificial.github.io/pokemon-icons/) (Colorful)| `pi`   | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | 1453      |
 | [PrimeIcons](https://github.com/primefaces/primeicons)        | `pr`   | [MIT](https://github.com/primefaces/primeicons/blob/master/LICENSE) | 202       |
