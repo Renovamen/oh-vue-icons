@@ -49,13 +49,18 @@ module.exports = {
       name: "Line Awesome"
     },
     {
+      id: "md",
+      name: "Material Design icons"
+    },
+    {
       id: "oi",
       name: "Octicons"
     },
     {
       id: "pi",
       name: "Pokemon Icons",
-      multiColor: true
+      multiColor: true,
+      website: "https://theartificial.github.io/pokemon-icons/"
     },
     {
       id: "pr",

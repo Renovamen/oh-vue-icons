@@ -213,8 +213,10 @@ export default {
       this.attribs
     );
 
-    if (!this.attribs.fill)
-      options.fill = this.fill ? this.fill : "currentColor";
+    if (this.attribs.stroke)
+      options.stroke = this.fill ? this.fill : "currentColor";
+    else options.fill = this.fill ? this.fill : "currentColor";
+
     if (this.x) options.x = this.x;
     if (this.y) options.y = this.y;
 

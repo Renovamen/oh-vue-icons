@@ -72,7 +72,22 @@
       </div>
 
       <!----------------- Icons ----------------->
-      <div class="mt-10">
+      <div
+        v-if="filterBySearch(getIconSet.components).length === 0"
+        class="mt-16"
+      >
+        <p class="desc leading-7">
+          Due to the large total size of icon files, icons from
+          <b>{{ this.tabSelected }}</b> can not be shown here. Please search for
+          icons on <b>{{ this.tabSelected }}</b
+          >'s
+          <a :href="getIconSet.website" target="_blank" class="text-blue-600"
+            ><b>official website</b></a
+          >, and use the icon name with prefix
+          <code>{{ getIconSet.id }}-</code> in <code>oh-vue-icons</code>.
+        </p>
+      </div>
+      <div v-else class="mt-10">
         <div class="grid grid-cols-4 sm:grid-cols-8 gap-3">
           <div
             v-for="(icon, index) in filterBySearch(getIconSet.components).slice(
@@ -166,10 +181,12 @@ export default {
     for (let icon of icons) {
       this.iconSets.push({
         tab: icon.name,
+        id: icon.id,
         components: iconKeys.filter(function(x) {
           return x.slice(0, icon.id.length) === icon.id;
         }),
-        multiColor: icon.multiColor
+        multiColor: icon.multiColor,
+        website: icon.website
       });
     }
   },
