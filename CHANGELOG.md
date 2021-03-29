@@ -1,6 +1,29 @@
 # Change Log
 
-# [0.3.1](https://github.com/Renovamen/oh-vue-icons/compare/v0.3.0...v0.3.1) (2021-03-26)
+## [0.4.1](https://github.com/Renovamen/oh-vue-icons/compare/v0.3.1...v0.4.1) (2021-03-29)
+
+### BREAKING CHANGES
+
+- expand data argument to remove need of array whem import icons ([8db96f3](https://github.com/Renovamen/oh-vue-icons/commit/8db96f33bd1055e3f899f6ec27b484c3ebdc6375)) ([#10](https://github.com/Renovamen/oh-vue-icons/pull/10))
+- use rollup to bundle the component in esm format ([4027627](https://github.com/Renovamen/oh-vue-icons/commit/4027627176c75dc6625b398ca93e3886d9bcbd71)) ([#9](https://github.com/Renovamen/oh-vue-icons/issues/9))
+- import paths have changed:
+
+  Icons:
+
+  ```diff
+  - OhVueIcon.add([FaFlag, RiZhihuFill]);
+  + OhVueIcon.add(FaFlag, RiZhihuFill);
+  ```
+
+  Vue 3:
+
+  ```diff
+  - import OhVueIcon from "oh-vue-icons/dist/v3/icon.umd.min";
+  + import OhVueIcon from "oh-vue-icons/dist/v3/icon.es";
+  ```
+
+
+## [0.3.1](https://github.com/Renovamen/oh-vue-icons/compare/v0.3.0...v0.3.1) (2021-03-26)
 
 ### Features
 
