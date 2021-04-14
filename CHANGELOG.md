@@ -1,5 +1,18 @@
 # Change Log
 
+## [0.4.2](https://github.com/Renovamen/oh-vue-icons/compare/v0.4.1...v0.4.2) (2021-04-14)
+
+### Features
+
+- **iconpacks:** add Material Design Icons ([#8](https://github.com/Renovamen/oh-vue-icons/issues/8)) ([868e773](https://github.com/Renovamen/oh-vue-icons/commit/868e77343b1de788b8ca811631ae878e9d62a11c))
+- **iconpack:** upgrade ([2126acb](https://github.com/Renovamen/oh-vue-icons/commit/2126acbe4eafdf5ec72850aa38929f7711cacf14)):
+  - [academicons](https://github.com/jpswalsh/academicons): 2 updated icons
+  - [Heroicons](https://heroicons.com/) (v1.0.0): 2 updated icons
+  - [Octicons](https://primer.style/octicons/) (v13.0.0): 10 new icons, 3 fixed icons
+  - [Simple Icons](https://simpleicons.org/) (v4.19.0): 7 new icons, 6 updated icons
+  - [VSCode Icons](https://github.com/vscode-icons/vscode-icons) (v11.4.0): 4 new icons, 1 updated icon
+
+
 ## [0.4.1](https://github.com/Renovamen/oh-vue-icons/compare/v0.3.1...v0.4.1) (2021-03-29)
 
 ### BREAKING CHANGES
