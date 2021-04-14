@@ -4,7 +4,7 @@ const camelcase = require("camelcase");
 const rimraf = require("rimraf");
 
 const { icons } = require("../iconpacks");
-const { getIconFiles, convertSVG, writeSVG } = require("./utils");
+const { getIconFiles, convertSVG /* writeSVG */ } = require("./utils");
 const {
   autoGenerateTemplate,
   packageJsonTemplate,
@@ -25,8 +25,8 @@ async function dirInit(DIST, ASSETS) {
   rimraf.sync(DIST);
   await fs.mkdir(DIST, { recursive: true }).catch(ignore);
 
-  rimraf.sync(ASSETS);
-  await fs.mkdir(ASSETS, { recursive: true }).catch(ignore);
+  // rimraf.sync(ASSETS);
+  // await fs.mkdir(ASSETS, { recursive: true }).catch(ignore);
 
   const write = (filePath, str) =>
     fs.writeFile(path.resolve(DIST, filePath), str, "utf8").catch(ignore);
@@ -47,11 +47,11 @@ async function writeIconModule(icon, DIST, ASSETS) {
   await fs.appendFile(path.resolve(DIST, "index.js"), entryModule, "utf8");
   await fs.appendFile(path.resolve(DIST, "index.d.ts"), entryModule, "utf8");
 
-  const svgDir = path.resolve(ASSETS, `${icon.id}`);
-  rimraf.sync(svgDir);
-  await fs.mkdir(svgDir, { recursive: true }).catch(ignore);
+  // const svgDir = path.resolve(ASSETS, `${icon.id}`);
+  // rimraf.sync(svgDir);
+  // await fs.mkdir(svgDir, { recursive: true }).catch(ignore);
 
-  const exists = new Set(); // for remove duplicate
+  const exists = new Set(); // for removing duplicate
   var iconNum = 0;
 
   for (const content of icon.contents) {
@@ -76,7 +76,7 @@ async function writeIconModule(icon, DIST, ASSETS) {
       const pascalName = camelcase(rawName, { pascalCase: true });
       const prefixPascalName =
         (content.formatter && content.formatter(pascalName)) || pascalName;
-      if (exists.has(prefixPascalName)) continue; // for remove duplicate
+      if (exists.has(prefixPascalName)) continue; // remove duplicate
       exists.add(prefixPascalName);
 
       const iconData = await convertSVG(
@@ -98,7 +98,7 @@ async function writeIconModule(icon, DIST, ASSETS) {
         "utf8"
       );
 
-      await writeSVG(svgDir, iconData);
+      // await writeSVG(svgDir, iconData);
 
       exists.add(file);
     }
