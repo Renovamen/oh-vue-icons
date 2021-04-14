@@ -433,7 +433,7 @@ or it will not be bundled, see [Nuxt's documentation](https://nuxtjs.org/docs/2.
 
 - This project is inspired by and based on [vue-awesome](https://github.com/Justineo/vue-awesome) and [react-icons](https://github.com/react-icons/react-icons).
 
-- This website is hosted on [Vercel](https://vercel.com/).
+- This website is hosted on [Netlify](https://www.netlify.com/).
 
 
 ## License

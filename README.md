@@ -50,7 +50,7 @@ Now the following 20 icon packs are supported:
 
 ## Documentation
 
-Search for icons and view the documentation [here](https://oh-vue-icons.vercel.app).
+Search for icons and view the documentation [here](https://oh-vue-icons.netlify.app).
 
 
 &nbsp;
@@ -147,7 +147,7 @@ The icon names should be passed using **kebab-case**.
 
 For [Font Awesome 5](https://fontawesome.com/) icons, icons from `regular` pack have name prop values like `fa-regular-flag`. Icons from `solid` and `brands` pack have name prop values like `fa-beer` and `fa-github`.
 
-See the [documentation](https://oh-vue-icons.vercel.app/docs#basic-usage) for more about the usage.
+See the [documentation](https://oh-vue-icons.netlify.app/docs#basic-usage) for more about the usage.
 
 
 &nbsp;
@@ -166,7 +166,7 @@ See the [documentation](https://oh-vue-icons.vercel.app/docs#basic-usage) for mo
 | `title`     | Icon title                               | `string`  | /                                                             | /              |
 | `inverse`   | Make icon color white?                   | `boolean` | `true` / `false`                                              | `false`        |
 
-Some examples could be found in the [documentation](https://oh-vue-icons.vercel.app/docs#examples).
+Some examples could be found in the [documentation](https://oh-vue-icons.netlify.app/docs#examples).
 
 
 &nbsp;
@@ -199,7 +199,7 @@ Contributions are welcomed, learn how to contribute [here](CONTRIBUTING.md).
 ## Acknowledgements
 
 - This project is inspired by and based on [vue-awesome](https://github.com/Justineo/vue-awesome) and [react-icons](https://github.com/react-icons/react-icons).
-- The [website](https://oh-vue-icons.vercel.app/) is hosted on [Vercel](https://vercel.com/).
+- The [website](https://oh-vue-icons.netlify.app/) is hosted on [Netlify](https://www.netlify.com/).
 
 
 &nbsp;
