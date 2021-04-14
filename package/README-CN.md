@@ -13,14 +13,14 @@
 
 - 它是 tree-shakable 的，因此你能够仅引入你需要的图标从而减小打包体积
 - 支持 Vue 2 和 Vue 3
-- 支持来自 [19 个流行的图标库](#支持的图标库)的 20000+ 个图标
+- 支持来自 [20 个流行的图标库](#支持的图标库)的 28000+ 个图标
 
 
 &nbsp;
 
 ## 支持的图标库
 
-目前支持以下 19 个图标库：
+目前支持以下 20 个图标库：
 
 | 图标库                                                         | 前缀    | 协议                                                          | 图标数量     |
 | ------------------------------------------------------------- | ------ | ------------------------------------------------------------- | ---------- |
@@ -35,13 +35,14 @@
 | [Heroicons](https://heroicons.com/)                           | `hi`   | [MIT](https://github.com/tailwindlabs/heroicons/blob/master/LICENSE) | 452       |
 | [Ionicons](https://ionicons.com/)                             | `io`   | [MIT](https://github.com/ionic-team/ionicons/blob/master/LICENSE) | 1332      |
 | [Line Awesome](https://icons8.com/line-awesome)               | `la`   | [MIT / Good Boy](https://github.com/icons8/line-awesome/blob/master/LICENSE.md) | 1544      |
-| [Octicons](https://primer.style/octicons/)                    | `oi`   | [MIT](https://github.com/primer/octicons/blob/master/LICENSE) | 209        |
+| [Material Design icons](https://github.com/google/material-design-icons) | `md`   | [Apache 2.0](https://github.com/google/material-design-icons/blob/master/LICENSE) | 6911      |
+| [Octicons](https://primer.style/octicons/)                    | `oi`   | [MIT](https://github.com/primer/octicons/blob/master/LICENSE) | 219        |
 | [Pokemon Icons](https://theartificial.github.io/pokemon-icons/) (Colorful)| `pi`   | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | 1453      |
 | [PrimeIcons](https://github.com/primefaces/primeicons)        | `pr`   | [MIT](https://github.com/primefaces/primeicons/blob/master/LICENSE) | 202       |
 | [Pixelarticons](https://pixelarticons.com/)                   | `px`   | [MIT](https://github.com/halfmage/pixelarticons/blob/master/LICENSE) | 460       |
 | [Remix Icon](https://github.com/Remix-Design/RemixIcon)       | `ri`   | [Apache 2.0](https://github.com/Remix-Design/RemixIcon/blob/master/License) | 2271       |
-| [Simple Icons](https://simpleicons.org/)                      | `si`   | [CC0 1.0 Universal](https://github.com/simple-icons/simple-icons/blob/develop/LICENSE.md) | 1872       |
-| [VSCode Icons](https://github.com/vscode-icons/vscode-icons) (Colorful) | `vi`   | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | 1068       |
+| [Simple Icons](https://simpleicons.org/)                      | `si`   | [CC0 1.0 Universal](https://github.com/simple-icons/simple-icons/blob/develop/LICENSE.md) | 1882       |
+| [VSCode Icons](https://github.com/vscode-icons/vscode-icons) (Colorful) | `vi`   | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | 1072       |
 | [Weather Icons](https://erikflowers.github.io/weather-icons/) | `wi`   | [SIL OFL 1.1](http://scripts.sil.org/OFL)                     | 219        |
 
 
@@ -49,7 +50,7 @@
 
 ## 文档
 
-在[这里](https://oh-vue-icons.vercel.app/cn)查找图标和查看文档。
+在[这里](https://oh-vue-icons.netlify.app/cn)查找图标和查看文档。
 
 
 &nbsp;
@@ -146,7 +147,7 @@ export default {
 
 对于 [Font Awesome 5](https://fontawesome.com/)，来自 `regular` 包的图标的 `name` prop 值的前缀为 `fa-regular-` 而不是 `fa-`，如 `fa-regular-flag`。而 `solid` 和 `brands` 包的图标前缀均为 `fa-`，如 `fa-beer` 和 `fa-github`。
 
-[文档](https://oh-vue-icons.vercel.app/cn/docs#基本用法)中有更多的用法。
+[文档](https://oh-vue-icons.netlify.app/cn/docs#基本用法)中有更多的用法。
 
 
 &nbsp;
@@ -165,7 +166,7 @@ export default {
 | `title`     | 图标的 title           | `string`  | /                                                             | /              |
 | `inverse`   | 把图标变成白色          | `boolean` | `true` / `false`                                              | `false`        |
 
-[文档](https://oh-vue-icons.vercel.app/cn/docs#示例)中有一些示例。
+[文档](https://oh-vue-icons.netlify.app/cn/docs#示例)中有一些示例。
 
 
 &nbsp;
@@ -198,7 +199,7 @@ export default {
 ## 致谢
 
 - 本项目受到了 [vue-awesome](https://github.com/Justineo/vue-awesome) 和 [react-icons](https://github.com/react-icons/react-icons) 的启发并借鉴了它们的部分代码。
-- [文档网站](https://oh-vue-icons.vercel.app/)部署在 [Vercel](https://vercel.com/) 上。
+- [文档网站](https://oh-vue-icons.netlify.app/)部署在 [Netlify](https://www.netlify.com/) 上。
 
 
 &nbsp;

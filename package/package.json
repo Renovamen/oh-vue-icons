@@ -24,7 +24,7 @@
     "vue3",
     "icons"
   ],
-  "homepage": "https://oh-vue-icons.vercel.app",
+  "homepage": "https://oh-vue-icons.netlify.app",
   "bugs": {
     "url": "https://github.com/Renovamen/oh-vue-icons/issues"
   },

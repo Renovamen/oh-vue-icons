@@ -13,14 +13,14 @@ A [Vue](https://vuejs.org/) component for including inline SVG icons from differ
 
 - Tree-shakable, which allows you to only import the used icons
 - Supports Vue 2 and Vue 3
-- Supports 20000+ icons from 19 popular icon packs, see [here](#supported-icon-packs)
+- Supports 28000+ icons from 20 popular icon packs, see [here](#supported-icon-packs)
 
 
 &nbsp;
 
 ## Supported Icon Packs
 
-Now the following 19 icon packs are supported:
+Now the following 20 icon packs are supported:
 
 | Icon Pack                                                     | Prefix | License                                                       | Icon Numer |
 | ------------------------------------------------------------- | ------ | ------------------------------------------------------------- | ---------- |
@@ -35,13 +35,14 @@ Now the following 19 icon packs are supported:
 | [Heroicons](https://heroicons.com/)                           | `hi`   | [MIT](https://github.com/tailwindlabs/heroicons/blob/master/LICENSE) | 452       |
 | [Ionicons](https://ionicons.com/)                             | `io`   | [MIT](https://github.com/ionic-team/ionicons/blob/master/LICENSE) | 1332      |
 | [Line Awesome](https://icons8.com/line-awesome)               | `la`   | [MIT](https://github.com/ionic-team/ionicons/blob/master/LICENSE) | 1544      |
-| [Octicons](https://primer.style/octicons/)                    | `oi`   | [MIT](https://github.com/primer/octicons/blob/master/LICENSE) | 209        |
+| [Material Design icons](https://github.com/google/material-design-icons) | `md`   | [Apache 2.0](https://github.com/google/material-design-icons/blob/master/LICENSE) | 6911      |
+| [Octicons](https://primer.style/octicons/)                    | `oi`   | [MIT](https://github.com/primer/octicons/blob/master/LICENSE) | 219        |
 | [Pokemon Icons](https://theartificial.github.io/pokemon-icons/) (Colorful)| `pi`   | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | 1453      |
 | [PrimeIcons](https://github.com/primefaces/primeicons)        | `pr`   | [MIT](https://github.com/primefaces/primeicons/blob/master/LICENSE) | 202       |
 | [Pixelarticons](https://pixelarticons.com/)                   | `px`   | [MIT](https://github.com/halfmage/pixelarticons/blob/master/LICENSE) | 460       |
 | [Remix Icon](https://github.com/Remix-Design/RemixIcon)       | `ri`   | [Apache 2.0](https://github.com/Remix-Design/RemixIcon/blob/master/License) | 2271       |
-| [Simple Icons](https://simpleicons.org/)                      | `si`   | [CC0 1.0 Universal](https://github.com/simple-icons/simple-icons/blob/develop/LICENSE.md) | 1872       |
-| [VSCode Icons](https://github.com/vscode-icons/vscode-icons) (Colorful) | `vi`   | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | 1068       |
+| [Simple Icons](https://simpleicons.org/)                      | `si`   | [CC0 1.0 Universal](https://github.com/simple-icons/simple-icons/blob/develop/LICENSE.md) | 1882       |
+| [VSCode Icons](https://github.com/vscode-icons/vscode-icons) (Colorful) | `vi`   | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | 1072       |
 | [Weather Icons](https://erikflowers.github.io/weather-icons/) | `wi`   | [SIL OFL 1.1](http://scripts.sil.org/OFL)                     | 219        |
 
 
@@ -49,7 +50,7 @@ Now the following 19 icon packs are supported:
 
 ## Documentation
 
-Search for icons and view the documentation [here](https://oh-vue-icons.vercel.app).
+Search for icons and view the documentation [here](https://oh-vue-icons.netlify.app).
 
 
 &nbsp;
@@ -146,7 +147,7 @@ The icon names should be passed using **kebab-case**.
 
 For [Font Awesome 5](https://fontawesome.com/) icons, icons from `regular` pack have name prop values like `fa-regular-flag`. Icons from `solid` and `brands` pack have name prop values like `fa-beer` and `fa-github`.
 
-See the [documentation](https://oh-vue-icons.vercel.app/docs#basic-usage) for more about the usage.
+See the [documentation](https://oh-vue-icons.netlify.app/docs#basic-usage) for more about the usage.
 
 
 &nbsp;
@@ -165,7 +166,7 @@ See the [documentation](https://oh-vue-icons.vercel.app/docs#basic-usage) for mo
 | `title`     | Icon title                               | `string`  | /                                                             | /              |
 | `inverse`   | Make icon color white?                   | `boolean` | `true` / `false`                                              | `false`        |
 
-Some examples could be found in the [documentation](https://oh-vue-icons.vercel.app/docs#examples).
+Some examples could be found in the [documentation](https://oh-vue-icons.netlify.app/docs#examples).
 
 
 &nbsp;
@@ -198,7 +199,7 @@ Contributions are welcomed, learn how to contribute [here](CONTRIBUTING.md).
 ## Acknowledgements
 
 - This project is inspired by and based on [vue-awesome](https://github.com/Justineo/vue-awesome) and [react-icons](https://github.com/react-icons/react-icons).
-- The [website](https://oh-vue-icons.vercel.app/) is hosted on [Vercel](https://vercel.com/).
+- The [website](https://oh-vue-icons.netlify.app/) is hosted on [Netlify](https://www.netlify.com/).
 
 
 &nbsp;
