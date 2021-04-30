@@ -122,6 +122,11 @@ app.mount("#app");
 ### Local Import
 
 ```js
+// Vue 2
+import OhVueIcon from "oh-vue-icons";
+// or Vue 3
+import OhVueIcon from "oh-vue-icons/dist/v3/icon.es";
+
 export default {
   components: {
     "v-icon": OhVueIcon
