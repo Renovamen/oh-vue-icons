@@ -1,5 +1,15 @@
 # Change Log
 
+## [0.4.3](https://github.com/Renovamen/oh-vue-icons/compare/v0.4.2...v0.4.3) (2021-05-08)
+
+### Features
+
+- **iconpack:** upgrade ([0c5a0e2](https://github.com/Renovamen/oh-vue-icons/commit/0c5a0e2c42bc33bcbf826990af5166e83a1e6aff)):
+  - [Heroicons](https://heroicons.com/) (v1.0.1): 8 new icons
+  - [Simple Icons](https://simpleicons.org/) (v4.22.0): 31 new icons, 12 updated icons
+  - [academicons](https://github.com/jpswalsh/academicons): 2 updated icons
+
+
 ## [0.4.2](https://github.com/Renovamen/oh-vue-icons/compare/v0.4.1...v0.4.2) (2021-04-14)
 
 ### Features
