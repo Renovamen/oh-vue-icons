@@ -51,11 +51,13 @@
         <div
           class="grid grid-cols-8 sm:grid-cols-12 rounded-md border border-gray-500 transition duration-200"
         >
-          <div class="relative col-start-1 col-span-1">
+          <div
+            class="relative col-start-1 col-span-1 flex items-center justify-center"
+          >
             <v-icon
               name="ri-search-2-line"
               scale="1.3"
-              class="absolute h-full right-0 mr-2 sm:mr-4 transition duration-200"
+              class="transition duration-200"
               :class="{ 'search-focused': isSearchFocused }"
             />
           </div>
@@ -72,51 +74,34 @@
       </div>
 
       <!----------------- Icons ----------------->
-      <div
-        v-if="filterBySearch(getIconSet.components).length === 0"
-        class="mt-16"
-      >
-        <p class="desc leading-7">
-          Due to the large total size of icon files, icons from
-          <b>{{ this.tabSelected }}</b> can not be shown here. Please search for
-          icons on <b>{{ this.tabSelected }}</b
-          >'s
-          <a :href="getIconSet.website" target="_blank" class="text-blue-600"
-            ><b>official website</b></a
-          >, and use the icon name with prefix
-          <code>{{ getIconSet.id }}-</code> in <code>oh-vue-icons</code>.
-        </p>
-      </div>
-      <div v-else class="mt-10">
-        <div class="grid grid-cols-4 sm:grid-cols-8 gap-3">
-          <div
-            v-for="(icon, index) in filterBySearch(getIconSet.components).slice(
-              0,
-              maxIcons
-            )"
-            :key="`icon-${index}`"
-            class="icon-block"
-            :class="{ selected: iconSelected === icon }"
-            @click="selectIcon(icon, getIconSet.tab.toLowerCase())"
-          >
-            <v-icon
-              :name="icon"
-              :scale="iconSize"
-              :animation="iconAnimation"
-              :speed="iconAnimSpeed === 'normal' ? null : iconAnimSpeed"
-              :flip="iconFlip === 'normal' ? null : iconFlip"
-              :fill="iconColor"
-            />
-          </div>
-        </div>
-        <button
-          v-if="filterBySearch(getIconSet.components).length > maxIcons"
-          class="load-btn"
-          @click="loadMore"
+      <div class="mt-10 grid grid-cols-4 sm:grid-cols-8 gap-3">
+        <div
+          v-for="(icon, index) in filterBySearch(getIconSet.components).slice(
+            0,
+            maxIcons
+          )"
+          :key="`icon-${index}`"
+          class="icon-block"
+          :class="{ selected: iconSelected === icon }"
+          @click="selectIcon(icon, getIconSet.tab.toLowerCase())"
         >
-          Load More
-        </button>
+          <v-icon
+            :name="icon"
+            :scale="iconSize"
+            :animation="iconAnimation"
+            :speed="iconAnimSpeed === 'normal' ? null : iconAnimSpeed"
+            :flip="iconFlip === 'normal' ? null : iconFlip"
+            :fill="iconColor"
+          />
+        </div>
       </div>
+      <button
+        v-if="filterBySearch(getIconSet.components).length > maxIcons"
+        class="load-btn"
+        @click="loadMore"
+      >
+        Load More
+      </button>
     </div>
 
     <IconInfo
@@ -261,8 +246,7 @@ export default {
 }
 
 .icon-block {
-  @apply w-20 h-20 cursor-pointer rounded-lg flex justify-center items-center
-         transition ease-out duration-300 border-2 border-solid border-transparent;
+  @apply w-20 h-20 cursor-pointer rounded-lg flex justify-center items-center transition ease-out duration-300 border-2 border-solid border-transparent;
 }
 .icon-block.selected {
   @apply bg-gray-200;
