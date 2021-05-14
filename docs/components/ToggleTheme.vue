@@ -1,7 +1,6 @@
 <template>
   <span
-    class="h-6 w-12 border-2 border-transparent rounded-full cursor-pointer
-          transition-colors ease-in-out duration-200 focus:outline-none focus:shadow-outline"
+    class="h-6 w-12 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:shadow-outline"
     :class="{
       'bg-gray-200': !isDark,
       'bg-blue-500': isDark
