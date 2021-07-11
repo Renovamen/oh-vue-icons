@@ -1,5 +1,18 @@
 # Change Log
 
+## [0.4.4](https://github.com/Renovamen/oh-vue-icons/compare/v0.4.3...v0.4.4) (2021-05-08)
+
+### Features
+
+- **iconpack:** upgrade ([22036d9](https://github.com/Renovamen/oh-vue-icons/commit/22036d9dd09fe7a8d5f9b7edd7460135033181d6)):
+  - [Cryptocurrency Icons](https://github.com/spothq/cryptocurrency-icons) (v0.17.2)
+  - [gameicons](https://game-icons.net/)
+  - [Heroicons](https://heroicons.com/) (v1.0.2)
+  - [Material Design icons](https://github.com/google/material-design-icons) (v4.0.0)
+  - [Simple Icons](https://simpleicons.org/) (v5.6.0)
+  - [VSCode Icons](https://github.com/vscode-icons/vscode-icons) (v11.5.0)
+
+
 ## [0.4.3](https://github.com/Renovamen/oh-vue-icons/compare/v0.4.2...v0.4.3) (2021-05-08)
 
 ### Features
@@ -14,7 +27,7 @@
 
 ### Features
 
-- **iconpacks:** add Material Design Icons ([#8](https://github.com/Renovamen/oh-vue-icons/issues/8)) ([868e773](https://github.com/Renovamen/oh-vue-icons/commit/868e77343b1de788b8ca811631ae878e9d62a11c))
+- **iconpacks:** add [Material Design Icons](https://github.com/google/material-design-icons) ([#8](https://github.com/Renovamen/oh-vue-icons/issues/8)) ([868e773](https://github.com/Renovamen/oh-vue-icons/commit/868e77343b1de788b8ca811631ae878e9d62a11c))
 - **iconpack:** upgrade ([2126acb](https://github.com/Renovamen/oh-vue-icons/commit/2126acbe4eafdf5ec72850aa38929f7711cacf14)):
   - [academicons](https://github.com/jpswalsh/academicons): 2 updated icons
   - [Heroicons](https://heroicons.com/) (v1.0.0): 2 updated icons
