@@ -11,9 +11,9 @@ A [Vue](https://vuejs.org/) component for including inline SVG icons from differ
 
 ## Features
 
-- Tree-shakable, which allows you to only import the used icons
+- Supports tree-shaking, which allows you to only import the used icons
 - Supports Vue 2 and Vue 3
-- Supports 28000+ icons from 20 popular icon packs, see [here](#supported-icon-packs)
+- Supports 30000+ icons from 20 popular icon packs, see [here](#supported-icon-packs)
 
 
 &nbsp;
@@ -26,23 +26,23 @@ Now the following 20 icon packs are supported:
 | ------------------------------------------------------------- | ------ | ------------------------------------------------------------- | ---------- |
 | [academicons](https://github.com/jpswalsh/academicons)        | `ai`   | [SIL OFL 1.1](http://scripts.sil.org/OFL)                     | 145        |
 | [Bootstrap Icons](https://icons.getbootstrap.com/)            | `bi`   | [MIT](https://github.com/twbs/icons/blob/main/LICENSE.md)     | 1325       |
-| [CoreUI Icons Free](https://icons.coreui.io/icons/) (Colorful) | `co`   | [CC BY 4.0 License](https://github.com/coreui/coreui-icons/blob/master/LICENSE) | 1583       |
-| [Cryptocurrency Icons](https://github.com/spothq/cryptocurrency-icons) (Colorful) | `ci`   | [CC0 1.0 Universal](https://github.com/spothq/cryptocurrency-icons/blob/master/LICENSE.md) | 892        |
-| [Font Awesome 5 Free](https://fontawesome.com/)               | `fa`   | [CC BY 4.0](https://github.com/FortAwesome/Font-Awesome/blob/master/LICENSE.txt) | 1609       |
+| [CoreUI Icons Free](https://icons.coreui.io/icons/) (Colorful) | `co`   | [CC BY 4.0 License](https://github.com/coreui/coreui-icons/blob/master/LICENSE) | 1575       |
+| [Cryptocurrency Icons](https://github.com/spothq/cryptocurrency-icons) (Colorful) | `ci`   | [CC0 1.0 Universal](https://github.com/spothq/cryptocurrency-icons/blob/master/LICENSE.md) | 912        |
+| [Font Awesome 5 Free](https://fontawesome.com/)               | `fa`   | [CC BY 4.0](https://github.com/FortAwesome/Font-Awesome/blob/master/LICENSE.txt) | 1610       |
 | [Flat Color Icons](https://github.com/icons8/flat-color-icons) (Colorful) | `fc`   | [MIT / Good Boy](https://github.com/icons8/flat-color-icons/blob/master/LICENSE.md) | 329        |
 | [Flag Icon](https://flagicons.lipis.dev/) (Colorful)          | `fi`   | [MIT](https://github.com/lipis/flag-icon-css/blob/master/LICENSE) | 516        |
-| [gameicons](https://game-icons.net/)                          | `gi`   | [CC BY 3.0](https://github.com/game-icons/icons/blob/master/license.txt) | 3927       |
+| [gameicons](https://game-icons.net/)                          | `gi`   | [CC BY 3.0](https://github.com/game-icons/icons/blob/master/license.txt) | 4040       |
 | [Heroicons](https://heroicons.com/)                           | `hi`   | [MIT](https://github.com/tailwindlabs/heroicons/blob/master/LICENSE) | 460       |
 | [Ionicons](https://ionicons.com/)                             | `io`   | [MIT](https://github.com/ionic-team/ionicons/blob/master/LICENSE) | 1332      |
 | [Line Awesome](https://icons8.com/line-awesome)               | `la`   | [MIT](https://github.com/ionic-team/ionicons/blob/master/LICENSE) | 1544      |
-| [Material Design icons](https://github.com/google/material-design-icons) | `md`   | [Apache 2.0](https://github.com/google/material-design-icons/blob/master/LICENSE) | 6911      |
+| [Material Design icons](https://github.com/google/material-design-icons) | `md`   | [Apache 2.0](https://github.com/google/material-design-icons/blob/master/LICENSE) | 9047      |
 | [Octicons](https://primer.style/octicons/)                    | `oi`   | [MIT](https://github.com/primer/octicons/blob/master/LICENSE) | 219        |
 | [Pokemon Icons](https://theartificial.github.io/pokemon-icons/) (Colorful)| `pi`   | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | 1453      |
 | [PrimeIcons](https://github.com/primefaces/primeicons)        | `pr`   | [MIT](https://github.com/primefaces/primeicons/blob/master/LICENSE) | 202       |
 | [Pixelarticons](https://pixelarticons.com/)                   | `px`   | [MIT](https://github.com/halfmage/pixelarticons/blob/master/LICENSE) | 460       |
 | [Remix Icon](https://github.com/Remix-Design/RemixIcon)       | `ri`   | [Apache 2.0](https://github.com/Remix-Design/RemixIcon/blob/master/License) | 2271       |
-| [Simple Icons](https://simpleicons.org/)                      | `si`   | [CC0 1.0 Universal](https://github.com/simple-icons/simple-icons/blob/develop/LICENSE.md) | 1913       |
-| [VSCode Icons](https://github.com/vscode-icons/vscode-icons) (Colorful) | `vi`   | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | 1072       |
+| [Simple Icons](https://simpleicons.org/)                      | `si`   | [CC0 1.0 Universal](https://github.com/simple-icons/simple-icons/blob/develop/LICENSE.md) | 1965       |
+| [VSCode Icons](https://github.com/vscode-icons/vscode-icons) (Colorful) | `vi`   | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | 1082       |
 | [Weather Icons](https://erikflowers.github.io/weather-icons/) | `wi`   | [SIL OFL 1.1](http://scripts.sil.org/OFL)                     | 219        |
 
 
