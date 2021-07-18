@@ -1,6 +1,15 @@
 # Change Log
 
-## [0.4.4](https://github.com/Renovamen/oh-vue-icons/compare/v0.4.3...v0.4.4) (2021-05-08)
+## [0.4.5](https://github.com/Renovamen/oh-vue-icons/compare/v0.4.4...v0.4.5) (2021-07-18)
+
+### Bug Fixes
+
+- fix [#15](https://github.com/Renovamen/oh-vue-icons/issues/15)
+
+
+## ~~[0.4.4](https://github.com/Renovamen/oh-vue-icons/compare/v0.4.3...v0.4.4) (2021-07-11)~~
+
+**This version has been DEPRECATED (see [#15](https://github.com/Renovamen/oh-vue-icons/issues/15)), use v0.4.5 or above instead.**
 
 ### Features
 
