@@ -5,6 +5,7 @@ iconpacks/gameicons/
 docs/dist/
 package/dist/*/*.js
 package/*/dist/
+package/icons/
 assets/
 
 # vscode settings
