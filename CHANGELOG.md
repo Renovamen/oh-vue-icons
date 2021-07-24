@@ -1,5 +1,16 @@
 # Change Log
 
+## [0.4.6](https://github.com/Renovamen/oh-vue-icons/compare/v0.4.5...v0.4.6) (2021-07-25)
+
+### Features
+
+- **iconpacks**: upgrade iconpacks ([9235fb9](https://github.com/Renovamen/oh-vue-icons/commit/9235fb97fb198502024bc431ca679866e9f0d6b9)):
+  - [Bootstrap Icons](https://icons.getbootstrap.com/) (v1.5.0)
+  - [Simple Icons](https://simpleicons.org/) (v5.7.0)
+  - [Octicons](https://primer.style/octicons/) (v14.2.2)
+  - [Cryptocurrency Icons](https://github.com/spothq/cryptocurrency-icons) (v0.18.0)
+
+
 ## [0.4.5](https://github.com/Renovamen/oh-vue-icons/compare/v0.4.4...v0.4.5) (2021-07-18)
 
 ### Bug Fixes
