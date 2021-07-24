@@ -13,7 +13,7 @@
 
 ### Features
 
-- **iconpack:** upgrade ([22036d9](https://github.com/Renovamen/oh-vue-icons/commit/22036d9dd09fe7a8d5f9b7edd7460135033181d6)):
+- **iconpack:** upgrade ([d04ddde](https://github.com/Renovamen/oh-vue-icons/commit/d04ddde68bc4fb88fc4c09b6b552ee45a0f930cc)):
   - [Cryptocurrency Icons](https://github.com/spothq/cryptocurrency-icons) (v0.17.2)
   - [gameicons](https://game-icons.net/)
   - [Heroicons](https://heroicons.com/) (v1.0.2)
@@ -26,7 +26,7 @@
 
 ### Features
 
-- **iconpack:** upgrade ([0c5a0e2](https://github.com/Renovamen/oh-vue-icons/commit/0c5a0e2c42bc33bcbf826990af5166e83a1e6aff)):
+- **iconpack:** upgrade ([7026e84](https://github.com/Renovamen/oh-vue-icons/commit/7026e84c62209ee01a7b64ee1851bb3ea55779ad)):
   - [Heroicons](https://heroicons.com/) (v1.0.1): 8 new icons
   - [Simple Icons](https://simpleicons.org/) (v4.22.0): 31 new icons, 12 updated icons
   - [academicons](https://github.com/jpswalsh/academicons): 2 updated icons
@@ -36,8 +36,8 @@
 
 ### Features
 
-- **iconpacks:** add [Material Design Icons](https://github.com/google/material-design-icons) ([#8](https://github.com/Renovamen/oh-vue-icons/issues/8)) ([868e773](https://github.com/Renovamen/oh-vue-icons/commit/868e77343b1de788b8ca811631ae878e9d62a11c))
-- **iconpack:** upgrade ([2126acb](https://github.com/Renovamen/oh-vue-icons/commit/2126acbe4eafdf5ec72850aa38929f7711cacf14)):
+- **iconpacks:** add [Material Design Icons](https://github.com/google/material-design-icons) ([#8](https://github.com/Renovamen/oh-vue-icons/issues/8)) ([b46accc](https://github.com/Renovamen/oh-vue-icons/commit/b46accc1f4a46fa804343f984647917355dd2b07))
+- **iconpack:** upgrade ([01ed58a](https://github.com/Renovamen/oh-vue-icons/commit/01ed58a2092a5b10a93fb52b1f6c9f1d18d58816)):
   - [academicons](https://github.com/jpswalsh/academicons): 2 updated icons
   - [Heroicons](https://heroicons.com/) (v1.0.0): 2 updated icons
   - [Octicons](https://primer.style/octicons/) (v13.0.0): 10 new icons, 3 fixed icons
@@ -49,8 +49,8 @@
 
 ### BREAKING CHANGES
 
-- expand data argument to remove need of array whem import icons ([8db96f3](https://github.com/Renovamen/oh-vue-icons/commit/8db96f33bd1055e3f899f6ec27b484c3ebdc6375)) ([#10](https://github.com/Renovamen/oh-vue-icons/pull/10))
-- use rollup to bundle the component in esm format ([4027627](https://github.com/Renovamen/oh-vue-icons/commit/4027627176c75dc6625b398ca93e3886d9bcbd71)) ([#9](https://github.com/Renovamen/oh-vue-icons/issues/9))
+- expand data argument to remove need of array whem import icons ([c32a79b](https://github.com/Renovamen/oh-vue-icons/commit/c32a79b3a2d846b5c3aa5b490751d638e2c1db3b)) ([#10](https://github.com/Renovamen/oh-vue-icons/pull/10))
+- use rollup to bundle the component in esm format ([4a31c95](https://github.com/Renovamen/oh-vue-icons/commit/4a31c9522854c7306b8f6fdfb3bf3fbdca5b24e9)) ([#9](https://github.com/Renovamen/oh-vue-icons/issues/9))
 - import paths have changed:
 
   Icons:
@@ -72,15 +72,15 @@
 
 ### Features
 
-- **iconpack:** upgrade [Bootstrap Icons](https://icons.getbootstrap.com/) (17 updated icons) ([dee4165](https://github.com/Renovamen/oh-vue-icons/commit/dee4165c0f71e7e85e7b8962f1fbd4580a90c3d0))
-- **animation:** add `float` animation ([f94d1c3](https://github.com/Renovamen/oh-vue-icons/commit/f94d1c34afc4836be16448f4a9a7b3975b44f803))
+- **iconpack:** upgrade [Bootstrap Icons](https://icons.getbootstrap.com/) (17 updated icons) ([5118f11](https://github.com/Renovamen/oh-vue-icons/commit/5118f1115855a5c1d625a07b4cda51a0ace6875d))
+- **animation:** add `float` animation ([6d514cb](https://github.com/Renovamen/oh-vue-icons/commit/6d514cbee5d806002d6c453f5d3d0d6ba1aa598a))
 
 
 ## [0.3.0](https://github.com/Renovamen/oh-vue-icons/compare/v0.2.2...v0.3.0) (2021-03-24)
 
 ### Features
 
-- add typescript supports ([#6](https://github.com/Renovamen/oh-vue-icons/issues/6)) ([c21b6cd](https://github.com/Renovamen/oh-vue-icons/commit/c21b6cd37d89adeccb3637c8d55baf90f367da70))
+- add typescript supports ([#6](https://github.com/Renovamen/oh-vue-icons/issues/6)) ([24b9c3b](https://github.com/Renovamen/oh-vue-icons/commit/24b9c3b70971604bf816739f33f2f129abef82bd))
 
 ### BREAKING CHANGES
 
@@ -119,8 +119,8 @@
 
 ### Features
 
-- **iconpack:** add [CoreUI Icons](https://github.com/coreui/coreui-icons) ([#5](https://github.com/Renovamen/oh-vue-icons/issues/5)) ([5b34c5f](https://github.com/Renovamen/oh-vue-icons/commit/5b34c5fab7d7cf8bb95b49ab6f235fdf68514fd6)), [Ionicons](https://ionicons.com/) ([#7](https://github.com/Renovamen/oh-vue-icons/issues/7)) ([fc00143](https://github.com/Renovamen/oh-vue-icons/commit/fc00143eb782bcef589e8c1533805fde94659e73)), [PrimeIcons](https://github.com/primefaces/primeicons) ([#4](https://github.com/Renovamen/oh-vue-icons/issues/4)) ([cbd1346](https://github.com/Renovamen/oh-vue-icons/commit/cbd1346d86a31c725579a703a09ed6d42a2cf600)) and [Heroicons](https://heroicons.com/) ([90a6024](https://github.com/Renovamen/oh-vue-icons/commit/90a602442328aeb0ee03f5cebeff63f5536b150b))
-- **iconpack:** upgrade ([f5c6c51](https://github.com/Renovamen/oh-vue-icons/commit/f5c6c518897ab100cac2be9fe1fda043679a857e)):
+- **iconpack:** add [CoreUI Icons](https://github.com/coreui/coreui-icons) ([#5](https://github.com/Renovamen/oh-vue-icons/issues/5)) ([ad8434d](https://github.com/Renovamen/oh-vue-icons/commit/ad8434d0c26b7ac5bfbbda0f4862082bfc2324ad)), [Ionicons](https://ionicons.com/) ([#7](https://github.com/Renovamen/oh-vue-icons/issues/7)) ([3bce239](https://github.com/Renovamen/oh-vue-icons/commit/3bce239385fae7855817059ab5c6537f91420f99)), [PrimeIcons](https://github.com/primefaces/primeicons) ([#4](https://github.com/Renovamen/oh-vue-icons/issues/4)) ([5733e7c](https://github.com/Renovamen/oh-vue-icons/commit/5733e7cccf9c3e3b86be8f3ae35c200d2b03b518)) and [Heroicons](https://heroicons.com/) ([697c391](https://github.com/Renovamen/oh-vue-icons/commit/697c3916ef7684f0589151d0ae82cc7777ba66b8))
+- **iconpack:** upgrade ([91e597b](https://github.com/Renovamen/oh-vue-icons/commit/91e597bbc24774f9eb44c7348b1ed7d44c9ef8eb)):
   - [VSCode Icons](https://github.com/vscode-icons/vscode-icons) (v11.2.0): 7 more icons, 1 updated icon
   - [Simple Icons](https://simpleicons.org/) (v4.12.0): 41 more icons, 31 updated icons
   - [Font Awesome 5](https://fontawesome.com/) (v5.15.3): 1 updated icon
@@ -130,7 +130,7 @@
 
 ### BREAKING CHANGES
 
-- support Vue 3 🎉 ([b7b3eed](https://github.com/Renovamen/oh-vue-icons/commit/b7b3eedf400248aeeb18494ff259faec8bb523ab))
+- support Vue 3 🎉 ([d58e037](https://github.com/Renovamen/oh-vue-icons/commit/d58e037485ad48bd1a245adc0937714d101f2249))
 - import path for Vue 2 has changed:
 
   ```diff
@@ -141,22 +141,22 @@
 ### Features
 
 - **iconpack:** upgrade:
-  - [Pixelarticons](https://pixelarticons.com/) (v1.4.0): 9 more icons, 1 fixed icon ([36e9465](https://github.com/Renovamen/oh-vue-icons/commit/36e946528fc490b79876567e3631de69e3029c95))
-  - [Simple Icons](https://simpleicons.org/) (v4.13.0): 32 more icons, 5 updated icons ([f81ad2c](https://github.com/Renovamen/oh-vue-icons/commit/f81ad2c3ec91d274a3df5897aa254c1f7d8c7343))
+  - [Pixelarticons](https://pixelarticons.com/) (v1.4.0): 9 more icons, 1 fixed icon ([4b9de36](https://github.com/Renovamen/oh-vue-icons/commit/4b9de361376158e62a19db60928f27c5946c163a))
+  - [Simple Icons](https://simpleicons.org/) (v4.13.0): 32 more icons, 5 updated icons ([5f85208](https://github.com/Renovamen/oh-vue-icons/commit/5f85208cb7057e63f0ac97e481dd330a13facf09))
 
 
 ## [0.1.11](https://github.com/Renovamen/oh-vue-icons/compare/v0.1.10...v0.1.11) (2021-02-27)
 
 ### Bug Fixes
 
-- remove `core-js` from dependencies ([#3](https://github.com/Renovamen/oh-vue-icons/issues/3)) ([53f8b69](https://github.com/Renovamen/oh-vue-icons/commit/53f8b69c4213f27128664eba64be66bd98c3daba))
+- remove `core-js` from dependencies ([#3](https://github.com/Renovamen/oh-vue-icons/issues/3)) ([0213f03](https://github.com/Renovamen/oh-vue-icons/commit/0213f0336cfdd40e3d2d8f9fe1ecd2be8b842308))
 
 
 ## [0.1.10](https://github.com/Renovamen/oh-vue-icons/compare/v0.1.9...v0.1.10) (2021-02-25)
 
 ### Features
 
-- **iconpack:** upgrade ([dafe9e6](https://github.com/Renovamen/oh-vue-icons/commit/dafe9e6dd21c81b9e204cce76324421e2ceff49c)):
+- **iconpack:** upgrade ([f805e3d](https://github.com/Renovamen/oh-vue-icons/commit/f805e3d5dd53ae72ac29e1e5b06ce7cc9e9d45d6)):
   - [Bootstrap Icons](https://icons.getbootstrap.com/) (v1.4.0): 60 more icons
   - [Simple Icons](https://simpleicons.org/) (v4.12.0): 49 more icons
   - [Weather Icons](https://erikflowers.github.io/weather-icons/) (v2.0.12): fix 1 icon
@@ -166,10 +166,8 @@
 
 ### Features
 
-- **iconpack:** add [Line Awesome](https://icons8.com/line-awesome) ([#2](https://github.com/Renovamen/oh-vue-icons/issues/2)) ([ebff0d0](https://github.com/Renovamen/oh-vue-icons/commit/ebff0d0cf4db8d778783709aba65fd86eef16fdd))
-- **iconpack:** add [Pixelarticons](https://pixelarticons.com/) ([e648337](https://github.com/Renovamen/oh-vue-icons/commit/e6483375bf5a859e985e9d085fae64adc6483e71))
-- **iconpack:** add [VSCode Icons](https://github.com/vscode-icons/vscode-icons) ([1a42006](https://github.com/Renovamen/oh-vue-icons/commit/1a42006dad7776a723e201ca078e19c2eabd053a))
-- **iconpack:** upgrade ([5190be4](https://github.com/Renovamen/oh-vue-icons/commit/5190be40fc81ea9a315b8f62da3d9e2441d75d7e)):
+- **iconpack:** add [Line Awesome](https://icons8.com/line-awesome) ([#2](https://github.com/Renovamen/oh-vue-icons/issues/2)) ([d1cb04a](https://github.com/Renovamen/oh-vue-icons/commit/d1cb04ab9ee47d1ba7df649017c4141a8a23f02e)), [Pixelarticons](https://pixelarticons.com/) ([530a591](https://github.com/Renovamen/oh-vue-icons/commit/530a591c28223a9e0e524f09178178dc07599a38)) and [VSCode Icons](https://github.com/vscode-icons/vscode-icons) ([279991a](https://github.com/Renovamen/oh-vue-icons/commit/279991a3ae344252283c80138d2f2f9619564490))
+- **iconpack:** upgrade ([eb263a4](https://github.com/Renovamen/oh-vue-icons/commit/eb263a461c3456107995e6576cfc8add28ff9190)):
   - [Bootstrap Icons](https://icons.getbootstrap.com/) (v1.3.0): 64 more icons
   - [Cryptocurrency Icons](https://github.com/spothq/cryptocurrency-icons) (v0.17.1): 26 more icons
   - [Octicons](https://primer.style/octicons/) (v12.0.0): 3 more icons
@@ -180,63 +178,66 @@
 
 ### Features
 
-- **iconpack**: add [Octicons](https://primer.style/octicons/) ([1111fc5](https://github.com/Renovamen/oh-vue-icons/commit/1111fc5c0a10966b51c49ae466214b50dbf6843f))
-- **animation**: support adjusting animation speed, add `flash` animation ([fab2b2b](https://github.com/Renovamen/oh-vue-icons/commit/fab2b2b92e3da703770a88141aabc2fdc90fe5df))
+- **iconpack**: add [Octicons](https://primer.style/octicons/) ([b381719](https://github.com/Renovamen/oh-vue-icons/commit/b381719cddc9196b2824e3b2a99445115a38bc5c))
+- **animation**: support adjusting animation speed, add `flash` animation ([e8ecf8f](https://github.com/Renovamen/oh-vue-icons/commit/e8ecf8fb672bedaf3370758b9833df69b3cca2ee))
 
 
 ## [0.1.7](https://github.com/Renovamen/oh-vue-icons/compare/v0.1.6...v0.1.7) (2021-01-05)
 
 ### Bug Fixes
 
-- fix tree shaking problems (which occured due to the code sructure change in v0.1.5) ([5f3f4b8](https://github.com/Renovamen/oh-vue-icons/commit/5f3f4b8ca91974236db1a243c11c5029252f5f2a))
+- fix tree shaking problems (which occured due to the code sructure change in v0.1.5) ([3507656](https://github.com/Renovamen/oh-vue-icons/commit/3507656076e533c20da09f01d565b3ac2d95f696))
 
 ### Features
 
-- **iconpack**: add [Bootstrap Icons](https://icons.getbootstrap.com/) ([#1](https://github.com/Renovamen/oh-vue-icons/issues/1)) ([990a45b](https://github.com/Renovamen/oh-vue-icons/commit/990a45b7eaf43b127e10bf12f49a64f65eeaa841))
-- **iconpack**: add [Flag Icons](https://flagicons.lipis.dev/) ([b664834](https://github.com/Renovamen/oh-vue-icons/commit/b6648345077c6e712ba6a20e26b45546a5d6586a))
-- **iconpack**: add [Pokemon Icons](https://theartificial.github.io/pokemon-icons/) ([e471360](https://github.com/Renovamen/oh-vue-icons/commit/e471360b6cd625729a7e651335fe107927fbf5ee))
+- **iconpack**: add [Bootstrap Icons](https://icons.getbootstrap.com/) ([#1](https://github.com/Renovamen/oh-vue-icons/issues/1)) ([3b213fc](https://github.com/Renovamen/oh-vue-icons/commit/3b213fcd7f050b59ec80c63700ab42fbffa6e8b0)), [Flag Icons](https://flagicons.lipis.dev/) ([02cc01a](https://github.com/Renovamen/oh-vue-icons/commit/02cc01a86a8d749540b1c92b16dedda82741a54c)) and [Pokemon Icons](https://theartificial.github.io/pokemon-icons/) ([2473310](https://github.com/Renovamen/oh-vue-icons/commit/2473310b433045ae9894ade447a16de05b9ad9c2))
 
 
 ## [0.1.6](https://github.com/Renovamen/oh-vue-icons/compare/v0.1.5...v0.1.6) (2021-01-03)
 
 ### Features
 
-- support colorful icons
-- support customizing icon fill color ([4a1cd05](https://github.com/Renovamen/oh-vue-icons/commit/4a1cd05dfc79d30e68acf250578e12e4bc4707ce))
-- **iconpack**: add [Flat Color Icons](https://github.com/icons8/flat-color-icons) ([7f79428](https://github.com/Renovamen/oh-vue-icons/commit/7f79428b62bf563169f7441d0626d77fdcf55af9))
-- **iconpack**: add [Cryptocurrency Icons](https://github.com/spothq/cryptocurrency-icons) ([5c69315](https://github.com/Renovamen/oh-vue-icons/commit/5c69315d52e222b298de124fb025db385af09971))
-- **iconpack**: add [Simple Icons](https://simpleicons.org/) ([342b879](https://github.com/Renovamen/oh-vue-icons/commit/342b879b3a861c3a296489ccdfcc99393d69de43))
-- **iconpack**: add [Weather Icons](https://erikflowers.github.io/weather-icons/) ([710823b](https://github.com/Renovamen/oh-vue-icons/commit/710823b71616a012e4b924dd502336e316902eda))
-- **animation**: add `wrench`, `ring` and `pulse` animations ([7130512](https://github.com/Renovamen/oh-vue-icons/commit/7130512af3e89b042566dcc8ffbad7326ac812af))
+- add support to colorful icons ([7167a45](https://github.com/Renovamen/oh-vue-icons/commit/7167a45db2ce061cf96e83e2648e4200f33eebd8))
+- support customizing icon fill color ([a19a142](https://github.com/Renovamen/oh-vue-icons/commit/a19a1425be02a33ed36dcd68cd62dede8cf93803))
+- **iconpack**: add [Flat Color Icons](https://github.com/icons8/flat-color-icons) ([7167a45](https://github.com/Renovamen/oh-vue-icons/commit/7167a45db2ce061cf96e83e2648e4200f33eebd8)), [Cryptocurrency Icons](https://github.com/spothq/cryptocurrency-icons) ([ff909bf](https://github.com/Renovamen/oh-vue-icons/commit/ff909bf7f370ae38b963b6b82e5d7c8d336037e6)), [Simple Icons](https://simpleicons.org/) ([87e0512](https://github.com/Renovamen/oh-vue-icons/commit/87e0512e2944c640456e16cacd05e759a4132b6f)) and [Weather Icons](https://erikflowers.github.io/weather-icons/) ([4f9e4d1](https://github.com/Renovamen/oh-vue-icons/commit/4f9e4d1b0a13b6ed265366552d57b1d0473f16f5))
+- **animation**: add `wrench`, `ring` and `pulse` animations ([2bdb1e6](https://github.com/Renovamen/oh-vue-icons/commit/2bdb1e60d01b92772c011fafcb47b3be32892319))
+
+### Chore
+
+- change the prefix of gameicons to 'gi' ([287852b](https://github.com/Renovamen/oh-vue-icons/commit/287852b605ce76695c761c9215dc7aece4e07812))
 
 
 ## [0.1.5](https://github.com/Renovamen/oh-vue-icons/compare/v0.1.2...v0.1.5) (2020-12-25)
 
 ### Features
 
-- **iconpack**: add [gameicons](https://game-icons.net/) ([6a65a46](https://github.com/Renovamen/oh-vue-icons/commit/6a65a4663149b5838166fbdf8a4aa4663cdb4928))
+- **iconpack**: add [gameicons](https://game-icons.net/) ([1fb8dc1](https://github.com/Renovamen/oh-vue-icons/commit/1fb8dc130915f3c982e38fc1657c6332d36e43e2))
 
 ### BREAKING CHANGES
 
-- change the way of importing icons ([537ada3](https://github.com/Renovamen/oh-vue-icons/commit/537ada37d4c9bd4cf0277f45e14f2306c0d6c300))
+- change the way of importing icons ([40d37d2](https://github.com/Renovamen/oh-vue-icons/commit/40d37d2bcaeb71c70bfc416c18425d99a004a59f))
 
 
 ## [0.1.2](https://github.com/Renovamen/oh-vue-icons/compare/v0.1.1...v0.1.2) (2020-12-06)
 
 ### Features
 
-- resize some of the icons for better and more consistent user experience ([97c3120](https://github.com/Renovamen/oh-vue-icons/commit/97c31200aeea28b0fe6a1b8fa72b9c3338a0aafa))
+- resize some of the icons for better and more consistent user experience ([6caf2e2](https://github.com/Renovamen/oh-vue-icons/commit/6caf2e2091524a39f76ac5ae38ff7f53a165f7fa))
 
 
 ## [0.1.1](https://github.com/Renovamen/oh-vue-icons/compare/v0.1.0...v0.1.1) (2020-12-06)
 
 ### Bug Fixes
 
-- upgrade some packages to generate svgs correctly ([c9b8fd7](https://github.com/Renovamen/oh-vue-icons/commit/c9b8fd76d0ad3acf477da00a0a5f273a9c9de3fe))
+- upgrade some packages to generate svgs correctly ([0e37e60](https://github.com/Renovamen/oh-vue-icons/commit/0e37e60b509b6744d54839fdc03767b1ed038277))
+
+### Features
+
+- support importing a whole given icon pack ([cb3e137](https://github.com/Renovamen/oh-vue-icons/commit/cb3e1373ab2f76cb7ef95454e205bcb1396ab9dc))
 
 
 ## [0.1.0](https://github.com/Renovamen/oh-vue-icons/compare/19c8c9d74ebf5a23c5dc34aace3b2807b06c9a9a...v0.1.0) (2020-12-04)
 
 ### Features
 
-- **iconpack**: add [Font Awesome 5](https://fontawesome.com/), [Remix Icon](https://github.com/Remix-Design/RemixIcon) and [academicons](https://github.com/jpswalsh/academicons) ([19c8c9d](https://github.com/Renovamen/oh-vue-icons/commit/19c8c9d74ebf5a23c5dc34aace3b2807b06c9a9a))
+- **iconpack**: add [Font Awesome 5](https://fontawesome.com/), [Remix Icon](https://github.com/Remix-Design/RemixIcon) and [academicons](https://github.com/jpswalsh/academicons) ([fbc2c5b](https://github.com/Renovamen/oh-vue-icons/commit/fbc2c5bcfb4a3c014c949553f279654756f2c862))
