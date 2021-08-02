@@ -1,5 +1,17 @@
 # Change Log
 
+## [0.4.7](https://github.com/Renovamen/oh-vue-icons/compare/v0.4.6...v0.4.7) (2021-08-02)
+
+### Features
+
+- **iconpacks:** upgrade iconpacks ([dedff0b](https://github.com/Renovamen/oh-vue-icons/commit/dedff0bc3a2fa754cb9c4536449259241d468aab)):
+  - [Heroicons](https://heroicons.com/) (v1.0.3)
+  - [Octicons](https://primer.style/octicons/) (v15.0.0)
+  - [Simple Icons](https://simpleicons.org/) (v5.8.1)
+  - [VSCode Icons](https://github.com/vscode-icons/vscode-icons) (v11.6.0)
+  - [Weather Icons](https://erikflowers.github.io/weather-icons/)
+
+
 ## [0.4.6](https://github.com/Renovamen/oh-vue-icons/compare/v0.4.5...v0.4.6) (2021-07-25)
 
 ### Features
