@@ -25,8 +25,8 @@ export default {
     "./assets/code-light.css",
     "./assets/code-dark.css"
   ],
-  components: true, // auto import components
-  modules: ["@nuxt/content", ["nuxt-i18n", i18n]],
+  // components: true, // auto import components
+  modules: ["@nuxt/content", ["@nuxtjs/i18n", i18n]],
   buildModules: ["@nuxtjs/tailwindcss", "vue-swatches/nuxt"],
   plugins: ["~/plugins/icons.js"]
 };

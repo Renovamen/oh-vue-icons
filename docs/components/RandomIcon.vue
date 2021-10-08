@@ -16,9 +16,9 @@
 import OhVueIcon from "../../package/icon-v2/src/components";
 const keys = Object.keys(OhVueIcon.icons);
 
-function randomIcon() {
+const randomIcon = () => {
   return keys[Math.floor(Math.random() * keys.length)];
-}
+};
 
 export default {
   data() {

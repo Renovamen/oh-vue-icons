@@ -7,7 +7,12 @@
 </template>
 
 <script>
+import Navbar from "../components/Navbar";
+
 export default {
+  components: {
+    Navbar
+  },
   computed: {
     isDark() {
       return this.$store.state.theme.isDark;
