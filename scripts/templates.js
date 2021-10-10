@@ -10,10 +10,10 @@ const packageJsonTemplate =
     2
   ) + "\n";
 
-const tsDefImportTemplate = `${autoGenerateTemplate}import { IconData } from "../../types/icons";\n`;
+const tsDefImportTemplate = `${autoGenerateTemplate}import { IconType } from "../../types/icons";\n`;
 
-const tsDefTemplate = name => {
-  return `export declare const ${name}: IconData;\n`;
+const tsDefTemplate = (name) => {
+  return `export declare const ${name}: IconType;\n`;
 };
 
 const iconDataTemplate = (name, data) => {

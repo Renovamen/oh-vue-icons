@@ -3,7 +3,7 @@ const path = require("path");
 const fs = require("fs").promises;
 const cheerio = require("cheerio");
 
-const attrToString = attr => {
+const attrToString = (attr) => {
   let str = "";
   for (let key in attr) str += ` ${key}="${attr[key]}"`;
   return str;
@@ -19,7 +19,7 @@ const cleanAttr = (attr, prefix) => {
 
 async function getIconFiles(content) {
   let files = await glob(content.files);
-  files = files.sort(function(a, b) {
+  files = files.sort(function (a, b) {
     const namea = a.substr(a.lastIndexOf("/") + 1),
       nameb = b.substr(b.lastIndexOf("/") + 1);
     return namea.localeCompare(nameb);
@@ -28,7 +28,12 @@ async function getIconFiles(content) {
 }
 
 async function convertSVG(scale, name, prefix, svg) {
-  const $ = cheerio.load(svg, { xmlMode: true, normalizeWhiteSpace: true });
+  const $ = cheerio.load(svg, {
+    xmlMode: true,
+    xml: {
+      normalizeWhitespace: true
+    }
+  });
 
   let attr = $("svg")[0].attribs;
 
@@ -50,7 +55,7 @@ async function convertSVG(scale, name, prefix, svg) {
 
   const raw = svg.match(/<svg(.*?)>(.*?)<\/svg>/)[2];
 
-  let data = {
+  const data = {
     name: name,
     minX: minX,
     minY: minY,

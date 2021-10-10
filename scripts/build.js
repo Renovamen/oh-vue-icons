@@ -1,7 +1,7 @@
-const { icons } = require("../iconpacks");
-const path = require("path");
-const task = require("./tasks");
 const performance = require("perf_hooks").performance;
+const path = require("path");
+const { icons } = require("../iconpacks");
+const task = require("./tasks");
 
 async function runTask(name, fn) {
   const start = performance.now();
@@ -13,7 +13,7 @@ async function runTask(name, fn) {
 
 async function main() {
   try {
-    const DIST = path.resolve(__dirname, "../package/icons");
+    const DIST = path.resolve(__dirname, "../icons");
     const ASSETS = path.resolve(__dirname, "../assets");
 
     await runTask("Initialize", async () => {

@@ -1,12 +1,7 @@
 iconpacks/gameicons/
+icons/
+*dist/
 *.zip
-.yarnrc
-.npmrc
-docs/dist/
-package/dist/*/*.js
-package/*/dist/
-package/icons/
-assets/
 
 # vscode settings
 .vscode
