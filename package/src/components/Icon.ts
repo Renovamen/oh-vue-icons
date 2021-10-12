@@ -337,10 +337,10 @@ const OhVueIcon = defineComponent({
         ? undefined
         : content.concat([
             this.$slots.default
-              ? // @ts-ignore: this.$slots.default() is only used in Vue3
-                isVue2
+              ? isVue2
                 ? this.$slots.default
-                : this.$slots.default()
+                : // @ts-ignore: this.$slots.default() is only used in Vue3
+                  this.$slots.default()
               : this.icon
               ? [
                   ...((this.icon as CustomizeIconType).paths as ObjType[]).map(

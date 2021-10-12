@@ -18,7 +18,14 @@ module.exports = {
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/ban-ts-comment": "off",
     "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/no-unused-vars": "off",
     "vue/require-default-prop": "off"
   },
-  ignorePatterns: ["node_modules/", "dist/", "demo-dist/", "icons/", "iconpacks/", "build/"]
+  ignorePatterns: [
+    "node_modules/",
+    "iconpacks/",
+    "package/icons/",
+    "package/build",
+    "*dist/"
+  ]
 };

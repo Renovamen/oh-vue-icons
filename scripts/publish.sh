@@ -7,6 +7,7 @@ yarn update
 yarn icons
 
 # build lib
+cd package
 yarn build
 
 # publish to npm
