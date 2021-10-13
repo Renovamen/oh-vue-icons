@@ -8,13 +8,13 @@ const icons = [
     name: "Bootstrap Icons"
   },
   {
-    id: "ci",
-    name: "Crypto Icons",
+    id: "co",
+    name: "CoreUI Icons",
     multiColor: true
   },
   {
-    id: "co",
-    name: "CoreUI Icons",
+    id: "ci",
+    name: "Crypto Icons",
     multiColor: true
   },
   {
