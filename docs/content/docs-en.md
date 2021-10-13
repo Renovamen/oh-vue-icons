@@ -9,16 +9,16 @@ links:
 
 ## Features
 
-- Supports tree-shaking, which allows you to only import the used icons
-- Supports Vue 2 and Vue 3
-- Supports 30000+ icons from 20 popular icon packs, see [here](#supported-icon-packs)
+- Works for both Vue 2 & 3
+- Supports tree-shaking: only import the icons you want
+- 30000+ icons from 20 popular icon packs, see [here](#supported-icon-packs)
 
 
 ## Supported Icon Packs
 
 Now the following 20 icon packs are supported:
 
-| Icon Pack                                                     | Prefix | License                                                       | Icon Numer |
+| Icon Pack                                                     | Prefix | License                                                       | Counts     |
 | ------------------------------------------------------------- | ------ | ------------------------------------------------------------- | ---------- |
 | [academicons](https://github.com/jpswalsh/academicons)        | `ai`   | [SIL OFL 1.1](http://scripts.sil.org/OFL)                     | 145        |
 | [Bootstrap Icons](https://github.com/twbs/icons)              | `bi`   | [MIT](https://github.com/twbs/icons/blob/main/LICENSE.md)     | 1406       |
@@ -50,7 +50,19 @@ yarn add oh-vue-icons
 npm install oh-vue-icons
 ```
 
-The latest version can be downloaded from [Github](https://github.com/Renovamen/oh-vue-icons).
+For Vue 2, you'll also need `@vue/composition-api`:
+
+```bash
+yarn add @vue/composition-api -D
+```
+
+Or if you are using [Nuxt 2](https://nuxtjs.org/), you'll need `@nuxtjs/composition-api` instead:
+
+```bash
+yarn add @nuxtjs/composition-api -D
+```
+
+then add `@nuxtjs/composition-api/module` to the `buildModules` option in your `nuxt.config.js`, see [here](https://composition-api.nuxtjs.org/getting-started/setup) for details.
 
 
 ## Import
@@ -59,22 +71,22 @@ The latest version can be downloaded from [Github](https://github.com/Renovamen/
 
 Import `oh-vue-icons` and install it into Vue in `main.js`. You can choose to only import the icons you use to reduce bundle size.
 
-#### Vue 2
+
+#### Vue 3
 
 ```js
 // main.js
-import Vue from "vue";
+import { createApp } from "vue";
 import App from "./App.vue";
-import OhVueIcon from "oh-vue-icons";
 
+import { OhVueIcon, addIcons } from "oh-vue-icons";
 import { FaFlag, RiZhihuFill } from "oh-vue-icons/icons";
-OhVueIcon.add(FaFlag, RiZhihuFill);
 
-Vue.component("v-icon", OhVueIcon);
+addIcons(FaFlag, RiZhihuFill);
 
-new Vue({
-  render: h => h(App)
-}).$mount("#app");
+const app = createApp(App);
+app.component("v-icon", OhVueIcon);
+app.mount("#app");
 ```
 
 If you don't care about the bundle size and want to import a whole icon pack, you may should:
@@ -85,32 +97,34 @@ If you don't care about the bundle size and want to import a whole icon pack, yo
 import * as FaIcons from "oh-vue-icons/icons/fa";
 
 const Fa = Object.values({ ...FaIcons });
-OhVueIcon.add(...Fa);
+addIcons(...Fa);
 ```
 
-#### Vue 3
+
+#### Vue 2
 
 ```js
 // main.js
-import { createApp } from "vue";
+import Vue from "vue";
 import App from "./App.vue";
-import OhVueIcon from "oh-vue-icons/dist/v3/icon.es";
 
+import { OhVueIcon, addIcons } from "oh-vue-icons";
 import { FaFlag, RiZhihuFill } from "oh-vue-icons/icons";
-OhVueIcon.add(FaFlag, RiZhihuFill);
 
-const app = createApp(App);
-app.component("v-icon", OhVueIcon);
-app.mount("#app");
+addIcons(FaFlag, RiZhihuFill);
+
+Vue.component("v-icon", OhVueIcon);
+
+new Vue({
+  render: h => h(App)
+}).$mount("#app");
 ```
+
 
 ### Local Import
 
 ```js
-// Vue 2
 import OhVueIcon from "oh-vue-icons";
-// or Vue 3
-import OhVueIcon from "oh-vue-icons/dist/v3/icon.es";
 
 export default {
   components: {
@@ -416,9 +430,11 @@ OhVueIcon.add(
 ```
 
 
-## Nuxt.js
+## Nuxt
 
-When using Nuxt.js, `oh-vue-icons` should be added to the transpile build option in `nuxt.config.js`:
+When using Nuxt, you need to register `oh-vue-icons` as a plugin following [Nuxt's documentation](https://nuxtjs.org/docs/directory-structure/plugins#vue-plugins).
+
+It should be noted that, `oh-vue-icons` should be added to the `transpile` build option in your `nuxt.config.js`:
 
 ```js
 export default {
@@ -429,14 +445,62 @@ export default {
 }
 ```
 
-or it will not be bundled, see [Nuxt's documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins) for details.
+or it will not be bundled, see [here](https://nuxtjs.org/docs/directory-structure/plugins/#es6-plugins) for details.
+
+To render the icon component only on client-side, you may need to wrap it in a `<client-only>` tag:
+
+```html
+<template>
+  <div>
+    <client-only>
+      <v-icon name="fa-flag" />
+      <v-icon name="ri-zhihu-fill" />
+    </client-only>
+  </div>
+</template>
+```
+
+
+## Migrate from v0.x to v1.x
+
+From `v1.x`, this library works for both Vue 2 & 3 within a single package.
+
+
+### Vue 3
+
+```diff
+- import OhVueIcon from "oh-vue-icons/dist/v3/icon.es";
++ import { OhVueIcon, addIcons } from "oh-vue-icons";
+
+- OhVueIcon.add(FaFlag)
++ addIcons(FaFlag)
+```
+
+
+### Vue 2
+
+```diff
+- import OhVueIcon from "oh-vue-icons";
++ import { OhVueIcon, addIcons } from "oh-vue-icons";
+
+- OhVueIcon.add(FaFlag)
++ addIcons(FaFlag)
+```
+
+And you need to have `@vue/composition-api` installed, see [here](#installation).
+
+
+### Nuxt 2
+
+You need to install and enable `@nuxtjs/composition-api`, see [here](#installation).
+
 
 
 ## Acknowledgements
 
-- This project is inspired by and based on [vue-awesome](https://github.com/Justineo/vue-awesome) and [react-icons](https://github.com/react-icons/react-icons).
+- This project is inspired by and based on [vue-awesome](https://github.com/Justineo/vue-awesome) and [react-icons](https://github.com/react-icons/react-icons)
 
-- This website is hosted on [Netlify](https://www.netlify.com/).
+- This website is hosted on [Netlify](https://www.netlify.com/)
 
 
 ## License

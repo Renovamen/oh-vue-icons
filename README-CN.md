@@ -11,8 +11,8 @@
 
 ## 特性
 
+- 支持 Vue 2 和 3
 - 支持 tree-shaking，因此你能够仅引入你需要的图标从而减小打包体积
-- 支持 Vue 2 和 Vue 3
 - 支持来自 [20 个流行的图标库](#支持的图标库)的 30000+ 个图标
 
 
@@ -63,6 +63,20 @@ yarn add oh-vue-icons
 npm install oh-vue-icons
 ```
 
+使用 Vue 2 时，还需要安装 `@vue/composition-api`：
+
+```bash
+yarn add @vue/composition-api -D
+```
+
+如果用的是 [Nuxt 2](https://nuxtjs.org/)，则需要安装的是 `@nuxtjs/composition-api`：
+
+```bash
+yarn add @nuxtjs/composition-api -D
+```
+
+然后把 `@nuxtjs/composition-api/module` 加到你的 `nuxt.config.js` 文件的 `buildModules` 项中，更多细节见[这里](https://composition-api.nuxtjs.org/getting-started/setup)。
+
 
 &nbsp;
 
@@ -72,22 +86,22 @@ npm install oh-vue-icons
 
 首先需要在 `main.js` 中引入 `oh-vue-icons`。你可以只引入你需要的图标从而减小打包体积。
 
-#### Vue 2
+
+#### Vue 3
 
 ```js
 // main.js
-import Vue from "vue";
+import { createApp } from "vue";
 import App from "./App.vue";
-import OhVueIcon from "oh-vue-icons";
 
+import { OhVueIcon, addIcons } from "oh-vue-icons";
 import { FaFlag, RiZhihuFill } from "oh-vue-icons/icons";
-OhVueIcon.add(FaFlag, RiZhihuFill);
 
-Vue.component("v-icon", OhVueIcon);
+addIcons(FaFlag, RiZhihuFill);
 
-new Vue({
-  render: h => h(App)
-}).$mount("#app");
+const app = createApp(App);
+app.component("v-icon", OhVueIcon);
+app.mount("#app");
 ```
 
 如果你并不在意打包体积，并希望引入某个图标库的所有图标，你可以：
@@ -101,31 +115,33 @@ const Fa = Object.values({ ...FaIcons })
 OhVueIcon.add(...Fa);
 ```
 
-#### Vue 3
+
+#### Vue 2
 
 ```js
 // main.js
-import { createApp } from "vue";
+import Vue from "vue";
 import App from "./App.vue";
-import OhVueIcon from "oh-vue-icons/dist/v3/icon.es";
 
+import { OhVueIcon, addIcons } from "oh-vue-icons";
 import { FaFlag, RiZhihuFill } from "oh-vue-icons/icons";
-OhVueIcon.add(FaFlag, RiZhihuFill);
 
-const app = createApp(App);
-app.component("v-icon", OhVueIcon);
-app.mount("#app");
+addIcons(FaFlag, RiZhihuFill);
+
+Vue.component("v-icon", OhVueIcon);
+
+new Vue({
+  render: h => h(App)
+}).$mount("#app");
 ```
+
 
 &nbsp;
 
 ### 局部引入
 
 ```js
-// Vue 2
 import OhVueIcon from "oh-vue-icons";
-// or Vue 3
-import OhVueIcon from "oh-vue-icons/dist/v3/icon.es";
 
 export default {
   components: {
@@ -176,9 +192,11 @@ export default {
 
 &nbsp;
 
-## Nuxt.js
+## Nuxt
 
-当使用 Nuxt.js 时，需要在 `nuxt.config.js` 的 `build.transpile` 项中添加 `oh-vue-icons`：
+当使用 Nuxt.js 时，需要按照 [Nuxt 文档](https://nuxtjs.org/docs/2.x/directory-structure/plugins)中的方式，将 `oh-vue-icons` 注册为一个插件。
+
+然后需要在 `nuxt.config.js` 的 `build.transpile` 项中添加 `oh-vue-icons`：
 
 ```js
 export default {
@@ -189,7 +207,20 @@ export default {
 }
 ```
 
-否则 Nuxt 可能就不会把 `oh-vue-icons` 打包进去，[Nuxt 的文档](https://nuxtjs.org/docs/2.x/directory-structure/plugins)中对此有更详细的说明。
+否则 Nuxt 可能就不会把 `oh-vue-icons` 打包进去，[这里](https://nuxtjs.org/docs/2.x/directory-structure/plugins)对此有更详细的说明。
+
+为了仅在客户端（client-side）渲染该组件，需要把组件包裹在 `<client-only>` 标签里：
+
+```html
+<template>
+  <div>
+    <client-only>
+      <v-icon name="fa-flag" />
+      <v-icon name="ri-zhihu-fill" />
+    </client-only>
+  </div>
+</template>
+```
 
 
 &nbsp;
@@ -203,8 +234,8 @@ export default {
 
 ## 致谢
 
-- 本项目受到了 [vue-awesome](https://github.com/Justineo/vue-awesome) 和 [react-icons](https://github.com/react-icons/react-icons) 的启发并借鉴了它们的部分代码。
-- [文档网站](https://oh-vue-icons.netlify.app/)部署在 [Netlify](https://www.netlify.com/) 上。
+- 本项目受到了 [vue-awesome](https://github.com/Justineo/vue-awesome) 和 [react-icons](https://github.com/react-icons/react-icons) 的启发并借鉴了它们的部分代码
+- [文档网站](https://oh-vue-icons.netlify.app/)部署在 [Netlify](https://www.netlify.com/) 上
 
 
 &nbsp;
