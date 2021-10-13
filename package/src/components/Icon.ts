@@ -37,7 +37,7 @@ const addIcons = (...data: CustomizeIconType[]): void => {
   for (const icon of data) register(icon);
 };
 
-const getIcons = (): IconsType => {
+const listIcons = (): IconsType => {
   return icons;
 };
 
@@ -358,4 +358,4 @@ const OhVueIcon = defineComponent({
   }
 });
 
-export { OhVueIcon, addIcons, getIcons };
+export { OhVueIcon, addIcons, listIcons };

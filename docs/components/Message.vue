@@ -24,7 +24,7 @@
             class="fill-current text-green-500 mr-1"
           />
         </client-only>
-        Copied '{{ icon }}'
+        Copied "{{ icon }}"
       </span>
     </div>
   </transition>
@@ -79,7 +79,7 @@ export default defineComponent({
 
 <style lang="postcss">
 .dark .msg-box {
-  @apply bg-gray-700 text-gray-400;
+  @apply bg-gray-700 text-gray-300 !important;
 }
 
 .slide-fade-enter-active,

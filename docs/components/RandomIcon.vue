@@ -30,8 +30,8 @@ import {
   onMounted,
   toRefs
 } from "@nuxtjs/composition-api";
-import { getIcons } from "oh-vue-icons/dist/index.esm.min";
-const keys = Object.keys(getIcons());
+import { listIcons } from "oh-vue-icons/dist/index.esm.min";
+const keys = Object.keys(listIcons());
 
 const randomIcon = () => {
   return keys[Math.floor(Math.random() * keys.length)];

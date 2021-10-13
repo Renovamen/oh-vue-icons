@@ -143,13 +143,13 @@ import {
   toRefs,
   useStore
 } from "@nuxtjs/composition-api";
-import { getIcons } from "oh-vue-icons/dist/index.esm.min";
+import { listIcons } from "oh-vue-icons/dist/index.esm.min";
 import icons from "../icons";
 import Sidebar from "../components/Sidebar.vue";
 import ToolSidebar from "../components/ToolSidebar.vue";
 import IconInfo from "../components/IconInfo.vue";
 
-const iconKeys = Object.keys(getIcons());
+const iconKeys = Object.keys(listIcons());
 const max = 304;
 
 export default defineComponent({
