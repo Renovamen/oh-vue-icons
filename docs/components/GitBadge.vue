@@ -3,7 +3,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from '@nuxtjs/composition-api'
+import { defineComponent } from "@nuxtjs/composition-api";
 import Dropdown from "./Dropdown.vue";
 // @ts-ignore
 import pkgJson from "../../package/package.json";
@@ -25,8 +25,7 @@ export default defineComponent({
           },
           {
             text: this.$t("nav.github.changelog"),
-            link:
-              "https://github.com/Renovamen/oh-vue-icons/blob/master/CHANGELOG.md",
+            link: "https://github.com/Renovamen/oh-vue-icons/blob/master/CHANGELOG.md",
             icon: "oi-git-compare"
           }
         ]

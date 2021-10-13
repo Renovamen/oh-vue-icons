@@ -21,7 +21,7 @@ export default defineComponent({
   setup() {
     return {
       nightwind
-    }
+    };
   }
 });
 </script>
@@ -31,7 +31,11 @@ body {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
 
-html, body, #__nuxt, #__layout, .layout {
+html,
+body,
+#__nuxt,
+#__layout,
+.layout {
   height: 100%;
 }
 

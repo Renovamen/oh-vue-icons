@@ -1,13 +1,39 @@
 <template>
   <div
-    class="sidebar nightwind-prevent-block bg-white text-gray-600 border-gray-200 fixed h-full w-64 sm:w-56 z-20 left-0 top-0 text-left border-r border-solid transform overflow-y-scroll"
+    class="
+      sidebar
+      nightwind-prevent-block
+      bg-white
+      text-gray-600
+      border-gray-200
+      fixed
+      h-full
+      w-64
+      sm:w-56
+      z-20
+      left-0
+      top-0
+      text-left
+      border-r border-solid
+      transform
+      overflow-y-scroll
+    "
     :class="{
       '-translate-x-full': !isSidebarOpen,
       '-translate-x-0': isSidebarOpen,
-      'hidden': !items && screenWidth >= 640
+      hidden: !items && screenWidth >= 640
     }"
   >
-    <ul class="nav-links mt-16 pb-2 text-base border-gray-200 border-b border-solid sm:hidden">
+    <ul
+      class="
+        nav-links
+        mt-16
+        pb-2
+        text-base
+        border-gray-200 border-b border-solid
+        sm:hidden
+      "
+    >
       <li>
         <router-link :to="localePath('index')">
           {{ $t("nav.icons") }}
@@ -28,7 +54,13 @@
 
     <ul
       v-if="items"
-      class="mt-2 sm:mt-20 pb-2 border-gray-200 border-b border-solid sm:border-none"
+      class="
+        mt-2
+        sm:mt-20
+        pb-2
+        border-gray-200 border-b border-solid
+        sm:border-none
+      "
     >
       <li
         v-for="item in items"
@@ -37,7 +69,9 @@
         @click="$emit('changeTab', item.tab)"
       >
         {{ item.tab }}
-        <v-icon v-if="item.multiColor" name="fc-picture" class="ml-1" />
+        <client-only>
+          <v-icon v-if="item.multiColor" name="fc-picture" class="ml-1" />
+        </client-only>
       </li>
     </ul>
 
@@ -46,7 +80,13 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, computed, onMounted, useStore } from '@nuxtjs/composition-api'
+import {
+  defineComponent,
+  ref,
+  computed,
+  onMounted,
+  useStore
+} from "@nuxtjs/composition-api";
 import LangSwitcher from "./LangSwitcher.vue";
 import GitBadge from "./GitBadge.vue";
 
@@ -77,7 +117,7 @@ export default defineComponent({
     return {
       isSidebarOpen,
       screenWidth
-    }
+    };
   }
 });
 </script>

@@ -9,7 +9,9 @@
         <div class="flex items-center justify-between flex-wrap">
           <div class="w-0 flex-1 flex items-center">
             <span class="flex p-2 rounded-lg bg-blue-700 text-white">
-              <v-icon :name="iconSelected" scale="1.5" />
+              <client-only>
+                <v-icon :name="iconSelected" scale="1.5" />
+              </client-only>
             </span>
             <p class="ml-3 font-medium text-white code truncate">
               <span class="text-xs md:inline md:text-base">
@@ -18,21 +20,50 @@
             </p>
           </div>
           <div
-            class="order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto"
+            class="
+              order-3
+              mt-2
+              flex-shrink-0
+              w-full
+              sm:order-2 sm:mt-0 sm:w-auto
+            "
           >
             <div class="flex rounded-md">
               <!-- <button
                 class="flex items-center justify-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-blue-600 bg-white hover:text-blue-700 focus:outline-none focus:shadow-outline transition ease-in-out duration-150"
                 @click="onDownloadSVG"
               >
-                <v-icon name="ri-download-fill" class="h-4 w-4 mr-1" />
+                <client-only>
+                  <v-icon name="ri-download-fill" class="h-4 w-4 mr-1" />
+                </client-only>
                 <span>SVG</span>
               </button> -->
               <button
-                class="ml-4 flex items-center justify-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-blue-600 bg-white hover:text-blue-700 focus:outline-none focus:shadow-outline transition ease-in-out duration-150"
+                class="
+                  ml-4
+                  flex
+                  items-center
+                  justify-center
+                  px-4
+                  py-2
+                  border border-transparent
+                  text-sm
+                  leading-5
+                  font-medium
+                  rounded-md
+                  text-blue-600
+                  bg-white
+                  hover:text-blue-700
+                  focus:outline-none focus:shadow-outline
+                  transition
+                  ease-in-out
+                  duration-150
+                "
                 @click="copyToClipboard"
               >
-                <v-icon name="fa-regular-copy" class="h-5 w-5 mr-1" />
+                <client-only>
+                  <v-icon name="fa-regular-copy" class="h-5 w-5 mr-1" />
+                </client-only>
                 <span>Copy</span>
               </button>
             </div>
@@ -40,10 +71,22 @@
           <div class="order-2 flex-shrink-0 sm:order-3 sm:ml-2">
             <button
               type="button"
-              class="-mr-1 flex p-2 rounded-md hover:bg-blue-400 focus:outline-none focus:bg-blue-400 transition ease-in-out duration-150"
+              class="
+                -mr-1
+                flex
+                p-2
+                rounded-md
+                hover:bg-blue-400
+                focus:outline-none focus:bg-blue-400
+                transition
+                ease-in-out
+                duration-150
+              "
               @click="onCloseClick"
             >
-              <v-icon name="ri-close-fill" class="h-6 w-6 text-white" />
+              <client-only>
+                <v-icon name="ri-close-fill" class="h-6 w-6 text-white" />
+              </client-only>
             </button>
           </div>
         </div>
@@ -53,7 +96,13 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, computed, watch, getCurrentInstance } from '@nuxtjs/composition-api'
+import {
+  defineComponent,
+  ref,
+  computed,
+  watch,
+  getCurrentInstance
+} from "@nuxtjs/composition-api";
 import camelcase from "camelcase";
 import Message from "./Message.vue";
 
@@ -61,8 +110,8 @@ export default defineComponent({
   components: {
     Message
   },
-  emits: ["close"],
   props: ["categorySelected", "iconSelected"],
+  emits: ["close"],
   setup(props, ctx) {
     const close = ref(false);
 
@@ -74,9 +123,12 @@ export default defineComponent({
       return `import { ${moduleName.value} } from 'oh-vue-icons/icons'`;
     });
 
-    watch(() => props.iconSelected, () => {
-      close.value = false;
-    });
+    watch(
+      () => props.iconSelected,
+      () => {
+        close.value = false;
+      }
+    );
 
     const proxy = getCurrentInstance()?.proxy;
 
@@ -112,7 +164,7 @@ export default defineComponent({
       const xhr = new XMLHttpRequest();
 
       xhr.responseType = "blob";
-      xhr.onload = function() {
+      xhr.onload = function () {
         let a = document.createElement("a");
         a.href = window.URL.createObjectURL(xhr.response);
         a.download = fileName;
@@ -129,7 +181,7 @@ export default defineComponent({
       importCode,
       onCloseClick,
       copyToClipboard
-    }
+    };
   }
 });
 </script>

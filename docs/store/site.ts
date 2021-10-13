@@ -8,7 +8,7 @@ export const state = () => ({
 export const mutations = {
   setDark(state: any, value: boolean) {
     state.dark = value;
-    nightwind.enable(value)
+    nightwind.enable(value);
   },
   toggleSidebar(state: any, value: boolean) {
     state.sidebar = value;

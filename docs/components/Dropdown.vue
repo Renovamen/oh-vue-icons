@@ -6,12 +6,14 @@
 
     <ul v-show="open" class="dropdown text-gray-600 bg-white">
       <li
-        class="hover:bg-gray-100"
         v-for="(subItem, index) in item.items"
-        @click="subItem.func ? subItem.func() : toLink(subItem.link)"
         :key="subItem.locale || index"
+        class="hover:bg-gray-100"
+        @click="subItem.func ? subItem.func() : toLink(subItem.link)"
       >
-        <v-icon v-if="subItem.icon" :name="subItem.icon" class="mr-1" />
+        <client-only>
+          <v-icon v-if="subItem.icon" :name="subItem.icon" class="mr-1" />
+        </client-only>
         <span class="align-middle">{{ subItem.text }}</span>
       </li>
     </ul>
@@ -19,7 +21,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, useRouter } from '@nuxtjs/composition-api';
+import { defineComponent, ref, useRouter } from "@nuxtjs/composition-api";
 
 export default defineComponent({
   name: "Dropdown",
@@ -46,7 +48,7 @@ export default defineComponent({
       toggle,
       toLink,
       open
-    }
+    };
   }
 });
 </script>

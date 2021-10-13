@@ -6,11 +6,24 @@
       @mouseenter="clearTimer"
       @mouseleave="startTimer(icon)"
     >
-      <span class="msg-box px-4 py-3 bg-white text-gray-800 shadow border-l-4 border-solid border-green-500 rounded">
-        <v-icon
-          name="ri-checkbox-circle-fill"
-          class="fill-current text-green-500 mr-1"
-        />
+      <span
+        class="
+          msg-box
+          px-4
+          py-3
+          bg-white
+          text-gray-800
+          shadow
+          border-l-4 border-solid border-green-500
+          rounded
+        "
+      >
+        <client-only>
+          <v-icon
+            name="ri-checkbox-circle-fill"
+            class="fill-current text-green-500 mr-1"
+          />
+        </client-only>
         Copied '{{ icon }}'
       </span>
     </div>
@@ -18,7 +31,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, toRefs } from '@nuxtjs/composition-api'
+import { defineComponent, reactive, toRefs } from "@nuxtjs/composition-api";
 
 export default defineComponent({
   name: "Message",
@@ -53,13 +66,13 @@ export default defineComponent({
           }
         }, time.duration);
       }
-    }
+    };
 
     return {
       ...toRefs(state),
       clearTimer,
       startTimer
-    }
+    };
   }
 });
 </script>

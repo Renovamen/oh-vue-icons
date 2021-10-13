@@ -1,5 +1,21 @@
 <template>
-  <div class="toolbar fixed h-full w-56 pt-16 z-20 top-0 right-0 text-left border-l border-solid bg-white text-gray-600 border-gray-200">
+  <div
+    class="
+      toolbar
+      fixed
+      h-full
+      w-56
+      pt-16
+      z-20
+      top-0
+      right-0
+      text-left
+      border-l border-solid
+      bg-white
+      text-gray-600
+      border-gray-200
+    "
+  >
     <div class="section">
       <div class="title">
         {{ $t("toolbar.scale") }}
@@ -23,11 +39,7 @@
       <div class="title">
         {{ $t("toolbar.color") }}
       </div>
-      <v-swatches
-        v-model="color"
-        show-fallback
-        fallback-input-type="color"
-      />
+      <v-swatches v-model="color" show-fallback fallback-input-type="color" />
     </div>
 
     <div class="section">
@@ -111,10 +123,18 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, onMounted, toRefs, computed, watch, useStore } from '@nuxtjs/composition-api';
-import VueSlider from 'vue-slider-component/dist-css/vue-slider-component.umd.min.js'
-import 'vue-slider-component/dist-css/vue-slider-component.css'
-import 'vue-slider-component/theme/default.css'
+import {
+  defineComponent,
+  reactive,
+  onMounted,
+  toRefs,
+  computed,
+  watch,
+  useStore
+} from "@nuxtjs/composition-api";
+import VueSlider from "vue-slider-component/dist-css/vue-slider-component.umd.min.js";
+import "vue-slider-component/dist-css/vue-slider-component.css";
+import "vue-slider-component/theme/default.css";
 
 const speedOptions = ["slow", "normal", "fast"];
 
@@ -128,7 +148,7 @@ export default defineComponent({
       color: "",
       speed: 2,
       isColorFocused: false
-    })
+    });
 
     const store = useStore();
 
@@ -148,25 +168,39 @@ export default defineComponent({
       store.commit("icon/setFlip");
     };
 
-    watch(() => state.size, (value: number, preValue: number) => {
-      store.commit("icon/setSize", value);
-    })
+    watch(
+      () => state.size,
+      (value: number, preValue: number) => {
+        store.commit("icon/setSize", value);
+      }
+    );
 
-    watch(() => state.color, (value: string, preValue: string) => {
-      store.commit("icon/setColor", value);
-    })
+    watch(
+      () => state.color,
+      (value: string, preValue: string) => {
+        store.commit("icon/setColor", value);
+      }
+    );
 
-    watch(() => state.speed, (value: number, preValue: number) => {
-      const speed = speedOptions[(value - 1) % 3];
-      store.commit("icon/setAnimSpeed", speed);
-    })
+    watch(
+      () => state.speed,
+      (value: number, preValue: number) => {
+        const speed = speedOptions[(value - 1) % 3];
+        store.commit("icon/setAnimSpeed", speed);
+      }
+    );
 
     const formatter = (v: number) => speedOptions[(v - 1) % 3];
 
     onMounted(() => {
       state.size = (store.state as any).icon.size;
       state.color = (store.state as any).icon.color;
-      state.speed = (speedOptions.findIndex((n) => n === (store.state as any).icon.animSpeed) + 1) % 3;
+      state.speed =
+        (speedOptions.findIndex(
+          (n) => n === (store.state as any).icon.animSpeed
+        ) +
+          1) %
+        3;
     });
 
     return {
@@ -176,7 +210,7 @@ export default defineComponent({
       setAnimation,
       setFlip,
       formatter
-    }
+    };
   }
 });
 </script>

@@ -2,19 +2,35 @@
   <div class="h-40 w-40 mt-4 mx-auto block relative">
     <figure
       id="random-icon"
-      class="absolute rounded-full transition-all duration-300 cursor-pointer bg-gray-700 text-blue-400 hover:bg-blue-400 hover:text-gray-700"
+      class="
+        absolute
+        rounded-full
+        transition-all
+        duration-300
+        cursor-pointer
+        bg-gray-700
+        text-blue-400
+        hover:bg-blue-400 hover:text-gray-700
+      "
       @mouseenter="toggle"
       @mouseleave="toggle"
       @click="change"
     >
-      <v-icon ref="logo" :playing="playing" :name="name" scale="4" />
+      <client-only>
+        <v-icon ref="logo" :playing="playing" :name="name" scale="4" />
+      </client-only>
     </figure>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, onMounted, toRefs } from '@nuxtjs/composition-api'
-import { getIcons } from "../lib";
+import {
+  defineComponent,
+  reactive,
+  onMounted,
+  toRefs
+} from "@nuxtjs/composition-api";
+import { getIcons } from "oh-vue-icons/dist/index.esm.min";
 const keys = Object.keys(getIcons());
 
 const randomIcon = () => {
@@ -35,7 +51,7 @@ export default defineComponent({
           change();
         }
       }, 200);
-    })
+    });
 
     const change = () => {
       state.name = randomIcon();
@@ -49,7 +65,7 @@ export default defineComponent({
       ...toRefs(state),
       toggle,
       change
-    }
+    };
   }
 });
 </script>

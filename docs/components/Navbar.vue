@@ -1,5 +1,14 @@
 <template>
-  <div class="navbar text-gray-600 w-full py-3 bg-white border-b border-solid border-gray-200">
+  <div
+    class="
+      navbar
+      text-gray-600
+      w-full
+      py-3
+      bg-white
+      border-b border-solid border-gray-200
+    "
+  >
     <nuxt-link
       class="site-name text-gray-800 absolute ml-3 sm:ml-4 text-lg font-medium"
       :to="localePath('index')"
@@ -27,7 +36,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, useStore } from '@nuxtjs/composition-api'
+import { defineComponent, useStore } from "@nuxtjs/composition-api";
 import ToggleTheme from "./ToggleTheme.vue";
 import LangSwitcher from "./LangSwitcher.vue";
 import GitBadge from "./GitBadge.vue";
@@ -43,13 +52,14 @@ export default defineComponent({
     const store = useStore();
 
     const toggleSidebar = (to: boolean | undefined) => {
-      const value = typeof to === "boolean" ? to : !(store.state as any).site.sidebar;
+      const value =
+        typeof to === "boolean" ? to : !(store.state as any).site.sidebar;
       store.commit("site/toggleSidebar", value);
-    }
+    };
 
     return {
       toggleSidebar
-    }
+    };
   }
 });
 </script>

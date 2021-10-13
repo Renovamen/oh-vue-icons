@@ -25,21 +25,47 @@
       <!----------- Search box ----------->
       <div class="search-box bg-white w-full pt-3 pb-1 -mt-4 -mb-5 z-10">
         <div
-          class="grid grid-cols-8 sm:grid-cols-12 rounded-md border border-gray-500 transition duration-200"
+          class="
+            grid grid-cols-8
+            sm:grid-cols-12
+            rounded-md
+            border border-gray-500
+            transition
+            duration-200
+          "
         >
           <div
-            class="relative col-start-1 col-span-1 flex items-center justify-center"
+            class="
+              relative
+              col-start-1 col-span-1
+              flex
+              items-center
+              justify-center
+            "
           >
-            <v-icon
-              name="ri-search-2-line"
-              scale="1.3"
-              class="search-icon text-gray-500 transition duration-200"
-              :class="{ 'search-focused': isSearchFocused }"
-            />
+            <client-only>
+              <v-icon
+                name="ri-search-2-line"
+                scale="1.3"
+                class="search-icon text-gray-500 transition duration-200"
+                :class="{ 'search-focused': isSearchFocused }"
+              />
+            </client-only>
           </div>
           <input
             v-model="searchTerm"
-            class="text-gray-900 col-start-2 col-span-7 sm:col-span-11 py-3 sm:py-4 inline-block align-middle text-base bg-transparent focus:outline-none"
+            class="
+              text-gray-900
+              col-start-2 col-span-7
+              sm:col-span-11
+              py-3
+              sm:py-4
+              inline-block
+              align-middle
+              text-base
+              bg-transparent
+              focus:outline-none
+            "
             :placeholder="`Search ${countIconsByTab} icons...`"
             @focus="isSearchFocused = true"
             @blur="isSearchFocused = false"
@@ -52,24 +78,48 @@
         <div
           v-for="(icon, index) in filterBySearch.slice(0, maxIcons)"
           :key="`icon-${index}`"
-          class="icon-block w-20 h-20 cursor-pointer rounded-lg flex justify-center items-center transition ease-out duration-300 border-2 border-solid border-transparent"
+          class="
+            icon-block
+            w-20
+            h-20
+            cursor-pointer
+            rounded-lg
+            flex
+            justify-center
+            items-center
+            transition
+            ease-out
+            duration-300
+            border-2 border-solid border-transparent
+          "
           :class="{ selected: iconSelected === icon }"
           @click="selectIcon(icon, getIconSet.tab.toLowerCase())"
         >
-          <v-icon
-            :name="icon"
-            :scale="size"
-            :animation="animation"
-            :speed="animSpeed === 'normal' ? null : animSpeed"
-            :flip="flip === 'normal' ? null : flip"
-            :fill="color"
-          />
+          <client-only>
+            <v-icon
+              :name="icon"
+              :scale="size"
+              :animation="animation"
+              :speed="animSpeed === 'normal' ? null : animSpeed"
+              :flip="flip === 'normal' ? null : flip"
+              :fill="color"
+            />
+          </client-only>
         </div>
       </div>
 
       <!----------- Load more ----------->
       <button
-        class="mt-6 capitalize text-gray-600 border border-solid border-gray-500 hover:bg-gray-100 rounded py-1 px-3"
+        class="
+          mt-6
+          capitalize
+          text-gray-600
+          border border-solid border-gray-500
+          hover:bg-gray-100
+          rounded
+          py-1
+          px-3
+        "
         @click="loadMore"
       >
         Load More
@@ -86,10 +136,15 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed, reactive, toRefs, useStore } from '@nuxtjs/composition-api'
-import { getIcons } from "../lib";
+import {
+  defineComponent,
+  computed,
+  reactive,
+  toRefs,
+  useStore
+} from "@nuxtjs/composition-api";
+import { getIcons } from "oh-vue-icons/dist/index.esm.min";
 import icons from "../icons";
-import GitBadge from "../components/GitBadge.vue";
 import Sidebar from "../components/Sidebar.vue";
 import ToolSidebar from "../components/ToolSidebar.vue";
 import IconInfo from "../components/IconInfo.vue";
@@ -99,7 +154,6 @@ const max = 304;
 
 export default defineComponent({
   components: {
-    GitBadge,
     Sidebar,
     ToolSidebar,
     IconInfo
@@ -114,16 +168,18 @@ export default defineComponent({
       maxIcons: max
     });
 
-    const iconSets = [{
-      tab: "All",
-      components: iconKeys
-    }] as any[];
+    const iconSets = [
+      {
+        tab: "All",
+        components: iconKeys
+      }
+    ] as any[];
 
     for (let icon of icons) {
       iconSets.push({
         tab: icon.name,
         id: icon.id,
-        components: iconKeys.filter(function(x) {
+        components: iconKeys.filter(function (x) {
           return x.slice(0, icon.id.length) === icon.id;
         }),
         multiColor: icon.multiColor,
@@ -150,7 +206,7 @@ export default defineComponent({
     });
 
     const changeTab = (name: string) => {
-      console.log(name)
+      console.log(name);
       resetSelectedIcon();
       state.tabSelected = name;
       state.maxIcons = max;
@@ -183,7 +239,7 @@ export default defineComponent({
       selectIcon,
       loadMore,
       resetSelectedIcon
-    }
+    };
   }
 });
 </script>

@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import { defineComponent } from '@nuxtjs/composition-api'
+import { defineComponent } from "@nuxtjs/composition-api";
 import Dropdown from "./Dropdown.vue";
 
 export default defineComponent({

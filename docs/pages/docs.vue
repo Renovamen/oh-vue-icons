@@ -16,9 +16,7 @@
             </a>
             ·
           </span>
-          <nuxt-link :to="localePath('index')">
-            icons
-          </nuxt-link>
+          <nuxt-link :to="localePath('index')"> icons </nuxt-link>
         </p>
       </div>
 
@@ -30,7 +28,7 @@
 </template>
 
 <script>
-import { defineComponent } from '@nuxtjs/composition-api'
+import { defineComponent } from "@nuxtjs/composition-api";
 import RandomIcon from "../components/RandomIcon.vue";
 import Sidebar from "../components/Sidebar.vue";
 
@@ -56,7 +54,6 @@ export default defineComponent({
   }
 });
 </script>
-
 
 <style lang="postcss">
 .nuxt-content-highlight {
