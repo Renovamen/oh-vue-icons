@@ -1,0 +1,31 @@
+{
+  "name": "docs-nuxt",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxt/content": "^1.14.0",
+    "@nuxtjs/composition-api": "^0.29.3",
+    "@nuxtjs/i18n": "^7.0.3",
+    "camelcase": "^6.2.0",
+    "core-js": "^3.15.1",
+    "nightwind": "^1.1.12",
+    "nuxt": "^2.15.7",
+    "vue-demi": "^0.11.4",
+    "vue-slider-component": "^3.2.15",
+    "vue-swatches": "^2.1.1"
+  },
+  "devDependencies": {
+    "@nuxt/types": "^2.15.7",
+    "@nuxt/typescript-build": "^2.1.0",
+    "@nuxtjs/tailwindcss": "^4.2.1",
+    "autoprefixer": "^10.3.7",
+    "postcss": "^8.3.9",
+    "tailwindcss": "^2.2.16"
+  }
+}

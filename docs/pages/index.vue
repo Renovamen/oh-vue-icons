@@ -1,0 +1,211 @@
+<template>
+  <div class="page">
+    <Sidebar
+      :item-selected="tabSelected"
+      :items="iconSets"
+      @changeTab="changeTab"
+    >
+      <ToolSidebar class="sm:hidden" />
+    </Sidebar>
+
+    <ToolSidebar class="hidden sm:block" />
+
+    <div class="page-width pt-16">
+      <div class="flex justify-center pt-16 pb-6">
+        <div class="flex flex-col text-center">
+          <h1 class="text-gray-800 text-3xl font-bold">Oh, Vue Icons!</h1>
+          <p class="text-gray-600 font-medium mt-3">
+            {{ $t("tagline") }}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-width pb-16">
+      <!----------- Search box ----------->
+      <div class="search-box bg-white w-full pt-3 pb-1 -mt-4 -mb-5 z-10">
+        <div
+          class="grid grid-cols-8 sm:grid-cols-12 rounded-md border border-gray-500 transition duration-200"
+        >
+          <div
+            class="relative col-start-1 col-span-1 flex items-center justify-center"
+          >
+            <v-icon
+              name="ri-search-2-line"
+              scale="1.3"
+              class="search-icon text-gray-500 transition duration-200"
+              :class="{ 'search-focused': isSearchFocused }"
+            />
+          </div>
+          <input
+            v-model="searchTerm"
+            class="text-gray-900 col-start-2 col-span-7 sm:col-span-11 py-3 sm:py-4 inline-block align-middle text-base bg-transparent focus:outline-none"
+            :placeholder="`Search ${countIconsByTab} icons...`"
+            @focus="isSearchFocused = true"
+            @blur="isSearchFocused = false"
+          />
+        </div>
+      </div>
+
+      <!----------- Icon list ----------->
+      <div class="mt-10 grid grid-cols-4 sm:grid-cols-8 gap-3">
+        <div
+          v-for="(icon, index) in filterBySearch.slice(0, maxIcons)"
+          :key="`icon-${index}`"
+          class="icon-block w-20 h-20 cursor-pointer rounded-lg flex justify-center items-center transition ease-out duration-300 border-2 border-solid border-transparent"
+          :class="{ selected: iconSelected === icon }"
+          @click="selectIcon(icon, getIconSet.tab.toLowerCase())"
+        >
+          <v-icon
+            :name="icon"
+            :scale="size"
+            :animation="animation"
+            :speed="animSpeed === 'normal' ? null : animSpeed"
+            :flip="flip === 'normal' ? null : flip"
+            :fill="color"
+          />
+        </div>
+      </div>
+
+      <!----------- Load more ----------->
+      <button
+        class="mt-6 capitalize text-gray-600 border border-solid border-gray-500 hover:bg-gray-100 rounded py-1 px-3"
+        @click="loadMore"
+      >
+        Load More
+      </button>
+    </div>
+
+    <IconInfo
+      :icon-selected="iconSelected"
+      :category-selected="categorySelected"
+      class="z-30"
+      @close="resetSelectedIcon"
+    />
+  </div>
+</template>
+
+<script lang="ts">
+import { defineComponent, computed, reactive, toRefs, useStore } from '@nuxtjs/composition-api'
+import { getIcons } from "../lib";
+import icons from "../icons";
+import GitBadge from "../components/GitBadge.vue";
+import Sidebar from "../components/Sidebar.vue";
+import ToolSidebar from "../components/ToolSidebar.vue";
+import IconInfo from "../components/IconInfo.vue";
+
+const iconKeys = Object.keys(getIcons());
+const max = 304;
+
+export default defineComponent({
+  components: {
+    GitBadge,
+    Sidebar,
+    ToolSidebar,
+    IconInfo
+  },
+  setup() {
+    const state = reactive({
+      searchTerm: "",
+      isSearchFocused: false,
+      tabSelected: "All",
+      iconSelected: "",
+      categorySelected: "",
+      maxIcons: max
+    });
+
+    const iconSets = [{
+      tab: "All",
+      components: iconKeys
+    }] as any[];
+
+    for (let icon of icons) {
+      iconSets.push({
+        tab: icon.name,
+        id: icon.id,
+        components: iconKeys.filter(function(x) {
+          return x.slice(0, icon.id.length) === icon.id;
+        }),
+        multiColor: icon.multiColor,
+        website: icon.website
+      });
+    }
+
+    const getIconSet = computed(() => {
+      const tabSelected = state.tabSelected;
+      return iconSets.find((x) => {
+        return x.tab === tabSelected;
+      });
+    });
+
+    const countIconsByTab = computed(() => {
+      return getIconSet.value.components.length;
+    });
+
+    const filterBySearch = computed(() => {
+      const components = getIconSet.value.components;
+      return components.filter((component: string) => {
+        return component.toLowerCase().includes(state.searchTerm.toLowerCase());
+      });
+    });
+
+    const changeTab = (name: string) => {
+      console.log(name)
+      resetSelectedIcon();
+      state.tabSelected = name;
+      state.maxIcons = max;
+    };
+
+    const resetSelectedIcon = () => {
+      state.iconSelected = "";
+      state.categorySelected = "";
+    };
+
+    const loadMore = () => {
+      state.maxIcons += max;
+    };
+
+    const selectIcon = (name: string, category: string) => {
+      state.iconSelected = name;
+      state.categorySelected = category;
+    };
+
+    const store = useStore();
+
+    return {
+      ...toRefs(state),
+      ...toRefs((store.state as any).icon),
+      iconSets,
+      countIconsByTab,
+      changeTab,
+      getIconSet,
+      filterBySearch,
+      selectIcon,
+      loadMore,
+      resetSelectedIcon
+    }
+  }
+});
+</script>
+
+<style lang="postcss">
+.icon-block.selected {
+  @apply bg-gray-200;
+}
+.icon-block:not(.selected):hover {
+  @apply border-gray-400;
+}
+
+.search-box {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 49px;
+}
+.dark .search-box {
+  @apply bg-gray-800;
+}
+
+.search-icon.search-focused {
+  @apply text-blue-600;
+}
+</style>
