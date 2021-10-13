@@ -1,51 +1,43 @@
 {
   "name": "oh-vue-icons",
   "private": true,
-  "description": "Include inline SVG icons from different popular icon packs in Vue easily.",
-  "license": "MIT",
-  "author": "Renovamen <renovamenzxh@gmail.com>",
   "scripts": {
-    "icons": "node scripts/build.js",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
-    "dev": "nuxt",
-    "build": "nuxt generate",
-    "preview": "cd docs/dist && http-server",
     "download": "sh ./scripts/download.sh",
-    "lint": "eslint --ext .js,.vue ./",
+    "icons": "node scripts/build.js",
     "postinstall": "husky install",
+    "lint": "eslint --ext .js,.ts,.tsx,.vue ./",
     "pub": "sh ./scripts/publish.sh",
     "submodule": "git submodule update --init",
-    "update": "sh ./scripts/update.sh",
-    "cp-readme": "cp {README.md,README-CN.md} package/"
+    "update": "sh ./scripts/update.sh"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "yarn lint-staged"
   },
   "lint-staged": {
-    "*.{js,vue}": [
-      "eslint --fix --ext .js,.vue ./"
+    "*.{js,ts,tsx,vue}": [
+      "eslint --fix --ext .js,.ts,.tsx,.vue ./"
     ],
     "package.json": [
-      "sort-package-json"
-    ],
-    "package/package.json": [
       "sort-package-json"
     ]
   },
   "devDependencies": {
-    "@nuxt/content": "^1.14.0",
-    "@nuxtjs/i18n": "^7.0.3",
-    "@nuxtjs/tailwindcss": "4.2.1",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "camelcase": "^6.2.0",
     "cheerio": "^1.0.0-rc.10",
-    "eslint": "^7.32.0",
+    "eslint": "^6.7.2",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-prettier": "^3.4.1",
     "eslint-plugin-vue": "^7.19.1",
     "glob-promise": "^4.2.0",
     "husky": "^7.0.2",
-    "lint-staged": "^11.2.0",
-    "nuxt": "^2.15.8",
+    "lint-staged": "^11.2.2",
+    "postcss": "^8.3.9",
+    "prettier": "^2.4.1",
     "rimraf": "^3.0.2",
     "sort-package-json": "^1.52.0",
     "svgo": "^1.3.2",
-    "vue-slider-component": "^3.2.14",
-    "vue-swatches": "^2.1.1"
+    "typescript": "^4.4.3"
   }
 }

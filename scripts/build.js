@@ -1,7 +1,7 @@
-const { icons } = require("../iconpacks");
-const path = require("path");
-const task = require("./tasks");
 const performance = require("perf_hooks").performance;
+const path = require("path");
+const { icons } = require("../iconpacks");
+const task = require("./tasks");
 
 async function runTask(name, fn) {
   const start = performance.now();

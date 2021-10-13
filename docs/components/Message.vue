@@ -6,57 +6,80 @@
       @mouseenter="clearTimer"
       @mouseleave="startTimer(icon)"
     >
-      <span class="msg-box">
-        <v-icon name="ri-checkbox-circle-fill" />
-        Copied '{{ icon }}'
+      <span
+        class="
+          msg-box
+          px-4
+          py-3
+          bg-white
+          text-gray-800
+          shadow
+          border-l-4 border-solid border-green-500
+          rounded
+        "
+      >
+        <client-only>
+          <v-icon
+            name="ri-checkbox-circle-fill"
+            class="fill-current text-green-500 mr-1"
+          />
+        </client-only>
+        Copied "{{ icon }}"
       </span>
     </div>
   </transition>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      duration: 2000,
-      timer: null,
+<script lang="ts">
+import { defineComponent, reactive, toRefs } from "@nuxtjs/composition-api";
+
+export default defineComponent({
+  name: "Message",
+  setup() {
+    const state = reactive({
       show: false,
       icon: ""
-    };
-  },
-  methods: {
-    close() {
-      this.show = false;
-    },
-    clearTimer() {
-      clearTimeout(this.timer);
-    },
-    startTimer(iconName) {
-      this.show = true;
-      this.icon = iconName;
-      this.clearTimer();
+    });
 
-      if (this.duration > 0) {
-        this.timer = setTimeout(() => {
-          if (this.show) {
-            this.close();
+    const time = reactive({
+      duration: 2000,
+      timer: null as any
+    });
+
+    const close = () => {
+      state.show = false;
+    };
+
+    const clearTimer = () => {
+      clearTimeout(time.timer);
+    };
+
+    const startTimer = (iconName: string) => {
+      state.show = true;
+      state.icon = iconName;
+      clearTimer();
+
+      if (time.duration > 0) {
+        time.timer = setTimeout(() => {
+          if (state.show) {
+            close();
           }
-        }, this.duration);
+        }, time.duration);
       }
-    }
+    };
+
+    return {
+      ...toRefs(state),
+      clearTimer,
+      startTimer
+    };
   }
-};
+});
 </script>
 
 <style lang="postcss">
-.msg-box {
-  @apply px-4 py-3 bg-white text-gray-800 shadow border-l-4 border-solid border-green-500 rounded;
-}
-.dark-mode .msg-box {
-  @apply bg-gray-700 text-gray-400;
-}
-.msg-box .ov-icon {
-  @apply fill-current text-green-500 mr-1;
+.dark .msg-box {
+  @apply bg-gray-700 text-gray-300 !important;
 }
 
 .slide-fade-enter-active,

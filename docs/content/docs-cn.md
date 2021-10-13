@@ -9,8 +9,8 @@ links:
 
 ## 特性
 
+- 支持 Vue 2 和 3
 - 支持 tree-shaking，因此你能够仅引入你需要的图标从而减小打包体积
-- 支持 Vue 2 和 Vue 3
 - 支持来自 [20 个流行的图标库](#支持的图标库)的 30000+ 个图标
 
 
@@ -21,24 +21,24 @@ links:
 | 图标库                                                         | 前缀    | 协议                                                          | 图标数量     |
 | ------------------------------------------------------------- | ------ | ------------------------------------------------------------- | ---------- |
 | [academicons](https://github.com/jpswalsh/academicons)        | `ai`   | [SIL OFL 1.1](http://scripts.sil.org/OFL)                     | 145        |
-| [Bootstrap Icons](https://icons.getbootstrap.com/)            | `bi`   | [MIT](https://github.com/twbs/icons/blob/main/LICENSE.md)     | 1370       |
-| [CoreUI Icons Free](https://icons.coreui.io/icons/) (Colorful) | `co`   | [CC BY 4.0 License](https://github.com/coreui/coreui-icons/blob/master/LICENSE) | 1575       |
+| [Bootstrap Icons](https://github.com/twbs/icons)              | `bi`   | [MIT](https://github.com/twbs/icons/blob/main/LICENSE.md)     | 1406       |
+| [CoreUI Icons Free](https://github.com/coreui/coreui-icons) (Colorful) | `co`   | [CC BY 4.0 License](https://github.com/coreui/coreui-icons/blob/master/LICENSE) | 1575       |
 | [Cryptocurrency Icons](https://github.com/spothq/cryptocurrency-icons) (Colorful) | `ci`   | [CC0 1.0 Universal](https://github.com/spothq/cryptocurrency-icons/blob/master/LICENSE.md) | 942        |
-| [Font Awesome 5 Free](https://fontawesome.com/)               | `fa`   | [CC BY 4.0](https://github.com/FortAwesome/Font-Awesome/blob/master/LICENSE.txt) | 1610       |
+| [Font Awesome 5 Free](https://github.com/FortAwesome/Font-Awesome) | `fa`   | [CC BY 4.0](https://github.com/FortAwesome/Font-Awesome/blob/master/LICENSE.txt) | 1610       |
 | [Flat Color Icons](https://github.com/icons8/flat-color-icons) (Colorful) | `fc`   | [MIT / Good Boy](https://github.com/icons8/flat-color-icons/blob/master/LICENSE.md) | 329        |
-| [Flag Icon](https://flagicons.lipis.dev/) (Colorful)          | `fi`   | [MIT](https://github.com/lipis/flag-icon-css/blob/master/LICENSE) | 516        |
-| [gameicons](https://game-icons.net/)                          | `gi`   | [CC BY 3.0](https://github.com/game-icons/icons/blob/master/license.txt) | 4040       |
-| [Heroicons](https://heroicons.com/)                           | `hi`   | [MIT](https://github.com/tailwindlabs/heroicons/blob/master/LICENSE) | 460       |
-| [Ionicons](https://ionicons.com/)                             | `io`   | [MIT](https://github.com/ionic-team/ionicons/blob/master/LICENSE) | 1332      |
-| [Line Awesome](https://icons8.com/line-awesome)               | `la`   | [MIT](https://github.com/ionic-team/ionicons/blob/master/LICENSE) | 1544      |
+| [Flag Icon](https://github.com/lipis/flag-icon-css) (Colorful)| `fi`   | [MIT](https://github.com/lipis/flag-icon-css/blob/master/LICENSE) | 516        |
+| [gameicons](https://github.com/game-icons/icons)              | `gi`   | [CC BY 3.0](https://github.com/game-icons/icons/blob/master/license.txt) | 4040       |
+| [Heroicons](https://github.com/tailwindlabs/heroicons)        | `hi`   | [MIT](https://github.com/tailwindlabs/heroicons/blob/master/LICENSE) | 460       |
+| [Ionicons](https://github.com/ionic-team/ionicons)            | `io`   | [MIT](https://github.com/ionic-team/ionicons/blob/master/LICENSE) | 1332      |
+| [Line Awesome](https://github.com/icons8/line-awesome)        | `la`   | [MIT / Good Boy](https://github.com/icons8/line-awesome/blob/master/LICENSE.md) | 1544      |
 | [Material Design icons](https://github.com/google/material-design-icons) | `md`   | [Apache 2.0](https://github.com/google/material-design-icons/blob/master/LICENSE) | 9047      |
-| [Octicons](https://primer.style/octicons/)                    | `oi`   | [MIT](https://github.com/primer/octicons/blob/main/LICENSE) | 229        |
-| [Pokemon Icons](https://theartificial.github.io/pokemon-icons/) (Colorful)| `pi`   | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | 1453      |
+| [Octicons](https://github.com/primer/octicons)                | `oi`   | [MIT](https://github.com/primer/octicons/blob/main/LICENSE) | 235        |
+| [Pokemon Icons](https://github.com/TheArtificial/pokemon-icons) (Colorful)| `pi`   | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | 1453      |
 | [PrimeIcons](https://github.com/primefaces/primeicons)        | `pr`   | [MIT](https://github.com/primefaces/primeicons/blob/master/LICENSE) | 202       |
-| [Pixelarticons](https://pixelarticons.com/)                   | `px`   | [MIT](https://github.com/halfmage/pixelarticons/blob/master/LICENSE) | 460       |
+| [Pixelarticons](https://github.com/halfmage/pixelarticons)    | `px`   | [MIT](https://github.com/halfmage/pixelarticons/blob/master/LICENSE) | 460       |
 | [Remix Icon](https://github.com/Remix-Design/RemixIcon)       | `ri`   | [Apache 2.0](https://github.com/Remix-Design/RemixIcon/blob/master/License) | 2271       |
-| [Simple Icons](https://simpleicons.org/)                      | `si`   | [CC0 1.0 Universal](https://github.com/simple-icons/simple-icons/blob/develop/LICENSE.md) | 1978       |
-| [VSCode Icons](https://github.com/vscode-icons/vscode-icons) (Colorful) | `vi`   | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | 1084       |
+| [Simple Icons](https://github.com/simple-icons/simple-icons)  | `si`   | [CC0 1.0 Universal](https://github.com/simple-icons/simple-icons/blob/develop/LICENSE.md) | 2055       |
+| [VSCode Icons](https://github.com/vscode-icons/vscode-icons) (Colorful) | `vi`   | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | 1085       |
 | [Weather Icons](https://erikflowers.github.io/weather-icons/) | `wi`   | [SIL OFL 1.1](http://scripts.sil.org/OFL)                     | 219        |
 
 
@@ -50,6 +50,20 @@ yarn add oh-vue-icons
 npm install oh-vue-icons
 ```
 
+使用 Vue 2 时，还需要安装 `@vue/composition-api`：
+
+```bash
+yarn add @vue/composition-api -D
+```
+
+如果用的是 [Nuxt 2](https://nuxtjs.org/)，则需要安装的是 `@nuxtjs/composition-api`：
+
+```bash
+yarn add @nuxtjs/composition-api -D
+```
+
+然后把 `@nuxtjs/composition-api/module` 加到你的 `nuxt.config.js` 文件的 `buildModules` 项中，更多细节见[这里](https://composition-api.nuxtjs.org/getting-started/setup)。
+
 
 ## 引入
 
@@ -57,16 +71,47 @@ npm install oh-vue-icons
 
 首先需要在 `main.js` 中引入 `oh-vue-icons`。你可以只引入你需要的图标从而减小打包体积。
 
+
+#### Vue 3
+
+```js
+// main.js
+import { createApp } from "vue";
+import App from "./App.vue";
+
+import { OhVueIcon, addIcons } from "oh-vue-icons";
+import { FaFlag, RiZhihuFill } from "oh-vue-icons/icons";
+
+addIcons(FaFlag, RiZhihuFill);
+
+const app = createApp(App);
+app.component("v-icon", OhVueIcon);
+app.mount("#app");
+```
+
+如果你并不在意打包体积，并希望引入某个图标库的所有图标，你可以：
+
+```js
+// main.js
+// 引入 Font Awesome
+import * as FaIcons from 'oh-vue-icons/icons/fa'
+
+const Fa = Object.values({ ...FaIcons })
+OhVueIcon.add(...Fa);
+```
+
+
 #### Vue 2
 
 ```js
 // main.js
 import Vue from "vue";
 import App from "./App.vue";
-import OhVueIcon from "oh-vue-icons";
 
+import { OhVueIcon, addIcons } from "oh-vue-icons";
 import { FaFlag, RiZhihuFill } from "oh-vue-icons/icons";
-OhVueIcon.add(FaFlag, RiZhihuFill);
+
+addIcons(FaFlag, RiZhihuFill);
 
 Vue.component("v-icon", OhVueIcon);
 
@@ -75,40 +120,11 @@ new Vue({
 }).$mount("#app");
 ```
 
-如果你并不在意打包体积，并希望引入某个图标库的所有图标，你可以：
-
-```js
-// main.js
-// 引入 Font Awesome
-import * as FaIcons from "oh-vue-icons/icons/fa";
-
-const Fa = Object.values({ ...FaIcons });
-OhVueIcon.add(...Fa);
-```
-
-#### Vue 3
-
-```js
-// main.js
-import { createApp } from "vue";
-import App from "./App.vue";
-import OhVueIcon from "oh-vue-icons/dist/v3/icon.es";
-
-import { FaFlag, RiZhihuFill } from "oh-vue-icons/icons";
-OhVueIcon.add(FaFlag, RiZhihuFill);
-
-const app = createApp(App);
-app.component("v-icon", OhVueIcon);
-app.mount("#app");
-```
 
 ### 局部引入
 
 ```js
-// Vue 2
 import OhVueIcon from "oh-vue-icons";
-// or Vue 3
-import OhVueIcon from "oh-vue-icons/dist/v3/icon.es";
 
 export default {
   components: {
@@ -408,9 +424,11 @@ OhVueIcon.add(
 ```
 
 
-## Nuxt.js
+## Nuxt
 
-当使用 Nuxt.js 时，需要在 `nuxt.config.js` 的 `build.transpile` 项中添加 `oh-vue-icons`：
+当使用 Nuxt.js 时，需要按照 [Nuxt 文档](https://nuxtjs.org/docs/2.x/directory-structure/plugins)中的方式，将 `oh-vue-icons` 注册为一个插件。
+
+然后需要在 `nuxt.config.js` 的 `build.transpile` 项中添加 `oh-vue-icons`：
 
 ```js
 export default {
@@ -421,14 +439,59 @@ export default {
 }
 ```
 
-否则 Nuxt 可能就不会把 `oh-vue-icons` 打包进去，[Nuxt 的文档](https://nuxtjs.org/docs/2.x/directory-structure/plugins)中对此有更详细的说明。
+否则 Nuxt 可能就不会把 `oh-vue-icons` 打包进去，[这里](https://nuxtjs.org/docs/2.x/directory-structure/plugins)对此有更详细的说明。
+
+为了仅在客户端（client-side）渲染该组件，需要把组件包裹在 `<client-only>` 标签里：
+
+```html
+<template>
+  <div>
+    <client-only>
+      <v-icon name="fa-flag" />
+      <v-icon name="ri-zhihu-fill" />
+    </client-only>
+  </div>
+</template>
+```
+
+
+## 从 v0.x 迁移到 v1.x
+
+### Vue 3
+
+```diff
+- import OhVueIcon from "oh-vue-icons/dist/v3/icon.es";
++ import { OhVueIcon, addIcons } from "oh-vue-icons";
+
+- OhVueIcon.add(FaFlag)
++ addIcons(FaFlag)
+```
+
+
+### Vue 2
+
+```diff
+- import OhVueIcon from "oh-vue-icons";
++ import { OhVueIcon, addIcons } from "oh-vue-icons";
+
+- OhVueIcon.add(FaFlag)
++ addIcons(FaFlag)
+```
+
+同时你还需要安装 `@vue/composition-api`，见[这里](#安装)。
+
+
+### Nuxt 2
+
+需要安装 `@nuxtjs/composition-api`，见[这里](#安装)。
+
 
 
 ## 致谢
 
-- 本项目受到了 [vue-awesome](https://github.com/Justineo/vue-awesome) 和 [react-icons](https://github.com/react-icons/react-icons) 的启发并借鉴了它们的部分代码。
+- 本项目受到了 [vue-awesome](https://github.com/Justineo/vue-awesome) 和 [react-icons](https://github.com/react-icons/react-icons) 的启发并借鉴了它们的部分代码
 
-- 本站部署在 [Netlify](https://www.netlify.com/) 上。
+- 本站部署在 [Netlify](https://www.netlify.com/) 上
 
 
 ## 开源协议

@@ -2,18 +2,21 @@
   <Dropdown :item="item" />
 </template>
 
-<script>
-import Dropdown from "./Dropdown";
-import packageJson from "../../package/package.json";
+<script lang="ts">
+import { defineComponent } from "@nuxtjs/composition-api";
+import Dropdown from "./Dropdown.vue";
+// @ts-ignore
+import pkgJson from "../../package/package.json";
 
-export default {
+export default defineComponent({
+  name: "GitBadge",
   components: {
     Dropdown
   },
   computed: {
     item() {
       return {
-        text: `v${packageJson.version}`,
+        text: `v${pkgJson.version}`,
         items: [
           {
             text: this.$t("nav.github.repo"),
@@ -22,13 +25,12 @@ export default {
           },
           {
             text: this.$t("nav.github.changelog"),
-            link:
-              "https://github.com/Renovamen/oh-vue-icons/blob/master/CHANGELOG.md",
+            link: "https://github.com/Renovamen/oh-vue-icons/blob/master/CHANGELOG.md",
             icon: "oi-git-compare"
           }
         ]
       };
     }
   }
-};
+});
 </script>

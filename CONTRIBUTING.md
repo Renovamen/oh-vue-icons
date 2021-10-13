@@ -30,39 +30,23 @@ yarn update
 
 ### Dev
 
-Vue 2:
-
 ```bash
-cd package/icon-v2
-yarn dev
-```
-
-Vue 3:
-
-```bash
-cd package/icon-v3
+cd package
 yarn dev
 ```
 
 ### Build
 
-Re-generate files under `src/icons` automatically:
+Re-generate files under `package/icons` automatically:
 
 ```bash
 yarn icons
 ```
 
-Build Vue 2 component:
+Build the component:
 
 ```bash
-cd package/icon-v2
-yarn build
-```
-
-Build Vue 3 component:
-
-```bash
-cd package/icon-v3
+cd package
 yarn build
 ```
 
@@ -71,14 +55,12 @@ yarn build
 
 ## Website
 
-The source code of our website is under folder [`docs`](docs), which is built with [Nuxt.js](https://nuxtjs.org) and [tailwindcss](https://tailwindcss.com).
+The source code of our website is under folder [`docs`](docs), building with [Nuxt.js](https://nuxtjs.org) and [Tailwind CSS](https://tailwindcss.com).
 
 ```bash
-# development
-yarn dev
-
-# generate static files
-yarn docs:build
+cd docs
+yarn dev  # Development
+yarn generate  # Generate static files
 ```
 
 
@@ -86,4 +68,4 @@ yarn docs:build
 
 ## License
 
-By contributing to oh-vue-icons, you agree that your contributions will be licensed under its MIT license.
+By contributing to `oh-vue-icons`, you agree that your contributions will be licensed under its MIT license.

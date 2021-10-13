@@ -1,0 +1,19 @@
+/* Code blocks */
+pre[class*="language-"] {
+	font-size: 0.9rem !important;
+	text-shadow: none !important;
+	padding: 1em 1.3em !important;
+}
+
+/* Inline code */
+:not(pre) > code {
+	background-color: #f9f2f4;
+	color: #c52950;
+	padding: 0.2rem 0.4rem;
+	border-radius: 3px;
+	font-size: 85%;
+}
+
+.token {
+	background: transparent !important;
+}

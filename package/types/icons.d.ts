@@ -1,31 +1,27 @@
-export interface IconData {
+export interface IconType {
   name: string;
   minX: number;
   minY: number;
   width: number;
   height: number;
   raw: string;
-  attr?: {
-    [key: string]: string;
-  };
+  attr?: ObjType;
 }
 
-export interface IconDataCustomize {
+export interface CustomizeIconType {
   name: string;
   width: number;
   height: number;
   minX?: number;
   minY?: number;
   raw?: string;
-  attr?: {
-    [key: string]: string;
-  };
+  attr?: ObjType;
   points?: string;
-  polygons?: {
-    [key: string]: string;
-  };
+  polygons?: ObjType[];
   d?: string;
-  paths?: {
-    [key: string]: string;
-  };
+  paths?: ObjType[];
+}
+
+export interface ObjType {
+  [key: string]: string;
 }

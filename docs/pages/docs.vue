@@ -2,7 +2,7 @@
   <div class="page">
     <Sidebar />
 
-    <div class="page-width docs-content">
+    <div class="page-width markdown pt-24 pb-16 text-gray-700 text-base">
       <div class="text-left sm:text-center">
         <RandomIcon />
         <h1>{{ page.title }}</h1>
@@ -16,9 +16,7 @@
             </a>
             ·
           </span>
-          <NuxtLink to="/">
-            icons
-          </NuxtLink>
+          <nuxt-link :to="localePath('index')"> icons </nuxt-link>
         </p>
       </div>
 
@@ -30,10 +28,11 @@
 </template>
 
 <script>
-import RandomIcon from "../components/RandomIcon";
+import { defineComponent } from "@nuxtjs/composition-api";
+import RandomIcon from "../components/RandomIcon.vue";
 import Sidebar from "../components/Sidebar.vue";
 
-export default {
+export default defineComponent({
   components: {
     RandomIcon,
     Sidebar
@@ -53,54 +52,10 @@ export default {
       return this.pages[this.$i18n.locale];
     }
   }
-};
+});
 </script>
 
 <style lang="postcss">
-.docs-content {
-  @apply text-gray-700 text-base;
-}
-
-.dark-mode .docs-content {
-  @apply text-gray-300;
-}
-
-.docs-content h1 {
-  @apply mt-10 mb-6;
-}
-
-.docs-content h2 {
-  @apply mt-20 mb-4;
-}
-
-.docs-content h3 {
-  @apply mt-16 mb-4;
-}
-
-.docs-content h4 {
-  @apply mt-8 mb-2;
-}
-
-.docs-content h2 + h3 {
-  @apply mt-4;
-}
-
-.docs-content {
-  @apply pt-24 pb-16;
-}
-
-.docs-content a {
-  @apply text-blue-600 font-medium;
-}
-
-.docs-content a:hover {
-  @apply underline;
-}
-
-.dark-mode .docs-content a {
-  @apply text-blue-400;
-}
-
 .nuxt-content-highlight {
   @apply mt-2 mb-4;
 }
@@ -109,19 +64,7 @@ export default {
   @apply m-0 rounded bg-transparent border border-solid border-gray-300;
 }
 
-.dark-mode .nuxt-content-highlight pre {
+.dark .nuxt-content-highlight pre {
   @apply border-gray-700;
-}
-
-.docs-content ul {
-  @apply my-2;
-}
-
-.docs-content li {
-  @apply ml-8 list-disc leading-7;
-}
-
-.docs-content strong {
-  @apply font-semibold;
 }
 </style>

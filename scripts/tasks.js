@@ -3,6 +3,7 @@ const fs = require("fs").promises;
 const camelcase = require("camelcase");
 const rimraf = require("rimraf");
 
+const svgo = require("./svgo");
 const { icons } = require("../iconpacks");
 const { getIconFiles, convertSVG /* writeSVG */ } = require("./utils");
 const {
@@ -12,9 +13,8 @@ const {
   tsDefTemplate,
   tsDefImportTemplate
 } = require("./templates");
-const svgo = require("./svgo");
 
-const ignore = err => {
+const ignore = (err) => {
   if (err.code === "EEXIST") return;
   throw err;
 };
@@ -58,7 +58,9 @@ async function writeIconModule(icon, DIST, ASSETS) {
     const files = await getIconFiles(content);
     for (const file of files) {
       const svgStrRaw = await fs.readFile(file, "utf8");
-      const svgStr = await svgo.optimize(svgStrRaw).then(result => result.data);
+      const svgStr = await svgo
+        .optimize(svgStrRaw)
+        .then((result) => result.data);
 
       const name =
         (content.nameFromPath && content.nameFromPath(file)) ||

@@ -1,71 +1,81 @@
 <template>
   <div class="h-40 w-40 mt-4 mx-auto block relative">
     <figure
-      id="logo"
-      class="absolute rounded-full transition-all duration-300 cursor-pointer"
+      id="random-icon"
+      class="
+        absolute
+        rounded-full
+        transition-all
+        duration-300
+        cursor-pointer
+        bg-gray-700
+        text-blue-400
+        hover:bg-blue-400 hover:text-gray-700
+      "
       @mouseenter="toggle"
       @mouseleave="toggle"
       @click="change"
     >
-      <v-icon ref="logo" :playing="playing" :name="name" scale="4" />
+      <client-only>
+        <v-icon ref="logo" :playing="playing" :name="name" scale="4" />
+      </client-only>
     </figure>
   </div>
 </template>
 
-<script>
-import OhVueIcon from "../../package/icon-v2/src/components";
-const keys = Object.keys(OhVueIcon.icons);
+<script lang="ts">
+import {
+  defineComponent,
+  reactive,
+  onMounted,
+  toRefs
+} from "@nuxtjs/composition-api";
+import { listIcons } from "oh-vue-icons/dist/index.esm.min";
+const keys = Object.keys(listIcons());
 
 const randomIcon = () => {
   return keys[Math.floor(Math.random() * keys.length)];
 };
 
-export default {
-  data() {
-    return {
+export default defineComponent({
+  name: "RandomIcon",
+  setup() {
+    const state = reactive({
       name: randomIcon(),
       playing: true
+    });
+
+    onMounted(() => {
+      setInterval(() => {
+        if (state.playing) {
+          change();
+        }
+      }, 200);
+    });
+
+    const change = () => {
+      state.name = randomIcon();
     };
-  },
-  mounted() {
-    setInterval(() => {
-      if (this.playing) {
-        this.change();
-      }
-    }, 200);
-  },
-  methods: {
-    change() {
-      this.name = randomIcon();
-    },
-    toggle: function() {
-      this.playing = !this.playing;
-    }
+
+    const toggle = () => {
+      state.playing = !state.playing;
+    };
+
+    return {
+      ...toRefs(state),
+      toggle,
+      change
+    };
   }
-};
+});
 </script>
 
-<style lang="postcss">
-#logo {
-  @apply bg-gray-700 text-blue-400;
-}
-#logo:hover {
-  @apply bg-blue-400 text-gray-700;
-}
-.dark-mode #logo {
-  @apply bg-gray-300 text-blue-600;
-}
-.dark-mode #logo:hover {
-  @apply bg-blue-600 text-gray-400;
-}
-</style>
-
 <style scoped>
-#logo {
+#random-icon {
   margin: 10px;
   padding: 30px;
 }
-#logo:hover {
+#random-icon:hover {
   margin: 0;
   padding: 40px;
 }

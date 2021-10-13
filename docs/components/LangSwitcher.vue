@@ -3,15 +3,17 @@
 </template>
 
 <script>
-import Dropdown from "./Dropdown";
+import { defineComponent } from "@nuxtjs/composition-api";
+import Dropdown from "./Dropdown.vue";
 
-export default {
+export default defineComponent({
+  name: "LangSwitcher",
   components: {
     Dropdown
   },
   computed: {
     item() {
-      let items = [];
+      const items = [];
       for (let locale of this.$i18n.locales) {
         items.push({
           link: this.switchLocalePath(locale.code),
@@ -25,5 +27,5 @@ export default {
       };
     }
   }
-};
+});
 </script>

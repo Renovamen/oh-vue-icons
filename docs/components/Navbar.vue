@@ -1,120 +1,71 @@
 <template>
-  <div class="navbar">
-    <NuxtLink
-      to="/"
-      class="site-name absolute ml-3 sm:ml-4 text-lg font-medium"
+  <div
+    class="
+      navbar
+      text-gray-600
+      w-full
+      py-3
+      bg-white
+      border-b border-solid border-gray-200
+    "
+  >
+    <nuxt-link
+      class="site-name text-gray-800 absolute ml-3 sm:ml-4 text-lg font-medium"
+      :to="localePath('index')"
     >
       Oh, Vue Icons!
-    </NuxtLink>
+    </nuxt-link>
+
     <div class="flex items-center justify-end">
-      <NuxtLink :to="localePath('index')" class="mr-6 hidden sm:block">
+      <nuxt-link :to="localePath('index')" class="mr-6 hidden sm:block">
         {{ $t("nav.icons") }}
-      </NuxtLink>
-      <NuxtLink :to="localePath('docs')" class="mr-6 hidden sm:block">
+      </nuxt-link>
+      <nuxt-link :to="localePath('docs')" class="mr-6 hidden sm:block">
         {{ $t("nav.docs") }}
-      </NuxtLink>
+      </nuxt-link>
+
       <LangSwitcher class="hidden sm:block" />
       <GitBadge class="hidden sm:block" />
       <ToggleTheme class="mr-6" />
-      <a class="sidebar-toggler mr-4 sm:hidden block" @click="toggleSidebar()">
+
+      <a class="text-gray-700 mr-4 sm:hidden block" @click="toggleSidebar()">
         <v-icon name="ri-menu-line" scale="1.5" />
       </a>
     </div>
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent, useStore } from "@nuxtjs/composition-api";
 import ToggleTheme from "./ToggleTheme.vue";
-import LangSwitcher from "./LangSwitcher";
-import GitBadge from "./GitBadge";
-import packageJson from "../../package.json";
+import LangSwitcher from "./LangSwitcher.vue";
+import GitBadge from "./GitBadge.vue";
 
-export default {
+export default defineComponent({
+  name: "Navbar",
   components: {
     ToggleTheme,
     LangSwitcher,
     GitBadge
   },
-  data() {
-    return {
-      scrollTop: 0,
-      version: "0.1.0"
+  setup() {
+    const store = useStore();
+
+    const toggleSidebar = (to: boolean | undefined) => {
+      const value =
+        typeof to === "boolean" ? to : !(store.state as any).site.sidebar;
+      store.commit("site/toggleSidebar", value);
     };
-  },
-  watch: {
-    $route() {
-      this.toggleSidebar(false);
-    }
-  },
-  mounted() {
-    this.version = packageJson.version;
-    window.addEventListener("scroll", this.handleScroll);
-  },
-  beforeDestroy() {
-    window.removeEventListener("scroll", this.handleScroll);
-  },
-  methods: {
-    handleScroll() {
-      this.scrollTop = window.pageYOffset;
-    },
-    toggleSidebar(to) {
-      const payload =
-        typeof to === "boolean" ? to : !this.$store.state.sidebar.isSidebarOpen;
-      this.$store.commit("sidebar/toggleSidebar", payload);
-    }
+
+    return {
+      toggleSidebar
+    };
   }
-};
+});
 </script>
 
-<style lang="postcss">
-.navbar {
-  @apply w-full py-3 bg-white border-b border-solid border-gray-200;
-}
-
-.dark-mode .navbar {
+<style lang="postcss" scoped>
+.dark .navbar {
   @apply bg-gray-800 border-gray-700;
-}
-
-.navbar a {
-  @apply text-gray-600;
-}
-
-.navbar a:hover {
-  @apply text-gray-700;
-}
-
-.dark-mode .navbar a {
-  @apply text-gray-400;
-}
-
-.dark-mode .navbar a:hover {
-  @apply text-gray-300;
-}
-
-.navbar .site-name {
-  @apply text-gray-800;
-  margin-top: 2px;
-}
-@media (min-width: 640px) {
-  .navbar .site-name {
-    margin-top: -1px;
-  }
-}
-.navbar .site-name:hover {
-  @apply text-gray-900;
-}
-.dark-mode .navbar .site-name {
-  @apply text-gray-300;
-}
-.dark-mode .navbar .site-name:hover {
-  @apply text-gray-200;
-}
-
-.navbar .sidebar-toggler {
-  @apply text-gray-700;
-}
-
-.dark-mode .navbar .sidebar-toggler {
-  @apply text-gray-300;
 }
 </style>
