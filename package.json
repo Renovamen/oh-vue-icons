@@ -2,6 +2,7 @@
   "name": "oh-vue-icons",
   "private": true,
   "scripts": {
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "download": "sh ./scripts/download.sh",
     "icons": "node scripts/build.js",
     "postinstall": "husky install",
