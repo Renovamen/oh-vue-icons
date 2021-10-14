@@ -10,9 +10,6 @@
     "submodule": "git submodule update --init",
     "update": "sh ./scripts/update.sh"
   },
-  "simple-git-hooks": {
-    "pre-commit": "yarn lint-staged"
-  },
   "lint-staged": {
     "*.{js,ts,tsx,vue}": [
       "eslint --fix --ext .js,.ts,.tsx,.vue ./"
