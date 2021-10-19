@@ -207,6 +207,7 @@ export default {
   <v-icon name="fa-regular-bell" animation="ring"></v-icon>
   <v-icon name="ri-heart-pulse-line" animation="pulse"></v-icon>
   <v-icon name="bi-lightning" animation="flash"></v-icon>
+  <v-icon name="ri-sailboat-line" animation="float"></v-icon>
 </p>
 
 ```html
@@ -216,6 +217,7 @@ export default {
 <v-icon name="fa-regular-bell" animation="ring" />
 <v-icon name="ri-heart-pulse-line" animation="pulse" />
 <v-icon name="bi-lightning" animation="flash" />
+<v-icon name="ri-sailboat-line" animation="float" />
 ```
 
 使用 `hover: boolean` 来仅在图标被 hover 时启用动画：

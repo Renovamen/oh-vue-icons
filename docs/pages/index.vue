@@ -22,7 +22,7 @@
     </div>
 
     <div class="page-width pb-16">
-      <!----------- Search box ----------->
+      <!-- --------- Search box --------- -->
       <div class="search-box bg-white w-full pt-3 pb-1 -mt-4 -mb-5 z-10">
         <div
           class="
@@ -73,7 +73,7 @@
         </div>
       </div>
 
-      <!----------- Icon list ----------->
+      <!-- --------- Icon list --------- -->
       <div class="mt-10 grid grid-cols-4 sm:grid-cols-8 gap-3">
         <div
           v-for="(icon, index) in filterBySearch.slice(0, maxIcons)"
@@ -108,7 +108,7 @@
         </div>
       </div>
 
-      <!----------- Load more ----------->
+      <!-- --------- Load more --------- -->
       <button
         class="
           mt-6
