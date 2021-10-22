@@ -110,6 +110,7 @@
 
       <!-- --------- Load more --------- -->
       <button
+        v-if="filterBySearch.length > maxIcons"
         class="
           mt-6
           capitalize
