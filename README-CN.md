@@ -50,7 +50,7 @@
 
 ## 文档
 
-在[这里](https://oh-vue-icons.netlify.app/cn)查找图标和查看文档。
+在[这里](https://oh-vue-icons.js.orgcn)查找图标和查看文档。
 
 
 &nbsp;
@@ -168,7 +168,7 @@ export default {
 
 对于 [Font Awesome 5](https://fontawesome.com/)，来自 `regular` 包的图标的 `name` prop 值的前缀为 `fa-regular-` 而不是 `fa-`，如 `fa-regular-flag`。而 `solid` 和 `brands` 包的图标前缀均为 `fa-`，如 `fa-beer` 和 `fa-github`。
 
-[文档](https://oh-vue-icons.netlify.app/cn/docs#基本用法)中有更多的用法。
+[文档](https://oh-vue-icons.js.orgcn/docs#基本用法)中有更多的用法。
 
 
 &nbsp;
@@ -187,7 +187,7 @@ export default {
 | `title`     | 图标的 title           | `string`  | /                                                             | /              |
 | `inverse`   | 把图标变成白色          | `boolean` | `true` / `false`                                              | `false`        |
 
-[文档](https://oh-vue-icons.netlify.app/cn/docs#示例)中有一些示例。
+[文档](https://oh-vue-icons.js.orgcn/docs#示例)中有一些示例。
 
 
 &nbsp;
@@ -235,7 +235,7 @@ export default {
 ## 致谢
 
 - 本项目受到了 [vue-awesome](https://github.com/Justineo/vue-awesome) 和 [react-icons](https://github.com/react-icons/react-icons) 的启发并借鉴了它们的部分代码
-- [文档网站](https://oh-vue-icons.netlify.app/)部署在 [Netlify](https://www.netlify.com/) 上
+- [文档网站](https://oh-vue-icons.js.org)部署在 [Netlify](https://www.netlify.com/) 上
 
 
 &nbsp;
