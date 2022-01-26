@@ -1,13 +1,21 @@
 {
   "name": "oh-vue-icons",
   "private": true,
+  "workspaces": [
+    "package",
+    "demo"
+  ],
   "scripts": {
+    "build": "yarn workspace oh-vue-icons run build",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
-    "download": "sh ./scripts/download.sh",
+    "demo": "yarn workspace demo dev",
+    "demo:build": "yarn workspace demo build",
+    "dev": "yarn build --watch",
+    "download": "bash ./scripts/download.sh",
     "icons": "node scripts/build.js",
-    "postinstall": "husky install",
     "lint": "eslint --ext .js,.ts,.tsx,.vue ./",
-    "pub": "sh ./scripts/publish.sh"
+    "prepare": "husky install",
+    "release": "bash ./scripts/release.sh"
   },
   "lint-staged": {
     "*.{js,ts,tsx,vue}": [
@@ -34,6 +42,8 @@
     "rimraf": "^3.0.2",
     "sort-package-json": "^1.52.0",
     "svgo": "^1.3.2",
-    "typescript": "^4.4.3"
+    "typescript": "^4.5.5",
+    "vite": "^2.7.13",
+    "vue-tsc": "^0.31.1"
   }
 }

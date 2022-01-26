@@ -1,6 +1,4 @@
 node_modules
 .DS_Store
-demo-dist
-dist-ssr
 *.local
 icons

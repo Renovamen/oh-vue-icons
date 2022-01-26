@@ -1,6 +1,6 @@
 import { createApp } from "vue";
 import App from "./App.vue";
-import { OhVueIcon, addIcons } from ".";
+import { OhVueIcon, addIcons } from "oh-vue-icons";
 
 import {
   FaFlag,
@@ -20,7 +20,7 @@ import {
   BiLightning,
   HiAcademicCap,
   RiSailboatLine
-} from "../icons";
+} from "oh-vue-icons/icons";
 
 addIcons(
   FaFlag,

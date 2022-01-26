@@ -1,5 +1,6 @@
 iconpacks/*/
 *.zip
+dist
 
 # vscode settings
 .vscode

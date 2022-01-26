@@ -1,3 +1,5 @@
+#!/bin/bash
+
 ICONPATH="./iconpacks"
 ICONJSON="${ICONPATH}/index.js"
 
@@ -24,15 +26,15 @@ done
 # Extract download URLs and file names from $ICONJSON
 # --------------------------------------------------------------------
 
-urlList=()
-fileNameList=()
+declare -a urlList=()
+declare -a fileNameList=()
 
 while read line
 do
   # Extract download URL
   result=$(echo $line | sed 's/downloadURL: "\(.*\)",/\1/g')
 
-  if [[ "$result" != "$line" ]]
+  if [ "$result" != "$line" ]
   then
     urlList[${#urlList[@]}]=$result
   fi
@@ -40,7 +42,7 @@ do
   # Extract download file name
   result=$(echo $line | sed 's/downloadFileName: "\(.*\)",/\1/g')
 
-  if [[ "$result" != "$line" ]]
+  if [ "$result" != "$line" ]
   then
     fileNameList[${#fileNameList[@]}]=$result
   fi
@@ -68,7 +70,7 @@ download() {
 
     echo "Extracting ${filePath} to ${folderPath}"
 
-    if [[ "$2" == "gameicons" ]]  # hard code for gameicons
+    if [ "$2" == "gameicons" ]  # hard code for gameicons
     then
       oldFolferName="icons"
     else

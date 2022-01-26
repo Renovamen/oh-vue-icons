@@ -5,8 +5,8 @@ yarn download -f
 yarn icons
 
 # build lib
-cd package
 yarn build
 
 # publish to npm
+cd package
 npm publish

@@ -4,8 +4,10 @@
 
 ### Install Dependencies
 
+Clone the repo and install dependencies:
+
 ```bash
-yarn install
+yarn
 ```
 
 ### Icon Packs
@@ -21,10 +23,18 @@ This script would download icon packs as zip files from their Github repositorie
 
 ### Dev
 
+Start watching source files:
+
 ```bash
-cd package
 yarn dev
 ```
+
+Open another terminal, and start developing the demo site:
+
+```bash
+yarn demo
+```
+
 
 ### Build
 
@@ -37,7 +47,6 @@ yarn icons
 Build the component:
 
 ```bash
-cd package
 yarn build
 ```
 
@@ -46,12 +55,27 @@ yarn build
 
 ## Website
 
-The source code of our website is under folder [`docs`](docs), building with [Nuxt.js](https://nuxtjs.org) and [Tailwind CSS](https://tailwindcss.com).
+The source code of the website is under folder [`docs`](docs), built with [Nuxt 2](https://nuxtjs.org) and [Tailwind CSS](https://tailwindcss.com).
+
+To start the site, you should first [build the component](#build) and remove `node_modules` in the root folder. This is because the component is developed using Vue 3 (although it supports both Vue 2 & 3) while the website is powered by Nuxt 2 which is based on Vue 2. Thus there could be some conflicts among dependencies.
+
+Then install dependencies:
 
 ```bash
 cd docs
-yarn dev  # Development
-yarn generate  # Generate static files
+yarn
+```
+
+Start developing:
+
+```bash
+yarn dev
+```
+
+Generate static files:
+
+```bash
+yarn generate
 ```
 
 
