@@ -106,4 +106,4 @@ declare const OhVueIcon: vue_demi.DefineComponent<{
     inverse: boolean;
 }>;
 
-export { OhVueIcon, addIcons, listIcons };
+export { CustomizeIconType, OhVueIcon, addIcons, listIcons };
