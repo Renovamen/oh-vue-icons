@@ -1,4 +1,4 @@
-iconpacks/gameicons/
+iconpacks/*/
 *.zip
 
 # vscode settings

@@ -7,9 +7,7 @@
     "icons": "node scripts/build.js",
     "postinstall": "husky install",
     "lint": "eslint --ext .js,.ts,.tsx,.vue ./",
-    "pub": "sh ./scripts/publish.sh",
-    "submodule": "git submodule update --init",
-    "update": "sh ./scripts/update.sh"
+    "pub": "sh ./scripts/publish.sh"
   },
   "lint-staged": {
     "*.{js,ts,tsx,vue}": [

@@ -1,7 +1,5 @@
-# download and update iconpacks
-yarn submodule
-yarn download
-yarn update
+# download iconpacks
+yarn download -f
 
 # generate icon files
 yarn icons

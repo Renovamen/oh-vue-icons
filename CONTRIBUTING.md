@@ -13,20 +13,11 @@ yarn install
 Fetch icon sources:
 
 ```bash
-yarn submodule
+yarn download -f
 ```
 
-Download some of the iconpacks ([`gameicons`](https://game-icons.net/archives/svg/zip/000000/transparent/game-icons.net.svg.zip)):
+This script would download icon packs as zip files from their Github repositories. Although it could be achieved more easily via "git submodule", too many submodules brings git too much loads and reduces its speed.
 
-```bash
-yarn download
-```
-
-Upgrade all iconpacks:
-
-```bash
-yarn update
-```
 
 ### Dev
 

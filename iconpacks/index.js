@@ -5,6 +5,8 @@ module.exports = {
     {
       id: "ai",
       name: "academicons",
+      downloadFileName: "academicons",
+      downloadURL: "https://github.com/jpswalsh/academicons/archive/refs/heads/master.zip",
       contents: [
         {
           files: path.resolve(__dirname, "academicons/svg/*.svg"),
@@ -21,6 +23,8 @@ module.exports = {
     {
       id: "bi",
       name: "Bootstrap Icons",
+      downloadFileName: "bootstrap-icons",
+      downloadURL: "https://github.com/twbs/icons/archive/refs/heads/main.zip",
       contents: [
         {
           files: path.resolve(__dirname, "bootstrap-icons/icons/*.svg"),
@@ -37,6 +41,8 @@ module.exports = {
     {
       id: "ci",
       name: "Crypto Icons",
+      downloadFileName: "cryptocurrency-icons",
+      downloadURL: "https://github.com/spothq/cryptocurrency-icons/archive/refs/heads/master.zip",
       contents: [
         {
           files: path.resolve(__dirname, "cryptocurrency-icons/svg/black/*.svg"),
@@ -60,6 +66,8 @@ module.exports = {
     {
       id: "co",
       name: "CoreUI Icons",
+      downloadFileName: "coreui-icons",
+      downloadURL: "https://github.com/coreui/coreui-icons/archive/refs/heads/master.zip",
       contents: [
         {
           files: path.resolve(__dirname, "coreui-icons/svg/*/*.svg"),
@@ -78,6 +86,8 @@ module.exports = {
     {
       id: "fa",
       name: "Font Awesome",
+      downloadFileName: "fontawesome",
+      downloadURL: "https://github.com/FortAwesome/Font-Awesome/archive/refs/heads/master.zip",
       contents: [
         {
           files: path.resolve(
@@ -103,6 +113,8 @@ module.exports = {
     {
       id: "fc",
       name: "Flat Color Icons",
+      downloadFileName: "flat-color-icons",
+      downloadURL: "https://github.com/icons8/flat-color-icons/archive/refs/heads/master.zip",
       contents: [
         {
           files: path.resolve(__dirname, "flat-color-icons/svg/*.svg"),
@@ -119,6 +131,8 @@ module.exports = {
     {
       id: "fi",
       name: "Flag Icon",
+      downloadFileName: "flag-icon",
+      downloadURL: "https://github.com/lipis/flag-icons/archive/refs/heads/main.zip",
       contents: [
         {
           files: path.resolve(__dirname, "flag-icon/flags/4x3/*.svg"),
@@ -141,9 +155,11 @@ module.exports = {
     {
       id: "gi",
       name: "gameicons",
+      downloadFileName: "gameicons",
+      downloadURL: "https://game-icons.net/archives/svg/zip/000000/transparent/game-icons.net.svg.zip",
       contents: [
         {
-          files: path.resolve(__dirname, "gameicons/*/*.svg"),
+          files: path.resolve(__dirname, "gameicons/000000/transparent/1x1/*/*.svg"),
           formatter: (name) => `Gi${name}`,
           prefix: (name) => `gi-${name}`,
           scale: 1.14
@@ -157,6 +173,8 @@ module.exports = {
     {
       id: "hi",
       name: "Heroicons",
+      downloadFileName: "heroicons",
+      downloadURL: "https://github.com/tailwindlabs/heroicons/archive/refs/heads/master.zip",
       contents: [
         {
           files: path.resolve(__dirname, "heroicons/optimized/outline/*.svg"),
@@ -177,6 +195,8 @@ module.exports = {
     {
       id: "io",
       name: "Ionicons",
+      downloadFileName: "ionicons",
+      downloadURL: "https://github.com/ionic-team/ionicons/archive/refs/heads/main.zip",
       contents: [
         {
           files: path.resolve(__dirname, "ionicons/src/svg/*.svg"),
@@ -192,6 +212,8 @@ module.exports = {
     {
       id: "la",
       name: "Line Awesome",
+      downloadFileName: "line-awesome",
+      downloadURL: "https://github.com/icons8/line-awesome/archive/refs/heads/master.zip",
       contents: [
         {
           files: path.resolve(__dirname, "line-awesome/svg/*.svg"),
@@ -207,6 +229,8 @@ module.exports = {
     {
       id: "md",
       name: "Material Design icons",
+      downloadFileName: "material-design-icons",
+      downloadURL: "https://github.com/google/material-design-icons/archive/refs/heads/master.zip",
       contents: [
         {
           files: path.resolve(__dirname, "material-design-icons/src/*/*/*/24px.svg"),
@@ -230,6 +254,8 @@ module.exports = {
     {
       id: "oi",
       name: "Octicons",
+      downloadFileName: "octicons",
+      downloadURL: "https://github.com/primer/octicons/archive/refs/heads/main.zip",
       contents: [
         {
           files: path.resolve(__dirname, "octicons/icons/*-16.svg"),
@@ -247,6 +273,8 @@ module.exports = {
     {
       id: "pi",
       name: "Pokemon Icons",
+      downloadFileName: "pokemon-icons",
+      downloadURL: "https://github.com/TheArtificial/pokemon-icons/archive/refs/heads/master.zip",
       contents: [
         {
           files: path.resolve(__dirname, "pokemon-icons/_icons/SVG/*.svg"),
@@ -265,6 +293,8 @@ module.exports = {
     {
       id: "pr",
       name: "PrimeIcons",
+      downloadFileName: "primeicons",
+      downloadURL: "https://github.com/primefaces/primeicons/archive/refs/heads/master.zip",
       contents: [
         {
           files: path.resolve(__dirname, "primeicons/raw-svg/*.svg"),
@@ -281,6 +311,8 @@ module.exports = {
     {
       id: "px",
       name: "Pixelarticons",
+      downloadFileName: "pixelarticons",
+      downloadURL: "https://github.com/halfmage/pixelarticons/archive/refs/heads/master.zip",
       contents: [
         {
           files: path.resolve(__dirname, "pixelarticons/svg/*.svg"),
@@ -297,6 +329,8 @@ module.exports = {
     {
       id: "ri",
       name: "Remix Icon",
+      downloadFileName: "remixicon",
+      downloadURL: "https://github.com/Remix-Design/RemixIcon/archive/refs/heads/master.zip",
       contents: [
         {
           files: path.resolve(__dirname, "remixicon/icons/*/*.svg"),
@@ -312,6 +346,8 @@ module.exports = {
     {
       id: "si",
       name: "Simple Icons",
+      downloadFileName: "simple-icons",
+      downloadURL: "https://github.com/simple-icons/simple-icons/archive/refs/heads/develop.zip",
       contents: [
         {
           files: path.resolve(__dirname, "simple-icons/icons/*.svg"),
@@ -328,6 +364,8 @@ module.exports = {
     {
       id: "vi",
       name: "VSCode Icons",
+      downloadFileName: "vscode-icons",
+      downloadURL: "https://github.com/vscode-icons/vscode-icons/archive/refs/heads/master.zip",
       contents: [
         {
           files: path.resolve(__dirname, "vscode-icons/icons/*.svg"),
@@ -345,6 +383,8 @@ module.exports = {
     {
       id: "wi",
       name: "Weather Icons",
+      downloadFileName: "weather-icons",
+      downloadURL: "https://github.com/erikflowers/weather-icons/archive/refs/heads/master.zip",
       contents: [
         {
           files: path.resolve(__dirname, "weather-icons/svg/*.svg")

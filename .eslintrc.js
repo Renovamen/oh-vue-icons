@@ -21,12 +21,5 @@ module.exports = {
     "@typescript-eslint/no-unused-vars": "off",
     "vue/require-default-prop": "off",
     "vue/require-prop-types": "off"
-  },
-  ignorePatterns: [
-    "node_modules/",
-    "iconpacks/",
-    "package/icons/",
-    "package/build",
-    "*dist/"
-  ]
+  }
 };
