@@ -358,4 +358,4 @@ const OhVueIcon = defineComponent({
   }
 });
 
-export { CustomizeIconType, OhVueIcon, addIcons, listIcons };
+export { OhVueIcon, addIcons, listIcons };
