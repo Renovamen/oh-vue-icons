@@ -1,5 +1,31 @@
 # Change Log
 
+## [v1.0.0-rc2](https://github.com/Renovamen/oh-vue-icons/compare/v1.0.0-rc1...1.0.0-rc2) (2022-01-27)
+
+### Features
+
+- export type `CustomizeIconType` ([90da087](https://github.com/Renovamen/oh-vue-icons/commit/90da0871e8869e9b6ae2c19bfe01c33a7dfe0ac5)) ([#18](https://github.com/Renovamen/oh-vue-icons/issues/18), [#19](https://github.com/Renovamen/oh-vue-icons/pull/19)), which can be imported by
+
+  ```js
+  import type { CustomizeIconType } from "oh-vue-icons";
+  ```
+
+- **iconpacks:** bump iconpacks ([d0a76db](https://github.com/Renovamen/oh-vue-icons/commit/d0a76dbf0886e99e790a759ae4ed6aa043954ed1))
+  - [academicons](https://github.com/jpswalsh/academicons)
+  - [Bootstrap Icons](https://github.com/twbs/icons) (v1.7.2)
+  - [Flag Icons](https://github.com/lipis/flag-icon-css) (v6.0.3)
+  - [gameicons](https://github.com/game-icons/icons)
+  - [Heroicons](https://github.com/tailwindlabs/heroicons) (v1.0.5)
+  - [Ionicons](https://ionicons.com/) (v6.0.1)
+  - [Material Design icons](https://github.com/google/material-design-icons)
+  - [Octicons](https://github.com/primer/octicons) (v16.3.0)
+  - [PrimeIcons](https://github.com/primefaces/primeicons) (v5.0.1-SNAPSHOT)
+  - [Pixelarticons](https://github.com/halfmage/pixelarticons) (v1.5.0)
+  - [Simple Icons](https://github.com/simple-icons/simple-icons) (v6.7.0)
+  - [VSCode Icons](https://github.com/vscode-icons/vscode-icons) (v11.8.0)
+
+
+
 ## [1.0.0-rc1](https://github.com/Renovamen/oh-vue-icons/compare/v0.4.7...v1.0.0-rc1) (2021-10-14)
 
 ### BREAKING CHANGES
