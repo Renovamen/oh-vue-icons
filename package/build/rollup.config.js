@@ -3,7 +3,6 @@ import { terser } from "rollup-plugin-terser";
 import analyze from "rollup-plugin-analyzer";
 import postcss from "rollup-plugin-postcss";
 import dts from "rollup-plugin-dts";
-import { handeWarning } from "rollup";
 
 const EMPTY_FILE_ID = "__rollup_empty__";
 
@@ -28,11 +27,7 @@ const base = {
     terser(),
     analyze({ summaryOnly: true, hideDeps: true })
   ],
-  external: ["vue-demi"],
-  onwarn: (warning) => {
-    if (warning.code === "THIS_IS_UNDEFINED") return;
-    handeWarning(warning);
-  }
+  external: ["vue-demi"]
 };
 
 const config = [

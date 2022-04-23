@@ -3,14 +3,15 @@
   "private": true,
   "workspaces": [
     "package",
-    "demo"
+    "docs"
   ],
   "scripts": {
     "build": "yarn workspace oh-vue-icons run build",
+    "build:demo": "yarn workspace oh-vue-icons build:demo",
+    "build:docs": "yarn workspace docs run build",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
-    "demo": "yarn workspace demo dev",
-    "demo:build": "yarn workspace demo build",
-    "dev": "yarn build --watch",
+    "dev": "yarn workspace oh-vue-icons run dev",
+    "docs": "yarn workspace docs run dev",
     "download": "bash ./scripts/download.sh",
     "icons": "node scripts/build.js",
     "lint": "eslint --ext .js,.ts,.tsx,.vue ./",

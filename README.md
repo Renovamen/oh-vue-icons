@@ -237,7 +237,7 @@ Contributions are welcomed, see the [contribution guides](CONTRIBUTING.md).
 ## Acknowledgements
 
 - This project is inspired by and based on [vue-awesome](https://github.com/Justineo/vue-awesome) and [react-icons](https://github.com/react-icons/react-icons)
-- The [website](https://oh-vue-icons.js.org) is hosted on [Netlify](https://www.netlify.com/)
+- The [website](https://oh-vue-icons.js.org) is built with [Vitesse](https://github.com/antfu/vitesse) and hosted on [Netlify](https://www.netlify.com/)
 
 
 &nbsp;

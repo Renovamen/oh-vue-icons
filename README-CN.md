@@ -235,7 +235,7 @@ export default {
 ## 致谢
 
 - 本项目受到了 [vue-awesome](https://github.com/Justineo/vue-awesome) 和 [react-icons](https://github.com/react-icons/react-icons) 的启发并借鉴了它们的部分代码
-- [文档网站](https://oh-vue-icons.js.org)部署在 [Netlify](https://www.netlify.com/) 上
+- [文档网站](https://oh-vue-icons.js.org)由 [Vitesse](https://github.com/antfu/vitesse) 驱动，部署在 [Netlify](https://www.netlify.com/) 上
 
 
 &nbsp;

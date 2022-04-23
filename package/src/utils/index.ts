@@ -1,24 +1,8 @@
-const hasOwn = (obj: any, key: string) => {
-  return Object.prototype.hasOwnProperty.call(obj, key);
-};
-
-/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
-const assign = (obj: any, ...sources: any[]): any => {
-  sources.forEach((source) => {
-    for (const key in source) {
-      if (key === "name") continue;
-      if (hasOwn(source, key)) {
-        obj[key] = source[key];
-      }
-    }
-  });
-  return obj;
-};
-
-const ESCAPE_MAP: any = {
+const ESCAPE_MAP: { [key: string]: string } = {
   "<": "&lt;",
   ">": "&gt;",
   '"': "&quot;",
+  "'": "&#039;",
   "&": "&amp;"
 };
 
@@ -32,20 +16,7 @@ const getID = (prefix: string): string => {
   return prefix + id_count++;
 };
 
-/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
-const warn = (msg: string, vm: any): void => {
-  if (!vm) {
-    /* eslint-disable no-console */
-    console.error(msg);
-    /* eslint-enable no-console */
-    return;
-  }
-  vm.constructor.super.util.warn(msg, vm);
-};
-
 export default {
-  assign,
-  warn,
   escapeHTML,
   getID
 };

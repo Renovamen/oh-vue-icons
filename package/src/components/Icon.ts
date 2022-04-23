@@ -9,7 +9,7 @@ import {
   h,
   isVue2
 } from "vue-demi";
-import { CustomizeIconType, ObjType } from "../../types/icons";
+import type { CustomizeIconType, ObjType } from "../../types/icons";
 import utils from "../utils";
 
 type IconsType = {
@@ -24,7 +24,7 @@ const register = (data: CustomizeIconType): void => {
   if (d) paths.push({ d });
   if (points) polygons.push({ points });
 
-  icons[name] = utils.assign({}, data, {
+  icons[name] = Object.assign({}, data, {
     paths,
     polygons
   });
@@ -49,10 +49,9 @@ const OhVueIcon = defineComponent({
       type: String,
       validator: (val: string): boolean => {
         if (val && !(val in icons)) {
-          utils.warn(
+          console.warn(
             `Invalid prop: prop "name" is referring to an unregistered icon "${val}".\n` +
-              `Please make sure you have imported this icon before using it.`,
-            this
+              `Please make sure you have imported this icon before using it.`
           );
           return false;
         }
@@ -110,10 +109,7 @@ const OhVueIcon = defineComponent({
     const normalizedScale = computed(() => {
       const scale = Number(props.scale);
       if (isNaN(scale) || scale <= 0) {
-        utils.warn(
-          `Invalid prop: prop "scale" should be a number over 0.`,
-          this
-        );
+        console.warn(`Invalid prop: prop "scale" should be a number over 0.`);
         return state.outerScale;
       }
       return scale * state.outerScale;
@@ -217,7 +213,7 @@ const OhVueIcon = defineComponent({
 
     const updateStack = () => {
       if (!props.name && props.name !== null && children.value.length === 0) {
-        utils.warn(`Invalid prop: prop "name" is required.`, this);
+        console.warn(`Invalid prop: prop "name" is required.`);
         return;
       }
 

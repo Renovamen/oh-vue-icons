@@ -23,16 +23,8 @@ This script would download icon packs as zip files from their Github repositorie
 
 ### Dev
 
-Start watching source files:
-
 ```bash
 yarn dev
-```
-
-Open another terminal, and start developing the demo site:
-
-```bash
-yarn demo
 ```
 
 
@@ -55,27 +47,18 @@ yarn build
 
 ## Website
 
-The source code of the website is under folder [`docs`](docs), built with [Nuxt 2](https://nuxtjs.org) and [Tailwind CSS](https://tailwindcss.com).
-
-To start the site, you should first [build the component](#build) and remove `node_modules` in the root folder. This is because the component is developed using Vue 3 (although it supports both Vue 2 & 3) while the website is powered by Nuxt 2 which is based on Vue 2. Thus there could be some conflicts among dependencies.
-
-Then install dependencies:
-
-```bash
-cd docs
-yarn
-```
+The source code of the website is under folder [`docs`](docs), built with [Vitesse](https://github.com/antfu/vitesse).
 
 Start developing:
 
 ```bash
-yarn dev
+yarn docs
 ```
 
 Generate static files:
 
 ```bash
-yarn generate
+yarn build:docs
 ```
 
 
@@ -83,4 +66,4 @@ yarn generate
 
 ## License
 
-By contributing to `oh-vue-icons`, you agree that your contributions will be licensed under its MIT license.
+By contributing to `oh-vue-icons`, you agree that your contributions will be licensed under its [MIT license](LICENSE).

@@ -35,20 +35,24 @@
     "types"
   ],
   "scripts": {
-    "build": "rollup --config ./build/rollup.config.js"
+    "build": "rollup --config ./build/rollup.config.js",
+    "build:demo": "vue-tsc --noEmit && vite build",
+    "dev": "vite",
+    "serve": "vite preview"
   },
   "dependencies": {
     "vue-demi": "^0.11.4"
   },
   "devDependencies": {
-    "@rollup/plugin-typescript": "^8.2.5",
-    "postcss": "^8.3.9",
-    "rollup": "^2.58.0",
+    "@rollup/plugin-typescript": "^8.3.2",
+    "@vitejs/plugin-vue": "^2.3.1",
+    "postcss": "^8.4.12",
+    "rollup": "^2.70.2",
     "rollup-plugin-analyzer": "^4.0.0",
-    "rollup-plugin-dts": "^4.0.0",
-    "rollup-plugin-postcss": "^4.0.1",
+    "rollup-plugin-dts": "^4.2.1",
+    "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-terser": "^7.0.2",
-    "vue": "^3.0.5"
+    "vue": "^3.2.33"
   },
   "peerDependencies": {
     "@vue/composition-api": "^1.0.0-rc.1",
