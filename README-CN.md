@@ -196,7 +196,7 @@ export default {
 
 当使用 Nuxt.js 时，需要按照 [Nuxt 文档](https://nuxtjs.org/docs/2.x/directory-structure/plugins)中的方式，将 `oh-vue-icons` 注册为一个插件。
 
-然后需要在 `nuxt.config.js` 的 `build.transpile` 项中添加 `oh-vue-icons`：
+然后需要在 `nuxt.config.js` 的 `build.transpile` 项中添加 `oh-vue-icons`（具体解释见[这里](https://nuxtjs.org/docs/2.x/directory-structure/plugins)）：
 
 ```js
 export default {
@@ -206,8 +206,6 @@ export default {
   }
 }
 ```
-
-否则 Nuxt 可能就不会把 `oh-vue-icons` 打包进去，[这里](https://nuxtjs.org/docs/2.x/directory-structure/plugins)对此有更详细的说明。
 
 为了仅在客户端（client-side）渲染该组件，需要把组件包裹在 `<client-only>` 标签里：
 
@@ -236,6 +234,19 @@ export default {
   // ...
   optimizeDeps: {
     exclude: ["oh-vue-icons/icons"]
+  }
+}
+```
+
+当使用 Vite 的[服务端渲染（SSR）](https://cn.vitejs.dev/guide/ssr.html)功能时（例如 [VuePress](https://v2.vuepress.vuejs.org/zh/)、[Vite SSG](https://github.com/antfu/vite-ssg) 等），需要将 `oh-vue-icons` 加入 `ssr.noExternal` 项（具体解释见[这里](https://cn.vitejs.dev/guide/ssr.html#ssr-externals)）：
+
+```js
+// vite.config.js
+
+export default {
+  // ...
+  ssr: {
+    noExternal: ["oh-vue-icons"]
   }
 }
 ```

@@ -198,7 +198,7 @@ Some examples could be found in the [documentation](https://oh-vue-icons.js.orgd
 
 When using Nuxt, you need to register `oh-vue-icons` as a plugin following [Nuxt's documentation](https://nuxtjs.org/docs/directory-structure/plugins#vue-plugins).
 
-It should be noted that, `oh-vue-icons` should be added to the `transpile` build option in your `nuxt.config.js`:
+It should be noted that, `oh-vue-icons` should be added to the `build.transpile` option in your `nuxt.config.js` (see [here](https://nuxtjs.org/docs/directory-structure/plugins/#es6-plugins) for details):
 
 ```js
 export default {
@@ -208,8 +208,6 @@ export default {
   }
 }
 ```
-
-or it will not be bundled, see [here](https://nuxtjs.org/docs/directory-structure/plugins/#es6-plugins) for details.
 
 To render the icon component only on client-side, you may need to wrap it in a `<client-only>` tag:
 
@@ -238,6 +236,19 @@ export default {
   // ...
   optimizeDeps: {
     exclude: ["oh-vue-icons/icons"]
+  }
+}
+```
+
+When using Vite's [Server-Side Rendering (SSR)](https://vitejs.dev/guide/ssr.html) support ([VuePress](https://v2.vuepress.vuejs.org/), [Vite SSG](https://github.com/antfu/vite-ssg), etc.), `oh-vue-icons` should be added to the `ssr.noExternal` option (see [here](https://vitejs.dev/guide/ssr.html#ssr-externals) for details):
+
+```js
+// vite.config.js
+
+export default {
+  // ...
+  ssr: {
+    noExternal: ["oh-vue-icons"]
   }
 }
 ```

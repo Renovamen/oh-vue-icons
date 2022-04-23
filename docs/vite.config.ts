@@ -24,6 +24,11 @@ export default defineConfig({
     }
   },
 
+  // @ts-ignore:next-line
+  ssr: {
+    noExternal: ["oh-vue-icons-npm"]
+  },
+
   plugins: [
     Vue({
       include: [/\.vue$/, /\.md$/],
@@ -136,7 +141,7 @@ export default defineConfig({
       generateSitemap();
     },
     includedRoutes() {
-      return ["/", "/zh/"];
+      return ["/", "/docs/", "/zh/", "/zh/docs/"];
     }
   }
 });

@@ -65,11 +65,14 @@ const isSidebarOpen = computed(() => {
 });
 
 const sidebar = ref(null);
-const siderToggle = document.getElementById("sidebar-toggle");
-const themeToggle = document.getElementById("theme-toggle");
 
-onClickOutside(sidebar, () => site.toggleSidebar(false), {
-  ignore: [siderToggle, themeToggle]
+onMounted(() => {
+  const siderToggle = document.getElementById("sidebar-toggle");
+  const themeToggle = document.getElementById("theme-toggle");
+
+  onClickOutside(sidebar, () => site.toggleSidebar(false), {
+    ignore: [siderToggle, themeToggle]
+  });
 });
 </script>
 
