@@ -7,8 +7,8 @@ import "@unocss/reset/tailwind.css";
 import "./styles/main.css";
 import "uno.css";
 
-import { OhVueIcon, addIcons } from "oh-vue-icons";
-import * as AllIcons from "oh-vue-icons/icons";
+import { OhVueIcon, addIcons } from "oh-vue-icons-npm";
+import * as AllIcons from "oh-vue-icons-npm/icons";
 
 addIcons(...Object.values({ ...AllIcons }));
 addIcons(

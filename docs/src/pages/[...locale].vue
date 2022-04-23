@@ -3,7 +3,7 @@
     <Sidebar
       :item-selected="state.tabSelected"
       :items="iconSets"
-      @changeTab="changeTab"
+      @change-tab="changeTab"
     >
       <ToolSidebar class="show-on-mobile" />
     </Sidebar>
@@ -97,7 +97,7 @@
 </template>
 
 <script setup lang="ts">
-import { listIcons } from "oh-vue-icons";
+import { listIcons } from "oh-vue-icons-npm";
 import { useIconStore } from "~/stores/icon";
 import icons from "~/icons";
 
