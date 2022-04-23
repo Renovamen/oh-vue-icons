@@ -10,7 +10,7 @@ Clone the repo and install dependencies:
 yarn
 ```
 
-### Icon Packs
+### Icons
 
 Fetch icon sources:
 
@@ -20,6 +20,11 @@ yarn download -f
 
 This script would download icon packs as zip files from their Github repositories. Although it could be achieved more easily via "git submodule", too many submodules brings git too much loads and reduces its speed.
 
+Then, re-generate files under `package/icons` automatically:
+
+```bash
+yarn icons
+```
 
 ### Dev
 
@@ -27,16 +32,7 @@ This script would download icon packs as zip files from their Github repositorie
 yarn dev
 ```
 
-
 ### Build
-
-Re-generate files under `package/icons` automatically:
-
-```bash
-yarn icons
-```
-
-Build the component:
 
 ```bash
 yarn build

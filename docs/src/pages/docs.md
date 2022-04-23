@@ -432,6 +432,8 @@ When using Nuxt, you need to register `oh-vue-icons` as a plugin following [Nuxt
 It should be noted that, `oh-vue-icons` should be added to the `transpile` build option in your `nuxt.config.js`:
 
 ```js
+// nuxt.config.js
+
 export default {
   // ...
   build: {
@@ -453,6 +455,22 @@ To render the icon component only on client-side, you may need to wrap it in a `
     </client-only>
   </div>
 </template>
+```
+
+
+## Vite
+
+When using [Vite](https://vitejs.dev/), it is suggested to exclude `oh-vue-icons` from pre-bundling (see [#20](https://github.com/Renovamen/oh-vue-icons/issues/20) for details):
+
+```js
+// vite.config.js
+
+export default {
+  // ...
+  optimizeDeps: {
+    exclude: ["oh-vue-icons/icons"]
+  }
+}
 ```
 
 

@@ -227,6 +227,24 @@ To render the icon component only on client-side, you may need to wrap it in a `
 
 &nbsp;
 
+## Vite
+
+When using [Vite](https://vitejs.dev/), it is suggested to exclude `oh-vue-icons` from pre-bundling (see [#20](https://github.com/Renovamen/oh-vue-icons/issues/20) for details):
+
+```js
+// vite.config.js
+
+export default {
+  // ...
+  optimizeDeps: {
+    exclude: ["oh-vue-icons/icons"]
+  }
+}
+```
+
+
+&nbsp;
+
 ## Contributing
 
 Contributions are welcomed, see the [contribution guides](CONTRIBUTING.md).

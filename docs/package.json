@@ -15,7 +15,7 @@
     "camelcase": "^6.3.0",
     "copy-text-to-clipboard": "^3.0.1",
     "nprogress": "^0.2.0",
-    "oh-vue-icons-npm": "npm:oh-vue-icons@^1.0.0-rc2",
+    "oh-vue-icons-npm": "npm:oh-vue-icons@1.0.0-rc2",
     "pinia": "^2.0.13",
     "prism-theme-vars": "^0.2.2",
     "vue": "^3.2.33",

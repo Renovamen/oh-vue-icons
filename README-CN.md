@@ -225,6 +225,24 @@ export default {
 
 &nbsp;
 
+## Vite
+
+使用 [Vite](https://cn.vitejs.dev/) 作为打包工具时，建议在预构建中排除 `oh-vue-icons`（具体讨论见 [#20](https://github.com/Renovamen/oh-vue-icons/issues/20)）：
+
+```js
+// vite.config.js
+
+export default {
+  // ...
+  optimizeDeps: {
+    exclude: ["oh-vue-icons/icons"]
+  }
+}
+```
+
+
+&nbsp;
+
 ## 贡献
 
 欢迎贡献，这里是[贡献指南](CONTRIBUTING.md)。

@@ -7,7 +7,7 @@ import pkgJson from "../../../package/package.json";
 
 const { t } = useI18n();
 
-const item = {
+const item = computed(() => ({
   text: `v${pkgJson.version}`,
   items: [
     {
@@ -21,5 +21,5 @@ const item = {
       icon: "oi-git-compare"
     }
   ]
-};
+}));
 </script>
