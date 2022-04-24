@@ -1,7 +1,7 @@
 <template>
   <div
     ref="sidebar"
-    class="bg-white text-gray-600 border-gray-200 dark:(bg-gray-800 text-gray-400 border-gray-700) fixed h-full w-64 lg:w-56 z-20 left-0 top-0 text-left border-r border-solid transform overflow-y-scroll"
+    class="bg-white text-gray-600 border-gray-200 dark:(bg-gray-800 text-gray-400 border-gray-700) fixed h-full w-64 lg:w-56 z-20 left-0 top-0 text-left border-r border-solid overflow-y-scroll transition-transform"
     :class="[
       isSidebarOpen ? '-translate-x-0' : '-translate-x-full',
       !items && 'lg:hidden'

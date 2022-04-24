@@ -15,8 +15,8 @@ Now the following 20 icon packs are supported:
 
 | Icon Pack                                                     | Prefix | License                                                       | Counts     |
 | ------------------------------------------------------------- | ------ | ------------------------------------------------------------- | ---------- |
-| [academicons](https://github.com/jpswalsh/academicons)        | `ai`   | [SIL OFL 1.1](http://scripts.sil.org/OFL)                     | 147        |
-| [Bootstrap Icons](https://github.com/twbs/icons)              | `bi`   | [MIT](https://github.com/twbs/icons/blob/main/LICENSE.md)     | 1522       |
+| [academicons](https://github.com/jpswalsh/academicons)        | `ai`   | [SIL OFL 1.1](http://scripts.sil.org/OFL)                     | 149        |
+| [Bootstrap Icons](https://github.com/twbs/icons)              | `bi`   | [MIT](https://github.com/twbs/icons/blob/main/LICENSE.md)     | 1668       |
 | [CoreUI Icons Free](https://github.com/coreui/coreui-icons) (Colorful) | `co`   | [CC BY 4.0 License](https://github.com/coreui/coreui-icons/blob/master/LICENSE) | 1575       |
 | [Cryptocurrency Icons](https://github.com/spothq/cryptocurrency-icons) (Colorful) | `ci`   | [CC0 1.0 Universal](https://github.com/spothq/cryptocurrency-icons/blob/master/LICENSE.md) | 942        |
 | [Font Awesome 5 Free](https://github.com/FortAwesome/Font-Awesome) | `fa`   | [CC BY 4.0](https://github.com/FortAwesome/Font-Awesome/blob/master/LICENSE.txt) | 1610       |
@@ -26,14 +26,14 @@ Now the following 20 icon packs are supported:
 | [Heroicons](https://github.com/tailwindlabs/heroicons)        | `hi`   | [MIT](https://github.com/tailwindlabs/heroicons/blob/master/LICENSE) | 460       |
 | [Ionicons](https://github.com/ionic-team/ionicons)            | `io`   | [MIT](https://github.com/ionic-team/ionicons/blob/master/LICENSE) | 1332      |
 | [Line Awesome](https://github.com/icons8/line-awesome)        | `la`   | [MIT / Good Boy](https://github.com/icons8/line-awesome/blob/master/LICENSE.md) | 1544      |
-| [Material Design icons](https://github.com/google/material-design-icons) | `md`   | [Apache 2.0](https://github.com/google/material-design-icons/blob/master/LICENSE) | 10337      |
-| [Octicons](https://github.com/primer/octicons)                | `oi`   | [MIT](https://github.com/primer/octicons/blob/main/LICENSE) | 250        |
+| [Material Design icons](https://github.com/google/material-design-icons) | `md`   | [Apache 2.0](https://github.com/google/material-design-icons/blob/master/LICENSE) | 10537      |
+| [Octicons](https://github.com/primer/octicons)                | `oi`   | [MIT](https://github.com/primer/octicons/blob/main/LICENSE) | 259        |
 | [Pokemon Icons](https://github.com/TheArtificial/pokemon-icons) (Colorful)| `pi`   | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | 1453      |
 | [PrimeIcons](https://github.com/primefaces/primeicons)        | `pr`   | [MIT](https://github.com/primefaces/primeicons/blob/master/LICENSE) | 238       |
 | [Pixelarticons](https://github.com/halfmage/pixelarticons)    | `px`   | [MIT](https://github.com/halfmage/pixelarticons/blob/master/LICENSE) | 460       |
 | [Remix Icon](https://github.com/Remix-Design/RemixIcon)       | `ri`   | [Apache 2.0](https://github.com/Remix-Design/RemixIcon/blob/master/License) | 2271       |
-| [Simple Icons](https://github.com/simple-icons/simple-icons)  | `si`   | [CC0 1.0 Universal](https://github.com/simple-icons/simple-icons/blob/develop/LICENSE.md) | 2159       |
-| [VSCode Icons](https://github.com/vscode-icons/vscode-icons) (Colorful) | `vi`   | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | 1098       |
+| [Simple Icons](https://github.com/simple-icons/simple-icons)  | `si`   | [CC0 1.0 Universal](https://github.com/simple-icons/simple-icons/blob/develop/LICENSE.md) | 2233       |
+| [VSCode Icons](https://github.com/vscode-icons/vscode-icons) (Colorful) | `vi`   | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | 1125       |
 | [Weather Icons](https://github.com/erikflowers/weather-icons) | `wi`   | [SIL OFL 1.1](http://scripts.sil.org/OFL)                     | 219        |
 
 

@@ -1,7 +1,7 @@
 <template>
   <div
     v-if="iconSelected && close === false"
-    class="max-w-screen-xl mx-auto fixed bottom-0 inset-x-0 pb-2 sm:pb-5"
+    class="z-30 max-w-screen-xl mx-auto fixed bottom-0 inset-x-0 pb-2 sm:pb-5"
   >
     <Message ref="message" />
 

@@ -90,7 +90,6 @@
     <IconInfo
       :icon-selected="state.iconSelected"
       :category-selected="state.categorySelected"
-      class="z-30"
       @close="resetSelectedIcon"
     />
   </div>
