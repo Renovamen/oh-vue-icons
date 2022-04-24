@@ -141,7 +141,7 @@ export default defineConfig({
       generateSitemap();
     },
     includedRoutes() {
-      return ["/", "/docs/", "/zh/", "/zh/docs/"];
+      return ["/", "/docs", "/zh/", "/zh/docs"];
     }
   }
 });
