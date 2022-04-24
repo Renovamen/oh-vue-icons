@@ -1,5 +1,25 @@
 # Change Log
 
+## [v1.0.0-rc3](https://github.com/Renovamen/oh-vue-icons/compare/1.0.0-rc2...v1.0.0-rc3) (2022-04-24)
+
+### Bug Fixes
+
+- correct `vue-demi` version [#21](https://github.com/Renovamen/oh-vue-icons/issues/21) ([9220f4d](https://github.com/Renovamen/oh-vue-icons/commit/9220f4d76585849739af5885cd05db6e65770d3b))
+
+### Features
+
+- **iconpacks:** bump iconpacks:
+
+  - [academicons](https://github.com/jpswalsh/academicons) (v1.9.2)
+  - [Bootstrap Icons](https://github.com/twbs/icons) (v1.8.1)
+  - [Flag Icons](https://github.com/lipis/flag-icon-css) (v6.2.0)
+  - [Heroicons](https://github.com/tailwindlabs/heroicons) (v1.0.6)
+  - [Material Design icons](https://github.com/google/material-design-icons)
+  - [Octicons](https://github.com/primer/octicons) (v17.0.0)
+  - [Simple Icons](https://github.com/simple-icons/simple-icons) (v6.19.0)
+  - [VSCode Icons](https://github.com/vscode-icons/vscode-icons) (v11.11.0)
+
+
 ## [v1.0.0-rc2](https://github.com/Renovamen/oh-vue-icons/compare/v1.0.0-rc1...1.0.0-rc2) (2022-01-27)
 
 ### Features
