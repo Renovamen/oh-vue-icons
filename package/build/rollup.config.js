@@ -1,8 +1,7 @@
-import typescript from "@rollup/plugin-typescript";
-import { terser } from "rollup-plugin-terser";
 import analyze from "rollup-plugin-analyzer";
 import postcss from "rollup-plugin-postcss";
 import dts from "rollup-plugin-dts";
+import esbuild from "rollup-plugin-esbuild";
 
 const EMPTY_FILE_ID = "__rollup_empty__";
 
@@ -22,9 +21,8 @@ const ingoreCSS = {
 const base = {
   input: "src/index.ts",
   plugins: [
-    typescript(),
+    esbuild(),
     postcss(),
-    terser(),
     analyze({ summaryOnly: true, hideDeps: true })
   ],
   external: ["vue-demi"]
@@ -33,16 +31,15 @@ const base = {
 const config = [
   Object.assign({}, base, {
     output: {
-      file: "dist/index.esm.min.js",
+      file: "dist/index.mjs",
       format: "es",
       sourcemap: true
     }
   }),
   Object.assign({}, base, {
     output: {
-      file: "dist/index.cjs.min.js",
+      file: "dist/index.cjs",
       format: "cjs",
-      exports: "named",
       sourcemap: true
     }
   }),

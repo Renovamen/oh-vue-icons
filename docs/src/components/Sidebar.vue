@@ -30,7 +30,7 @@
 
     <ul
       v-if="items"
-      class="mt-2 lg:mt-20 pb-2 border-gray-200 border-b border-solid lg:border-none"
+      class="mt-2 lg:mt-20 pb-2 border-gray-200 dark:border-gray-700 border-b border-solid lg:border-none"
     >
       <li
         v-for="item in items"
@@ -51,7 +51,6 @@
 <script setup lang="ts">
 import { useSiteStore } from "~/stores/site";
 import { localePath } from "~/composables";
-import { onMounted } from "@vue/runtime-core";
 
 defineProps(["itemSelected", "items"]);
 defineEmits(["changeTab"]);

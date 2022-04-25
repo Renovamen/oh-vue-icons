@@ -1,5 +1,4 @@
 {
-  "name": "oh-vue-icons",
   "private": true,
   "workspaces": [
     "package",

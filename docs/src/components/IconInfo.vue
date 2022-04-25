@@ -73,14 +73,9 @@ const message = ref("null");
 
 const copyToClipboard = () => {
   const isSuccess = copyText(moduleName.value);
-  if (isSuccess) {
-    // const msg = proxy?.$children[0] as any;
-    // msg.startTimer(moduleName.value);
-    console.log(message.value);
-    message.value.startTimer(moduleName.value);
-  } else {
-    alert("Oops, unable to copy");
-  }
+
+  if (isSuccess) message.value.startTimer(moduleName.value);
+  else alert("Oops, unable to copy");
 };
 
 const onCloseClick = () => {

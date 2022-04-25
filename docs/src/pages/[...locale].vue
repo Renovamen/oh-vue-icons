@@ -37,8 +37,12 @@
             <v-icon
               name="ri-search-2-line"
               scale="1.3"
-              class="search-icon text-gray-500 transition duration-200"
-              :class="[state.isSearchFocused && 'text-blue-600']"
+              class="transition duration-200"
+              :class="[
+                state.isSearchFocused
+                  ? 'text-blue-600 dark:text-blue-400'
+                  : 'text-gray-500 dark:text-gray-400'
+              ]"
             />
           </div>
           <input
