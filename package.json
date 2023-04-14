@@ -33,7 +33,7 @@
     "eslint": "^8.14.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-vue": "^8.7.1",
+    "eslint-plugin-vue": "^9.10.0",
     "glob-promise": "^4.2.2",
     "husky": "^7.0.4",
     "lint-staged": "^12.4.0",

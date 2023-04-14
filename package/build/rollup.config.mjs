@@ -19,6 +19,7 @@ const ingoreCSS = {
 };
 
 const base = {
+  strictDeprecations: true,
   input: "src/index.ts",
   plugins: [
     esbuild(),
