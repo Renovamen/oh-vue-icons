@@ -11,7 +11,7 @@ title: Docs - Oh, Vue Icons!
 
 ## Supported Icon Packs
 
-Now the following 20 icon packs are supported:
+The following 20 icon packs are now supported:
 
 | Icon Pack                                                     | Prefix | License                                                       | Counts     |
 | ------------------------------------------------------------- | ------ | ------------------------------------------------------------- | ---------- |
@@ -57,7 +57,7 @@ Or if you are using [Nuxt 2](https://nuxtjs.org/), you'll need `@nuxtjs/composit
 yarn add @nuxtjs/composition-api -D
 ```
 
-then add `@nuxtjs/composition-api/module` to the `buildModules` option in your `nuxt.config.js`, see [here](https://composition-api.nuxtjs.org/getting-started/setup) for details.
+then add `@nuxtjs/composition-api/module` to the `buildModules` option in your `nuxt.config.js`; see [here](https://composition-api.nuxtjs.org/getting-started/setup) for details.
 
 
 ## Import
@@ -84,7 +84,7 @@ app.component("v-icon", OhVueIcon);
 app.mount("#app");
 ```
 
-If you don't care about the bundle size and want to import a whole icon pack, you may should:
+If you don't care about the bundle size and want to import a whole icon pack, you may:
 
 ```js
 // main.js
@@ -162,7 +162,7 @@ The icon names should be passed using **kebab-case**.
 | `hover`     | Enable animation only when being hovered | `boolean` | `true` / `false`                                              | `false`        |
 | `flip`      | Used to flip icon                        | `string`  | `vertical` / `horizontal` / `both`                            | /              |
 | `fill`      | Fill color of icon                       | `string`  | HEX color code or color name                                  | `currentColor` |
-| `label`     | Icon lable                               | `string`  | /                                                             | /              |
+| `label`     | Icon label                               | `string`  | /                                                             | /              |
 | `title`     | Icon title                               | `string`  | /                                                             | /              |
 | `inverse`   | Make icon color white?                   | `boolean` | `true` / `false`                                              | `false`        |
 
@@ -193,7 +193,7 @@ Use prop `scale: number | string` to specify the icon size:
 
 ### Animations
 
-Use `animation: string` to enablle animations:
+Use `animation: string` to enable animations:
 
 <p>
   <v-icon name="ri-refresh-line" animation="spin"></v-icon>
@@ -215,7 +215,7 @@ Use `animation: string` to enablle animations:
 <v-icon name="ri-sailboat-line" animation="float" />
 ```
 
-Use `hover: boolean` to enable the animation only when the icon is hoverd:
+Use `hover: boolean` to enable the animation only when the icon is hovered:
 
 <p><v-icon name="ri-refresh-line" animation="spin" hover></v-icon></p>
 
@@ -276,7 +276,7 @@ Set fill color for icons via prop `fill: string`:
 
 ### Stacked Icons
 
-Stack your icons easily jusy like in Font Awesome, even more powerful.
+Stack your icons easily, just like in Font Awesome, but even more powerful.
 
 <p>
   <v-icon label="No Photo">
@@ -311,7 +311,7 @@ You can also make it animated:
 
 ### Inverse
 
-Use `inverse: boolean` to make the color of icon white (`#fff`), which is **invalid on multi-color icons**:
+Use `inverse: boolean` to make the color of the icon white (`#fff`), which is **invalid on multi-color icons**:
 
 <p>
   <v-icon label="Wechat Logo">
@@ -429,7 +429,7 @@ OhVueIcon.add(
 
 When using Nuxt, you need to register `oh-vue-icons` as a plugin following [Nuxt's documentation](https://nuxtjs.org/docs/directory-structure/plugins#vue-plugins).
 
-It should be noted that, `oh-vue-icons` should be added to the `build.transpile` option in your `nuxt.config.js` (see [here](https://nuxtjs.org/docs/directory-structure/plugins/#es6-plugins) for details):
+It should be noted that `oh-vue-icons` should be added to the `build.transpile` option in your `nuxt.config.js` (see [here](https://nuxtjs.org/docs/directory-structure/plugins/#es6-plugins) for details):
 
 ```js
 // nuxt.config.js
