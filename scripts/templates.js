@@ -4,7 +4,8 @@ const packageJsonTemplate =
   JSON.stringify(
     {
       sideEffects: false,
-      module: "./index.js"
+      module: "./index.js",
+      type: "module"
     },
     null,
     2
